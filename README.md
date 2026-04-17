@@ -225,7 +225,7 @@ colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen obj
 
 # Capítulo I: Introducción
 ## 1.1. Startup Profile
-Somos un equipo de estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC) motivados en desarrollar una solución cuyo objetivo principal sea ayudar a las personas que usan el transporte público.
+Somos un equipo de estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC) motivados en desarrollar una solución que cuyo objetivo principal sea ayudar a las personas que usan el transporte público.
 
 ### 1.1.1. Descripción de la Startup
 ChapaTuRuta es un startup enfocado en desarrollar soluciones de software eficientes que resuelvan problemas reales de infraestructura y logística urbana. Priorizamos el rendimiento y la escalabilidad, así como la adopción de prácticas de desarrollo para ofrecer una solución robusta que mejore el tránsito en la ciudad.
@@ -241,7 +241,7 @@ ChapaTuRuta es un startup enfocado en desarrollar soluciones de software eficien
 
 | Foto | Información General |
 | :---: | :--- |
-| <img src="pending..." width="250" alt="Foto de Perfil"> | **Nombre y Apellidos:** <br> [pending...] <br><br> **Código:** <br> [pending...] <br><br> **Carrera:** <br> Ingeniería de Software <br><br> **Información:** <br> [pending...] |
+| <img src="img/FotoHector.png" alt="foto-hector" width="250px"/> | **Nombre y Apellidos:** Héctor Javier Rios Pacheco <br>  <br><br> **Código:** <br> u20231c540 <br><br> **Carrera:** <br> Ingeniería de Software <br><br> **Información:** <br> Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles y cumplir con mis tareas a tiempo. Siempre estoy dispuesto a colaborar y ayudar al equipo a avanzar de la mejor manera posible. |
 
 | Foto | Información General |
 | :---: | :--- |
