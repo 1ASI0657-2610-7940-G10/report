@@ -592,6 +592,15 @@ Sabremos que estamos teniendo éxito cuando:
 ### 2.2.3. Análisis de entrevistas
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
+
+<p align="center">
+  <img src="./img/userPersona_1.png" alt="Lean UX Canvas" width="850">
+</p>
+
+<p align="center">
+  <img src="./img/userPersona_2.png" alt="Lean UX Canvas" width="850">
+</p>
+
 ### 2.3.2. User Task Matrix
 ### 2.3.3. User Journey Mapping
 ### 2.3.4. Empathy Mapping
