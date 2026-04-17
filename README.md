@@ -88,12 +88,13 @@ _Tabla de contenidos_
     - [1.1.1. Descripción de la Startup]
     - [1.1.2. Perfiles de integrantes del equipo]
   - [1.2. Solution Profile]
-    - [1.2.1. Antecedentes y problemática]
-    - [1.2.2. Lean UX Process]
-      - [1.2.2.1. Lean UX Problem Statements]
-      - [1.2.2.2. Lean UX Assumptions]
-      - [1.2.2.3. Lean UX Hypothesis Statements]
-      - [1.2.2.4. Lean UX Canvas]
+  - [1.2.1. Nombre del Producto]
+    - [1.2.2. Antecedentes y problemática]
+    - [1.2.3. Lean UX Process]
+      - [1.2.3.1. Lean UX Problem Statements]
+      - [1.2.3.2. Lean UX Assumptions]
+      - [1.2.3.3. Lean UX Hypothesis Statements]
+      - [1.2.3.4. Lean UX Canvas]
   - [1.3. Segmentos objetivo]
 - [Capítulo II: Requirements Elicitation \& Analysis]
   - [2.1. Competidores]
@@ -248,7 +249,12 @@ ChapaTuRuta es un startup enfocado en desarrollar soluciones de software eficien
 | <img src="pending..." width="250" alt="Foto de Perfil"> | **Nombre y Apellidos:** <br> [pending...] <br><br> **Código:** <br> [pending...] <br><br> **Carrera:** <br> Ingeniería de Software <br><br> **Información:** <br> [pending...] |
 
 ## 1.2. Solution Profile
-### 1.2.1. Antecedentes y problemática
+
+### 1.2.1. Nombre del Producto
+
+ChapaTuRuta es una aplicación móvil diseñada para pasajeros y conductores del sistema de transporte interurbano. Permitiendo a los usuarios consultar tiempos estimados de llegada en tiempo y planificar viajes que requieren transbordos estáticos. La propuesta se centra en eliminar la incertidumbre y reducir los tiempos de espera "a ciegas" mediante un sistema de rastreo combinado: los conductores pueden reportar su ubicación vía GPS continuo o mediante un botón de "Check-in"de manera manual al llegar a paraderos clave. El modelo busca formalizar la información de rutas periféricas con una interfaz minimalista, accesible y de rápida respuesta.
+
+### 1.2.2. Antecedentes y problemática
 **What**  
 Los pasajeros del transporte interurbano no cuentan con herramientas para conocer el tiempo estimado de llegada del transporte.
 
@@ -274,11 +280,11 @@ Pérdida de 20 a 40 minutos diarios en promedio.
 
 ---
 
-### 1.2.2. Lean UX Process
-#### 1.2.2.1. Lean UX Problem Statements
-#### 1.2.2.2. Lean UX Assumptions
-#### 1.2.2.3. Lean UX Hypothesis Statements
-#### 1.2.2.4. Lean UX Canvas
+### 1.2.3. Lean UX Process
+#### 1.2.3.1. Lean UX Problem Statements
+#### 1.2.3.2. Lean UX Assumptions
+#### 1.2.3.3. Lean UX Hypothesis Statements
+#### 1.2.3.4. Lean UX Canvas
 ## 1.3. Segmentos objetivo
 # Capítulo II: Requirements Elicitation & Analysis
 ## 2.1. Competidores
