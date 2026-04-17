@@ -522,7 +522,32 @@ Sabremos que estamos teniendo éxito cuando:
 # Capítulo II: Requirements Elicitation & Analysis
 ## 2.1. Competidores
 ### 2.1.1. Análisis competitivo
+
+|  | **Moovit** | **Google Maps** | **TuRuta** |
+|---------------------------------------------------------------|-----------------------------|---------------------------|---------------------------|
+| **Perfil**<br>Overview | Plataforma enfocada en transporte interurbano informal (colectivos). Usa tracking híbrido (GPS/Check-in) para calcular tiempos y rutas de transbordo en zonas con paraderos no oficiales. | App global en movilidad urbana. Integra horarios de trenes y buses. | Startup peruana enfocada en rutas de buses tradicionales. |
+| **Ventaja competitiva**<br>¿Qué valor ofrece a los clientes? | Integra y visibiliza rutas informales. El modo "Check-in" ahorra datos al conductor. Sugiere transbordos estáticos que otras apps ignoran. | Base de datos masiva de transporte oficial. Alertas paso a paso muy precisas. | Conocimiento local de las rutas de buses tradicionales peruanas y comunidad activa. |
+
+| **Perfil de marketing** |  |  |  |
+|-------------------------|--|--|--|
+| **Mercado objetivo** | Estudiantes/trabajadores de zonas periféricas y choferes de colectivos interurbanos. | Usuarios de transporte público masivo formal (Metropolitano, corredores). | Usuarios frecuentes de "micros" y combis en Lima metropolitana. |
+| **Estrategias de marketing** | Mostrar la app como una manera efectiva de no esperar demasiado y planificar rutas con transbordos. | Alianzas con municipios, SEO global, integración con Uber/Cabify. | Alianzas con empresas de transporte tradicionales y gamificación comunitaria. |
+
+| **Perfil de Producto** |  |  |  |
+|------------------------|--|--|--|
+| **Productos & Servicios** | App móvil (pasajeros) y módulo de emisión híbrida (conductores). Motor de ETA basado en microservicios. | Planificador multimodal, horarios offline, alertas de bajada. | ETA de buses limeños, alarmas para despertar antes del paradero. |
+| **Precios & Costos** | S/ 0 (Desarrollo académico en Free Tier AWS). | Gratis con anuncios (Freemium). | Gratis con anuncios, opción de pago sin publicidad. |
+| **Canales de distribución** | Móvil, GitHub | App Store, Google Play, Web. | App Store, Google Play. |
+
+| **FODA** |  |  |  |
+|----------|--|--|--|
+| **Fortalezas** | Atiende un nicho aún no entendido completamente. Arquitectura Cloud Native ligera. Consumo mínimo de datos. | Precisión extrema en rutas formales y presencia global. | Fuerte tropicalización y entendimiento del caos limeño. |
+| **Oportunidades** | Formalizar digitalmente un sector que moviliza a millones. | Integrar micro-movilidad (scooters, bicicletas) en su red. | Expandirse a otras provincias del Perú. |
+| **Debilidades** | Dependencia inicial de que los choferes hagan el Check-in. Sistema en fase de prueba manual. | Ignora por completo el transporte de colectivos o taxis de ruta. | Consume muchos datos/batería al requerir GPS constante en todos los buses. |
+| **Amenazas** | Que apps locales como TuRuta añadan soporte para seguimiento de buses. | Competencia directa de otras apps como Apple Maps. | Pérdida de usuarios si las flotas apagan sus GPS. |
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+- ChapaTuRuta aplicará una estrategia de especialización enfocada en rutas periféricas interurbanas, ofreciendo predictibilidad de tiempos de llegada y opciones de transbordo; complementará con una arquitectura ágil, garantizando cálculos de ETA ultrarrápidos y un modelo de reporte híbrido para superar a la competencia masiva; y finalmente, impulsará la adopción orgánica mediante interfaces utilitarias y minimalistas para generar confianza y eficiencia operativa en sus usuarios.
 ## 2.2. Entrevistas
 ### 2.2.1. Diseño de entrevistas
 ### 2.2.2. Registro de entrevistas
