@@ -38,11 +38,11 @@
         </thead>
         <tbody>
           <tr>
-            <td>u202216698 </td>
+            <td>u20231c540 </td>
             <td> Rios Pacheco, Hector </td>
           </tr>
           <tr>
-            <td> u20191e562 </td>
+            <td> u20231e795 </td>
             <td> Nuñez Soto, Andy Arturo </td>
           </tr>
           <tr>
@@ -220,7 +220,7 @@ colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen obj
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Rios Pacheco, Hector (u202216698)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] <br><br> **Nuñez Soto, Andy Arturo (u20191e562)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] <br><br> **Valerio Garcia, Adrian Emanuel (u202210334)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] | [pending...] |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Rios Pacheco, Hector** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] <br><br> **Nuñez Soto, Andy Arturo (u20191e562)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] <br><br> **Valerio Garcia, Adrian Emanuel (u202210334)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] | [pending...] |
 | **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Rios Pacheco, Hector (u202216698)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] <br><br> **Nuñez Soto, Andy Arturo (u20191e562)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] <br><br> **Valerio Garcia, Adrian Emanuel (u202210334)** <br> **AV1:** [Acción] <br> **TB1:** [Acción] <br> **AV2:** [Acción] <br> **TB2:** [Acción] | [pending...] |
 
 # Capítulo I: Introducción
