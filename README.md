@@ -366,6 +366,11 @@ Pérdida de 20 a 40 minutos diarios en promedio.
 | TS11 | Simulación de paraderos y localidades | Como desarrollador, quiero definir paraderos y localidades para representar puntos de embarque y desembarque | **Escenario 1: Paraderos visibles**<br>Dado que accedo a la Fake API,<br>Cuando consulto el endpoint de paraderos,<br>Entonces deben mostrarse correctamente con su localidad correspondiente. |
 
 ## 3.2. Impact Mapping
+
+**Segmento 1 y segmento 2:**
+
+![Project management tool impact map](img/Impact-Mapping.jpn)
+
 ## 3.3. Product Backlog
 # Capítulo IV: Solution Software Design
 ## 4.1. Strategic-Level Domain-Driven Design
