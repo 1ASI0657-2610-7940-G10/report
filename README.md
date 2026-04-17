@@ -440,6 +440,85 @@ Sabremos que estamos teniendo éxito cuando:
 </p>
 
 ## 1.3. Segmentos objetivo
+
+### Segmento Objetivo 1: Pasajeros
+
+#### Datos Demográficos
+- **Sexo**: Masculino y Femenino  
+- **Edades**: 18–45 años  
+- **Nivel Socioeconómico**: Medio–Bajo a Medio  
+- **Ocupación**: Estudiantes universitarios, técnicos y trabajadores dependientes/independientes  
+- **Ingresos**: Medios, dependientes del transporte público económico  
+
+#### Aspectos Geográficos
+- **Nacionalidad**: Peruana  
+- **Ubicación Actual**: Zonas periféricas, distritos interurbanos o ciudades con alto índice de transporte informal (colectivos)  
+- **Acceso a Tecnología**: Smartphones de gama media/baja, planes de datos prepago o limitados  
+
+#### Aspectos Psicográficos
+- **Motivaciones**:
+  - Llegar a tiempo a sus destinos  
+  - No perder tiempo esperando "a ciegas" en la calle  
+  - Seguridad personal  
+
+- **Estilo de vida**:
+  - Rutinario  
+  - Horarios ajustados  
+  - Alta movilidad interdistrital  
+
+- **Preocupaciones**:
+  - Impuntualidad  
+  - Clima durante la espera  
+  - Inseguridad en paraderos vacíos  
+
+- **Adaptación a la tecnología**:
+  - Media-Alta  
+  - Uso constante de mensajería y redes sociales  
+
+- **Interés por la personalización**:
+  - Medio  
+  - Valoran que la app guarde rutas frecuentes  
+
+---
+
+### Segmento Objetivo 2: Conductores (Emisores de Datos)
+
+#### Datos Demográficos
+- **Sexo**: Mayoritariamente Masculino  
+- **Edades**: 30–60 años  
+- **Nivel Socioeconómico**: Medio–Bajo a Medio  
+- **Ocupación**: Choferes de colectivos y transporte interurbano  
+- **Ingresos**: Variables, dependientes de la cantidad de carreras o "vueltas" diarias  
+
+#### Aspectos Geográficos
+- **Nacionalidad**: Peruana  
+- **Ubicación Actual**: Mismas zonas de operación que el Segmento 1  
+- **Acceso a Tecnología**: Smartphones básicos a gama media, preocupación constante por consumo de datos y batería  
+
+#### Aspectos Psicográficos
+- **Motivaciones**:
+  - Llenar el vehículo rápidamente  
+  - Maximizar ingresos diarios  
+
+- **Estilo de vida**:
+  - Dinámico  
+  - Largas horas al volante  
+  - Alto estrés por el tráfico  
+
+- **Preocupaciones**:
+  - Costo del combustible  
+  - Consumo de datos del celular  
+  - Multas de tránsito  
+
+- **Adaptación a la tecnología**:
+  - Básica-Media  
+  - Preferencia por interfaces simples (un solo toque)  
+  - Rechazo a apps complejas o invasivas  
+
+- **Interés por la personalización**:
+  - Bajo  
+  - Buscan una herramienta utilitaria y directa 
+
 # Capítulo II: Requirements Elicitation & Analysis
 ## 2.1. Competidores
 ### 2.1.1. Análisis competitivo
