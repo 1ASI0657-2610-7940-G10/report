@@ -602,6 +602,17 @@ Sabremos que estamos teniendo éxito cuando:
 </p>
 
 ### 2.3.2. User Task Matrix
+
+| Tarea (Task del mundo real) | Jesús Ramírez (Pasajero) | Frecuencia / Importancia | Roberto Quispe (Conductor) | Frecuencia / Importancia |
+|-----------------------------|---------------------------|---------------------------|-----------------------------|---------------------------|
+| Planificar el horario de salida |  | Alta / Alta |  | Alta / Media |
+| Identificar la ruta y trasbordos necesarios |  | Media / Alta |  | Baja / Baja |
+| Desplazarse y esperar en el paradero |  | Alta / Alta |  | Alta / Alta |
+| Calcular el tiempo de llegada al destino |  | Alta / Alta |  | Media / Alta |
+| Identificar paraderos adecuados para abordar/recoger |  | Alta / Alta |  | Media / Media |
+| Avisar disponibilidad de espacios a pasajeros (o "dateros") |  | Baja / Media |  | Alta / Alta |
+| Ajustar la ruta u horario según los momentos de mayor demanda |  | Baja / Media |  | Alta / Alta |
+
 ### 2.3.3. User Journey Mapping
 ### 2.3.4. Empathy Mapping
 ## 2.4. Big Picture EventStorming
