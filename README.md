@@ -369,9 +369,77 @@ Pérdida de 20 a 40 minutos diarios en promedio.
 
 **Segmento 1 y segmento 2:**
 
-![Project management tool impact map](img/Impact-Mapping.jpn)
+![Project management tool impact map](img/Impact-Mapping.jpg)
 
 ## 3.3. Product Backlog
+
+| #Orden |   ID   | User Story                                            | Story Points |
+|:------|:------|:-----------------------------------------------------|:-------------|
+| 01    | US-01 | Ver información sobre la plataforma de transporte    | 3            |
+| 02    | US-02 | Consultar rutas disponibles                          | 5            |
+| 03    | US-03 | Ver horarios de colectivos en cada ruta               | 5            |
+| 04    | US-04 | Acceder a información sobre paraderos cercanos       | 4            |
+| 05    | US-05 | Filtrar rutas por ubicación o destino                 | 6            |
+| 06    | US-06 | Ver detalles de un colectivo en una ruta específica  | 4            |
+| 07    | US-07 | Crear y editar perfil de conductor                    | 6            |
+| 08    | US-08 | Ver historial de rutas recorridas por un colectivo    | 5            |
+| 09    | US-09 | Hacer una búsqueda de colectivos cercanos a mi ubicación | 6          |
+| 10    | US-10 | Enviar notificación sobre cambios en las rutas       | 4            |
+| 11    | US-11 | Calificar la experiencia con un colectivo            | 3            |
+| 12    | US-12 | Reportar un problema con un colectivo o ruta         | 5            |
+| 13		| US13 | Conocer las ventajas del servicio   | 2  |
+| 14		| US14 | Acceder a preguntas frecuentes (FAQ)| 2  |
+| 15		| US15 | Postular como colaborador           | 3  |
+| 16		| US16 | Registro de usuario    | 5  |
+| 17		| US17 | Inicio de sesión de usuario     | 3  |
+| 18		| US18 | Gestión de Rutas para Empresas      | 8  |
+| 19  |  US19	| Personalización de perfil de empresa 				| 2             |
+| 20  |  US20	| Navegación en toolbar (Inicio, Paraderos, Rutas)	| 3             |
+| 21  |  US21	| Ver resumen general en la página de inicio 		| 3             |
+| 22  |  US22	| Ver paraderos en la página de inicio  			| 5             |
+| 23  |  US23	| Gestión de paraderos (agregar, editar, eliminar)	| 3             |
+| 24  |  US24	| Filtrar paraderos por ubicación       			| 3             |
+| 25  |  US25	| Ver detalles completos de una ruta    			 |3			|  
+| 26 | US26 | Registro de usuario | 5 |
+| 27 | US27 | Iniciar sesión | 3 |
+| 28 | US28 | Cerrar sesión | 2 |
+| 29 | US29 | Editar perfil de usuario | 4 |
+| 30 | US30 | Registrar datos de empresa | 6 |
+| 31 | US31 | Editar información de empresa | 4 |
+| 32 | US32 | Crear paradero | 5 |
+| 33 | US33 | Ver lista de paraderos | 3 |
+| 34 | US34 | Editar paradero | 4 |
+| 35 | US35 | Eliminar paradero | 3 |
+| 36 | US36 | Crear ruta | 6 |
+| 37 | US37 | Ver lista de rutas | 3 |
+| 38 | US38 | Editar ruta | 5 |
+| 39 | US39 | Eliminar ruta | 3 |
+| 40 | US40 | Configurar horarios de ruta | 4 |
+| 41 | US41 | Filtrar rutas por ubicación | 6 |
+| 42 | US42 | Ver resultados de búsqueda | 4 |
+| 43 | US43 | Ver detalles de ruta | 3 |
+| 44 | US44 | Volver al listado | 2 |
+| 45 | US45 | Crear colección | 4 |
+| 46 | US46 | Ver mis colecciones | 3 |
+| 47 | US47 | Editar nombre de colección | 3 |
+| 48 | US48 | Eliminar colección | 2 |
+| 49 | US49 | Agregar ruta a colección | 4 |
+| 50 | US50 | Seleccionar colección para ruta | 3 |
+| 51 | US51 | Quitar ruta de colección | 3 |
+| 52 | US52 | Ver rutas de colección | 4 |
+ **#Orden** |   **ID**   | **Technical Story**                        | **Story Points** |
+| 01     | TS-01 | Configuración de Fake API (JSON Server)       				| 3            |
+| 02     | TS-02 | Simulación de regiones, provincias y distritos				| 2            |
+| 03     | TS-03 | Simulación de paraderos y localidades         				| 2            |
+| 04     | TS-04 | Simulación de conductores y usuarios          				| 3            |
+| 05     | TS-05 | Simulación de rutas de colectivos             				| 3            |
+| 06     | TS-06 | Gestión de horarios de disponibilidad         				| 2            |
+| 07     | TS-07 | Relación entre rutas y paraderos              				| 2            |
+| 08     | TS-08 | Gestión de itinerarios para pasajeros         				| 3            |
+| 09     | TS-09 | Simulación de precios y tarifas               				| 2            |
+| 05 | TS-10 | Simulación de regiones, provincias y distritos | 2 |
+| 06 | TS-11 | Simulación de paraderos y localidades | 2 |
+
 # Capítulo IV: Solution Software Design
 ## 4.1. Strategic-Level Domain-Driven Design
 ### 4.1.1. Design-Level EventStorming
