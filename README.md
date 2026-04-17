@@ -256,35 +256,189 @@ ChapaTuRuta es una aplicación móvil diseñada para pasajeros y conductores del
 
 ### 1.2.2. Antecedentes y problemática
 **What**  
-Los pasajeros del transporte interurbano no cuentan con herramientas para conocer el tiempo estimado de llegada del transporte.
+-	Los pasajeros del transporte interurbano no cuentan con herramientas para conocer el tiempo estimado de llegada del transporte para planificar rutas con transbordos eficientemente. Al mismo tiempo, los conductores operan a ciegas, sin saber en qué paraderos hay concentración de demanda.
 
 **When**  
-El problema ocurre diariamente, especialmente en horas punta.
+-	El problema ocurre diariamente, pero se agudiza en las "horas punta", momentos en los que la necesidad de hacer transbordos es alta y la incertidumbre genera tardanzas y estrés.
 
 **Where**  
-Zonas periféricas, distritos interurbanos y rutas largas.
+-	Surge en zonas periféricas, distritos interurbanos y rutas largas donde el transporte masivo formal no tiene cobertura eficiente. Ocurre en paraderos, esquinas y terminales de paso.
 
 **Who**  
-Pasajeros (estudiantes y trabajadores) y conductores.
+-	Afecta a dos grupos principales: **Los pasajeros** (estudiantes universitarios y trabajadores que dependen de este medio para su rutina diaria) y **los conductores** (choferes que buscan optimizar el recojo de pasajeros).
 
 **Why**  
-El sistema es semi-informal y las apps actuales no cubren este escenario.
+-	Este problema persiste porque el ecosistema de colectivos es semi-informal por naturaleza. Las aplicaciones de movilidad existentes (como Google Maps o Moovit) están diseñadas para únicamente para ver rutas mas no generan un seguimiento, y no se adaptan a la flexibilidad de rutas ni a las limitaciones tecnológicas de estos conductores.
 
 **How**  
-- Esperas sin información  
-- Decisiones ineficientes  
-- Pérdida de oportunidades para conductores  
+-	Los pasajeros pierden tiempo esperando "a ciegas" en la vía pública, exponiéndose a la inseguridad y al clima.
+
+-	En caso de no encontrar ruta directa, toman decisiones de transbordo ineficientes que les cuestan más dinero.
+
+-	Los conductores se detienen innecesariamente en paraderos vacíos o pierden pasajeros por no avisar su cercanía.
+ 
 
 **How much**  
-Pérdida de 20 a 40 minutos diarios en promedio.
+-	En gran parte de las principales ciudades del país, el transporte representa un alto porcentaje de los viajes motorizados diarios. Los usuarios pueden llegar a perder en promedio entre 20 a 40 minutos diarios de su tiempo productivo únicamente esperando en los paraderos sin saber a qué hora pasará su vehículo.
 
 ---
 
 ### 1.2.3. Lean UX Process
 #### 1.2.3.1. Lean UX Problem Statements
+- Los pasajeros y conductores del transporte interurbano enfrentan una constante falta de previsibilidad sobre los tiempos de llegada y las opciones de transbordo. Las aplicaciones de navegación tradicionales ignoran este sector, obligando a las personas a esperar sin referencias en los paraderos, lo que provoca pérdida de tiempo productivo, exposición a la inseguridad y un servicio ineficiente.
+Hemos observado que esta falta de información genera una falta de gestión de tiempo en los usuarios diarios al no poder planificar sus trayectos, mientras que los conductores operan sin saber dónde se concentra la demanda, perdiendo oportunidades de llenar sus vehículos rápidamente.
+¿Cómo podríamos ofrecer una plataforma digital minimalista que estandarice la información de rutas informales y calcule tiempos de espera precisos mediante un rastreo de bajo consumo, permitiendo a los pasajeros planificar sus viajes con seguridad sin generar fricción tecnológica para el conductor?
+
 #### 1.2.3.2. Lean UX Assumptions
+
+### Supuestos del negocio
+
+#### 1. Necesidad del Cliente
+Creo que mis clientes tienen la necesidad de:
+- Conocer con anticipación la ubicación y el tiempo estimado de llegada de los vehículos de transporte interurbano informal.
+- Evitar esperas prolongadas.
+- Planificar rutas que requieren transbordos.
+
+#### 2. Propuesta de Solución
+Estas necesidades pueden resolverse con:
+- **AAAAA**, una plataforma digital y minimalista que:
+  - Conecta a conductores y pasajeros mediante un sistema asíncrono de reporte de ubicación.
+  - Integra un motor de sugerencias de rutas.
+  - Se adapta a las limitaciones de red de la periferia urbana.
+
+#### 3. Segmento de Clientes
+Mis clientes iniciales son (o serán):
+- **Pasajeros**:
+  - Estudiantes
+  - Trabajadores
+  - Personas que dependen del transporte periférico e informal diario
+- **Conductores**:
+  - Colectivos
+  - Minivans
+  - Interesados en optimizar el recojo de pasajeros
+
+#### 4. Propuesta de Valor
+El principal valor que un cliente quiere obtener de mi servicio es:
+- Reducción de la incertidumbre
+- Ahorro de tiempo
+- Mayor seguridad (evitar exposición en paraderos vacíos)
+
+#### 5. Canales de Adquisición
+Adquiriré la mayoría de mis clientes a través de:
+- Recomendación boca a boca
+- Paraderos de alta afluencia
+- Campus universitarios
+
+#### 6. Modelo de Ingresos
+Ganaré dinero mediante:
+- **Modelo freemium**
+  - Publicidad no invasiva orientada a comercios locales a lo largo de la ruta
+- **Alianzas B2B**
+  - Suscripción a asociaciones de transportistas
+  - Entrega de reportes de demanda de pasajeros
+
+#### 7. Competencia
+Mi principal competencia en el mercado será:
+- Aplicaciones globales:
+  - Moovit
+  - Google Maps
+- Alternativas locales:
+  - TuRuta
+
+##### Ventaja Competitiva
+Superaremos a la competencia debido a:
+- Enfoque exclusivo en el ecosistema informal e interurbano
+- Bajo consumo de datos (modelo de **Check-in**)
+
+#### 8. Riesgos Principales
+El mayor riesgo de mi producto es:
+- Que los conductores olviden o decidan no interactuar con el botón de "Check-in" manual
+
+##### Mitigación
+- Interfaz de uso rápido (un solo toque)
+- Diseño que no interrumpa la conducción
+
+#### 9. Suposiciones Críticas
+Otras suposiciones que, si se demuestran falsas, harán que el negocio fracase:
+- Que los pasajeros confíen en un ETA basado en reportes asíncronos en lugar de un mapa GPS en vivo
+
+
+### Supuestos del Cliente
+
+#### 1. ¿Quién es el cliente?
+- **Pasajeros**:
+  - Estudiantes
+  - Trabajadores
+  - Residentes de zonas periféricas con largas esperas de transporte
+- **Conductores**:
+  - Choferes de transporte interurbano
+
+#### 2. ¿Dónde encaja nuestro producto en su vida?
+El producto se integra en la rutina diaria de movilidad:
+
+- **Pasajeros**:
+  - Minutos antes de salir de casa o del trabajo hacia el paradero
+- **Conductores**:
+  - Durante toda la jornada laboral al volante
+
+#### 3. ¿Qué problemas soluciona nuestro producto?
+- Incertidumbre sobre cuándo pasará el próximo colectivo
+- Falta de información para realizar transbordos efectivos entre rutas
+
+#### 4. ¿Cuándo y cómo se utiliza nuestro producto?
+
+- **Pasajeros**:
+  - Uso diario y breve antes de salir
+  - Interacción mediante buscador de origen/destino
+
+- **Conductores**:
+  - Uso intermitente pero constante durante la jornada
+  - Interacción rápida (un toque) al pasar por paraderos clave
+
+#### 5. ¿Qué características son importantes?
+- Velocidad de respuesta (tiempos de carga mínimos)
+- Interfaz minimalista
+- Alto contraste (legible bajo luz solar)
+
+#### 6. ¿Cómo debe verse y comportarse nuestro producto?
+- Diseño directo y sin fricciones
+  - Sin menús profundos
+  - Sin configuraciones complejas
+- Rendimiento fluido y resiliente
+  - Funcional incluso en dispositivos móviles de gama baja
+  - Capaz de operar con conectividad limitada
+
 #### 1.2.3.3. Lean UX Hypothesis Statements
+
+### 1. Primera Hipótesis
+Creemos que:
+- Implementar un sistema de reporte de ubicación híbrido (Check-in manual y GPS) aumentará la participación de los conductores de transporte.
+
+Sabremos que estamos bien cuando:
+- Al menos el 40% de los conductores en rutas de prueba utilicen el botón de "Check-in" consistentemente al llegar a los paraderos clave durante su jornada.
+
+### 2. Segunda Hipótesis
+Creemos que:
+- Proporcionar a los pasajeros tiempo estimado de llegada o al menos la última actualización de la ubicación del transporte reducirá drásticamente su incertidumbre y el tiempo de espera.
+
+Sabremos que esto es cierto cuando:
+- Los pasajeros involucrados en nuestras pruebas manuales reporten una disminución del 40% en su tiempo de espera en los paraderos.
+- Califiquen de manera positiva la precisión del cálculo de llegada.
+
+### 3. Tercera Hipótesis
+Creemos que:
+- Ofrecer un motor de sugerencias de rutas estáticas para destinos complejos facilitará la planificación de viajes interurbanos que requieren tomar más de un vehículo.
+
+Sabremos que estamos teniendo éxito cuando:
+- Más del 30% de las búsquedas de origen/destino que requieran transbordos sean completadas exitosamente usando las indicaciones de la aplicación.
+- El usuario no deba consultar a terceros en la calle.
+
 #### 1.2.3.4. Lean UX Canvas
+
+<p align="center">
+  <img src="./img/LeanUX_Canvas.jpg" alt="Lean UX Canvas" width="850">
+</p>
+
 ## 1.3. Segmentos objetivo
 # Capítulo II: Requirements Elicitation & Analysis
 ## 2.1. Competidores
