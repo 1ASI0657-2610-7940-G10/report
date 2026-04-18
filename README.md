@@ -64,10 +64,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
-|  1.0    |              |              |                    |
-|  1.0.1  |              |               |                   |
-|  1.0.2  |              |              |                    |
-|  1.0.3    |              |              |                    |
+|  1.0    | 18/04/2026 | Héctor Ríos,  Arturo Nuñez, Adrian Valerio                                              | Añadido template, perfil de la startup, antecedentes y problemática; incorporación de Hypothesis Statements y Lean UX Canvas; segmentos objetivo, needfinding, entrevistas y especificación de requisitos                                                                                                               |
+
 
 # Project Report Collaboration Insights
 
@@ -82,134 +80,36 @@ En esta seccion se registra la colaboración de todo el equipo durante el desarr
 _Tabla de contenidos_
 
 
-- [Student Outcome]
-- [Capítulo I: Introducción]
-  - [1.1. Startup Profile]
-    - [1.1.1. Descripción de la Startup]
-    - [1.1.2. Perfiles de integrantes del equipo]
-  - [1.2. Solution Profile]
-  - [1.2.1. Nombre del Producto]
-    - [1.2.2. Antecedentes y problemática]
-    - [1.2.3. Lean UX Process]
-      - [1.2.3.1. Lean UX Problem Statements]
-      - [1.2.3.2. Lean UX Assumptions]
-      - [1.2.3.3. Lean UX Hypothesis Statements]
-      - [1.2.3.4. Lean UX Canvas]
-  - [1.3. Segmentos objetivo]
-- [Capítulo II: Requirements Elicitation \& Analysis]
-  - [2.1. Competidores]
-    - [2.1.1. Análisis competitivo]
-    - [2.1.2. Estrategias y tácticas frente a competidores]
-  - [2.2. Entrevistas]
-    - [2.2.1. Diseño de entrevistas]
-    - [2.2.2. Registro de entrevistas]
-    - [2.2.3. Análisis de entrevistas]
-  - [2.3. Needfinding]
-    - [2.3.1. User Personas]
-    - [2.3.2. User Task Matrix]
-    - [2.3.3. User Journey Mapping]
-    - [2.3.4. Empathy Mapping]
-  - [2.4. Big Picture EventStorming]
-  - [2.5. Ubiquitous Language]
-- [Capítulo III: Requirements Specification]
-  - [3.1. User Stories]
-  - [3.2. Impact Mapping]
-  - [3.3. Product Backlog]
-- [Capítulo IV: Solution Software Design]
-  - [4.1. Strategic-Level Domain-Driven Design]
-    - [4.1.1. Design-Level EventStorming]
-      - [4.1.1.1 Candidate Context Discovery]
-      - [4.1.1.2. Domain Message Flows Modeling]
-      - [4.1.1.3. Bounded Context Canvases]
-    - [4.1.2. Context Mapping]
-    - [4.1.3. Software Architecture]
-      - [4.1.3.1. Software Architecture System Landscape Diagram]
-      - [4.1.3.2. Software Architecture Context Level Diagrams]
-      - [4.1.3.2. Software Architecture Container Level Diagrams]
-      - [4.1.3.3. Software Architecture Deployment Diagrams]
-  - [4.2. Tactical-Level Domain-Driven Design]
-    - [4.2.1. Bounded Context: Identity and Access Management]
-      - [4.2.1.1. Domain Layer]
-      - [4.2.1.2. Interface Layer]
-      - [4.2.1.3. Application Layer]
-      - [4.2.1.4. Infrastructure Layer]
-      - [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams]
-      - [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams]
-        - [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams]
-        - [4.2.1.6.2. Bounded Context Database Design Diagram]
-    - [4.2.2. Bounded Context: _Subscriptions and Billing_]
-      - [4.2.2.1. Domain Layer]
-      - [4.2.2.2. Interface Layer]
-      - [4.2.2.3. Application Layer]
-      - [4.2.2.4. Infrastructure Layer]
-      - [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams]
-      - [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams]
-        - [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams]
-        - [4.2.2.6.2. Bounded Context Database Design Diagram]
-    - [4.2.3. Bounded Context: _Alerts \& Resolution_]
-      - [4.2.3.1. Domain Layer]
-      - [4.2.3.2. Interface Layer]
-      - [4.2.3.3. Application Layer]
-      - [4.2.3.4. Infrastructure Layer]
-      - [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams]
-      - [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams]
-        - [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams]
-        - [4.2.3.6.2. Bounded Context Database Design Diagram]
-    - [4.2.4. Bounded Context: _Real-Time Monitoring_]
-      - [4.2.4.1. Domain Layer.]
-      - [4.2.4.2. Interface Layer.]
-      - [4.2.4.3. Application Layer.]
-      - [4.2.4.4. Infrastructure Layer.]
-      - [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams]
-      - [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams]
-        - [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams]
-        - [4.2.4.6.2. Bounded Context Database Design Diagram]
-    - [4.2.5. Bounded Context: _Trip management_]
-      - [4.2.5.1. Domain Layer.]
-      - [4.2.5.2. Interface Layer.]
-      - [4.2.5.3. Application Layer.]
-      - [4.2.5.4. Infrastructure Layer.]
-      - [4.2.5.5. Bounded Context Software Architecture Component Level Diagrams.]
-      - [4.2.5.6. Bounded Context Software Architecture Code Level Diagrams.]
-        - [4.2.5.6.1. Bounded Context Domain Layer Class Diagrams.]
-        - [4.2.5.6.2. Bounded Context Database Design Diagram.]
-    - [4.2.6. Bounded Context: Fleet Management]
-      - [4.2.6.1. Domain Layer]
-      - [4.2.6.2. Interface Layer]
-      - [Controllers principales (HTTP REST)]
-      - [4.2.6.3. Application Layer]
-      - [4.2.6.4. Infrastructure Layer]
-      - [4.2.6.5. Bounded Context Software Architecture Component Level Diagrams.]
-      - [4.2.5.6. Bounded Context Software Architecture Code Level Diagrams.]
-        - [4.2.5.6.1. Bounded Context Domain Layer Class Diagrams.]
-        - [4.2.5.6.2. Bounded Context Database Design Diagram.]
-    - [4.2.7. Bounded Context: Profile and Preferences Management]
-      - [4.2.7.1. Domain Layer.]
-      - [4.2.7.2. Interface Layer.]
-      - [4.2.7.3. Application Layer.]
-      - [4.2.7.4. Infrastructure Layer.]
-      - [4.2.7.5. Bounded Context Software Architecture Component Level Diagrams.]
-      - [4.2.7.6. Bounded Context Software Architecture Code Level Diagrams.]
-        - [4.2.7.6.1. Bounded Context Domain Layer Class Diagrams.]
-        - [4.2.7.6.2. Bounded Context Database Design Diagram]
-    - [4.2.8. Bounded Context: Visualization Analytics]
-      - [4.2.8.1. Domain Layer]
-      - [4.2.8.2. Interface Layer]
-      - [4.2.8.3. Application Layer]
-      - [4.2.8.4. Infrastructure Layer]
-      - [4.2.8.5. Bounded Context Software Architecture Component Level Diagrams]
-      - [4.2.8.6. Bounded Context Software Architecture Code Level Diagrams]
-        - [4.2.8.6.1. Bounded Context Domain Layer Class Diagrams]
-        - [4.2.8.6.2. Bounded Context Database Design Diagram]
-    - [4.2.9. Bounded Context: Merchant]
-      - [4.2.9.1. Domain Layer]
-      - [4.2.9.2. Interface Layer]
-      - [4.2.9.3. Application Layer]
-      - [4.2.9.4. Infrastructure Layer]
-      - [4.2.9.5. Bounded Context Software Architecture Component Level Diagrams]
-      - [4.2.9.6. Bounded Context Software Architecture Code Level Diagrams]
-        - [4.2.9.6.1. Bounded Context Domain Layer Class Diagrams]
-        - [4.2.9.6.2. Bounded Context Database Design Diagram]
+- Student Outcome
+
+- Capítulo I: Introducción
+  - [1.1 Startup Profile](#11-startup-profile)
+    - [1.1.1 Descripción de la Startup](#111-descripcion-de-la-startup)
+    - [1.1.2 Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2 Solution Profile](#12-solution-profile)
+    - [1.2.1 Nombre del producto](#121-nombre-del-producto)
+    - [1.2.2 Antecedentes y problemática](#122-antecedentes-y-problematica)
+    - [1.2.3 Lean UX Process](#123-lean-ux-process)
+      - [1.2.3.1 Lean UX Problem Statement](#1231-lean-ux-problem-statement)
+      - [1.2.3.2 Lean UX Assumptions](#1232-lean-ux-assumptions)
+      - [1.2.3.3 Lean UX Hypothesis](#1233-lean-ux-hypothesis)
+      - [1.2.3.4 Lean UX Canvas](#1234-lean-ux-canvas)
+  - [1.3 Segmentos objetivo](#13-segmentos-objetivo)
+
+- Capítulo II: Requirements  & Analysis
+  - [2.1 Competidores](#21-competidores)
+  - [2.2 Entrevistas](#22-entrevistas)
+  - [2.3 Needfinding](#23-needfinding)
+    - [2.3.1 User Personas](#231-user-personas)
+    - [2.3.2 User Task Matrix](#232-user-task-matrix)
+    - [2.3.3 Empathy Maps](#233-empathy-maps)
+    - [2.3.4 As-is Scenario Mapping](#234-as-is-scenario-mapping)
+
+- Capítulo III: Requirements Specification
+  - [3.1 To-Be Scenario Mapping](#31-to-be-scenario-mapping)
+  - [3.2 User Stories](#32-user-stories)
+  - [3.3 Impact Map](#33-impact-map)
+  - [3.4 Product Backlog](#34-product-backlog)
 
 # Student Outcome
 
@@ -221,8 +121,8 @@ colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen obj
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** |      |        |
-| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** |  | |
+| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** |  **Héctor Rios:** Contribuí realizando el capítulo 1 y sedimentando las bases del proyecto <br><br> **Arturo Nuñez** Contribuí realizando parte del capitulo II y  <br><br> **Adrian Valerio** Contribuí realizando el capítulo III y entervistas    |    **Héctor Rios** **TB1:** El desarrollo del capítulo 1 me permitió reforzar mis conocimientos sobre la estructura inicial de un proyecto de software. Sentí que este proceso me ayudó a entender mejor cómo plantear una base sólida, lo cual considero clave para mi crecimiento profesional. <br><br>  **Arturo Nuñez** **TB1:** Al trabajar en el capítulo II, me di cuenta de la importancia de investigar y aplicar correctamente los conceptos teóricos. Esta experiencia me ayudó a actualizar mis conocimientos y a ser más consciente de cómo estos influyen en la calidad del proyecto. <br><br>  **Adrian Valerio** **TB1:** El desarrollo del capítulo III y las entrevistas me permitió aplicar conocimientos en un contexto más práctico. Considero que esta experiencia fortaleció mi capacidad de análisis y me motivó a seguir aprendiendo para mejorar mis habilidades en proyectos reales. |
+| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** | **Héctor Rios:** Contribuí realizando el capítulo 1 y sedimentando las bases del proyecto <br><br> **Arturo Nuñez** Contribuí realizando parte del capitulo II y  <br><br> **Adrian Valerio** Contribuí realizando el capítulo III y entervistas | **Héctor Rios** **TB1:** A lo largo del desarrollo del capítulo 1, comprendí que siempre hay aspectos que mejorar y aprender. Esta experiencia me hizo reflexionar sobre la importancia de mantenerme en constante actualización para poder aportar mejor en futuros proyectos. <br><br> **Arturo Nuñez** **TB1:** Mientras desarrollaba el capítulo II, noté que el aprendizaje no se limita a lo ya conocido. Me di cuenta de que investigar y aprender continuamente es necesario para adaptarme a nuevos retos dentro del proyecto. <br><br> **Adrian Valerio** **TB1:** Durante la realización de entrevistas y el capítulo III, entendí que cada interacción es una oportunidad de aprendizaje. Esto reforzó en mí la idea de que el aprendizaje constante es fundamental para desenvolverme mejor en el ámbito profesional. |
 
 # Capítulo I: Introducción
 ## 1.1. Startup Profile
@@ -301,7 +201,7 @@ Creo que mis clientes tienen la necesidad de:
 
 #### 2. Propuesta de Solución
 Estas necesidades pueden resolverse con:
-- **AAAAA**, una plataforma digital y minimalista que:
+- **ChapaTuRuta**, una plataforma digital y minimalista que:
   - Conecta a conductores y pasajeros mediante un sistema asíncrono de reporte de ubicación.
   - Integra un motor de sugerencias de rutas.
   - Se adapta a las limitaciones de red de la periferia urbana.
@@ -625,13 +525,7 @@ Sabremos que estamos teniendo éxito cuando:
 | Avisar disponibilidad de espacios a pasajeros (o "dateros") |  | Baja / Media |  | Alta / Alta |
 | Ajustar la ruta u horario según los momentos de mayor demanda |  | Baja / Media |  | Alta / Alta |
 
-### 2.3.3. User Journey Mapping
-
-![Journey Mapping1](img/JM1.png)
-
-![Journey Mapping2](img/JM2.png)
-
-### 2.3.4. Empathy Mapping
+### 2.3.3. Empathy Mapping
 
 **Segmento 1 y segmento 2:**
 
@@ -639,8 +533,7 @@ Sabremos que estamos teniendo éxito cuando:
 
 ![Empathy Mapping segmento2](img/EMConductor.png)
 
-## 2.4. Big Picture EventStorming
-## 2.5. Ubiquitous Language
+
 # Capítulo III: Requirements Specification
 ## 3.1. User Stories
 | User Story ID / Technical Story ID | Título                              | Descripción                                                  | Criterios de aceptación                                                            |
