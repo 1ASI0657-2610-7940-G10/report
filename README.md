@@ -618,9 +618,9 @@ Sabremos que estamos teniendo éxito cuando:
 
 **Segmento 1 y segmento 2:**
 
-(img/EMPasajero.png)
+![Empathy Mapping segmento1](../img/EMPasajero.png)
 
-(img/EMConductor.png)
+![Empathy Mapping segmento2](../img/EMConductor.png)
 
 ## 2.4. Big Picture EventStorming
 ## 2.5. Ubiquitous Language
