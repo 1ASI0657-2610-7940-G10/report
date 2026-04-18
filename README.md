@@ -615,6 +615,13 @@ Sabremos que estamos teniendo éxito cuando:
 
 ### 2.3.3. User Journey Mapping
 ### 2.3.4. Empathy Mapping
+
+**Segmento 1 y segmento 2:**
+
+(img/EMPasajero.png)
+
+(img/EMConductor.png)
+
 ## 2.4. Big Picture EventStorming
 ## 2.5. Ubiquitous Language
 # Capítulo III: Requirements Specification
@@ -688,6 +695,7 @@ Sabremos que estamos teniendo éxito cuando:
 | TS11 | Simulación de paraderos y localidades | Como desarrollador, quiero definir paraderos y localidades para representar puntos de embarque y desembarque | **Escenario 1: Paraderos visibles**<br>Dado que accedo a la Fake API,<br>Cuando consulto el endpoint de paraderos,<br>Entonces deben mostrarse correctamente con su localidad correspondiente. |
 
 ## 3.2. Impact Mapping
+
 
 **Segmento 1 y segmento 2:**
 
