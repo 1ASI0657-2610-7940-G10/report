@@ -246,7 +246,7 @@ ChapaTuRuta es un startup enfocado en desarrollar soluciones de software eficien
 
 | Foto | Información General |
 | :---: | :--- |
-| <img src="pending..." width="250" alt="Foto de Perfil"> | **Nombre y Apellidos:** <br> Nuñez Soto, Andy Arturo <br><br> **Código:** <br> U20231e795 <br><br> **Carrera:** <br> Ingeniería de Software <br><br> **Información:** <br> Soy una persona creativa y comprometida, lo que me permite enfrentar desafíos con determinación y encontrar soluciones efectivas. Voy a aportar mis habilidades al proyecto con el objetivo de alcanzar resultados exitosos. |
+| <img src="https://drive.google.com/uc?export=view&id=1Wtjq6fplduhNzflaOcK1Fjh5-w24X7Pv" width="250" alt="Foto de Perfil"> | **Nombre y Apellidos:** <br> Nuñez Soto, Andy Arturo <br><br> **Código:** <br> U20231e795 <br><br> **Carrera:** <br> Ingeniería de Software <br><br> **Información:** <br> Soy una persona creativa y comprometida, lo que me permite enfrentar desafíos con determinación y encontrar soluciones efectivas. Voy a aportar mis habilidades al proyecto con el objetivo de alcanzar resultados exitosos. |
 
 ## 1.2. Solution Profile
 
