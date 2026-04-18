@@ -589,6 +589,18 @@ Sabremos que estamos teniendo éxito cuando:
 6. ¿Dónde colocas tu celular mientras conduces y mediante qué canales digitales sueles comunicarte con otros compañeros de ruta?  
 
 ### 2.2.2. Registro de entrevistas
+#### Entrevista N°1 – Segmento 1
+![entrevista_segmento1](img/entrevista-adrian.jpg) 
+- Nombres: Juan
+- Apellidos: Pescoran
+- Edad: 19 años
+- Ciudad: Trujillo 
+- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- Duración: 00:08:46 minutos 
+- Resumen:<br>
+    Juan, un estudiante universitario de 19 años, comentó que en su experiencia los "jaladores" de colectivos suelen brindar información incorrecta sobre las rutas, lo que genera confusión. Actualmente, su método para abordar un colectivo consiste en preguntar directamente al conductor sobre el recorrido. Además, considera que sería muy útil poder planificar su viaje antes de salir, especialmente porque en Trujillo no existen paraderos formales. Finalmente, destacó que valoraría mucho un sistema confiable que le permita identificar qué colectivos lo pueden llevar a su destino de manera precisa.
+
+---
 ### 2.2.3. Análisis de entrevistas
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
