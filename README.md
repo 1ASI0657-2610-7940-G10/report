@@ -614,6 +614,11 @@ Sabremos que estamos teniendo éxito cuando:
 | Ajustar la ruta u horario según los momentos de mayor demanda |  | Baja / Media |  | Alta / Alta |
 
 ### 2.3.3. User Journey Mapping
+
+![Journey Mapping1](img/JM1.png)
+
+![Journey Mapping2](img/JM2.png)
+
 ### 2.3.4. Empathy Mapping
 
 **Segmento 1 y segmento 2:**
