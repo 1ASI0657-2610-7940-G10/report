@@ -533,9 +533,46 @@ Sabremos que estamos teniendo éxito cuando:
 
 ![Empathy Mapping segmento2](img/EMConductor.png)
 
+#### 2.3.4. As-is Scenario Mapping
+### AS - IS Scenario Mapping (Segmento: Pasajeros)
+| FASES             | Buscar ruta/colectivo                          | Planificar viaje                                      | Abordar colectivo                                  | Llegada a destino                                   |
+|------------------|------------------------------------------------|------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------|
+| **DOING**        | Preguntar a personas locales sobre rutas y paraderos disponibles. | No hay información clara sobre tarifas, horarios o puntos de embarque. | Llegar al paradero y esperar hasta que el colectivo llegue. | Confirmar llegada al destino mediante señales visuales. |
+| **THINKING**     | "No sé si estoy en la ruta correcta."          | "No tengo idea de cuánto me costará ni a qué hora llegaré." | "¿Será este el colectivo correcto?"                 | "¿Llegué al lugar adecuado?"                        |
+| **FEELING**      | Confusión, incertidumbre.                     | Ansiedad, falta de control.                          | Desconfianza, incomodidad.                         | Estrés, falta de información.                      |
+
+### AS - IS Scenario Mapping (Segmento: Conductores)
+| FASES             | Activar disponibilidad                        | Captar pasajeros                                      | Realizar recorrido                                  | Finalizar viaje                                    |
+|------------------|------------------------------------------------|------------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
+| **DOING**        | No hay plataforma para activar su disponibilidad. | Esperar en el paradero sin saber si hay pasajeros.    | Realizar el recorrido sin un control preciso de tiempo o pasajeros. | No hay seguimiento digital ni estadísticas sobre el viaje. |
+| **THINKING**     | "¿Habrá pasajeros para mi ruta hoy?"           | "¿Estarán los pasajeros listos cuando llegue?"        | "¿Voy a llegar a tiempo o hacer paradas innecesarias?" | "No tengo forma de saber si mi viaje fue rentable." |
+| **FEELING**      | Incertidumbre, frustración.                    | Inseguridad, desorganización.                         | Estrés, falta de control.                          | Desconcierto, falta de retroalimentación.          |
+
+
+
+
+
+
+
 
 # Capítulo III: Requirements Specification
-## 3.1. User Stories
+
+## 3.1 To-Be Scenario Mapping
+### To - be Scenario mapping (Segmento: Pasajeros)
+| FASES             | Buscar ruta/colectivo                        | Planificar viaje                                  | Abordar colectivo                                 | Llegada a destino                              |
+|------------------|----------------------------------------------|--------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| **DOING**        | Entro a la app y visualiza rutas y paraderos disponibles. | Consulto tarifas estimadas, horarios aproximados y puntos de embarque. | Llegue al paradero indicado con anticipación y aborda el vehículo. | Confirma llegada y califica al conductor en la app. |
+| **THINKING**     | "Ya no tengo que preguntar a nadie en la calle." | "Puedo calcular cuánto me costará y a qué hora llegaré." | "Estoy yendo al lugar correcto, sé quién me llevará." | "Fue un viaje tranquilo, todo estuvo bien organizado." |
+| **FEELING**      | Seguridad, autonomía.                         | Confianza, planificación.                        | Tranquilidad, menor ansiedad.                   | Satisfacción, gratitud.                        |
+
+### To - be Scenario mapping (Segmento: Conductores)
+| FASES             | Activar disponibilidad                       | Captar pasajeros                                 | Realizar recorrido                               | Finalizar viaje                                 |
+|------------------|----------------------------------------------|--------------------------------------------------|--------------------------------------------------|-------------------------------------------------|
+| **DOING**        | Abro la app y activo mi ruta habitual.       | Aparecen mis paraderos  con un tiempo de llegada estimado. | Recoge a los pasajeros y sigue la ruta habitual. | Marca el fin del viaje y visualiza estadísticas. |
+| **THINKING**     | "Estoy visible para más pasajeros hoy."      | "Ya tengo a quién recoger y sé dónde están."     | "Todo va según lo planeado, sin perder tiempo."  | "Ese viaje fue rentable y bien organizado."      |
+| **FEELING**      | Motivación, oportunidad.                     | Eficiencia, comodidad.                           | Control, foco.                                   | Logro, satisfacción.                            |
+
+## 3.2 User Stories
 | User Story ID / Technical Story ID | Título                              | Descripción                                                  | Criterios de aceptación                                                            |
 |---------------|-------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | US01          | Buscar rutas disponibles            | Como pasajero, quiero buscar rutas de colectivos cercanas para saber qué opciones tengo para movilizarme. | **Escenario 1: Búsqueda exitosa**<br/>Dado que soy un pasajero con acceso a la app,<br/>Cuando ingreso una ubicación de origen y destino,<br/>Entonces el sistema debe mostrarme las rutas de colectivos disponibles.<br/><br/>**Escenario 2: Sin resultados**<br/>Dado que no hay rutas activas entre los puntos seleccionados,<br/>Cuando realizo la búsqueda,<br/>Entonces el sistema debe indicarme que no hay resultados disponibles.<br/><br/> |
@@ -604,81 +641,80 @@ Sabremos que estamos teniendo éxito cuando:
 | TS10 | Simulación de regiones, provincias y distritos | Como desarrollador, quiero simular regiones, provincias y distritos para organizar las zonas de operación de los colectivos | **Escenario 1: Visualización correcta**<br>Dado que accedo a la Fake API,<br>Cuando consulto los endpoints de regiones, provincias y distritos,<br>Entonces deben listarse correctamente según la relación establecida. |
 | TS11 | Simulación de paraderos y localidades | Como desarrollador, quiero definir paraderos y localidades para representar puntos de embarque y desembarque | **Escenario 1: Paraderos visibles**<br>Dado que accedo a la Fake API,<br>Cuando consulto el endpoint de paraderos,<br>Entonces deben mostrarse correctamente con su localidad correspondiente. |
 
-## 3.2. Impact Mapping
+## 3.3. Impact Mapping
 
 
 **Segmento 1 y segmento 2:**
 
 ![Project management tool impact map](img/Impact-Mapping.jpg)
 
-## 3.3. Product Backlog
+## 3.4. Product Backlog
 
-| #Orden |   ID   | User Story                                            | Story Points |
-|:------|:------|:-----------------------------------------------------|:-------------|
-| 01    | US-01 | Ver información sobre la plataforma de transporte    | 3            |
-| 02    | US-02 | Consultar rutas disponibles                          | 5            |
-| 03    | US-03 | Ver horarios de colectivos en cada ruta               | 5            |
-| 04    | US-04 | Acceder a información sobre paraderos cercanos       | 4            |
-| 05    | US-05 | Filtrar rutas por ubicación o destino                 | 6            |
-| 06    | US-06 | Ver detalles de un colectivo en una ruta específica  | 4            |
-| 07    | US-07 | Crear y editar perfil de conductor                    | 6            |
-| 08    | US-08 | Ver historial de rutas recorridas por un colectivo    | 5            |
-| 09    | US-09 | Hacer una búsqueda de colectivos cercanos a mi ubicación | 6          |
-| 10    | US-10 | Enviar notificación sobre cambios en las rutas       | 4            |
-| 11    | US-11 | Calificar la experiencia con un colectivo            | 3            |
-| 12    | US-12 | Reportar un problema con un colectivo o ruta         | 5            |
-| 13		| US13 | Conocer las ventajas del servicio   | 2  |
-| 14		| US14 | Acceder a preguntas frecuentes (FAQ)| 2  |
-| 15		| US15 | Postular como colaborador           | 3  |
-| 16		| US16 | Registro de usuario    | 5  |
-| 17		| US17 | Inicio de sesión de usuario     | 3  |
-| 18		| US18 | Gestión de Rutas para Empresas      | 8  |
-| 19  |  US19	| Personalización de perfil de empresa 				| 2             |
-| 20  |  US20	| Navegación en toolbar (Inicio, Paraderos, Rutas)	| 3             |
-| 21  |  US21	| Ver resumen general en la página de inicio 		| 3             |
-| 22  |  US22	| Ver paraderos en la página de inicio  			| 5             |
-| 23  |  US23	| Gestión de paraderos (agregar, editar, eliminar)	| 3             |
-| 24  |  US24	| Filtrar paraderos por ubicación       			| 3             |
-| 25  |  US25	| Ver detalles completos de una ruta    			 |3			|  
-| 26 | US26 | Registro de usuario | 5 |
-| 27 | US27 | Iniciar sesión | 3 |
-| 28 | US28 | Cerrar sesión | 2 |
-| 29 | US29 | Editar perfil de usuario | 4 |
-| 30 | US30 | Registrar datos de empresa | 6 |
-| 31 | US31 | Editar información de empresa | 4 |
-| 32 | US32 | Crear paradero | 5 |
-| 33 | US33 | Ver lista de paraderos | 3 |
-| 34 | US34 | Editar paradero | 4 |
-| 35 | US35 | Eliminar paradero | 3 |
-| 36 | US36 | Crear ruta | 6 |
-| 37 | US37 | Ver lista de rutas | 3 |
-| 38 | US38 | Editar ruta | 5 |
-| 39 | US39 | Eliminar ruta | 3 |
-| 40 | US40 | Configurar horarios de ruta | 4 |
-| 41 | US41 | Filtrar rutas por ubicación | 6 |
-| 42 | US42 | Ver resultados de búsqueda | 4 |
-| 43 | US43 | Ver detalles de ruta | 3 |
-| 44 | US44 | Volver al listado | 2 |
-| 45 | US45 | Crear colección | 4 |
-| 46 | US46 | Ver mis colecciones | 3 |
-| 47 | US47 | Editar nombre de colección | 3 |
-| 48 | US48 | Eliminar colección | 2 |
-| 49 | US49 | Agregar ruta a colección | 4 |
-| 50 | US50 | Seleccionar colección para ruta | 3 |
-| 51 | US51 | Quitar ruta de colección | 3 |
-| 52 | US52 | Ver rutas de colección | 4 |
- **#Orden** |   **ID**   | **Technical Story**                        | **Story Points** |
-| 01     | TS-01 | Configuración de Fake API (JSON Server)       				| 3            |
-| 02     | TS-02 | Simulación de regiones, provincias y distritos				| 2            |
-| 03     | TS-03 | Simulación de paraderos y localidades         				| 2            |
-| 04     | TS-04 | Simulación de conductores y usuarios          				| 3            |
-| 05     | TS-05 | Simulación de rutas de colectivos             				| 3            |
-| 06     | TS-06 | Gestión de horarios de disponibilidad         				| 2            |
-| 07     | TS-07 | Relación entre rutas y paraderos              				| 2            |
-| 08     | TS-08 | Gestión de itinerarios para pasajeros         				| 3            |
-| 09     | TS-09 | Simulación de precios y tarifas               				| 2            |
-| 05 | TS-10 | Simulación de regiones, provincias y distritos | 2 |
-| 06 | TS-11 | Simulación de paraderos y localidades | 2 |
+| Orden | User Story Id | Título | Descripción | Story Points |
+|------|--------------|--------|-------------|--------------|
+| 1 | US01 | Buscar rutas disponibles | Como pasajero, quiero buscar rutas de colectivos cercanas para saber qué opciones tengo para movilizarme. | 5 |
+| 2 | US02 | Ver paraderos en el mapa | Como pasajero, quiero ver en un mapa los paraderos cercanos para saber dónde tomar el colectivo. | 8 |
+| 3 | US07 | Activar disponibilidad de ruta | Como conductor, quiero activar mi ruta disponible para que los pasajeros puedan verla. | 5 |
+| 4 | US08 | Recibir notificaciones de pasajeros | Como conductor, quiero recibir alertas cuando haya pasajeros interesados en mi ruta. | 5 |
+| 5 | US41 | Filtrar rutas por ubicación | Como viajero quiero filtrar por región, provincia, distrito y finalmente ciudad para poder ubicar las rutas que se encuentran en esa locación. | 3 |
+| 6 | US42 | Ver resultados de búsqueda | Como viajero quiero ver el resultado del filtro en forma de tarjetas resumidas, para comparar de un vistazo las opciones disponibles. | 3 |
+| 7 | US43 | Ver detalles de ruta | Como viajero quiero navegar a la página de detalle de la ruta para ver información completa. | 3 |
+| 8 | US24 | Filtrar paraderos por ubicación | Como viajero, quiero filtrar los paraderos por región, provincia, distrito y localidad, para encontrar las opciones más cercanas a mí. | 3 |
+| 9 | US25 | Ver detalles completos de una ruta | Como viajero, quiero ver detalles completos de una ruta seleccionada, para conocer la empresa, duración, tarifas y horarios. | 3 |
+| 10 | US44 | Volver al listado | Como viajero, quiero ver un botón "Volver al listado", para regresar fácilmente al listado de rutas sin perder los filtros. | 2 |
+| 11 | US03 | Ver información del conductor | Como pasajero, quiero ver información del conductor antes de abordar para mayor confianza. | 3 |
+| 12 | US09 | Ver demanda de rutas por horario | Como conductor, quiero ver los horarios con mayor demanda para decidir cuándo salir a trabajar. | 5 |
+| 13 | US18 | Gestión de Rutas para Empresas | Como empresa de transporte, quiero crear, editar y eliminar rutas, para mantener mi servicio actualizado. | 8 |
+| 14 | US36 | Crear ruta | Como gestor de la empresa de transporte, quiero crear una nueva ruta seleccionando dos paraderos existentes. | 5 |
+| 15 | US37 | Ver lista de rutas | Como gestor de la empresa de transporte, quiero ver la lista completa de rutas registradas para verificar qué trayectos ofrezco. | 3 |
+| 16 | US38 | Editar ruta | Como gestor de la empresa de transporte, quiero editar una ruta existente para ajustar tarifas o corregir errores en la ruta. | 3 |
+| 17 | US39 | Eliminar ruta | Como gestor de la empresa de transporte, quiero eliminar una ruta que ya no voy a operar. | 2 |
+| 18 | US40 | Configurar horarios de ruta | Como gestor de la empresa de transporte, quiero ingresar los horarios de atención en la que está disponible la ruta. | 3 |
+| 19 | US23 | Gestión de paraderos | Como empresa de transporte, quiero agregar, editar o eliminar paraderos, para mantener actualizada mi lista. | 8 |
+| 20 | US32 | Crear paradero | Como gestor de la empresa de transporte, quiero crear un nuevo paradero para poder agregarlo al sistema y asociarlo a una ruta. | 5 |
+| 21 | US33 | Ver lista de paraderos | Como gestor de la empresa de transporte, quiero ver la lista completa de paraderos registrados. | 3 |
+| 22 | US34 | Editar paradero | Como gestor de la empresa de transporte, quiero editar los datos de un paradero para mantener la información siempre actualizada. | 3 |
+| 23 | US35 | Eliminar paradero | Como gestor de la empresa de transporte, quiero eliminar un paradero que ya no esté en servicio. | 2 |
+| 24 | US21 | Ver resumen general en inicio | Como empresa de transporte, quiero ver un resumen general en la página de inicio (total paraderos, tarifa, etc.). | 5 |
+| 25 | US22 | Ver paraderos en inicio | Como empresa de transporte, quiero ver un listado de mis paraderos con su ubicación, para gestionarlos fácilmente. | 3 |
+| 26 | US20 | Navegación en toolbar | Como empresa de transporte, quiero navegar fácilmente entre inicio, paraderos y rutas, para gestionar mi servicio. | 2 |
+| 27 | TS01 | Configuración de Fake API | Como desarrollador, quiero configurar una Fake API usando JSON Server para simular datos y endpoints. | 5 |
+| 28 | TS02 | Simulación de regiones... | Como desarrollador, quiero simular regiones, provincias y distritos para organizar las zonas de operación. | 3 |
+| 29 | TS03 | Simulación de paraderos... | Como desarrollador, quiero definir paraderos y localidades para representar puntos de embarque y desembarque. | 3 |
+| 30 | TS04 | Simulación de usuarios | Como desarrollador, quiero crear entidades simuladas de conductores y pasajeros para pruebas de interacción en la app. | 3 |
+| 31 | TS05 | Simulación de rutas | Como desarrollador, quiero definir rutas simuladas que conecten paraderos, especificando precios y horarios. | 5 |
+| 32 | TS06 | Gestión de horarios... | Como desarrollador, quiero establecer horarios de salida de los colectivos para probar disponibilidad en la Fake API. | 3 |
+| 33 | TS07 | Relación rutas y paraderos | Como desarrollador, quiero definir la relación entre rutas y paraderos para reflejar su conexión real. | 5 |
+| 34 | TS08 | Gestión de itinerarios... | Como desarrollador, quiero permitir que los pasajeros creen itinerarios seleccionando rutas simuladas. | 5 |
+| 35 | TS09 | Simulación de precios | Como desarrollador, quiero definir precios variables para las rutas para probar diferentes escenarios de cobro. | 2 |
+| 36 | TS10 | Simulación de regiones... | Como desarrollador, quiero simular regiones, provincias y distritos para organizar las zonas de operación de los colectivos. | 2 |
+| 37 | TS11 | Simulación de paraderos... | Como desarrollador, quiero definir paraderos y localidades para representar puntos de embarque y desembarque. | 2 |
+| 38 | US04 | Calificar al conductor | Como pasajero, quiero calificar al conductor después del viaje para contribuir a la calidad del servicio. | 3 |
+| 39 | US05 | Ver historial de viajes | Como pasajero, quiero ver mis viajes anteriores para tener un registro de mis trayectos. | 3 |
+| 40 | US10 | Ver calificaciones... | Como conductor, quiero ver las calificaciones que me han dejado los pasajeros para mejorar mi servicio. | 3 |
+| 41 | US45 | Crear colección | Como viajero autenticado, quiero crear una nueva colección con un nombre descriptivo, para agrupar rutas. | 3 |
+| 42 | US46 | Ver mis colecciones | Como viajero autenticado, quiero ver la lista de mis colecciones existentes. | 2 |
+| 43 | US47 | Editar nombre de colección | Como viajero autenticado, quiero editar el nombre de una colección, para renombrarla. | 2 |
+| 44 | US48 | Eliminar colección | Como viajero autenticado, quiero eliminar una colección completa, para borrar agrupaciones que ya no uso. | 2 |
+| 45 | US49 | Agregar ruta a colección | Como viajero autenticado, quiero ver el botón "Agregar a colección" en la pantalla de detalle de ruta. | 3 |
+| 46 | US50 | Seleccionar colección... | Como viajero autenticado, quiero seleccionar la colección a la cual agregar la ruta. | 2 |
+| 47 | US51 | Quitar ruta de colección | Como viajero autenticado, quiero quitar una ruta de una colección. | 2 |
+| 48 | US52 | Ver rutas de colección | Como viajero autenticado, quiero entrar a una colección específica y ver la lista de rutas guardadas. | 3 |
+| 49 | US11 | Explorar desde la Landing | Como visitante, quiero explorar paraderos disponibles desde la Landing Page sin necesidad de registrarme. | 5 |
+| 50 | US12 | Consultar cómo funciona | Como visitante, quiero entender cómo funciona el servicio para saber cómo usarlo antes de registrarme. | 2 |
+| 51 | US13 | Conocer las ventajas | Como visitante, quiero conocer las ventajas de usar la plataforma para decidirme a utilizarla. | 2 |
+| 52 | US14 | Acceder a FAQ | Como visitante, quiero resolver mis dudas rápidamente leyendo preguntas frecuentes. | 2 |
+| 53 | US15 | Postular como colaborador | Como visitante, quiero tener una opción para colaborar con la plataforma. | 3 |
+| 54 | US06 | Registrarse como conductor | Como conductor, quiero registrarme en la plataforma para ofrecer mi servicio de colectivo. | 5 |
+| 55 | US16 | Registro de usuario | Como usuario, quiero registrarme en la plataforma, para poder gestionar mis paraderos y rutas. | 5 |
+| 56 | US26 | Registro de usuario (Plataforma) | Como usuario de la plataforma de transporte quiero registrarme para poder iniciar sesión. | 5 |
+| 57 | US17 | Inicio de sesión de usuario | Como usuario, quiero iniciar sesión en la plataforma, para gestionar mis paraderos y rutas. | 3 |
+| 58 | US27 | Iniciar sesión | Como usuario de la plataforma quiero poder iniciar sesión para tener acceso a la plataforma. | 3 |
+| 59 | US28 | Cerrar sesión | Como usuario de la plataforma quiero poder salir de la sesión iniciada para ya no estar más en ella. | 2 |
+| 60 | US29 | Editar perfil de usuario | Como usuario de la plataforma me gustaría poder editar mi perfil para mantener actualizado mis datos. | 3 |
+| 61 | US30 | Registrar datos de empresa | Como gestor de la empresa de transporte quiero registrar los datos generales de mi compañía tras el primer inicio de sesión. | 5 |
+| 62 | US31 | Editar información de empresa | Como gestor de la empresa de transporte, quiero editar la información de la empresa que manejo, para mantenerla actualizada. | 3 |
+| 63 | US19 | Personalización de perfil | Como empresa de transporte, quiero subir el logo de mi empresa y especificar su nombre, para que los pasajeros me identifiquen. | 3 |
 
 # Capítulo IV: Solution Software Design
 ## 4.1. Strategic-Level Domain-Driven Design
