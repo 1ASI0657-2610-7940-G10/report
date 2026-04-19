@@ -503,8 +503,8 @@ Sabremos que estamos teniendo éxito cuando:
 #### Entrevista N°2 – Segmento Conductores
 ![entrevista_conductor](img/EC.png)  
 
-- **Nombres:** Luis  
-- **Apellidos:** Torres  
+- **Nombres:** Andy  
+- **Apellidos:** Pillaca Torres  
 - **Edad:** 26 años  
 - **Ciudad:** Lima  
 - **URL Entrevista:** https://drive.google.com/file/d/1so5df0ySYQIBXWjm7smSaWyOXd0-n51H/view?usp=sharing
