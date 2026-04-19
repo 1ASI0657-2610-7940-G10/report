@@ -500,6 +500,21 @@ Sabremos que estamos teniendo éxito cuando:
 - Resumen:<br>
     Juan, un estudiante universitario de 19 años, comentó que en su experiencia los "jaladores" de colectivos suelen brindar información incorrecta sobre las rutas, lo que genera confusión. Actualmente, su método para abordar un colectivo consiste en preguntar directamente al conductor sobre el recorrido. Además, considera que sería muy útil poder planificar su viaje antes de salir, especialmente porque en Trujillo no existen paraderos formales. Finalmente, destacó que valoraría mucho un sistema confiable que le permita identificar qué colectivos lo pueden llevar a su destino de manera precisa.
 
+#### Entrevista N°2 – Segmento Conductores
+![entrevista_conductor](img/EC.png)  
+
+- **Nombres:** Luis  
+- **Apellidos:** Torres  
+- **Edad:** 26 años  
+- **Ciudad:** Lima  
+- **URL Entrevista:** https://drive.google.com/file/d/1so5df0ySYQIBXWjm7smSaWyOXd0-n51H/view?usp=sharing
+- **Duración:** 00:04:30 minutos  
+
+- **Resumen:**  
+Luis, conductor de 26 años con varios años de experiencia en transporte urbano informal, comenta que su jornada inicia desde temprano y depende en gran medida de identificar dónde hay pasajeros durante el día. Señala que suele detenerse en paraderos conocidos o donde observa personas esperando, basándose principalmente en su experiencia, aunque reconoce que muchas veces esto implica incertidumbre. Indica que uno de sus principales problemas es no saber con anticipación dónde hay mayor demanda, lo que le hace perder tiempo y combustible, especialmente cuando hay tráfico o mucha competencia en la ruta. En cuanto al uso de tecnología, menciona que utiliza el celular de forma rápida y prefiere aplicaciones simples, con botones grandes y sin pasos innecesarios. Considera útil poder avisar su llegada a paraderos mediante una acción rápida, siempre que no lo distraiga. Finalmente, destaca que usaría una herramienta de forma constante si le ayuda a ubicar pasajeros con mayor precisión y optimizar sus recorridos diarios.
+
+
+
 ---
 ### 2.2.3. Análisis de entrevistas
 ## 2.3. Needfinding
