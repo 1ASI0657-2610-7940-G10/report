@@ -490,7 +490,7 @@ Sabremos que estamos teniendo éxito cuando:
 
 ### 2.2.2. Registro de entrevistas
 #### Entrevista N°1 – Segmento 1
-![entrevista_segmento1](img/entrevista-adrian.jpg) 
+![entrevista_segmento1](img/entrevista1_s1.jpg) 
 - Nombres: Juan
 - Apellidos: Pescoran
 - Edad: 19 años
@@ -516,6 +516,22 @@ Mauri, conductor de 26 años con varios años de experiencia en transporte urban
 
 
 ---
+
+#### Entrevista N°1 – Segmento 2
+![entrevista_segmento2](img/entrevista1_s2.jpg) 
+
+- Nombres: Sebastian
+- Apellidos: Rodriguez Macedo
+- Eda: 23 años
+- Ciudad: Lima
+- URL Entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQCiYQ4UaesKQKGHwmrssM8mAU0A970vEi49uwUr2PLSAvk?e=zSdjNy
+- Duración: 00:04:05
+- Resumen: <br>
+Sebastián, conductor de transporte público de 23 años en Lima, comentó que decide sus paradas según la demanda visible de pasajeros y busca optimizar el tiempo de ruta para maximizar sus ganancias, enfrentando desafíos como el tráfico y la competencia. Usa frecuentemente su celular (iPhone 12) y aplicaciones como WhatsApp para coordinar con otros conductores. Señaló que adoptaría una app como “Chapa tu ruta” siempre que sea intuitiva, rápida y le brinde beneficios concretos, como llenar el bus más eficientemente. Además, consideró viable interactuar con la app durante su jornada, siempre que no interfiera con sus tareas, destacando la importancia de una herramienta práctica que mejore la comunicación y eficiencia en el servicio.
+
+
+
+
 ### 2.2.3. Análisis de entrevistas
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
