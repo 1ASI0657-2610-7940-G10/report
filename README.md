@@ -495,7 +495,7 @@ Sabremos que estamos teniendo éxito cuando:
 - Apellidos: Pescoran
 - Edad: 19 años
 - Ciudad: Trujillo 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: [https://tinyurl.com/EntrevistasFROCK-WEB](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210334_upc_edu_pe/IQDmKhDwDPoXRLfgfO2TN7WUAY3faiAEIsTOpvBFYOC8LGU?e=VhUb6a&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 - Duración: 00:08:46 minutos 
 - Resumen:<br>
     Juan, un estudiante universitario de 19 años, comentó que en su experiencia los "jaladores" de colectivos suelen brindar información incorrecta sobre las rutas, lo que genera confusión. Actualmente, su método para abordar un colectivo consiste en preguntar directamente al conductor sobre el recorrido. Además, considera que sería muy útil poder planificar su viaje antes de salir, especialmente porque en Trujillo no existen paraderos formales. Finalmente, destacó que valoraría mucho un sistema confiable que le permita identificar qué colectivos lo pueden llevar a su destino de manera precisa.
