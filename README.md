@@ -831,11 +831,59 @@ Estas entidades contienen atributos que describen sus propiedades y, además, pu
 - **Gestión de roles y permisos:** Implementar un sistema que asigne permisos según el rol del usuario, restringiendo el acceso a funcionalidades específicas.
 
 ### 4.2 Architectural Drivers
-#### 4.1.8 Design Purpose
-#### 4.1.9 Primary Functionality (Primary User Stories)
-#### 4.1.10 Quality Attribute Scenarios
-#### 4.1.11 Constraints
-#### 4.1.12 Architectural Concerns
+
+#### 4.2.1 Design Purpose
+
+El objetivo principal de la arquitectura de **Frock** es definir una base tecnológica sólida que permita administrar rutas de transporte de forma eficiente, confiable y segura. Este diseño busca optimizar el rendimiento del sistema, garantizar su disponibilidad continua y ofrecer tiempos de respuesta adecuados frente a múltiples solicitudes.
+
+Además, la arquitectura está pensada para adaptarse al crecimiento del sistema, permitiendo incrementar el número de usuarios y operaciones sin afectar su funcionamiento. También se considera fundamental la integración con servicios externos y la evolución progresiva del sistema, asegurando la integridad y exactitud de los datos manejados.
+
+---
+
+#### 4.2.1.1 Primary Functionality (Primary User Stories)
+
+A continuación, se describen las funcionalidades clave que influyen directamente en las decisiones de diseño arquitectónico:
+
+##### **US01 – Consulta de rutas disponibles**
+El sistema permitirá a los usuarios visualizar rutas disponibles mediante filtros como ubicación, fecha o tipo de servicio. Para ello, será necesario implementar mecanismos eficientes de consulta y gestión de datos que soporten múltiples solicitudes simultáneas.
+
+##### **US07 – Habilitación de rutas**
+Los usuarios con permisos específicos podrán activar rutas dentro del sistema para que estén disponibles para su consulta. Esta funcionalidad requiere control de accesos, consistencia en la información y actualización inmediata de los datos.
+
+##### **US18 – Administración de rutas empresariales**
+Los administradores tendrán la capacidad de gestionar y asignar rutas a clientes corporativos. Esto implica manejar distintos niveles de acceso, segmentación de información y soporte para diferentes tipos de usuarios.
+
+---
+
+#### 4.2.1.2 Quality Attribute Scenarios
+
+##### **QA01 – Rendimiento**
+El sistema deberá responder a múltiples solicitudes concurrentes en un tiempo menor a 2 segundos en la mayoría de los casos bajo condiciones normales de operación.
+
+##### **QA02 – Disponibilidad**
+Se espera que la plataforma mantenga un nivel de disponibilidad del 99.9%, asegurando el acceso continuo mediante mecanismos de tolerancia a fallos y redundancia.
+
+##### **QA03 – Exactitud**
+La información presentada al usuario, especialmente las rutas, debe ser confiable, manteniendo un margen de error mínimo en los datos procesados.
+
+---
+
+#### 4.2.1.3 Constraints
+
+- **CON-1:** El sistema debe soportar una alta cantidad de usuarios concurrentes, utilizando técnicas de escalabilidad y distribución de carga.  
+- **CON-2:** Se empleará MySQL como sistema de base de datos, optimizado para consultas rápidas, uso de índices y replicación de información.  
+- **CON-3:** La conexión con servicios externos deberá realizarse mediante APIs seguras, cumpliendo estándares como PCI DSS en el caso de plataformas de pago.  
+- **CON-4:** Se deben respetar las normativas de protección de datos vigentes, incluyendo GDPR y la legislación peruana, garantizando la seguridad de la información sensible.  
+
+---
+
+#### 4.2.1.4 Architectural Concerns
+
+- **CRN-1:** Implementar mecanismos de seguridad que incluyan cifrado de datos, autenticación robusta y monitoreo continuo del sistema.  
+- **CRN-2:** Diseñar la arquitectura para soportar alta demanda mediante escalabilidad y balanceo de carga dinámico.  
+- **CRN-3:** Adoptar un enfoque modular o basado en microservicios que facilite el mantenimiento y la evolución del sistema.  
+- **CRN-4:** Mantener una adecuada organización interna con bajo acoplamiento y alta cohesión entre componentes.  
+- **CRN-5:** Establecer control de acceso mediante roles y permisos, incluyendo auditoría de acciones dentro del sistema.  
 
 ### 4.3 ADD Iterations
 #### 4.2.X Iteration N: <Iteration Name>
