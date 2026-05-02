@@ -807,7 +807,7 @@ Los esquemas de contenedores ilustran las distintas partes que conforman el sist
 Diagrama container:
 
 <p align="center">
-  <img src="./img/Container_diagram.png" alt="Container Diagram">
+  <img src="./img/conteiners_diagram.png" alt="Container Diagram">
 </p>
 
 #### 4.1.5 Relational / Non-Relational Database Diagram
@@ -818,37 +818,57 @@ Diagrama container:
 
 #### 4.1.6 Design Patterns
 
-### Patrón Facade (Fachada)
+Para asegurar una arquitectura **mantenible**, **escalable** y alineada con los principios de diseño establecidos, UrbanFlow implementa los siguientes patrones tácticos y arquitectónicos:
 
-Es un patrón de diseño de tipo conductual que define una relación de dependencia de uno a muchos entre objetos. Bajo este enfoque, cuando un objeto cambia su estado, comunica automáticamente dicho cambio a todos los objetos que dependen de él. Resulta especialmente útil en sistemas donde es necesario que las modificaciones en un componente se reflejen en otros, evitando un acoplamiento directo entre ellos mediante el uso de notificaciones.
+---
 
-Este patrón permite que tanto el objeto principal como sus observadores puedan evolucionar de manera independiente, sin generar impactos mutuos. Asimismo, brinda flexibilidad al sistema, ya que posibilita agregar o eliminar observadores en tiempo de ejecución, adaptándose a necesidades dinámicas.
+## **Patrones Arquitectónicos**
 
-<p align="center">
-  <img src="./img/Facade.png" alt="Patron Facade">
-</p>
+- **API Gateway**
+  - Se implementa como **fachada única** para la aplicación móvil.
+  - Centraliza el **enrutamiento de peticiones** hacia los microservicios:
+    - Identity
+    - Routing
+    - Tracking
+  - Maneja la **validación de seguridad** (tokens JWT).
+  - Abstrae la complejidad del backend para los clientes.
 
-### Patrón Observador
+- **CQRS (Command Query Responsibility Segregation)**
+  - Crucial para el rendimiento del microservicio de Tracking.
+  - Separa:
+    - **Command (escritura)** → usado por conductores para enviar *Check-ins*.
+    - **Query (lectura)** → usado por pasajeros para consultar ETAs.
+  - Utiliza una **caché optimizada (Redis)** para mejorar el rendimiento en lecturas masivas.
 
-Es un patrón de diseño conductual que define una relación de dependencia de tipo uno a muchos entre distintos objetos. En este esquema, cuando un objeto modifica su estado, informa automáticamente a todos aquellos que dependen de él.
+- **Publish-Subscribe (Orientado a Eventos)**
+  - Implementado mediante un **Message Broker (RabbitMQ)**.
+  - Permite la **comunicación asíncrona** entre servicios.
+  - Flujo:
+    - Se registra un *Check-in*.
+    - El servicio de Tracking publica un evento.
+    - El evento es consumido en segundo plano.
+    - Se disparan **notificaciones Push** (Firebase).
+  - Evita bloqueos en la interfaz del conductor.
 
-Se utiliza en sistemas donde los cambios en un componente deben propagarse a otros, evitando un acoplamiento directo gracias al uso de mecanismos de notificación. Esto permite que tanto el objeto principal como los dependientes puedan modificarse de forma independiente sin generar impactos entre sí.
+---
 
-Adicionalmente, el patrón proporciona flexibilidad, ya que permite incorporar o remover observadores durante la ejecución, facilitando la adaptación a cambios dinámicos del sistema.
+## **Patrones Tácticos (Domain-Driven Design)**
 
-<p align="center">
-  <img src="./img/Observer.png" alt="Patrón Observador">
-</p>
+- **Patrón Entidad**
+  - Modela objetos con una **identidad única y persistente** en el tiempo.
+  - Ejemplos:
+    - Usuarios
+    - Vehículos
+    - Rutas
+  - Se identifican mediante **UUIDs**.
+  - Permiten trazabilidad entre distintos **Bounded Contexts**.
 
-### Patrón Identidad
-El Patrón de Identidad tiene como finalidad administrar y representar entidades únicas dentro de un sistema mediante la asignación de un identificador irrepetible, como un ID o UUID, lo que permite mantener su consistencia a lo largo de toda la aplicación. Este patrón resulta especialmente útil en contextos donde es necesario distinguir de manera inequívoca múltiples instancias de un mismo tipo de objeto.
-
-Su aplicación contribuye a la coherencia del sistema, asegurando que cada objeto sea tratado de forma uniforme en los distintos componentes. Asimismo, favorece la eficiencia operativa al facilitar procesos como la búsqueda, almacenamiento y recuperación de objetos, especialmente en entornos con uso de caché o arquitecturas distribuidas.
-
-### Patrón de Entidad
-El Patrón de Entidad se utiliza para modelar y gestionar objetos que representan elementos del dominio dentro de un sistema. Una entidad se caracteriza por poseer una identidad única y persistente, lo que permite diferenciarla claramente de otros objetos.
-
-Estas entidades contienen atributos que describen sus propiedades y, además, pueden incorporar comportamientos asociados a su lógica de negocio. Este patrón es ampliamente utilizado en sistemas donde la persistencia y administración de datos son fundamentales, como en bases de datos relacionales y plataformas de gestión de información.
+- **Patrón Objeto de Valor**
+  - Modela atributos **inmutables** sin identidad propia.
+  - Se comparan por **valor**, no por identidad.
+  - Ejemplo:
+    - CoordenadasGPS
+  - Si dos objetos tienen la misma latitud y longitud, representan exactamente la **misma ubicación**.
 
 #### 4.1.7 Tactics
 
