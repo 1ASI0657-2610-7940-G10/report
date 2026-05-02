@@ -762,7 +762,7 @@ Adicionalmente, se plantea una evolución progresiva desde una arquitectura mono
 #### 4.1.3 Context Diagram
 
 <p align="center">
-  <img src="./img/Context_diagram.jpeg" alt="Principle statements">
+  <img src="./img/Context_diagram.jpeg" alt="Context statements">
 </p>
 
 #### 4.1.4 Approach Driven ViewPoints Diagrams
@@ -770,7 +770,7 @@ Los esquemas de contenedores ilustran las distintas partes que conforman el sist
 Diagrama container:
 
 <p align="center">
-  <img src="./img/Container_diagram.jpeg" alt="Database Diagram">
+  <img src="./img/Container_diagram.jpeg" alt="Container Diagram">
 </p>
 
 #### 4.1.5 Relational / Non-Relational Database Diagram
@@ -782,6 +782,21 @@ Diagrama container:
 #### 4.1.6 Design Patterns
 #### 4.1.7 Tactics
 
+### Usabilidad
+- **Prototipos y wireframes:** Emplear herramientas de diseño como Figma o Adobe XD para crear prototipos y esquemas visuales antes de desarrollar completamente las funcionalidades.
+- **Guía de estilos y consistencia:** Definir una guía de diseño que incluya tipografías, colores y componentes reutilizables para asegurar uniformidad en toda la aplicación.
+
+### Disponibilidad
+- **Monitoreo en tiempo real y alertas:** Implementar soluciones que permitan detectar fallas o degradaciones del sistema de forma inmediata, facilitando una respuesta rápida ante incidentes.
+- **Compatibilidad multiplataforma:** Asegurar el correcto funcionamiento en los navegadores más utilizados (Chrome, Firefox, Edge y Safari) para garantizar el acceso continuo de los usuarios.
+- **Clustering:** Utilizar clústeres de servidores que permitan distribuir la carga y mantener el servicio activo ante la caída de alguno de ellos.
+- **Monitoreo proactivo:** Integrar herramientas como New Relic o Datadog para anticipar problemas y mitigarlos antes de que impacten a los usuarios.
+
+### Seguridad
+- **Cifrado de datos:** Proteger la información mediante encriptación tanto en tránsito como en reposo, especialmente datos sensibles como transacciones y perfiles.
+- **Control de acceso y roles:** Establecer mecanismos que limiten las acciones críticas únicamente a usuarios autorizados.
+- **Gestión de roles y permisos:** Implementar un sistema que asigne permisos según el rol del usuario, restringiendo el acceso a funcionalidades específicas.
+- 
 ### 4.2 Architectural Drivers
 #### 4.1.8 Design Purpose
 #### 4.1.9 Primary Functionality (Primary User Stories)
