@@ -778,9 +778,23 @@ De acuerdo con la visión de negocio necesitamos proveer de previsibilidad en el
 
 
 #### 4.1.2 Approaches Statements Architectural Styles & Patterns
-Se adoptó Domain-Driven Design (DDD) como enfoque de desarrollo debido a las ventajas que ofrece en la construcción de soluciones alineadas con el negocio. Este enfoque fomenta el uso de un lenguaje ubicuo compartido entre desarrolladores y expertos del dominio, lo que facilita la comunicación y asegura una mejor comprensión de los requerimientos. Asimismo, la segmentación del sistema en bounded contexts permite controlar la complejidad de manera estructurada, asegurando que cada parte del sistema responda de forma precisa a necesidades específicas del dominio.
 
-Adicionalmente, se plantea una evolución progresiva desde una arquitectura monolítica hacia un enfoque basado en microservicios, siguiendo lineamientos compatibles con DDD. Esta estrategia contribuye a mejorar la escalabilidad y mantenibilidad del sistema. La definición de contextos delimitados permite desacoplar funcionalidades y organizar el dominio de forma eficiente. En complemento, la adopción de Clean Architecture garantiza una adecuada separación de responsabilidades, favoreciendo un código más claro, modular y preparado para cambios futuros.
+#### Approaches Statements (Enfoques de Desarrollo)
+
+- Se ha adoptado Domain-Driven Design (DDD) como el enfoque principal para abordar la complejidad del tema del negocio. Este enfoque nos permite alinear el desarrollo de software con las reglas de negocio de un ecosistema que carece de estandarización.
+
+#### Architectural Styles (Estilos Arquitectónicos)
+
+- **Arquitectura de Microservicios:** Para complir con los requerimientos del producto y escalabilidad se necesita de una arquitectura basada en microservicios. Esta decisión permite aislar el microservicio de Tracking del de Routing.
+
+- **Arquitectura Hexagonal:** Para cada microservicio se usarán puertos y adaptadores. el core se mantendrá aislado pues toda comunicacion con las bases de datos serán atra vés de iknterfaces
+
+#### Architectural Patterns
+
+- **Patron CQRS:** el suo de este patrón ayudará a separar las consultas (miles de cosnultas del ETA) de la escritura la cual será menor (check-in)
+
+- **API gateway:** Ayudaraá a la validación y comunicación con microservicios.
+
 
 #### 4.1.3 Context Diagram
 
