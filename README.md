@@ -799,7 +799,7 @@ De acuerdo con la visión de negocio necesitamos proveer de previsibilidad en el
 #### 4.1.3 Context Diagram
 
 <p align="center">
-  <img src="./img/Context_diagram.png" alt="Context statements">
+  <img src="./img/context_diagram.png" alt="Context statements">
 </p>
 
 #### 4.1.4 Approach Driven ViewPoints Diagrams
