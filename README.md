@@ -747,97 +747,28 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | 62 | US31 | Editar información de empresa | Como gestor de la empresa de transporte, quiero editar la información de la empresa que manejo, para mantenerla actualizada. | 3 |
 | 63 | US19 | Personalización de perfil | Como empresa de transporte, quiero subir el logo de mi empresa y especificar su nombre, para que los pasajeros me identifiquen. | 3 |
 
-# Capítulo IV: Solution Software Design
-## 4.1. Strategic-Level Domain-Driven Design
-### 4.1.1. Design-Level EventStorming
-#### 4.1.1.1 Candidate Context Discovery
-#### 4.1.1.2. Domain Message Flows Modeling
-#### 4.1.1.3. Bounded Context Canvases
-### 4.1.2. Context Mapping
-### 4.1.3. Software Architecture
-#### 4.1.3.1. Software Architecture System Landscape Diagram
-#### 4.1.3.2. Software Architecture Context Level Diagrams
-#### 4.1.3.2. Software Architecture Container Level Diagrams
-#### 4.1.3.3. Software Architecture Deployment Diagrams
-## 4.2. Tactical-Level Domain-Driven Design
-### 4.2.1. Bounded Context: Identity and Access Management
-#### 4.2.1.1. Domain Layer
-#### 4.2.1.2. Interface Layer
-#### 4.2.1.3. Application Layer
-#### 4.2.1.4. Infrastructure Layer
-#### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
-#### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
-##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.1.6.2. Bounded Context Database Design Diagram
-### 4.2.2. Bounded Context: Subscriptions and Billing
-#### 4.2.2.1. Domain Layer
-#### 4.2.2.2. Interface Layer
-#### 4.2.2.3. Application Layer
-#### 4.2.2.4. Infrastructure Layer
-#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
-#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
-#### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
-#### 4.2.2.6.2. Bounded Context Database Design Diagram
-### 4.2.3. Bounded Context: Alerts & Resolution
-#### 4.2.3.1. Domain Layer
-#### 4.2.3.2. Interface Layer
-#### 4.2.3.3. Application Layer
-#### 4.2.3.4. Infrastructure Layer
-#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
-#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
-##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.3.6.2. Bounded Context Database Design Diagram
-### 4.2.4. Bounded Context: Real-Time Monitoring
-#### 4.2.4.1. Domain Layer.
-#### 4.2.4.2. Interface Layer.
-#### 4.2.4.3. Application Layer.
-#### 4.2.4.4. Infrastructure Layer.
-#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
-#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
-##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.4.6.2. Bounded Context Database Design Diagram
-### 4.2.5. Bounded Context: Trip management
-#### 4.2.5.1. Domain Layer.
-#### 4.2.5.2. Interface Layer.
-#### 4.2.5.3. Application Layer.
-#### 4.2.5.4. Infrastructure Layer.
-#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams.
-#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams.
-##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams.
-##### 4.2.5.6.2. Bounded Context Database Design Diagram.
-### 4.2.6. Bounded Context: Fleet Management
-#### 4.2.6.1. Domain Layer
-#### 4.2.6.2. Interface Layer
-#### 4.2.6.3. Application Layer
-#### 4.2.6.4. Infrastructure Layer
-#### 4.2.6.5. Bounded Context Software Architecture Component Level Diagrams.
-#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams.
-##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams.
-##### 4.2.5.6.2. Bounded Context Database Design Diagram.
-### 4.2.7. Bounded Context: Profile and Preferences Management
-#### 4.2.7.1. Domain Layer.
-#### 4.2.7.2. Interface Layer.
-#### 4.2.7.3. Application Layer.
-#### 4.2.7.4. Infrastructure Layer.
-#### 4.2.7.5. Bounded Context Software Architecture Component Level Diagrams.
-#### 4.2.7.6. Bounded Context Software Architecture Code Level Diagrams.
-##### 4.2.7.6.1. Bounded Context Domain Layer Class Diagrams.
-##### 4.2.7.6.2. Bounded Context Database Design Diagram
-### 4.2.8. Bounded Context: Visualization Analytics
-#### 4.2.8.1. Domain Layer
-#### 4.2.8.2. Interface Layer
-#### 4.2.8.3. Application Layer
-#### 4.2.8.4. Infrastructure Layer
-#### 4.2.8.5. Bounded Context Software Architecture Component Level Diagrams
-#### 4.2.8.6. Bounded Context Software Architecture Code Level Diagrams
-##### 4.2.8.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.8.6.2. Bounded Context Database Design Diagram
-### 4.2.9. Bounded Context: Merchant
-#### 4.2.9.1. Domain Layer
-#### 4.2.9.2. Interface Layer
-#### 4.2.9.3. Application Layer
-#### 4.2.9.4. Infrastructure Layer
-#### 4.2.9.5. Bounded Context Software Architecture Component Level Diagrams
-#### 4.2.9.6. Bounded Context Software Architecture Code Level Diagrams
-##### 4.2.9.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.9.6.2. Bounded Context Database Design Diagram
+### 4.1 Design Concepts, ViewPoints & ER Diagrams
+#### 4.1.1 Principles Statements
+#### 4.1.2 Approaches Statements Architectural Styles & Patterns
+#### 4.1.3 Context Diagram
+#### 4.1.4 Approach Driven ViewPoints Diagrams
+#### 4.1.5 Relational / Non-Relational Database Diagram
+#### 4.1.6 Design Patterns
+#### 4.1.7 Tactics
+
+### 4.2 Architectural Drivers
+#### 4.1.8 Design Purpose
+#### 4.1.9 Primary Functionality (Primary User Stories)
+#### 4.1.10 Quality Attribute Scenarios
+#### 4.1.11 Constraints
+#### 4.1.12 Architectural Concerns
+
+### 4.3 ADD Iterations
+#### 4.2.X Iteration N: <Iteration Name>
+##### 4.2.X.1 Architectural Design Backlog N
+##### 4.2.X.2 Establish Iteration Goal by Selecting Drivers
+##### 4.2.X.3 Choose One or More Elements of the System to Refine
+##### 4.2.X.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+##### 4.2.X.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+##### 4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions
+##### 4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
