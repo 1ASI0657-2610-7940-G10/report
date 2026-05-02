@@ -756,12 +756,13 @@ El enfoque de diseño de software se fundamenta en principios sólidos que asegu
 
 #### 4.1.2 Approaches Statements Architectural Styles & Patterns
 Se adoptó Domain-Driven Design (DDD) como enfoque de desarrollo debido a las ventajas que ofrece en la construcción de soluciones alineadas con el negocio. Este enfoque fomenta el uso de un lenguaje ubicuo compartido entre desarrolladores y expertos del dominio, lo que facilita la comunicación y asegura una mejor comprensión de los requerimientos. Asimismo, la segmentación del sistema en bounded contexts permite controlar la complejidad de manera estructurada, asegurando que cada parte del sistema responda de forma precisa a necesidades específicas del dominio.
+
 Adicionalmente, se plantea una evolución progresiva desde una arquitectura monolítica hacia un enfoque basado en microservicios, siguiendo lineamientos compatibles con DDD. Esta estrategia contribuye a mejorar la escalabilidad y mantenibilidad del sistema. La definición de contextos delimitados permite desacoplar funcionalidades y organizar el dominio de forma eficiente. En complemento, la adopción de Clean Architecture garantiza una adecuada separación de responsabilidades, favoreciendo un código más claro, modular y preparado para cambios futuros.
 
 #### 4.1.3 Context Diagram
 
 <p align="center">
-  <img src="./img/Context_diagram.jpeg" alt="Context statements">
+  <img src="./img/Context_diagram.png" alt="Context statements">
 </p>
 
 #### 4.1.4 Approach Driven ViewPoints Diagrams
@@ -779,6 +780,39 @@ Diagrama container:
 </p>
 
 #### 4.1.6 Design Patterns
+
+### Patrón Facade (Fachada)
+
+Es un patrón de diseño de tipo conductual que define una relación de dependencia de uno a muchos entre objetos. Bajo este enfoque, cuando un objeto cambia su estado, comunica automáticamente dicho cambio a todos los objetos que dependen de él. Resulta especialmente útil en sistemas donde es necesario que las modificaciones en un componente se reflejen en otros, evitando un acoplamiento directo entre ellos mediante el uso de notificaciones.
+
+Este patrón permite que tanto el objeto principal como sus observadores puedan evolucionar de manera independiente, sin generar impactos mutuos. Asimismo, brinda flexibilidad al sistema, ya que posibilita agregar o eliminar observadores en tiempo de ejecución, adaptándose a necesidades dinámicas.
+
+<p align="center">
+  <img src="./img/Facade.png" alt="Patron Facade">
+</p>
+
+### Patrón Observador
+
+Es un patrón de diseño conductual que define una relación de dependencia de tipo uno a muchos entre distintos objetos. En este esquema, cuando un objeto modifica su estado, informa automáticamente a todos aquellos que dependen de él.
+
+Se utiliza en sistemas donde los cambios en un componente deben propagarse a otros, evitando un acoplamiento directo gracias al uso de mecanismos de notificación. Esto permite que tanto el objeto principal como los dependientes puedan modificarse de forma independiente sin generar impactos entre sí.
+
+Adicionalmente, el patrón proporciona flexibilidad, ya que permite incorporar o remover observadores durante la ejecución, facilitando la adaptación a cambios dinámicos del sistema.
+
+<p align="center">
+  <img src="./img/Observer.png" alt="Patrón Observador">
+</p>
+
+### Patrón Identidad
+El Patrón de Identidad tiene como finalidad administrar y representar entidades únicas dentro de un sistema mediante la asignación de un identificador irrepetible, como un ID o UUID, lo que permite mantener su consistencia a lo largo de toda la aplicación. Este patrón resulta especialmente útil en contextos donde es necesario distinguir de manera inequívoca múltiples instancias de un mismo tipo de objeto.
+
+Su aplicación contribuye a la coherencia del sistema, asegurando que cada objeto sea tratado de forma uniforme en los distintos componentes. Asimismo, favorece la eficiencia operativa al facilitar procesos como la búsqueda, almacenamiento y recuperación de objetos, especialmente en entornos con uso de caché o arquitecturas distribuidas.
+
+### Patrón de Entidad
+El Patrón de Entidad se utiliza para modelar y gestionar objetos que representan elementos del dominio dentro de un sistema. Una entidad se caracteriza por poseer una identidad única y persistente, lo que permite diferenciarla claramente de otros objetos.
+
+Estas entidades contienen atributos que describen sus propiedades y, además, pueden incorporar comportamientos asociados a su lógica de negocio. Este patrón es ampliamente utilizado en sistemas donde la persistencia y administración de datos son fundamentales, como en bases de datos relacionales y plataformas de gestión de información.
+
 #### 4.1.7 Tactics
 
 ### Usabilidad
@@ -795,7 +829,7 @@ Diagrama container:
 - **Cifrado de datos:** Proteger la información mediante encriptación tanto en tránsito como en reposo, especialmente datos sensibles como transacciones y perfiles.
 - **Control de acceso y roles:** Establecer mecanismos que limiten las acciones críticas únicamente a usuarios autorizados.
 - **Gestión de roles y permisos:** Implementar un sistema que asigne permisos según el rol del usuario, restringiendo el acceso a funcionalidades específicas.
-- 
+
 ### 4.2 Architectural Drivers
 #### 4.1.8 Design Purpose
 #### 4.1.9 Primary Functionality (Primary User Stories)
