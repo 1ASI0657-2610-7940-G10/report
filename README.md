@@ -751,7 +751,7 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 El enfoque de diseño de software se fundamenta en principios sólidos que aseguran la calidad y mantenibilidad del sistema. Se utilizó Domain Driven Design (DDD) para alinear el modelo con una comprensión detallada del dominio empresarial, lo que permite escalar y desarrollar software de manera eficiente, enfocado en las necesidades del negocio. También se incorporó los principios SOLID para garantizar la creación de código limpio y robusto durante todo el ciclo de desarrollo. Conceptos como el Principio de Responsabilidad Única y el Principio de Inversión de Dependencia son esenciales en nuestra metodología.
 
 <p align="center">
-  <img src="./img/statements.jpeg" alt="Principle statements" width="850">
+  <img src="./img/statements.jpeg" alt="Principle statements">
 </p>
 
 #### 4.1.2 Approaches Statements Architectural Styles & Patterns
@@ -770,13 +770,13 @@ Los esquemas de contenedores ilustran las distintas partes que conforman el sist
 Diagrama container:
 
 <p align="center">
-  <img src="./img/Container_diagram.jpeg" alt="Container Diagram">
+  <img src="./img/Container_diagram.png" alt="Container Diagram">
 </p>
 
 #### 4.1.5 Relational / Non-Relational Database Diagram
 
 <p align="center">
-  <img src="./img/Database_diagram.jpeg" alt="Database Diagram">
+  <img src="./img/Database_diagram.png" alt="Database Diagram">
 </p>
 
 #### 4.1.6 Design Patterns
