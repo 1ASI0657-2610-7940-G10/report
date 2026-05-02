@@ -1,5 +1,4 @@
-<img width="862" height="430" alt="image" src="https://github.com/user-attachments/assets/c4a33359-c0f5-4fb7-aa71-6430292d8959" /><div style="text-align: center">
-  <p align="center">
+<p align="center">
     <br />
     <img
       src="https://www.upc.edu.pe/static/img/logo_upc_red.png"
