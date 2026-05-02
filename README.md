@@ -748,11 +748,34 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 
 ### 4.1 Design Concepts, ViewPoints & ER Diagrams
 #### 4.1.1 Principles Statements
-El enfoque de diseño de software se fundamenta en principios sólidos que aseguran la calidad y mantenibilidad del sistema. Se utilizó Domain Driven Design (DDD) para alinear el modelo con una comprensión detallada del dominio empresarial, lo que permite escalar y desarrollar software de manera eficiente, enfocado en las necesidades del negocio. También se incorporó los principios SOLID para garantizar la creación de código limpio y robusto durante todo el ciclo de desarrollo. Conceptos como el Principio de Responsabilidad Única y el Principio de Inversión de Dependencia son esenciales en nuestra metodología.
+De acuerdo con la visión de negocio necesitamos proveer de previsibilidad en el transporte interurbano bajo diferentes situaciones y realizando una revisión arquitectónica podemos decir que se encuentra orientada al uso de microservicios en la nube:
 
-<p align="center">
-  <img src="./img/statements.jpeg" alt="Principle statements">
-</p>
+#### Llamadas asincrónicas sobre las sincrónicas
+
+- Debido a que los conductores operan en distintos lugares y no siempre puede haber una cobertura o una estabilidad de red permanente si la aplicacion dependiera de llamadas sincrónicas la interfaz se bloquearía al esperar la respuesta del servidor por lo que invalidaría completamente la propuesta  solución que ofrecemos.
+
+- Se priorizará el asincronismo mediante el envío de eventos en segundo plano (background sync). Cuando el conductor presiona "Llegué al paradero", el evento se encola localmente y se transmite de forma asíncrona al backend tan pronto como haya red.
+
+#### Desacoplamiento de por contextos de dominio
+
+- El sistema debe manejar por separado los datos que se actualizan constantemente como la ubicación por gps, check-ins, ETAs; de datos más estáticos pues mezclarlos generaría latencias y cuellos de botella.
+
+- Las responsabilidades se separan usando el concepto de DDD. ningun microservicio debería compartir base de datos con otro. Si el módulo de pasajeros necesita validar la información de un conductor, no hará consultas SQL directas a la base de datos de usuarios, sino que se comunicará mediante APIs, asegurando que cada módulo pueda escalar o modificarse de forma aislada.
+
+#### Diseño para el fallo y recuperación
+
+- En una arquitectura distribuidad, fallos de red, caídas de servidores es inevitable por lo que no podemos permitirnos una caída general.
+
+- Si el microservicio pierde conexión, la aplicación móvil de los pasajeros seguirá funcionando, mostrando la última ubicación almacenada en la memoria caché o permitiendo acceder al mapa estático de paraderos del microservicio de Routing.
+
+#### Arquitectura optimizada para la lectura
+
+- La proporcion de tipos de usuarios es asimétrica. Existirá una cantidad mínima de conductores en comparación a los pasajeros los cuales estarán consultando constantemente la ubicación
+
+- el diseño arquitctónico priorizará la velocidad de lectora sobre la escritura. Las ubicaciones de los buses se mantendrá en memoria (Redis) para garantizar qu elas consultas no tengan latencia.
+
+
+
 
 #### 4.1.2 Approaches Statements Architectural Styles & Patterns
 Se adoptó Domain-Driven Design (DDD) como enfoque de desarrollo debido a las ventajas que ofrece en la construcción de soluciones alineadas con el negocio. Este enfoque fomenta el uso de un lenguaje ubicuo compartido entre desarrolladores y expertos del dominio, lo que facilita la comunicación y asegura una mejor comprensión de los requerimientos. Asimismo, la segmentación del sistema en bounded contexts permite controlar la complejidad de manera estructurada, asegurando que cada parte del sistema responda de forma precisa a necesidades específicas del dominio.
