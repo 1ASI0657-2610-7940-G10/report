@@ -1,4 +1,4 @@
-<div style="text-align: center">
+<img width="862" height="430" alt="image" src="https://github.com/user-attachments/assets/c4a33359-c0f5-4fb7-aa71-6430292d8959" /><div style="text-align: center">
   <p align="center">
     <br />
     <img
@@ -756,9 +756,29 @@ El enfoque de diseño de software se fundamenta en principios sólidos que asegu
 </p>
 
 #### 4.1.2 Approaches Statements Architectural Styles & Patterns
+Se adoptó Domain-Driven Design (DDD) como enfoque de desarrollo debido a las ventajas que ofrece en la construcción de soluciones alineadas con el negocio. Este enfoque fomenta el uso de un lenguaje ubicuo compartido entre desarrolladores y expertos del dominio, lo que facilita la comunicación y asegura una mejor comprensión de los requerimientos. Asimismo, la segmentación del sistema en bounded contexts permite controlar la complejidad de manera estructurada, asegurando que cada parte del sistema responda de forma precisa a necesidades específicas del dominio.
+Adicionalmente, se plantea una evolución progresiva desde una arquitectura monolítica hacia un enfoque basado en microservicios, siguiendo lineamientos compatibles con DDD. Esta estrategia contribuye a mejorar la escalabilidad y mantenibilidad del sistema. La definición de contextos delimitados permite desacoplar funcionalidades y organizar el dominio de forma eficiente. En complemento, la adopción de Clean Architecture garantiza una adecuada separación de responsabilidades, favoreciendo un código más claro, modular y preparado para cambios futuros.
+
 #### 4.1.3 Context Diagram
+
+<p align="center">
+  <img src="./img/Context_diagram.jpeg" alt="Principle statements">
+</p>
+
 #### 4.1.4 Approach Driven ViewPoints Diagrams
+Los esquemas de contenedores ilustran las distintas partes que conforman el sistema, tales como aplicaciones en línea, bases de datos, microservicios y la forma en que interactúan entre ellos. Estos esquemas ofrecen una panorámica detallada de la arquitectura del sistema, resaltando las obligaciones de cada contenedor y sus relaciones entre sí.
+Diagrama container:
+
+<p align="center">
+  <img src="./img/Container_diagram.jpeg" alt="Database Diagram">
+</p>
+
 #### 4.1.5 Relational / Non-Relational Database Diagram
+
+<p align="center">
+  <img src="./img/Database_diagram.jpeg" alt="Database Diagram">
+</p>
+
 #### 4.1.6 Design Patterns
 #### 4.1.7 Tactics
 
