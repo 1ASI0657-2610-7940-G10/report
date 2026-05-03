@@ -933,7 +933,7 @@ Para asegurar una arquitectura **mantenible**, **escalable** y alineada con los 
 
 ---
 
-## **4. Usabilidad**
+#### **4. Usabilidad**
 
 - **Descripción**
   - El sistema debe ser **simple e intuitivo**, especialmente para conductores.
@@ -947,12 +947,185 @@ Para asegurar una arquitectura **mantenible**, **escalable** y alineada con los 
   - **Feedback del Sistema**
     - Confirmación visual y sonora al registrar acciones.
     - Asegura que el usuario entienda el estado sin esfuerzo.
-### 4.2 Architectural Drivers
-#### 4.1.8 Design Purpose
-#### 4.1.9 Primary Functionality (Primary User Stories)
-#### 4.1.10 Quality Attribute Scenarios
-#### 4.1.11 Constraints
-#### 4.1.12 Architectural Concerns
+
+### **4.2 Architectural Drivers**
+
+- **Descripción**
+  - No todos los requerimientos tienen el mismo peso en el diseño.
+  - Los **Drivers Arquitectónicos** son el subconjunto crítico que influye directamente en la arquitectura.
+  - Incluyen:
+    - Requerimientos funcionales clave
+    - Atributos de calidad
+    - Restricciones técnicas
+
+---
+
+#### **4.2.1 Design Purpose**
+
+- **Descripción**
+  - Establecer una base sólida para UrbanFlow que garantice:
+    - **Alta disponibilidad**
+    - **Baja latencia** en la entrega de información
+  - Mantener una **experiencia simple** para los conductores.
+
+- **Objetivos del Diseño**
+  - Guiar la transición de:
+    - Monolito → **Microservicios en la nube**
+  - Asegurar coherencia con:
+    - **Patrones tácticos (DDD)**
+    - **Patrones arquitectónicos (CQRS, Arquitectura Hexagonal)**
+
+---
+
+#### **4.2.3 Primary Functionality (Primary User Stories)**
+
+- **Descripción**
+  - Son los **drivers funcionales** que definen la arquitectura.
+  - Justifican el uso de:
+    - Microservicios
+    - Bases de datos separadas
+
+- **Funcionalidades Clave**
+
+  - **Consulta masiva y concurrente de ETAs (US01, US02)**
+    - Miles de pasajeros consultando simultáneamente.
+    - Implica:
+      - Uso de **CQRS**
+      - Caché en memoria (**Redis**)
+    - Enfocado en alto rendimiento en lecturas.
+
+  - **Reporte asíncrono de ubicación / Check-in (US07, US08)**
+    - Conductores enviando datos en zonas con baja conectividad.
+    - Implica:
+      - Arquitectura **orientada a eventos**
+      - Uso de **RabbitMQ**
+    - Permite procesamiento en segundo plano sin bloquear la app.
+
+  - **Gestión estática del mapa y transbordos (US41, US43)**
+    - Cálculo de rutas y combinaciones.
+    - Implica:
+      - Modelo **relacional estructurado**
+      - Uso de **PostgreSQL**
+      - Microservicio independiente (**Routing Service**)
+
+#### **4.2.4 Quality Attribute Scenarios — ChapaTuRuta**
+
+Los siguientes escenarios permiten evaluar atributos de calidad como **escalabilidad**, **confiabilidad**, **rendimiento** y **usabilidad**.
+
+---
+
+#### **Escenario 1: Escalabilidad (Scalability)**
+
+| **Componente**            | **Descripción** |
+|--------------------------|----------------|
+| **Fuente de Estímulo**   | Múltiples pasajeros usando la app concurrentemente |
+| **Estímulo**             | Consultas simultáneas de ETA en hora pico (7:00–8:00 a.m.) |
+| **Medioambiente**        | Sistema bajo carga máxima |
+| **Artefacto Estimulado** | Microservicio de Tracking & ETA + Redis |
+| **Respuesta**            | Lectura desde caché sin impactar la BD |
+| **Medida de Respuesta**  | 95% < 200 ms, CPU < 70% |
+
+---
+
+#### **Escenario 2: Confiabilidad (Reliability)**
+
+| **Componente**            | **Descripción** |
+|--------------------------|----------------|
+| **Fuente de Estímulo**   | Entorno de red del conductor |
+| **Estímulo**             | Pérdida de conexión al enviar Check-in |
+| **Medioambiente**        | Zona con baja cobertura |
+| **Artefacto Estimulado** | App móvil + Tracking Service |
+| **Respuesta**            | Almacenamiento local + reintento + modo degradado |
+| **Medida de Respuesta**  | 0% pérdida de eventos, 0 crashes |
+
+---
+
+#### **Escenario 3: Rendimiento (Performance)**
+
+| **Componente**            | **Descripción** |
+|--------------------------|----------------|
+| **Fuente de Estímulo**   | Sistema interno (nuevo Check-in) |
+| **Estímulo**             | Nueva ubicación → recalcular ETA + notificar |
+| **Medioambiente**        | Operación normal |
+| **Artefacto Estimulado** | Sistema ETA + RabbitMQ |
+| **Respuesta**            | Procesamiento asíncrono + actualización en Redis |
+| **Medida de Respuesta**  | ETA < 50 ms, respuesta < 1 s |
+
+---
+
+#### **Escenario 4: Usabilidad (Usability)**
+
+| **Componente**            | **Descripción** |
+|--------------------------|----------------|
+| **Fuente de Estímulo**   | Conductor |
+| **Estímulo**             | Registrar llegada a paradero |
+| **Medioambiente**        | Conducción con atención limitada |
+| **Artefacto Estimulado** | UI de la app |
+| **Respuesta**            | Botón One-Tap + feedback inmediato |
+| **Medida de Respuesta**  | Interacción < 1.5 s |
+
+
+
+
+
+
+
+#### **4.2.5 Constraints**
+
+- **Descripción**
+  - Son restricciones **no negociables** que guían el diseño del sistema.
+  - Definen límites técnicos, económicos y de entorno.
+
+- **Restricciones**
+
+  - **CON-01 (Económica / Infraestructura)**
+    - Uso exclusivo de **Free Tier** en la nube.
+    - Ejemplos:
+      - AWS (t2.micro)
+      - MongoDB Atlas M0
+      - Redis gratuito
+    - Objetivo: mantener **costo cero** en fase académica.
+
+  - **CON-02 (Tecnológica)**
+    - Backend:
+      - **Java + Spring Boot**
+    - Base de datos:
+      - **PostgreSQL**
+    - Alineado con lineamientos del curso.
+
+  - **CON-03 (Entorno / Cliente)**
+    - Compatibilidad con:
+      - **Android de gama media-baja**
+      - Versiones antiguas del sistema operativo
+    - Considera limitaciones reales del usuario final.
+
+---
+
+#### **4.2.6 Architectural Concerns**
+
+- **Descripción**
+  - Son riesgos o aspectos críticos que pueden impactar la arquitectura.
+  - Deben ser **gestionados activamente**.
+
+- **Preocupaciones**
+
+  - **Consistencia de Datos Distribuida**
+    - Riesgo de inconsistencia entre microservicios.
+    - **Solución:**
+      - Uso de eventos con **RabbitMQ**
+      - Aplicación de **consistencia eventual**
+
+  - **Complejidad Operativa**
+    - Mayor complejidad frente a un monolito.
+    - **Solución:**
+      - Uso de **API Gateway**
+      - Contenerización con **Docker**
+
+  - **Seguridad en Endpoints Públicos**
+    - Riesgo de uso malicioso (Check-ins falsos).
+    - **Solución:**
+      - Autenticación con **JWT**
+      - Validación centralizada en el **API Gateway**
 
 ### 4.3 ADD Iterations
 #### 4.2.X Iteration N: <Iteration Name>
