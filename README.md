@@ -897,63 +897,63 @@ La información presentada al usuario, especialmente las rutas, debe ser confiab
 
 ###### Analysis of Current Design
 
-En la presente iteración, el diseño arquitectónico del sistema **ChapatuRuta** ha sido definido a un nivel inicial, estableciendo una estructura basada en una arquitectura de tipo cliente-servidor compuesta por un frontend web, un backend de servicios y una base de datos. Esta aproximación permite separar responsabilidades, facilitando la mantenibilidad y la evolución progresiva del sistema.
+En esta iteración, la arquitectura del sistema **ChapatuRuta** se ha definido a nivel preliminar, adoptando un enfoque cliente-servidor compuesto por una interfaz web (frontend), un conjunto de servicios (backend) y una base de datos. Esta organización permite distribuir responsabilidades entre componentes, facilitando tanto el mantenimiento como la evolución futura del sistema.
 
-Asimismo, se han identificado y priorizado historias de usuario clave (**US01–US09**), las cuales representan las funcionalidades esenciales tanto para pasajeros como para conductores. Estas historias constituyen los principales impulsores (*drivers*) del diseño, ya que determinan la necesidad de soportar consultas eficientes de rutas, gestión de disponibilidad y visualización de información relevante en tiempo real.
+De igual manera, se han identificado y priorizado un conjunto de historias de usuario (**US01–US09**) que representan las funcionalidades esenciales del sistema para los distintos tipos de usuarios. Estas historias actúan como impulsores del diseño arquitectónico, ya que establecen la necesidad de implementar consultas eficientes, gestión dinámica de disponibilidad y visualización de información en tiempo real.
 
-Adicionalmente, se ha considerado la integración conceptual de servicios de geolocalización y la gestión de perfiles de conductores. Esta decisión responde a la necesidad de mejorar la confiabilidad del sistema, permitiendo a los usuarios tomar decisiones informadas en función de la ubicación y características del servicio ofrecido.
+Además, se ha contemplado la incorporación de servicios de geolocalización y la administración de perfiles de conductores. Esto responde a la necesidad de aumentar la confiabilidad del sistema, permitiendo que los usuarios dispongan de información relevante para la toma de decisiones.
 
 ---
 
 ###### Fortalezas identificadas
 
-- El diseño propuesto aborda de manera directa los principales problemas del dominio, tales como la identificación de rutas disponibles, la localización de paraderos, la disponibilidad del servicio y la percepción de seguridad por parte del usuario.  
-- Se ha priorizado la usabilidad mediante una interfaz simple y accesible, evitando la obligatoriedad de registro en etapas iniciales, lo cual reduce la fricción de entrada y favorece la adopción en contextos con limitaciones de alfabetización digital.  
-- La estructuración del backlog en historias de usuario bien definidas permite una gestión ágil del desarrollo, facilitando la planificación iterativa y la asignación de responsabilidades dentro del equipo.  
-- La separación inicial de componentes (frontend, backend y base de datos) constituye una base adecuada para futuras decisiones de escalabilidad y modularización del sistema.  
+- La propuesta arquitectónica responde de forma directa a los principales retos del dominio, como la detección de rutas disponibles, la ubicación de paraderos, la disponibilidad del servicio y la percepción de seguridad por parte del usuario.  
+- Se ha puesto énfasis en la facilidad de uso mediante una interfaz intuitiva y accesible, evitando la obligatoriedad de registro en fases iniciales, lo que disminuye la barrera de entrada y favorece la adopción del sistema.  
+- La organización del backlog en historias de usuario claramente definidas permite una gestión ágil del desarrollo, facilitando la planificación iterativa y la distribución de tareas dentro del equipo.  
+- La separación de componentes principales (frontend, backend y base de datos) establece una base sólida para futuras mejoras relacionadas con escalabilidad y modularidad.  
 
 ---
 
 ###### Debilidades y aspectos pendientes
 
-- La interacción entre los componentes internos del sistema aún no ha sido completamente definida, particularmente en lo que respecta a la comunicación entre el backend, la base de datos y servicios externos como APIs de geolocalización.  
-- El diseño actual no incorpora de manera explícita mecanismos de escalabilidad, lo que representa un riesgo ante un incremento significativo en la cantidad de usuarios concurrentes.  
-- Los aspectos de seguridad han sido considerados de forma general, pero requieren una definición más detallada, especialmente en lo relacionado con autenticación, autorización y validación de la identidad de los conductores.  
-- No se han establecido aún criterios claros para el manejo de errores, tolerancia a fallos ni recuperación ante incidentes, lo cual es relevante para garantizar la disponibilidad del sistema.  
+- Aún no se ha definido con precisión la interacción entre los distintos componentes del sistema, especialmente en lo relacionado con la comunicación entre el backend, la base de datos y servicios externos como APIs de geolocalización.  
+- El diseño actual no contempla explícitamente mecanismos de escalabilidad, lo cual podría representar un problema ante un aumento significativo de usuarios concurrentes.  
+- Los aspectos de seguridad han sido considerados de manera general, pero requieren mayor detalle, particularmente en temas de autenticación, autorización y validación de identidad de los conductores.  
+- No se han establecido criterios claros para el manejo de errores, tolerancia a fallos ni estrategias de recuperación, elementos clave para asegurar la continuidad del servicio.  
 
 ---
 
 ###### Enfoque para la siguiente iteración
 
-En la siguiente iteración, el equipo deberá centrarse en el refinamiento del diseño arquitectónico, abordando los siguientes aspectos:
+En la próxima iteración, el equipo deberá enfocarse en mejorar y detallar la arquitectura del sistema considerando los siguientes puntos:
 
-- Definir de manera precisa los componentes del sistema, sus responsabilidades, dependencias e interfaces de comunicación.  
-- Incorporar mecanismos de seguridad más robustos, incluyendo autenticación de usuarios, validación de datos y protección de información sensible.  
-- Evaluar estrategias de escalabilidad, tales como el uso de balanceo de carga o partición de servicios, en función de los escenarios de crecimiento esperados.  
-- Desarrollar prototipos navegables que permitan validar la experiencia de usuario y realizar ajustes antes de la implementación completa del sistema.  
+- Especificar con claridad los componentes del sistema, sus responsabilidades, relaciones e interfaces de comunicación.  
+- Fortalecer los mecanismos de seguridad, incluyendo autenticación de usuarios, validación de datos y protección de información sensible.  
+- Analizar e implementar estrategias de escalabilidad, como balanceo de carga o distribución de servicios, de acuerdo con los escenarios de crecimiento previstos.  
+- Construir prototipos funcionales que permitan validar la experiencia de usuario antes de avanzar hacia la implementación completa.  
 
 ---
 
 ###### Review Iteration Goal
 
-El objetivo principal de esta iteración fue refinar la arquitectura inicial del sistema, asegurando que los principales *drivers* de calidad —tales como la usabilidad, accesibilidad y generación de confianza— estén adecuadamente reflejados en las decisiones de diseño adoptadas.
+El propósito de esta iteración fue optimizar la arquitectura inicial del sistema, asegurando que los principales atributos de calidad —como la usabilidad, la accesibilidad y la confianza del usuario— se reflejen adecuadamente en las decisiones de diseño adoptadas.
 
 ---
 
 ###### Resultados obtenidos
 
-- Se elaboraron representaciones preliminares del sistema mediante diagramas **C4** y **UML**, lo cual permitió visualizar la estructura general del sistema y sus principales componentes.  
-- Se identificaron y priorizaron drivers arquitectónicos clave, incluyendo la simplicidad de uso, la visibilidad de la información y la confiabilidad percibida por el usuario.  
-- Se documentaron decisiones de diseño relevantes orientadas a la flexibilidad del sistema, facilitando su evolución y adaptación a futuros requerimientos.  
-- Se logró una alineación inicial entre los requerimientos funcionales y los atributos de calidad definidos, estableciendo una base coherente para el diseño arquitectónico.  
+- Se desarrollaron diagramas iniciales utilizando modelos **C4** y **UML**, lo que permitió comprender la estructura general del sistema y la relación entre sus componentes.  
+- Se definieron y priorizaron los principales impulsores arquitectónicos, destacando la facilidad de uso, la claridad de la información y la confiabilidad percibida por los usuarios.  
+- Se documentaron decisiones clave orientadas a garantizar la flexibilidad del sistema, facilitando su adaptación a futuros requerimientos.  
+- Se logró una alineación inicial entre los requerimientos funcionales y los atributos de calidad, estableciendo una base coherente para el diseño arquitectónico.  
 
 ---
 
 ###### Evaluación del objetivo
 
-El objetivo de la iteración se considera alcanzado en un nivel satisfactorio, dado que se ha logrado consolidar una visión clara de la arquitectura del sistema y de los principales factores que la condicionan. No obstante, el nivel de detalle alcanzado aún es de carácter conceptual, por lo que resulta necesario avanzar hacia una especificación técnica más precisa en iteraciones posteriores.
+Se considera que el objetivo de la iteración ha sido alcanzado de manera satisfactoria, ya que se ha logrado establecer una visión clara de la arquitectura y de los factores que influyen en su diseño. Sin embargo, el nivel de detalle alcanzado sigue siendo conceptual, por lo que será necesario profundizar en aspectos técnicos en futuras iteraciones.
 
-En particular, será fundamental profundizar en la definición de interfaces, protocolos de comunicación, mecanismos de seguridad y estrategias de escalabilidad, así como validar las decisiones de diseño mediante prototipos más elaborados.
+En este sentido, será fundamental avanzar en la definición de interfaces, protocolos de comunicación, mecanismos de seguridad y estrategias de escalabilidad, además de validar las decisiones mediante prototipos más desarrollados.
 
 ---
 
@@ -961,8 +961,8 @@ En particular, será fundamental profundizar en la definición de interfaces, pr
 
 | To Do | In Progress | Done |
 |------|------------|------|
-| US05 – Ver historial de viajes | US02 – Ver paraderos en el mapa | US01 – Buscar rutas disponibles |
-| US06 – Registro de conductores | US08 – Recibir notificaciones de pasajeros | US03 – Ver información del conductor |
-| US09 – Ver demanda de rutas |  | US04 – Calificar al conductor |
-| Mejora de seguridad básica |  | Bocetos C4 & UML |
-| Refinar integración con API de mapas |  | Documentación de drivers de calidad |
+| US05 – Ver historial de viajes | US02 – Visualizar paraderos en el mapa | US01 – Consultar rutas disponibles |
+| US06 – Registro de conductores | US08 – Notificaciones a pasajeros | US03 – Información del conductor |
+| US09 – Análisis de demanda de rutas |  | US04 – Evaluación del conductor |
+| Mejora de seguridad inicial |  | Diagramas C4 & UML |
+| Optimización de integración con API de mapas |  | Documentación de drivers de calidad |
