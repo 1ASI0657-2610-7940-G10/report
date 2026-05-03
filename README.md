@@ -886,14 +886,45 @@ La información presentada al usuario, especialmente las rutas, debe ser confiab
 - **CRN-5:** Establecer control de acceso mediante roles y permisos, incluyendo auditoría de acciones dentro del sistema.  
 
 ### 4.3 ADD Iterations
-#### 4.2.X Iteration N: <Iteration Name>
-##### 4.2.X.1 Architectural Design Backlog N
-##### 4.2.X.2 Establish Iteration Goal by Selecting Drivers
-##### 4.2.X.3 Choose One or More Elements of the System to Refine
-##### 4.2.X.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
-##### 4.2.X.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
-##### 4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions
-##### 4.2.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+#### 4.3.X Iteration N: <Iteration Name>
+##### 4.3.X.1 Architectural Design Backlog N
+##### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
+
+El objetivo principal de esta primera iteración es refinar la arquitectura inicial del sistema **ChapatuRuta**, enfocándose en la consolidación de las funcionalidades críticas relacionadas con la consulta de rutas, visualización de paraderos y gestión de disponibilidad por parte de los conductores.
+
+Esta iteración está guiada por drivers arquitectónicos prioritarios como la **usabilidad**, el **rendimiento** y la **disponibilidad**, los cuales responden directamente a las características del contexto de uso del sistema. En particular, se considera que los usuarios objetivo —pasajeros y conductores de transporte informal— utilizan dispositivos móviles de gama media o baja, con conectividad limitada, lo que exige una solución ligera, eficiente y de fácil interacción.
+
+Asimismo, se busca garantizar una experiencia de usuario intuitiva que minimice la fricción de uso, especialmente en conductores con baja adaptación tecnológica, quienes requieren interfaces simples y de rápida ejecución. De igual forma, el sistema debe ser capaz de responder de manera ágil a múltiples consultas de rutas, asegurando tiempos de respuesta adecuados incluso en escenarios de alta concurrencia.
+
+En este sentido, la iteración no solo se orienta a validar funcionalidades, sino también a establecer una base arquitectónica coherente que permita soportar el crecimiento del sistema y la incorporación de nuevas capacidades en futuras iteraciones.
+
+---
+
+##### 4.3.1.3 Choose One or More Elements of the System to Refine
+
+En esta iteración, se han seleccionado los siguientes elementos del sistema para su refinamiento, debido a su impacto directo en los drivers arquitectónicos definidos y en la experiencia de los usuarios finales:
+
+| Decisiones | Justificación |
+|-----------|--------------|
+| **Interfaz de Usuario (Frontend)** | La interfaz de usuario es el principal punto de interacción para pasajeros y conductores, por lo que debe ser altamente intuitiva, accesible y eficiente. Dado que los usuarios operan en contextos de movilidad constante y con limitaciones tecnológicas, es fundamental optimizar la navegación, reducir la cantidad de pasos necesarios para realizar acciones y garantizar tiempos de carga rápidos. |
+| **API RESTful (Backend)** | La API constituye el núcleo funcional del sistema, encargándose de procesar solicitudes relacionadas con la búsqueda de rutas, filtrado por ubicación, disponibilidad de conductores y gestión de datos. Su refinamiento es esencial para garantizar la eficiencia en el procesamiento de consultas, la consistencia de la información y la correcta integración con servicios externos como APIs de geolocalización. |
+
+---
+
+##### 4.3.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+
+Con el objetivo de satisfacer los drivers arquitectónicos identificados, se han adoptado los siguientes conceptos de diseño:
+
+| Decisiones | Justificación |
+|-----------|--------------|
+| **Desarrollo de la interfaz de usuario utilizando Vue.js** | Vue.js permite la construcción de interfaces basadas en componentes reutilizables, facilitando el mantenimiento y la escalabilidad del sistema. Su enfoque progresivo resulta adecuado para el desarrollo incremental del proyecto, mientras que su eficiencia contribuye a mejorar el rendimiento en dispositivos con recursos limitados. |
+| **Desarrollo de la API RESTful utilizando .NET** | El uso de .NET permite desarrollar servicios robustos, seguros y de alto rendimiento, capaces de manejar múltiples solicitudes concurrentes. Además, facilita la implementación de buenas prácticas, control de acceso y gestión eficiente de datos. |
+| **Aplicación de diseño responsive (Responsive Design)** | El diseño responsive permite adaptar la interfaz a distintos tamaños de pantalla, garantizando una experiencia de usuario consistente tanto en dispositivos móviles como en equipos de escritorio. |
+| **Integración con servicios de geolocalización (Mapas)** | La incorporación de APIs de geolocalización permite visualizar rutas y paraderos en tiempo real, mejorando la toma de decisiones y aportando mayor claridad al usuario. |
+| **Arquitectura cliente-servidor desacoplada** | La separación entre frontend, backend y base de datos permite reducir el acoplamiento entre componentes, facilitando el mantenimiento, la escalabilidad y la evolución del sistema. |
+##### 4.3.X.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+##### 4.3.X.6 Sketch Views (C4 & UML) and Record Design Decisions
+##### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
 ###### Analysis of Current Design
 
