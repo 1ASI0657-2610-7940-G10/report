@@ -1127,12 +1127,217 @@ Los siguientes escenarios permiten evaluar atributos de calidad como **escalabil
       - Autenticación con **JWT**
       - Validación centralizada en el **API Gateway**
 
-### 4.3 ADD Iterations
-#### 4.2.X Iteration N: <Iteration Name>
-##### 4.2.X.1 Architectural Design Backlog N
-##### 4.2.X.2 Establish Iteration Goal by Selecting Drivers
-##### 4.2.X.3 Choose One or More Elements of the System to Refine
-##### 4.2.X.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
-##### 4.2.X.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
-##### 4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions
-##### 4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+### **4.3 ADD Iterations — ChapaTuRuta**
+
+En esta sección se aplica el método **Attribute-Driven Design (ADD)** para diseñar la arquitectura en iteraciones, abordando los drivers arquitectónicos y mitigando riesgos.
+
+---
+
+#### **4.3.1 Iteration 1: Estructura Macro del Sistema (Monolito a Microservicios)**
+
+- **Descripción**
+  - Se define la estructura general del sistema.
+  - Se busca separar dominios (**DDD**) y sentar bases para:
+    - Escalabilidad
+    - Confiabilidad
+
+---
+
+##### **4.3.1.1 Architectural Design Backlog 1**
+
+- **Drivers Funcionales**
+  - **US01** → Buscar rutas
+  - **US07** → Activar disponibilidad
+  - **US08** → Recibir notificaciones
+
+- **Drivers de Calidad**
+  - **QA-01** → Escalabilidad
+  - **QA-02** → Confiabilidad
+
+- **Restricciones**
+  - **CON-01** → Free Tier (costo cero)
+  - **CON-02** → Java + Spring Boot + PostgreSQL
+
+---
+
+##### **4.3.1.2 Establish Iteration Goal by Selecting Drivers**
+
+- **Objetivo**
+  - Definir una arquitectura de alto nivel que:
+    - Desacople datos **volátiles** (ETAs, ubicaciones)
+    - De datos **estáticos** (usuarios, rutas)
+  - Evite:
+    - Cuellos de botella
+    - Puntos únicos de fallo
+
+---
+
+##### **4.3.1.3 Choose One or More Elements of the System to Refine**
+
+- **Elemento seleccionado**
+  - Sistema completo **ChapaTuRuta**
+  - Enfoque:
+    - Proyecto **Greenfield** (desde cero)
+    - Definición de contenedores principales
+
+---
+
+##### **4.3.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers**
+
+- **Patrón Arquitectónico**
+  - **Microservicios**
+  - **API Gateway**
+
+- **Gestión de Datos**
+  - **Database-per-service**
+  - Persistencia políglota:
+    - **PostgreSQL** (datos estructurados)
+    - **Redis** (datos en tiempo real)
+
+---
+
+##### **4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces**
+
+- **API Gateway**
+  - Enrutamiento de peticiones
+  - Validación de **JWT**
+  - Punto de entrada único
+
+- **Identity Service (PostgreSQL)**
+  - Gestión de:
+    - Usuarios
+    - Empresas
+    - Suscripciones
+
+- **Routing Service (PostgreSQL)**
+  - Gestión de:
+    - Rutas
+    - Paraderos
+  - Datos **estáticos y relacionales**
+
+- **Tracking Service (Redis)**
+  - Gestión de:
+    - Check-ins
+    - ETAs
+  - Datos **en tiempo real y alta velocidad**
+
+
+##### **4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions**
+
+- Se aislaron las bases de datos para evitar que consultas pesadas de ruteo afecten el inicio de sesión o la lectura de ubicaciones.
+
+---
+
+<p align="center">
+  <img src="./img/conteiners_diagram_I1.png" alt="Context statements">
+</p>
+
+---
+
+##### **4.3.1.7 Analysis of Current Design and Review Iteration Goal**
+
+| Backlog (Pendientes Futuros) | To Do (Para Iteración 2) | In Progress (En Revisión) | Done (Completado - Iteración 1) |
+|-----------------------------|--------------------------|---------------------------|----------------------------------|
+| [TSK-05] Configurar servidores en Free Tier (AWS/GCP). | [ARC-04] Diseñar estrategia para alto volumen de lecturas concurrentes en Tracking. | [ARC-03] Evaluar impacto de latencia en el API Gateway. | [ARC-01] Definir estructura de Microservicios (Identity, Routing, Tracking). |
+| [TSK-06] Definir esquema de seguridad JWT. | [ARC-05] Diseñar manejo asíncrono para escrituras de Check-in. |  | [ARC-02] Aplicar Database-per-service (Aislamiento de DB Identity y DB Routing). |
+|  |  |  | [DOC-01] Generar Diagrama de Contexto (C4 L1). |
+|  |  |  | [DOC-02] Generar Diagrama de Contenedores (C4 L2) V1. |
+
+
+
+
+
+
+
+
+
+
+#### **4.3.2 Iteration 2: Microservicio de Tracking & ETA (CQRS y Eventos) — ChapaTuRuta**
+
+En esta iteración se refina el componente más crítico del sistema: el **Fleet Tracking & ETA Service**, encargado de manejar la mayor carga operativa.
+
+---
+
+##### **4.3.2.1 Architectural Design Backlog 2**
+
+- **Drivers Funcionales**
+  - **US07** → Activar disponibilidad
+  - **US08** → Recibir notificaciones asíncronas
+
+- **Drivers de Calidad**
+  - **QA-01** → Escalabilidad extrema (consultas masivas de ETA)
+  - **QA-02** → Confiabilidad (tolerancia a fallos)
+
+---
+
+##### **4.3.2.2 Establish Iteration Goal by Selecting Drivers**
+
+- **Objetivo**
+  - Separar:
+    - **Escrituras (Check-ins)**
+    - **Lecturas (consultas de pasajeros)**
+  - Evitar bloqueos entre operaciones
+  - Garantizar que las notificaciones no afecten el rendimiento del sistema
+
+---
+
+##### **4.3.2.3 Choose One or More Elements of the System to Refine**
+
+- **Elemento seleccionado**
+  - **Fleet Tracking & ETA Service**
+  - Interacción con sistemas externos (RabbitMQ, Firebase)
+
+---
+
+##### **4.3.2.4 Choose One or More Design Concepts That Satisfy the Selected Drivers**
+
+- **Patrones Tácticos**
+  - **CQRS (Command Query Responsibility Segregation)**
+
+- **Patrón de Comunicación**
+  - **Publish-Subscribe (RabbitMQ)**
+
+- **Patrón Estructural**
+  - **Arquitectura Hexagonal (Ports & Adapters)**
+
+---
+
+##### **4.3.2.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces**
+
+- **Command Model (Escritura)**
+  - Recibe Check-ins
+  - Valida coordenadas
+  - Actualiza estado en **Redis**
+  - Publica evento **CheckInRegistered** en RabbitMQ
+  - Retorna respuesta inmediata (**HTTP 200**)
+
+- **Query Model (Lectura)**
+  - Endpoint optimizado
+  - Lee datos directamente desde **Redis**
+  - Calcula y retorna ETA
+
+- **Notification Worker (Consumidor)**
+  - Escucha eventos en RabbitMQ
+  - Procesa notificaciones en segundo plano
+  - Envía alertas push vía **Firebase (FCM)**
+
+---
+
+##### **4.3.2.6 Sketch Views (C4 & UML) and Record Design Decisions**
+
+---
+
+<p align="center">
+  <img src="./img/conteiners_diagram_I2.png" alt="Context statements">
+</p>
+
+---
+
+##### **4.3.2.7 Analysis of Current Design and Review Iteration Goal**
+
+| Backlog (Pendientes Futuros) | To Do (Para Pruebas) | In Progress (En Revisión) | Done (Completado - Iteración 2) |
+|-----------------------------|----------------------|---------------------------|----------------------------------|
+| [TSK-07] Configurar alertas de caída de Firebase. | [TST-01] Pruebas de estrés para lecturas O(1) en Redis. | [DOC-04] Redactar justificación de Atributos de Calidad en el informe. | [ARC-04] Implementar patrón CQRS para separar lectura y escritura en Tracking. |
+| [TSK-08] Crear pipeline CI/CD. | [TST-02] Simular pérdida de red para probar persistencia en RabbitMQ. |  | [ARC-05] Integrar RabbitMQ para desacoplar las notificaciones Push. |
+|  |  |  | [ARC-06] Configurar Redis como Tracking Cache para ETAs. |
+|  |  |  | [DOC-03] Actualizar Diagrama de Contenedores (C4 L2) V2 con Worker y Message Broker. |
