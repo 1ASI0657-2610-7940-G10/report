@@ -176,7 +176,7 @@ ChapaTuRuta es una aplicación móvil diseñada para pasajeros y conductores del
  
 
 **How much**  
--	En gran parte de las principales ciudades del país, el transporte representa un alto porcentaje de los viajes motorizados diarios. Los usuarios pueden llegar a perder en promedio entre 20 a 40 minutos diarios de su tiempo productivo únicamente esperando en los paraderos sin saber a qué hora pasará su vehículo.
+-	En gran parte de las principales ciudades del país, el transporte representa un alto porcentaje de los viajes motorizados diarios. Los usuarios pueden llegar a perder en promedio entre 20 a 40 minutos diarios de su tiempo productivo únicamente esperando en los paraderos sin saber a qué hora pasará su vehículo. Y según datos publicados por el comercio, Lima no solo está dentro del top 10 de ciudades con más tráfico del mundo, también que se pierden alrededor de 195 horas al año en horas punta.
 
 ---
 
