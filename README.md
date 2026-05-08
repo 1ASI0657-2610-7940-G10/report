@@ -1339,3 +1339,69 @@ En esta iteración se refina el componente más crítico del sistema: el **Fleet
 | [TSK-08] Crear pipeline CI/CD. | [TST-02] Simular pérdida de red para probar persistencia en RabbitMQ. |  | [ARC-05] Integrar RabbitMQ para desacoplar las notificaciones Push. |
 |  |  |  | [ARC-06] Configurar Redis como Tracking Cache para ETAs. |
 |  |  |  | [DOC-03] Actualizar Diagrama de Contenedores (C4 L2) V2 con Worker y Message Broker. |
+
+
+# Capítulo V: Product Implementation, Validation & Deployment
+
+### **5.1 Testing Suites & General Patterns**
+
+#### **5.1.1 Backend Application Core Testing Suite**
+
+Para garantizar la calidad de los Web Services, se implementará una suite de pruebas automatizadas:
+
+- Unit Testing: Uso de JUnit 5 y Mockito para validar la lógica de dominio en aislamiento.
+
+- Integration Testing: Validación de la persistencia y comunicación entre servicios usando 
+
+-  Acceptance Testing (BDD): Implementación de pruebas de aceptación utilizando el lenguaje Gherkin y la herramienta Cucumber, asegurando que cada funcionalidad cumpla con los criterios de aceptación de las User Stories.
+
+#### **5.1.2 Pattern Based Backend Application(s)**
+
+Los microservicios se desarrollan bajo la Arquitectura Hexagonal (Puertos y Adaptadores). Este patrón permite desacoplar el núcleo del negocio de las tecnologías externas, facilitando la migración de la lógica heredada del proyecto anterior hacia una implementación limpia en Java Spring Boot.
+
+#### **5.1.3 Pattern Based Custom Software Library**
+
+Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
+- El manejo de excepciones globales y respuestas HTTP uniformes.
+- Contratos de eventos comunes para la comunicación asíncrona vía RabbitMQ. 
+- Configuraciones base para la validación de tokens JWT en el API Gateway.
+
+#### **5.1.4 Framework Pattern Driven Refactoring Report**
+
+#### 1. Implementación de Arquitectura Hexagonal
+- Se refactorizó el sistema para separar la lógica de negocio de las dependencias externas utilizando el patrón de **Puertos y Adaptadores**.
+- Mediante la definición de interfaces de dominio (**Puertos**), se asgura que el núcelo se encuentre independiente de la infrastructura.
+- La infraestructura externa, como PostgreSQL y Redis, es gestionada por **Adaptadores** específicos.
+
+---
+
+#### 2. Adopción de CQRS (Command Query Responsibility Segregation)
+- Para resolver cuellos de botella en el módulo de Tracking, se refactorizó la estrategia de acceso a datos.
+- Se separaron las operaciones de escritura (**Command**), encargadas de actualizar el estado de los buses.
+- Las operaciones de lectura (**Query**) se optimizaron para recuperar los ETAs directamente desde la memoria caché de Redis.
+
+---
+
+#### 3. Refactorización hacia Comunicación Orientada a Eventos
+- La comunicación síncrona entre el servicio de rastreo y el sistema de avisos se refactorizó hacia un modelo asíncrono basado en el patrón **Publish-Subscribe**.
+- Se integró RabbitMQ como **Message Broker** para desacoplar estos procesos.
+- Esto permitió que el conductor reciba confirmación inmediata mientras las notificaciones se procesan en segundo plano.
+
+---
+
+#### 4. Implementación de los Patrones Strategy y Repository
+
+#### Patrón Strategy
+- Se aplicó el patrón **Strategy** para permitir que los algoritmos de cálculo de ETA sean intercambiables.
+- Dependiendo de la disponibilidad de datos del conductor, el sistema puede utilizar:
+  - Algoritmos basados en historial.
+  - Algoritmos basados en GPS en vivo.
+
+#### Patrón Repository
+- El patrón **Repository** se estandarizó en todos los servicios.
+- Esto permitió:
+  - Centralizar la lógica de persistencia.
+  - Facilitar la ejecución de pruebas unitarias.
+
+
+### **5.2 Software Configuration Management**
