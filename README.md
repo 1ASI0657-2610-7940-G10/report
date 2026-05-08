@@ -1405,3 +1405,58 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 
 
 ### **5.2 Software Configuration Management**
+
+#### **5.2.1 Software Development Environment Configuration**
+
+#### 1. Project Management
+- Trello (Tablero Kanban).
+
+#### 2. Software Development
+- IntelliJ IDEA.
+- Docker Desktop (Contenerización).
+
+#### 3. Testing
+- Postman para Web Services.
+- Cucumber para BDD.
+
+#### **5.2.2 Source Code Management**
+
+### 1. Plataforma de Control de Versiones
+- Se utiliza GitHub como plataforma de control de versiones.
+
+### 2. Implementación de GitFlow
+
+### Ramas Principales
+- `main` (producción).
+- `develop` (desarrollo).
+
+### Feature Branches
+- `feature/US-[ID]-[Descripción]`
+- Ejemplo:
+  - `feature/US01-busqueda-rutas`
+
+
+### 3. Convención de Commits
+- Se aplica Conventional Commits.
+- Ejemplo:
+  - `feat: implement logic for ETA calculation`
+
+#### **5.2.4 Source Code Style Guide & Conventions**
+
+- Se adopta la Google Java Style Guide. Toda la nomenclatura de clases, variables y métodos se realiza estrictamente en inglés. Para las especificaciones BDD, se siguen las Gherkin Conventions para asegurar legibilidad por parte de los stakeholders.
+
+#### **5.2.4 Software Deployment Configuration**
+
+## 1. Entorno de Despliegue
+- El despliegue se realiza en la nube utilizando la capa gratuita (Free Tier).
+
+## 2. Infraestructura
+- AWS.
+  - EC2 para microservicios.
+  - RDS para PostgreSQL.
+
+## 3. Diagrama de Despliegue
+- Se utiliza el modelo C4 para representar la topología de red y servidores.
+
+
+
