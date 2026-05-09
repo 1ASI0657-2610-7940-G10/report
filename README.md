@@ -68,7 +68,11 @@
 
 # Project Report Collaboration Insights
 
-En esta seccion se registra la colaboración de todo el equipo durante el desarrollo del informe del proyecto, se adjunta el enlace del repositorio 
+En esta seccion se registra la colaboración de todo el equipo durante el desarrollo del informe del proyecto, backend. 
+
+- Organización: https://github.com/1ASI0657-2610-7940-G10
+
+Se adjunta el enlace del repositorios:
 
 | Repository Name | Link |
 | :--- | :--- |
@@ -744,6 +748,9 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | 62 | US31 | Editar información de empresa | Como gestor de la empresa de transporte, quiero editar la información de la empresa que manejo, para mantenerla actualizada. | 3 |
 | 63 | US19 | Personalización de perfil | Como empresa de transporte, quiero subir el logo de mi empresa y especificar su nombre, para que los pasajeros me identifiquen. | 3 |
 
+# Capítulo IV: Product Architecture Design
+
+
 ### 4.1 Design Concepts, ViewPoints & ER Diagrams
 #### 4.1.1 Principles Statements
 De acuerdo con la visión de negocio necesitamos proveer de previsibilidad en el transporte interurbano bajo diferentes situaciones y realizando una revisión arquitectónica podemos decir que se encuentra orientada al uso de microservicios en la nube:
@@ -1341,6 +1348,22 @@ En esta iteración se refina el componente más crítico del sistema: el **Fleet
 |  |  |  | [DOC-03] Actualizar Diagrama de Contenedores (C4 L2) V2 con Worker y Message Broker. |
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ### **5.1 Testing Suites & General Patterns**
@@ -1357,7 +1380,23 @@ Para garantizar la calidad de los Web Services, se implementará una suite de pr
 
 #### **5.1.2 Pattern Based Backend Application(s)**
 
-Los microservicios se desarrollan bajo la Arquitectura Hexagonal (Puertos y Adaptadores). Este patrón permite desacoplar el núcleo del negocio de las tecnologías externas, facilitando la migración de la lógica heredada del proyecto anterior hacia una implementación limpia en Java Spring Boot.
+#### 1. Puertos de Entrada (Inbound Ports)
+
+- `RegisterUserUseCase.java`
+  - Interfaz que define el contrato de operaciones.
+
+#### 2. Adaptadores Primarios (Driving Adapters)
+- `UserController.java`
+  - Controlador REST que recibe peticiones HTTP y activa el caso de uso.
+
+#### 3. Puertos de Salida (Outbound Ports)
+- `UserRepository.java`
+  - Contrato de persistencia en la capa de dominio.
+
+#### 4. Adaptadores Secundarios (Driven Adapters)
+- `UserRepositoryAdapter.java`
+- `SpringDataUserRepository.java`
+
 
 #### **5.1.3 Pattern Based Custom Software Library**
 
@@ -1418,11 +1457,51 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 #### 3. Testing
 - Postman para Web Services.
 - Cucumber para BDD.
+- Unit Test:
+
+#### 1. Identity Service
+
+- **Pruebas Unitarias (JUnit 5 & Mockito):**
+  - `RegisterUserUseCaseImplTest.java`: Valida la lógica de registro de usuarios, asegurando la creación exitosa de cuentas y el rechazo por correos duplicados.
+  - `IdentityServiceApplicationTests.java`: Verifica que el contexto de la aplicación cargue correctamente.
+
+- **Pruebas BDD (Cucumber):**
+  - `register_user.feature` y `RegisterUserSteps.java`: Validan el flujo de negocio para el registro de pasajeros y conductores.
+  - `CucumberTestRunner.java`: Orquestador de la ejecución de pruebas BDD.
+
+#### 2. Routing Service
+
+- **Pruebas Unitarias (JUnit 5 & Mockito):**
+  - `SearchRoutesUseCaseImplTest.java`: Comprueba la búsqueda de rutas por distritos de origen y destino, validando tanto la obtención de datos como el manejo de búsquedas sin resultados.
+  - `RoutingServiceApplicationTests.java`: Confirma la inicialización íntegra del microservicio.
+
+- **Pruebas BDD (Cucumber):**
+  - `search_routes.feature` y `SearchRoutesSteps.java`: Evalúan el flujo de consulta de rutas disponibles para el usuario.
+  - `CucumberTestRunner.java`: Ejecutor de las características de búsqueda.
+
+#### 3. Tracking Service
+
+- **Pruebas Unitarias (JUnit 5 & Mockito):**
+  - `TrackingCommandServiceTest.java`: Testea el procesamiento de Check-In de vehículos, verificando el almacenamiento de coordenadas en caché (Redis) y la emisión de eventos asíncronos (RabbitMQ).
+  - `TrackingServiceApplicationTests.java`: Asegura que el servicio arranque sin errores.
+
+- **Pruebas BDD (Cucumber):**
+  - `vehicle_checkin.feature` y `VehicleCheckInSteps.java`: Validan el rastreo en tiempo real y la notificación de ubicación del vehículo.
+  - `CucumberTestRunner.java`: Gestiona la ejecución de los escenarios de rastreo.
+
+
+
+#### 4. Software Deployment
+- AWS Management Console.
+
+#### 5. Software Deployment
+- Software Documentation
 
 #### **5.2.2 Source Code Management**
 
 ### 1. Plataforma de Control de Versiones
 - Se utiliza GitHub como plataforma de control de versiones.
+- Organización: https://github.com/1ASI0657-2610-7940-G10
 
 ### 2. Implementación de GitFlow
 
@@ -1431,32 +1510,43 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 - `develop` (desarrollo).
 
 ### Feature Branches
-- `feature/US-[ID]-[Descripción]`
-- Ejemplo:
-  - `feature/US01-busqueda-rutas`
-
+- `feature/identity-service`
+- `feature/routing-service`
+- `feature/tracking-service`
+- `feature/api-gateway`
 
 ### 3. Convención de Commits
-- Se aplica Conventional Commits.
-- Ejemplo:
-  - `feat: implement logic for ETA calculation`
 
-#### **5.2.4 Source Code Style Guide & Conventions**
+- Se aplica el estándar Conventional Commits para estructurar los mensajes de confirmación de cambios.
+- Esto facilita la legibilidad del historial.
 
-- Se adopta la Google Java Style Guide. Toda la nomenclatura de clases, variables y métodos se realiza estrictamente en inglés. Para las especificaciones BDD, se siguen las Gherkin Conventions para asegurar legibilidad por parte de los stakeholders.
+#### feat
+- Implementación de una nueva característica.
+
+#### fix
+- Solución de un error o bug.
+
+#### test
+- Adición o modificación de pruebas automatizadas.
+
+#### docs
+- Actualización en la documentación.
+
+#### **5.2.3 Source Code Style Guide & Conventions**
+
+#### Guía de Estilo Java
+- Se adopta de forma estricta la Google Java Style Guide.
+
+#### Idioma
+- Toda la nomenclatura de paquetes, clases, interfaces, variables y métodos se realiza estrictamente en inglés para mantener un estándar profesional internacional.
+
+#### Especificaciones BDD
+- Para la redacción de los archivos de pruebas, se siguen las Gherkin Conventions for Readable Specifications.
+- Uso correcto de `Given`, `When`, `Then` y `And` en inglés.
+- Esto asegura que los escenarios sean perfectamente legibles por los stakeholders y dueños de producto.
 
 #### **5.2.4 Software Deployment Configuration**
 
-## 1. Entorno de Despliegue
-- El despliegue se realiza en la nube utilizando la capa gratuita (Free Tier).
-
-## 2. Infraestructura
-- AWS.
-  - EC2 para microservicios.
-  - RDS para PostgreSQL.
-
-## 3. Diagrama de Despliegue
-- Se utiliza el modelo C4 para representar la topología de red y servidores.
-
+El despliegue de la solución se realiza íntegramente bajo la capa gratuita de AWS (Free Tier) para evitar costos operativos. La infraestructura se compone de una instancia EC2 (t2.micro) para alojar el API Gateway y los microservicios, y una instancia RDS (db.t3.micro) para la base de datos PostgreSQL. El proceso de publicación consiste en aprovisionar los recursos en la nube, preparar el entorno con el JDK adecuado, compilar el código fuente y ejecutar el artefacto .jar enlazándolo a la base de datos mediante variables de entorno. Finalmente, la topología de red y la distribución de los servidores se documentan visualmente mediante el Diagrama de Despliegue del Modelo C4.
 
 
