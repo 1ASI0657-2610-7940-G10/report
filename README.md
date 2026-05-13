@@ -1697,3 +1697,13 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 | US26 Crear y listar Colecciones |  |  |  |
 | US27 Gestionar rutas en Colecciones |  |  |  |
 | TS06 Pruebas BDD y Unitarias |  |  |  |
+
+### Kanban Board del Sprint 1
+
+<p align="center">
+  <img src="./img/kanban.png" alt="Context statements">
+</p>
+
+**Fuente:** Elaboración propia mediante Trello.  
+**Enlace:** [https://trello.com/b/xxxx/proyecto-kanban](https://trello.com/invite/b/6a04e4d2318841e6879a0f06/ATTI1844f7065acbae5a1736de2850cd2f094DE602E1/kanban-board)
+
