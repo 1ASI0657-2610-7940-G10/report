@@ -1701,9 +1701,18 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 ### Kanban Board del Sprint 1
 
 <p align="center">
-  <img src="./img/kanban.png" alt="Context statements">
+  <img src="./img/kanban.png" alt="Kanban Board Sprint 1" width="100%">
 </p>
 
+**Descripción de etiquetas:**
+- 🔵 Azul: Historias de Usuario (US)
+- 🟢 Verde: Base de Datos y Persistencia
+- 🔴 Rojo: Backend y Seguridad
+- 🟣 Morado: Frontend e Interfaz
+- 🟠 Naranja: Funcionalidades en Tiempo Real / GPS
+- ⚫ Negro: Infraestructura y Servicios
+- 🟡 Amarillo: Testing y Calidad
+
 **Fuente:** Elaboración propia mediante Trello.  
-**Enlace:** [https://trello.com/b/xxxx/proyecto-kanban](https://trello.com/invite/b/6a04e4d2318841e6879a0f06/ATTI1844f7065acbae5a1736de2850cd2f094DE602E1/kanban-board)
+**Enlace:** [Kanban Board del Proyecto](https://trello.com/invite/b/6a04e4d2318841e6879a0f06/ATTI1844f7065acbae5a1736de2850cd2f094DE602E1/kanban-board)
 
