@@ -1567,7 +1567,7 @@ Se desarrollaron suites con Mockito para validar la lógica de negocio de forma 
 
 <p align="center">
   <em>
-  Figura 13. Ejecución satisfactoria de pruebas automatizadas en el módulo identity-service mediante Maven Surefire y JUnit 5, incluyendo la validación del caso de uso RegisterUserUseCaseImplTest utilizando Mockito.
+  Ejecución satisfactoria de pruebas automatizadas en el módulo identity-service mediante Maven Surefire y JUnit 5, incluyendo la validación del caso de uso RegisterUserUseCaseImplTest utilizando Mockito.
   </em>
 </p>
 
@@ -1579,7 +1579,7 @@ Se desarrollaron suites con Mockito para validar la lógica de negocio de forma 
 
 <p align="center">
   <em>
-  Figura 14. Ejecución satisfactoria de pruebas automatizadas en el módulo routing-service, incluyendo SearchRoutesUseCaseImplTest para validar la lógica de búsqueda de rutas disponibles.
+  Ejecución satisfactoria de pruebas automatizadas en el módulo routing-service, incluyendo SearchRoutesUseCaseImplTest para validar la lógica de búsqueda de rutas disponibles.
   </em>
 </p>
 
