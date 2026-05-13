@@ -694,6 +694,13 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | 36 | US27 | Gestionar rutas en Colecciones | Lógica de vinculación/desvinculación de rutas en carpetas. | 3 |
 | 37 | TS06 | Pruebas BDD y Unitarias | Implementación continua de test automatizados en capa de negocio. | 5 |
 
+
+
+
+
+
+
+
 # Capítulo IV: Product Architecture Design
 
 
@@ -1097,9 +1104,13 @@ En esta sección se aplica el método **Attribute-Driven Design (ADD)** para dis
 ##### **4.3.1.1 Architectural Design Backlog 1**
 
 - **Drivers Funcionales**
-  - **US01** → Buscar rutas
-  - **US07** → Activar disponibilidad
-  - **US08** → Recibir notificaciones
+  - **US01** → Inicio de Sesión con JWT
+  - **US017** → Búsqueda de Rutas y Transbordos
+  - **US20** → Consultar Tiempo Estimado (ETA)
+
+  - **Drivers Técnicos**
+  - **TS01** → Seguridad en API Gateway
+  - **TS02** → Persistencia Relacional (PostgreSQL)
 
 - **Drivers de Calidad**
   - **QA-01** → Escalabilidad
@@ -1148,29 +1159,21 @@ En esta sección se aplica el método **Attribute-Driven Design (ADD)** para dis
 ---
 
 ##### **4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces**
-
-- **API Gateway**
+ 
+- **API Gateway (TS01)**
   - Enrutamiento de peticiones
   - Validación de **JWT**
   - Punto de entrada único
 
-- **Identity Service (PostgreSQL)**
+- **Identity Service (PostgreSQL - TS02)**
   - Gestión de:
-    - Usuarios
-    - Empresas
-    - Suscripciones
+    - Gestión de Pasajeros (US04), Conductores (US05), Empresas (US09/10) y autenticación (US06).
 
-- **Routing Service (PostgreSQL)**
-  - Gestión de:
-    - Rutas
-    - Paraderos
-  - Datos **estáticos y relacionales**
+- **Routing Service (PostgreSQL - TS02)**
+  - Gestión de Paraderos (US12/13/14), Rutas (US15/16) y algoritmo de búsqueda (US17)
 
-- **Tracking Service (Redis)**
-  - Gestión de:
-    - Check-ins
-    - ETAs
-  - Datos **en tiempo real y alta velocidad**
+- **Tracking Service (Redis - TS03)**
+  - Ingesta de coordenadas GPS y resoluciones de ETA en tiempo real (US20).
 
 
 ##### **4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions**
@@ -1187,18 +1190,11 @@ En esta sección se aplica el método **Attribute-Driven Design (ADD)** para dis
 
 ##### **4.3.1.7 Analysis of Current Design and Review Iteration Goal**
 
-| Backlog (Pendientes Futuros) | To Do (Para Iteración 2) | In Progress (En Revisión) | Done (Completado - Iteración 1) |
-|-----------------------------|--------------------------|---------------------------|----------------------------------|
-| [TSK-05] Configurar servidores en Free Tier (AWS/GCP). | [ARC-04] Diseñar estrategia para alto volumen de lecturas concurrentes en Tracking. | [ARC-03] Evaluar impacto de latencia en el API Gateway. | [ARC-01] Definir estructura de Microservicios (Identity, Routing, Tracking). |
-| [TSK-06] Definir esquema de seguridad JWT. | [ARC-05] Diseñar manejo asíncrono para escrituras de Check-in. |  | [ARC-02] Aplicar Database-per-service (Aislamiento de DB Identity y DB Routing). |
-|  |  |  | [DOC-01] Generar Diagrama de Contexto (C4 L1). |
-|  |  |  | [DOC-02] Generar Diagrama de Contenedores (C4 L2) V1. |
 
 
-
-
-
-
+<p align="center">
+  <img src="./img/kamban_board1.jpg" alt="Context statements">
+</p>
 
 
 
@@ -1212,8 +1208,15 @@ En esta iteración se refina el componente más crítico del sistema: el **Fleet
 ##### **4.3.2.1 Architectural Design Backlog 2**
 
 - **Drivers Funcionales**
-  - **US07** → Activar disponibilidad
-  - **US08** → Recibir notificaciones asíncronas
+  - **US028** → Transmitir ubicación GPS
+  - **US029** → Check-in manual en Paraderos
+  - **US020** → Consultar Tiempo Estimado (ETA)
+  - **US021** → Notificaciones push de proximidad
+
+  - **Drivers Técnicos**
+  - **TS03** → Caché de Coordenadas (Redis)
+  - **TS04** → Bus de Eventos (RabbitMQ)
+  - **TS05** → Integración de SDK Firebase Admin
 
 - **Drivers de Calidad**
   - **QA-01** → Escalabilidad extrema (consultas masivas de ETA)
@@ -1225,18 +1228,16 @@ En esta iteración se refina el componente más crítico del sistema: el **Fleet
 
 - **Objetivo**
   - Separar:
-    - **Escrituras (Check-ins)**
-    - **Lecturas (consultas de pasajeros)**
-  - Evitar bloqueos entre operaciones
-  - Garantizar que las notificaciones no afecten el rendimiento del sistema
+    - **Escrituras (Check-ins US28/29)**
+    - **Lecturas (consultas de pasajeros de ETA US20)**
+  - Orquestar la comunicación asíncrona (TS04) para disparar alertas móviles (US21) en segundo plano.
 
 ---
 
 ##### **4.3.2.3 Choose One or More Elements of the System to Refine**
 
 - **Elemento seleccionado**
-  - **Fleet Tracking & ETA Service**
-  - Interacción con sistemas externos (RabbitMQ, Firebase)
+  - Tracking Service y sus adaptadores externos (Redis, RabbitMQ y Firebase).
 
 ---
 
@@ -1286,13 +1287,9 @@ En esta iteración se refina el componente más crítico del sistema: el **Fleet
 
 ##### **4.3.2.7 Analysis of Current Design and Review Iteration Goal**
 
-| Backlog (Pendientes Futuros) | To Do (Para Pruebas) | In Progress (En Revisión) | Done (Completado - Iteración 2) |
-|-----------------------------|----------------------|---------------------------|----------------------------------|
-| [TSK-07] Configurar alertas de caída de Firebase. | [TST-01] Pruebas de estrés para lecturas O(1) en Redis. | [DOC-04] Redactar justificación de Atributos de Calidad en el informe. | [ARC-04] Implementar patrón CQRS para separar lectura y escritura en Tracking. |
-| [TSK-08] Crear pipeline CI/CD. | [TST-02] Simular pérdida de red para probar persistencia en RabbitMQ. |  | [ARC-05] Integrar RabbitMQ para desacoplar las notificaciones Push. |
-|  |  |  | [ARC-06] Configurar Redis como Tracking Cache para ETAs. |
-|  |  |  | [DOC-03] Actualizar Diagrama de Contenedores (C4 L2) V2 con Worker y Message Broker. |
-
+<p align="center">
+  <img src="./img/kamban_board2.jpg" alt="Context statements">
+</p>
 
 
 
@@ -1496,3 +1493,207 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 El despliegue de la solución se realiza íntegramente bajo la capa gratuita de AWS (Free Tier) para evitar costos operativos. La infraestructura se compone de una instancia EC2 (t2.micro) para alojar el API Gateway y los microservicios, y una instancia RDS (db.t3.micro) para la base de datos PostgreSQL. El proceso de publicación consiste en aprovisionar los recursos en la nube, preparar el entorno con el JDK adecuado, compilar el código fuente y ejecutar el artefacto .jar enlazándolo a la base de datos mediante variables de entorno. Finalmente, la topología de red y la distribución de los servidores se documentan visualmente mediante el Diagrama de Despliegue del Modelo C4.
 
 
+### 5.3 Microservices Implementation
+
+#### 5.3.1 Sprint 1
+#### 5.3.1.1 Sprint Backlog 1
+
+| Orden | ID   | Título                   | Descripción                                                                    | Story Points | Estado | Asignado a   |
+| ----: | ---- | ------------------------ | ------------------------------------------------------------------------------ | -----------: | ------ | ------------ |
+|     1 | TS01 | Seguridad en API Gateway | Configuración de Spring Cloud Gateway y validación centralizada de tokens JWT. |            5 | Done   | Hector Rios |
+|     2 | TS02 | Persistencia Relacional  | Modelado de base de datos e integridad relacional en PostgreSQL (Supabase).    |            5 | Done   | Hector Rios |
+|     3 | US04 | Registro de Pasajeros    | Creación de cuentas de usuario final con validación de correo único.           |            3 | Done   | Hector Rios |
+|     4 | US05 | Registro de Conductores  | Creación de cuentas operativas asociadas a empresas validadas por RUC.         |            5 | Done   | Hector Rios |
+|     5 | US06 | Inicio de Sesión con JWT | Endpoint de autenticación segura y despacho de Access Tokens firmados.         |            3 | Done   | Hector Rios |
+|     6 | US12 | Crear y listar Paraderos | CRUD básico: alta y listado geolocalizado de puntos de embarque.               |            5 | Done   | Hector Rios |
+|     7 | US15 | Crear Ruta y Horarios    | Asociación secuencial de paraderos, definición de tarifas y tiempos estimados. |            8 | Done   | Hector Rios |
+|     8 | US17 | Búsqueda de Rutas        | Algoritmo central para calcular rutas directas entre orígenes y destinos.      |            8 | Done   | Hector Rios |
+
+#### 5.3.1.2 Development Evidence for Sprint Review
+
+- La implementación del código se organizó estrictamente bajo los patrones de Arquitectura Hexagonal (Ports and Adapters) y Domain-Driven Design (DDD) dentro de un monorepositorio en Java 21 con Spring Boot 3.4.5.
+
+### A. API Gateway & Seguridad Centralizada (TS01)
+
+Se implementó un filtro global (`JwtAuthenticationFilter`) en el API Gateway utilizando Spring WebFlux. Este componente intercepta todas las peticiones entrantes, extrae el token del encabezado `Authorization`, verifica su firma criptográfica y enruta el tráfico de forma transparente hacia los microservicios internos, garantizando que los endpoints protegidos no sean accesibles sin credenciales válidas.
+
+```java
+// Extracto de implementación: JwtAuthenticationFilter.java en API Gateway
+@Component
+public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
+    // Validación de firma JWT y propagación de claims hacia los microservicios
+}
+```
+
+### B. Identity Service (US04, US05, US06)
+
+Se construyó el servicio de identidad gestionando el agregado raíz `User` y sus entidades asociadas `Role` y `Company`. La lógica de negocio garantiza que las contraseñas se almacenen de forma segura y despacha Web Tokens (JWT) con una validez de 24 horas tras una autenticación exitosa en el `UserController`.
+
+### C. Routing Service (US12, US15, US17)
+
+Se programó el motor logístico definiendo las entidades de dominio `Route`, `Stop` y `District`. La persistencia se resolvió mediante adaptadores JPA (`RouteRepositoryAdapter`) que mapean las coordenadas espaciales y relaciones secuenciales en la base de datos relacional.
+
+<p align="center">
+  <img src="./img/tracking_service_project.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/routing_service_project.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/api_gateway_project.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/identity_service_project.jpg" alt="Context statements">
+</p>
+
+#### 5.3.1.3 Testing Suite Evidence for Sprint Review
+
+Para garantizar la calidad del software y evitar regresiones, se implementó una estrategia de pruebas automatizadas combinando Pruebas Unitarias con Behavior-Driven Development (BDD) utilizando el framework Cucumber y JUnit 5.
+
+### A. Pruebas Unitarias en Capa de Dominio y Aplicación
+
+Se desarrollaron suites con Mockito para validar la lógica de negocio de forma aislada. Por ejemplo, la clase `RegisterUserUseCaseImplTest` verifica que el sistema arroje excepciones de dominio si se intenta registrar un correo previamente existente, mientras que `SearchRoutesUseCaseImplTest` valida que el algoritmo retorne la lista correcta de rutas disponibles.
+
+### B. Pruebas de Comportamiento (BDD con Cucumber)
+
+Se redactaron archivos `.feature` en lenguaje Gherkin para que las pruebas reflejen fielmente los criterios de aceptación del negocio.
+
+- `register_user.feature`: Valida los flujos de éxito y error en la creación de pasajeros y conductores.
+- `search_routes.feature`: Simula peticiones de búsqueda de pasajeros indicando distritos de origen y destino, verificando que los Step Definitions (`SearchRoutesSteps.java`) respondan con las rutas esperadas.
+
+
+#### 5.3.1.4 Execution Evidence for Sprint Review
+
+<p align="center">
+  <img src="./img/evidence_1.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_2.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_3.jpg" alt="Context statements">
+</p>
+
+#### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
+Cada microservicio tiene su documentación basándose en el estándar OpenAPI, facilitando la integración para los desarrolladores frontend y aplicaciones móviles.
+
+**Identity Service OpenAPI:** Expone los esquemas de datos para peticiones de login y registro de conductores.
+
+**Routing Service OpenAPI:** Documenta los parámetros de consulta espaciales para paraderos y los algoritmos de búsqueda de rutas.
+
+**Tracking Service OpenAPI:** Detalla los endpoints iniciales para la ingesta de coordenadas GPS y la consulta de disponibilidad de flota.
+
+<p align="center">
+  <img src="./img/swagger_.tracking.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/swagger_identity.jpg" alt="Context statements">
+</p>
+
+<p align="center">
+  <img src="./img/swagger_routing.jpg" alt="Context statements">
+</p>
+
+
+https://identity-service-2nhw.onrender.com/swagger-ui/index.html
+
+https://tracking-service-yj42.onrender.com/swagger-ui/index.html
+
+https://chapaturuta-backend.onrender.com/swagger-ui/index.html
+
+#### 5.3.1.6 Software Deployment Evidence for Sprint Review
+
+El aprovisionamiento de la infraestructura se llevó a cabo aplicando el patrón *Database-per-service* y utilizando plataformas de nube nativas bajo la restricción de costo cero (*Free Tier*).
+
+### A. Aislamiento de Bases de Datos en Supabase
+
+Se crearon instancias separadas en Supabase (PostgreSQL) para disociar la carga operativa:
+
+- El esquema `identity_schema` almacena las credenciales y perfiles.
+- El esquema `routing_schema` persiste los distritos, paraderos y rutas.
+
+La conexión se optimizó utilizando el *Session Pooler* (puerto `5432` con soporte IPv4) inyectando las cadenas de conexión con el protocolo `jdbc:` de forma segura mediante variables de entorno.
+
+### B. Despliegue en Render.com mediante Dockerfiles Universales
+
+Debido a que Render delega las aplicaciones Java a su entorno de contenedores en la capa gratuita, se implementó un `Dockerfile` optimizado multi-etapa en la raíz de cada microservicio. Este archivo descarga la imagen oficial `eclipse-temurin:21-jdk`, empaqueta el código dinámicamente mediante el wrapper de Maven (`mvnw clean package`) y expone la aplicación en el puerto interno `10000` asignado automáticamente por Render.
+
+Los servicios enlazados en producción y operando en estado *Live* son:
+
+- API Gateway: `https://api-gateway-pet3.onrender.com`
+- Identity Service: `https://identity-service-2nhw.onrender.com`
+- Routing Service: `https://chapaturuta-backend.onrender.com`
+
+<p align="center">
+  <img src="./img/deploys.jpg" alt="Context statements">
+</p>
+
+#### 5.3.1.7 Team Collaboration Insights during Sprint
+
+**Informe:**
+<br>
+
+<p align="center">
+  <img src="./img/insightssprint4final.png" width="800">
+</p>
+
+<br>
+
+**Landing:**
+<br>
+<p align="center">
+  <img src="./img/insightslandingfinal.png" width="800">
+</p>
+
+<br>
+
+
+<br>
+
+**Backend:**
+<br>
+
+<p align="center">
+  <img src="./img/insightsbackendfinal.png" width="800">
+</p>
+
+#### 5.3.1.8 Kanban Board
+
+
+|  BACKLOG (Product Backlog General) |  TO DO (Sprint 1 Commitments) |  IN PROGRESS |  DONE (Sprint 1 Completado) |
+|---|---|---|---|
+| US01 Explorar paraderos desde Landing | (Las 8 tareas planificadas para este Sprint ya iniciaron su ciclo) | (Ninguna tarea quedó bloqueada o a medias al cierre del Sprint) | TS01 Seguridad en API Gateway |
+| US02 Consultar funcionamiento y ventajas |  |  | TS02 Persistencia Relacional (PostgreSQL) |
+| US03 Acceder a FAQ |  |  | US04 Registro de Pasajeros |
+| US07 Cierre de Sesión |  |  | US05 Registro de Conductores con RUC |
+| US08 Edición de Perfil de Usuario |  |  | US06 Inicio de Sesión con JWT |
+| US09 Registro inicial de Empresa |  |  | US12 Crear y listar Paraderos |
+| US10 Personalizar perfil de Empresa |  |  | US15 Crear Ruta y Horarios |
+| US11 Panel de resumen de métricas |  |  | US17 Búsqueda de Rutas y Transbordos |
+| US13 Editar y eliminar Paraderos |  |  |  |
+| US14 Visualizar paraderos en el mapa |  |  |  |
+| US16 Gestionar Rutas (Editar/Eliminar) |  |  |  |
+| US18 Detalle visual de la Ruta |  |  |  |
+| US19 Indicar espera en Paradero |  |  |  |
+| TS03 Caché de Coordenadas (Redis) |  |  |  |
+| US28 Transmitir ubicación GPS |  |  |  |
+| US29 Check-in manual en Paraderos |  |  |  |
+| US20 Consultar Tiempo Estimado (ETA) |  |  |  |
+| TS04 Bus de Eventos (RabbitMQ) |  |  |  |
+| US30 Ver concurrencia en tiempo real |  |  |  |
+| TS05 Integración de SDK Firebase Admin |  |  |  |
+| US21 Notificaciones push de proximidad |  |  |  |
+| US22 Confirmación manual de abordaje |  |  |  |
+| US23 Eliminación automática de espera |  |  |  |
+| US24 Ver información del Conductor |  |  |  |
+| US25 Calificar viaje y Conductor |  |  |  |
+| US31 Consultar reputación propia |  |  |  |
+| US26 Crear y listar Colecciones |  |  |  |
+| US27 Gestionar rutas en Colecciones |  |  |  |
+| TS06 Pruebas BDD y Unitarias |  |  |  |
