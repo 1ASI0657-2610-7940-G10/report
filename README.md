@@ -1557,12 +1557,66 @@ Para garantizar la calidad del software y evitar regresiones, se implementó una
 
 Se desarrollaron suites con Mockito para validar la lógica de negocio de forma aislada. Por ejemplo, la clase `RegisterUserUseCaseImplTest` verifica que el sistema arroje excepciones de dominio si se intenta registrar un correo previamente existente, mientras que `SearchRoutesUseCaseImplTest` valida que el algoritmo retorne la lista correcta de rutas disponibles.
 
+#### Evidencia de ejecución de pruebas unitarias
+
+<p align="center">
+  <img src="./img/identity.png"
+       alt="Pruebas unitarias en identity-service"
+       width="90%">
+</p>
+
+<p align="center">
+  <em>
+  Figura 13. Ejecución satisfactoria de pruebas automatizadas en el módulo identity-service mediante Maven Surefire y JUnit 5, incluyendo la validación del caso de uso RegisterUserUseCaseImplTest utilizando Mockito.
+  </em>
+</p>
+
+<p align="center">
+  <img src="./img/routing.png"
+       alt="Pruebas unitarias en routing-service"
+       width="90%">
+</p>
+
+<p align="center">
+  <em>
+  Figura 14. Ejecución satisfactoria de pruebas automatizadas en el módulo routing-service, incluyendo SearchRoutesUseCaseImplTest para validar la lógica de búsqueda de rutas disponibles.
+  </em>
+</p>
+
+---
+
 ### B. Pruebas de Comportamiento (BDD con Cucumber)
 
 Se redactaron archivos `.feature` en lenguaje Gherkin para que las pruebas reflejen fielmente los criterios de aceptación del negocio.
 
 - `register_user.feature`: Valida los flujos de éxito y error en la creación de pasajeros y conductores.
 - `search_routes.feature`: Simula peticiones de búsqueda de pasajeros indicando distritos de origen y destino, verificando que los Step Definitions (`SearchRoutesSteps.java`) respondan con las rutas esperadas.
+
+#### Evidencia de ejecución BDD
+
+<p align="center">
+  <img src="./img/identity.png"
+       alt="Pruebas BDD en identity-service"
+       width="90%">
+</p>
+
+<p align="center">
+  <em>
+  Ejecución de escenarios BDD definidos en register_user.feature mediante Cucumber y Step Definitions en el módulo identity-service.
+  </em>
+</p>
+
+<p align="center">
+  <img src="./img/routing.png"
+       alt="Pruebas BDD en routing-service"
+       width="90%">
+</p>
+
+<p align="center">
+  <em>
+  Validación de escenarios definidos en search_routes.feature utilizando Cucumber y SearchRoutesSteps.java en el módulo routing-service.
+  </em>
+</p>
 
 
 #### 5.3.1.4 Execution Evidence for Sprint Review
