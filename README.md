@@ -1057,15 +1057,40 @@ Se redactaron archivos `.feature` en lenguaje Gherkin para que las pruebas refle
   </em>
 </p>
 
-###### Kanban Board (Iteración Actual)
+#### 5.3.1.8 Kanban Board
 
-| To Do | In Progress | Done |
-|------|------------|------|
-| US05 – Ver historial de viajes | US02 – Visualizar paraderos en el mapa | US01 – Consultar rutas disponibles |
-| US06 – Registro de conductores | US08 – Notificaciones a pasajeros | US03 – Información del conductor |
-| US09 – Análisis de demanda de rutas |  | US04 – Evaluación del conductor |
-| Mejora de seguridad inicial |  | Diagramas C4 & UML |
-| Optimización de integración con API de mapas |  | Documentación de drivers de calidad |
+
+|  BACKLOG (Product Backlog General) |  TO DO (Sprint 1 Commitments) |  IN PROGRESS |  DONE (Sprint 1 Completado) |
+|---|---|---|---|
+| US01 Explorar paraderos desde Landing | (Las 8 tareas planificadas para este Sprint ya iniciaron su ciclo) | (Ninguna tarea quedó bloqueada o a medias al cierre del Sprint) | TS01 Seguridad en API Gateway |
+| US02 Consultar funcionamiento y ventajas |  |  | TS02 Persistencia Relacional (PostgreSQL) |
+| US03 Acceder a FAQ |  |  | US04 Registro de Pasajeros |
+| US07 Cierre de Sesión |  |  | US05 Registro de Conductores con RUC |
+| US08 Edición de Perfil de Usuario |  |  | US06 Inicio de Sesión con JWT |
+| US09 Registro inicial de Empresa |  |  | US12 Crear y listar Paraderos |
+| US10 Personalizar perfil de Empresa |  |  | US15 Crear Ruta y Horarios |
+| US11 Panel de resumen de métricas |  |  | US17 Búsqueda de Rutas y Transbordos |
+| US13 Editar y eliminar Paraderos |  |  |  |
+| US14 Visualizar paraderos en el mapa |  |  |  |
+| US16 Gestionar Rutas (Editar/Eliminar) |  |  |  |
+| US18 Detalle visual de la Ruta |  |  |  |
+| US19 Indicar espera en Paradero |  |  |  |
+| TS03 Caché de Coordenadas (Redis) |  |  |  |
+| US28 Transmitir ubicación GPS |  |  |  |
+| US29 Check-in manual en Paraderos |  |  |  |
+| US20 Consultar Tiempo Estimado (ETA) |  |  |  |
+| TS04 Bus de Eventos (RabbitMQ) |  |  |  |
+| US30 Ver concurrencia en tiempo real |  |  |  |
+| TS05 Integración de SDK Firebase Admin |  |  |  |
+| US21 Notificaciones push de proximidad |  |  |  |
+| US22 Confirmación manual de abordaje |  |  |  |
+| US23 Eliminación automática de espera |  |  |  |
+| US24 Ver información del Conductor |  |  |  |
+| US25 Calificar viaje y Conductor |  |  |  |
+| US31 Consultar reputación propia |  |  |  |
+| US26 Crear y listar Colecciones |  |  |  |
+| US27 Gestionar rutas en Colecciones |  |  |  |
+| TS06 Pruebas BDD y Unitarias |  |  |  |
 
 ### Kanban Board del Sprint 1
 
