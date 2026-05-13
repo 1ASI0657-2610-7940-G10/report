@@ -997,3 +997,21 @@ En este sentido, será fundamental avanzar en la definición de interfaces, prot
 | US09 – Análisis de demanda de rutas |  | US04 – Evaluación del conductor |
 | Mejora de seguridad inicial |  | Diagramas C4 & UML |
 | Optimización de integración con API de mapas |  | Documentación de drivers de calidad |
+
+### Kanban Board del Sprint 1
+
+<p align="center">
+  <img src="./img/kanban.png" alt="Kanban Board Sprint 1" width="100%">
+</p>
+
+**Descripción de etiquetas:**
+- 🔵 Azul: Historias de Usuario (US)
+- 🟢 Verde: Base de Datos y Persistencia
+- 🔴 Rojo: Backend y Seguridad
+- 🟣 Morado: Frontend e Interfaz
+- 🟠 Naranja: Funcionalidades en Tiempo Real / GPS
+- ⚫ Negro: Infraestructura y Servicios
+- 🟡 Amarillo: Testing y Calidad
+
+**Fuente:** Elaboración propia mediante Trello.  
+**Enlace:** [Kanban Board del Proyecto](https://trello.com/invite/b/6a04e4d2318841e6879a0f06/ATTI1844f7065acbae5a1736de2850cd2f094DE602E1/kanban-board)
