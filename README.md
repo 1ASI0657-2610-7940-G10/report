@@ -1694,7 +1694,7 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 <br>
 
 <p align="center">
-  <img src="./img/insightssprint4final.png" width="800">
+  <img src="./img/report-image.jpeg" width="800">
 </p>
 
 <br>
@@ -1702,7 +1702,7 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 **Landing:**
 <br>
 <p align="center">
-  <img src="./img/insightslandingfinal.png" width="800">
+  <img src="./img/landing-image.jpeg" width="800">
 </p>
 
 <br>
@@ -1714,7 +1714,7 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 <br>
 
 <p align="center">
-  <img src="./img/insightsbackendfinal.png" width="800">
+  <img src="./img/backend-image.jpeg" width="800">
 </p>
 
 #### 5.3.1.8 Kanban Board
