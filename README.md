@@ -1746,7 +1746,7 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 <br>
 
 <p align="center">
-  <img src="./img/report-image.jpeg" width="800">
+  <img src="./img/insights_informe.jpg" width="800">
 </p>
 
 <br>
