@@ -1794,3 +1794,37 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 **Fuente:** Elaboración propia mediante Trello.  
 **Enlace:** [Kanban Board del Proyecto](https://trello.com/invite/b/6a04e4d2318841e6879a0f06/ATTI1844f7065acbae5a1736de2850cd2f094DE602E1/kanban-board)
 
+
+#### 5.3.2 Sprint 2
+#### 5.3.2.1 Sprint Backlog 
+
+| Orden | ID | Título | Descripción | Story Points | Estado | Asignado a |
+|--------|--------|--------|--------|--------|--------|--------|
+| 1 | TS03 | Caché de Coordenadas (Redis) | Setup de almacenamiento en memoria RAM (Upstash) con SSL para lecturas y escrituras de GPS a velocidad de sub-milisegundo. | 5 | Done | Andy Nuñez |
+| 2 | US28 | Transmitir ubicación GPS | Endpoint de emisión y actualización continua de coordenadas desde el dispositivo móvil del conductor hacia la caché. | 5 | Done | Hector Rios |
+| 3 | US19 | Indicar espera en Paradero | Acción del pasajero para registrar su presencia de origen/destino, almacenándose en el set de demanda de la caché. | 5 | Done | Hector Rios |
+| 4 | US20 | Consultar Tiempo Estimado (ETA) | Consumo de coordenadas en tiempo real emparejadas con la API de Mapbox para retornar la distancia y los minutos de arribo exactos. | 5 | Done | Adrian Valerio |
+| 5 | TS04 | Bus de Eventos (RabbitMQ) | Orquestación de mensajería asíncrona mediante CloudAMQP (tracking.exchange) para desacoplar el guardado del GPS del procesamiento de alertas. | 5 | Done | Andy Nuñez |
+| 6 | US23 | Eliminación automática de espera | Implementación de la "Regla de los 2 minutos" (TTL) en Redis para otorgar tolerancia a caídas de internet del conductor antes de limpiar la cola. | 5 | Done | Hector Rios |
+| 7 | TS06 | Pruebas BDD y Unitarias (Fase II) | Implementación de pruebas automatizadas con Cucumber, Gherkin (vehicle_checkin.feature) y Mockito para la capa de negocio del tracking. | 5 | Done | Adrian Valerio |
+| 8 | TS07 | Dockerización e Infraestructura CI/CD | Configuración de empaquetado multi-contenedor e integración continua conducida por Git en la plataforma cloud Render. | 5 | Done | Andy Nuñez |
+| 9 | TS08 | Configuración Externalizada de Red | Aislamiento de variables de entorno y optimización estricta de conexiones simultáneas mediante HikariCP (max-pool-size=3). | 4 | Done | Hector Rios |
+| 10 | TS09 | Resiliencia de Sentencias de BD | Desactivación del umbral de pre-compilación de sentencias en el driver JDBC para compatibilidad en la nube (prepareThreshold=0). | 3 | Done | Adrian Valerio |
+
+#### 5.3.2.2 Development Evidence for Sprint Review
+
+#### 5.3.2.3 Testing Suite Evidence for Sprint Review
+
+#### 5.3.2.4 Execution Evidence for Sprint Review
+
+#### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
+
+
+#### 5.3.2.6 Software Deployment Evidence for Sprint Review
+
+
+#### 5.3.2.7 Team Collaboration Insights during Sprint
+
+#### 5.3.2.8 Kanban Board
+
+
