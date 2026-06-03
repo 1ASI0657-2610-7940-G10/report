@@ -696,6 +696,9 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | TS04 | Bus de Eventos (RabbitMQ) | Configurar exchanges y colas para publicar eventos de Check-in, actualización GPS y demanda de paraderos de forma asíncrona. | Escenario 1: El Tracking Service emite el mensaje sin bloquear el hilo principal de ejecución del conductor. |
 | TS05 | Integración de SDK Firebase Admin | Desarrollar un worker consumidor que procese eventos de proximidad y despache alertas a los tokens de dispositivos móviles. | Escenario 1: El worker recibe el evento de RabbitMQ y ejecuta el envío push a través de los servidores de Firebase. |
 | TS06 | Pruebas BDD y Unitarias | Mantener la cobertura del apartado 5.1 implementando Cucumber y JUnit 5 Platform Suite en los flujos core. | Escenario 1: Los pipelines de integración continua ejecutan exitosamente los archivos `.feature` de identidad, ruteo y tracking. |
+| TS07 | Dockerización e Infraestructura CI/CD | Como desarrollador, quiero automatizar el despliegue y empaquetado de la aplicación mediante contenedores Docker y un pipeline CI/CD para asegurar entregas consistentes y rápidas. | Escenario 1: Al realizar un push al repositorio principal, el pipeline ejecuta automáticamente la construcción y despliegue de la aplicación.<br>Escenario 2: Si la construcción falla, el despliegue no se ejecuta y se registra el error correspondiente. |
+| TS08 | Configuración Externalizada de Red | Como desarrollador, quiero externalizar las configuraciones de red y optimizar el pool de conexiones para facilitar la administración de entornos y mejorar el rendimiento. | Escenario 1: Las variables de configuración pueden modificarse sin recompilar la aplicación.<br>Escenario 2: El sistema limita las conexiones concurrentes utilizando la configuración definida en HikariCP. |
+| TS09 | Resiliencia de Sentencias de BD | Como desarrollador, quiero ajustar la configuración del driver JDBC para garantizar la compatibilidad y estabilidad de las consultas en entornos cloud. | Escenario 1: Las consultas a la base de datos se ejecutan correctamente en el entorno cloud sin errores de pre-compilación.<br>Escenario 2: La aplicación mantiene compatibilidad con el proveedor de base de datos configurado tras desactivar el prepareThreshold. |
 
 ## 3.3. Impact Mapping
 
@@ -745,6 +748,9 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | 35 | US26 | Crear y listar Colecciones | Módulo de usuario para generar carpetas de rutas favoritas. | 3 |
 | 36 | US27 | Gestionar rutas en Colecciones | Lógica de vinculación/desvinculación de rutas en carpetas. | 3 |
 | 37 | TS06 | Pruebas BDD y Unitarias | Implementación continua de test automatizados en capa de negocio. | 5 |
+| 38 | TS07 | Dockerización e Infraestructura CI/CD | Configuración de empaquetado multi-contenedor e integración continua conducida por Git Git-driven en la plataforma cloud Render. | 5 |
+| 39 | TS08 | Configuración Externalizada de Red | Aislamiento de variables de entorno y optimización estricta de conexiones simultáneas mediante HikariCP (max-pool-size=3). | 4 |
+| 40 | TS09 | Resiliencia de Sentencias de BD | Desactivación del umbral de pre-compilación de sentencias en el driver JDBC para compatibilidad en la nube (prepareThreshold=0). | 3 |
 
 
 
