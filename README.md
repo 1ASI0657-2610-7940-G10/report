@@ -1830,7 +1830,27 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 | 10 | TS09 | Resiliencia de Sentencias de BD | Desactivación del umbral de pre-compilación de sentencias en el driver JDBC para compatibilidad en la nube (prepareThreshold=0). | 3 | Done | Adrian Valerio |
 
 #### 5.3.2.2 Development Evidence for Sprint Review
---------
+
+| Repository          | Branch                   | Commit Id | Commit Message                                                                   | Commit Message Body                                                                               | Commited on (Date) |
+| ------------------- | ------------------------ | --------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------ |
+| ChapaTuRuta-backend | feature/identityservice  | 72ddfd8   | feat: adding register with ruc for drivers                                       | Implementación del registro de conductores con asociación obligatoria a una empresa mediante RUC. | 01/06/2026         |
+| ChapaTuRuta-backend | feature/identityservice  | 1056d4e   | feat: Implement user profile management and driver list by company               | Desarrollo de la gestión de perfiles de usuario y consulta de conductores por empresa.            | 01/06/2026         |
+| ChapaTuRuta-backend | feature/routing-service  | 75c7daf   | feat: Implement CRUD for route management in the catalog                         | Implementación de operaciones CRUD para la administración de rutas de transporte.                 | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | 5933528   | feat: adding pattern for coordinates                                             | Implementación de validaciones para el manejo y almacenamiento de coordenadas geográficas.        | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | 4e3602d   | feat: adding endpoint for passengers demand                                      | Desarrollo de endpoints para registrar y consultar la demanda de pasajeros.                       | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | f543212   | feat: adding location history management                                         | Implementación del historial de ubicaciones de las unidades de transporte.                        | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | 6b91b81   | feat: Integrate Mapbox for ETA and PostgreSQL for offline history                | Integración con Mapbox para cálculo de ETA y PostgreSQL para persistencia histórica.              | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | 228033a   | fix: adding connection to Supabase                                               | Configuración de la conexión entre la aplicación y la base de datos Supabase en entorno cloud.    | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | e694bfc   | fix: generate token jwt                                                          | Corrección en la generación de tokens JWT para autenticación segura.                              | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | 0479e86   | feat: adding validation token                                                    | Implementación de validación de tokens JWT en las solicitudes protegidas.                         | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | dc8d086   | feat: adding jwt                                                                 | Incorporación de autenticación basada en JWT dentro de la arquitectura del sistema.               | 03/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | dd15a8c   | fix: fixing connections to db                                                    | Optimización y corrección de conexiones a la base de datos para entornos productivos.             | 03/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | df6e070   | fix: fixing schema to use configuration                                          | Ajuste del esquema de persistencia para utilizar configuración externalizada.                     | 03/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | cfbf8e5   | fix: stop setting manual UUID for routes                                         | Corrección en la generación automática de identificadores UUID para rutas.                        | 03/06/2026         |
+| ChapaTuRuta-backend | feature/identityservice  | 8c43443   | feat: add validation for user registration scenarios                             | Implementación de pruebas BDD para validar escenarios de registro de usuarios.                    | 03/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | f0a95bd   | feat: add tracking controller API with check-in and ETA scenarios                | Desarrollo de pruebas de integración para Check-In y ETA del servicio de tracking.                | 04/06/2026         |
+| ChapaTuRuta-backend | feature/routing-service  | e1e2c66   | feat: enhance routing service tests and scenarios for direct and transfer routes | Implementación de escenarios BDD para búsqueda de rutas directas y con transbordos.               | 04/06/2026         |
+
 
 #### 5.3.2.3 Testing Suite Evidence for Sprint Review
 
