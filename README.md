@@ -2050,7 +2050,50 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 
 
 #### 5.3.2.6 Software Deployment Evidence for Sprint Review
--------
+
+- Esta captura evidencia el dashboard principal de nuestra plataforma PaaS (Render Cloud). El estado verde ("Deploy successful" / "Live") de todos los componentes confirma que el pipeline de Integración Continua (CI/CD) descargó correctamente el código fuente, empaquetó las imágenes inmutables de Docker y levantó los contenedores sin errores
+
+<p align="center">
+  <img src="./img/deployment_evidence0.jpg" width="800">
+</p>
+
+- Se confirma el despliegue del identity-service en su dominio público. La interfaz interactiva demuestra que el contenedor ha cargado exitosamente las configuraciones de seguridad criptográfica y está listo para emitir y validar tokens JWT en la nube.
+
+<p align="center">
+  <img src="./img/deployment_evidence1.jpg" width="800">
+</p>
+
+- Evidencia del despliegue del tracking-service. Su correcto arranque en la nube confirma que la inyección de variables de entorno críticas (como el MAPBOX_ACCESS_TOKEN y las credenciales de colas) fue exitosa, permitiendo exponer los endpoints de telemetría de alta velocidad.
+
+<p align="center">
+  <img src="./img/deployment_evidence2.jpg" width="800">
+</p>
+
+- Captura del entorno productivo del routing-service, demostrando que los controladores que albergan la lógica algorítmica de búsqueda de itinerarios y transbordos están operativos y expuestos a través de la red perimetral.
+
+<p align="center">
+  <img src="./img/deployment_evidence3.jpg" width="800">
+</p>
+
+- Consola de administración de Supabase evidenciando el aprovisionamiento de la base de datos relacional (PostgreSQL). Demuestra que las tablas maestras de dominios (Usuarios, Rutas, Empresas) están activas en la nube y recibiendo conexiones persistentes desde los microservicios, validando las credenciales JDBC inyectadas en Render.
+
+<p align="center">
+  <img src="./img/deployment_evidence4.jpg" width="800">
+</p>
+
+- Monitoreo del clúster gestionado de Redis en Upstash. Esta instancia en memoria RAM, ahora activa en la nube, es la responsable de absorber la alta concurrencia de la telemetría GPS vehicular y la gestión de colas de demanda, garantizando lecturas de latencia ultrabaja.
+
+<p align="center">
+  <img src="./img/deployment_evidence5.jpg" width="800">
+</p>
+
+- Panel de control de CloudAMQP mostrando el bróker de mensajería en estado de ejecución (Running). Esta captura certifica el correcto despliegue de la infraestructura de colas asíncronas.
+
+<p align="center">
+  <img src="./img/deployment_evidence6.jpg" width="800">
+</p>
+
+
 
 #### 5.3.2.7 Team Collaboration Insights during Sprint
 
