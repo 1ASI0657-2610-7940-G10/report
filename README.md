@@ -1840,6 +1840,59 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 #### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 
 
+
+-  Los endpoints de creación, actualización y eliminación (POST, PUT y DELETE) entregam respuestas en formato JSON con un UUID generados por la base de datos para garantizar la integridad de la información. En el caso del endpoint de check-in del conductor, la solicitud se acepta de inmediato y el procesamiento se realiza en segundo plano mediante RabbitMQ para mejorar el rendimiento y evitar tiempos de espera.
+
+- Por otro lado, los endpoints de consulta (GET) obtienen la información desde Redis, una caché en memoria que permite respuestas más rápidas. Para calcular el tiempo estimado de llegada (ETA), el sistema combina las coordenadas almacenadas con datos de tráfico proporcionados por Mapbox y devuelve un resultado sencillo, por ejemplo, "6 min", listo para mostrarse en la aplicación móvil.
+
+
+
+| Endpoint                                | Acción                                            | Método HTTP | Sintaxis de llamada                     | Parámetros                                                                                                                                  | Ejemplo de Response                                                                                                                                                            | URL Documentación                                          |
+| --------------------------------------- | ------------------------------------------------- | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `/api/v1/auth/register`                 | Registrar un nuevo usuario (Pasajero o Conductor) | POST        | `/api/v1/auth/register`                 | **Body (JSON):** name (string), email (string), password (string), role (string), companyId (string/uuid)                                   | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/login`                    | Iniciar Sesión y obtener JWT                      | POST        | `/api/v1/auth/login`                    | **Body (JSON):** email (string), password (string)                                                                                          | `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZmE4NWY2NC..."`                                                                                                             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Obtener Perfil del usuario                        | GET         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Actualizar Perfil del usuario                     | PUT         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)<br>**Body (JSON):** name (string), password (string)                                                             | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Actualizado", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Eliminar Cuenta de usuario                        | DELETE      | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | En blanco (204 No Content / 200 OK)                                                                                                                                            | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/register`            | Registrar una nueva Empresa                       | POST        | `/api/v1/companies/register`            | **Body (JSON):** name (string), ruc (string), busPhotoUrl (string), managerId (string/uuid)                                                 | `{ "id": "e8a15f64-2717-4562-b3fc-2c963f66bbb2", "name": "Transportes Lima S.A.", "ruc": "20123456789" }`                                                                      | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/{companyId}/drivers` | Listar choferes de la empresa                     | GET         | `/api/v1/companies/{companyId}/drivers` | **Path:** companyId (string/uuid)                                                                                                           | `[{ "id": "8ca85f64-5717-4562-b3fc-2c963f66ccc4", "name": "Pedro Chofer", "email": "pedro@bus.com", "role": "DRIVER", "createdAt": "2026-06-03T19:00:00Z" }]`                  | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/routes`                        | Crear nueva ruta de transporte                    | POST        | `/api/v1/routes`                        | **Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer)                               | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }`                                        | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes`                        | Listar todas las rutas                            | GET         | `/api/v1/routes`                        | Ninguno                                                                                                                                     | `[{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }]`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Actualizar datos de una ruta                      | PUT         | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)<br>**Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer) | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Callao", "price": 4.00, "estimatedDuration": 50 }`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Eliminar una ruta                                 | DELETE      | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)                                                                                                                  | En blanco (200 OK)                                                                                                                                                             | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/search`                 | Buscar rutas directas/transbordos                 | GET         | `/api/v1/routes/search`                 | **Query:** origin (string), destination (string)                                                                                            | `[{ "legs": [{ "routeId": "4da75f64...", "origin": "Ate", "destination": "Lima", "price": 3.5, "estimatedDuration": 45 }], "totalPrice": 3.5, "totalEstimatedDuration": 45 }]` | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/tracking/check-in`             | Registrar Check-in del Conductor                  | POST        | `/api/v1/tracking/check-in`             | **Body (JSON):** driverId (uuid), routeId (uuid), stopId (uuid), latitude (number), longitude (number), timestamp (integer)                 | `"Check-in procesado asincronamente"`                                                                                                                                          | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/tracking/eta/{routeId}`        | Consultar Tiempo Estimado (ETA)                   | GET         | `/api/v1/tracking/eta/{routeId}`        | **Path:** routeId (string/uuid)<br>**Query:** pasajeroLat (number), pasajeroLng (number)                                                    | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "currentLatitude": -12.0400, "currentLongitude": -76.9500, "estimatedTime": "6 min" }`                                   | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/join`                   | Registrar pasajero en espera                      | POST        | `/api/v1/demand/join`                   | **Query:** routeId (string/uuid), stopId (string/uuid), passengerId (string/uuid)                                                           | `"Pasajero registrado en espera exitosamente"`                                                                                                                                 | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/transfer`               | Registrar transbordo de pasajero                  | POST        | `/api/v1/demand/transfer`               | **Query:** nextRouteId (string/uuid), nextStopId (string/uuid), passengerId (string/uuid)                                                   | `"Pasajero registrado para transbordo exitosamente"`                                                                                                                           | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/route/{routeId}`        | Ver demanda total de la ruta                      | GET         | `/api/v1/demand/route/{routeId}`        | **Path:** routeId (string/uuid)                                                                                                             | `{ "paradero-ate-123": 5, "paradero-santa-anita-456": 12 }`                                                                                                                    | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+
+
+<p align="center">
+  <img src="./img/microservice_evidence.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence1.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence2.jpg" width="800">
+</p>
+
+
+
+https://identity-service-2nhw.onrender.com/swagger-ui/index.html
+
+https://tracking-service-yj42.onrender.com/swagger-ui/index.html
+
+https://chapaturuta-backend.onrender.com/swagger-ui/index.html
+
+
+- **URL del Repositorio de Web Services:** https://github.com/1ASI0657-2610-7940-G10/ChapaTuRuta-backend
+
+
+
 #### 5.3.2.6 Software Deployment Evidence for Sprint Review
 -------
 
