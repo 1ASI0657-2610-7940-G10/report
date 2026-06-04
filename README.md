@@ -1458,7 +1458,7 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 #### **5.2.1 Software Development Environment Configuration**
 
 #### 1. Project Management
-- Trello (Tablero Kanban).
+- Jira (Tablero Kanban).
 
 #### 2. Software Development
 - IntelliJ IDEA.
@@ -1467,9 +1467,9 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 #### 3. Testing
 - Postman para Web Services.
 - Cucumber para BDD.
-- Unit Test:
+- Unit Test
 
-#### 1. Identity Service
+##### 1. Identity Service
 
 - **Pruebas Unitarias (JUnit 5 & Mockito):**
   - `RegisterUserUseCaseImplTest.java`: Valida la lógica de registro de usuarios, asegurando la creación exitosa de cuentas y el rechazo por correos duplicados.
@@ -1479,7 +1479,7 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
   - `register_user.feature` y `RegisterUserSteps.java`: Validan el flujo de negocio para el registro de pasajeros y conductores.
   - `CucumberTestRunner.java`: Orquestador de la ejecución de pruebas BDD.
 
-#### 2. Routing Service
+##### 2. Routing Service
 
 - **Pruebas Unitarias (JUnit 5 & Mockito):**
   - `SearchRoutesUseCaseImplTest.java`: Comprueba la búsqueda de rutas por distritos de origen y destino, validando tanto la obtención de datos como el manejo de búsquedas sin resultados.
@@ -1489,7 +1489,7 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
   - `search_routes.feature` y `SearchRoutesSteps.java`: Evalúan el flujo de consulta de rutas disponibles para el usuario.
   - `CucumberTestRunner.java`: Ejecutor de las características de búsqueda.
 
-#### 3. Tracking Service
+##### 3. Tracking Service
 
 - **Pruebas Unitarias (JUnit 5 & Mockito):**
   - `TrackingCommandServiceTest.java`: Testea el procesamiento de Check-In de vehículos, verificando el almacenamiento de coordenadas en caché (Redis) y la emisión de eventos asíncronos (RabbitMQ).
@@ -1502,11 +1502,20 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 
 
 #### 4. Software Deployment
-- AWS Management Console.
+- 4.1. Plataforma de Despliegue (PaaS): Render Cloud.
+- 4.2. Estrategia de Empaquetado: Docker y CaaS (Container as a Service).
+- 4.3. Integración y Despliegue Continuo (CI/CD): Despliegue automatizado guiado por Git (Git-driven deployment).
 
-#### 5. Software Deployment
-- Software Documentation
+#### 5. Chat y Comunicación
+- 5.1. Comunicación del Equipo: Uso de Microsoft Teams como medio de comunicación masiva, coordinación de entregables y resolución de bloqueos técnicos en el desarrollo.
 
+#### 6. Videoconferencia
+- 6.1. Sincronización y Ceremonias: Se utiliza Zoom como plataforma de videoconferencia para la coordinación de avances, revisiones de modificaciones arquitectónicas y reuniones periódicas de asignación de responsabilidades.
+
+#### 7. Prácticas DevOps y Calidad de Software (CI/CD)
+- 7.1. Orquestación de Integración Continua: Jenkins (Automatización del pipeline de construcción, compilación y ejecución de suites de pruebas).
+- 7.2. Inspección Continua y Análisis Estático: SonarQube (Evaluación exhaustiva de la salud del código, detección de deuda técnica, vulnerabilidades de seguridad y control de métricas de cobertura).
+- 7.3. Calidad de Integración (Quality Gates): Configuración automatizada de barreras de calidad (Quality Gates) con una exigencia mínima del 80% de cobertura en pruebas de código para autorizar el paso a entornos productivos.
 #### **5.2.2 Source Code Management**
 
 ### 1. Plataforma de Control de Versiones
@@ -1821,8 +1830,10 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 | 10 | TS09 | Resiliencia de Sentencias de BD | Desactivación del umbral de pre-compilación de sentencias en el driver JDBC para compatibilidad en la nube (prepareThreshold=0). | 3 | Done | Adrian Valerio |
 
 #### 5.3.2.2 Development Evidence for Sprint Review
+--------
 
 #### 5.3.2.3 Testing Suite Evidence for Sprint Review
+-----------
 
 #### 5.3.2.4 Execution Evidence for Sprint Review
 
@@ -1830,10 +1841,11 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 
 
 #### 5.3.2.6 Software Deployment Evidence for Sprint Review
-
+-------
 
 #### 5.3.2.7 Team Collaboration Insights during Sprint
 
 #### 5.3.2.8 Kanban Board
+-------
 
 
