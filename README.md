@@ -1833,7 +1833,143 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 --------
 
 #### 5.3.2.3 Testing Suite Evidence for Sprint Review
------------
+
+
+En esta sección se expone el conjunto de pruebas de integración y aceptación (Integration/Acceptance Tests) automatizadas bajo el enfoque de Desarrollo Guiado por Comportamiento (BDD). Los escenarios fueron escritos en lenguaje natural utilizando la sintaxis descriptiva Gherkin y acoplados al contexto de Spring Boot mediante Cucumber.
+
+Estas pruebas validan de extremo a extremo que las reglas de negocio, filtros de excepción y flujos de datos perimetrales correspondan rigurosamente con los criterios de aceptación de las Historias de Usuario (User Stories) planificadas para el presente Sprint.
+
+**Identity-service**
+
+<p align="center">
+  <img src="./img/test_identity.jpg" width="800">
+</p>
+
+```gherkin
+Feature: User Registration Authentication Flow
+
+  As a new passenger or driver
+  I want to register an account with my personal details
+  So that I can authenticate and access the ChapaTuRuta platform
+
+  Scenario: Successful user registration
+    Given a new user wants to register with email "juan.perez@example.com", name "Juan Perez", password "secure123", and role "PASSENGER"
+    When the registration request is processed
+    Then the account is successfully created returning the user details
+
+  Scenario: Registration fails due to duplicate email
+    Given an existing user is already registered with email "admin@example.com"
+    When a new user attempts to register with the duplicate email "admin@example.com"
+    Then the system rejects the request with a bad request error "El correo ya está registrado"
+
+  Scenario: Registration fails for driver without a company
+    Given a new driver attempts to register with email "chofer@example.com", name "Carlos", password "pass123", but no company ID
+    When the registration request is processed
+    Then the system rejects the request with a bad request error "Los conductores deben estar asociados a una empresa (companyId requerido)"
+```
+
+
+**routing-service**
+
+<p align="center">
+  <img src="./img/test_routing.jpg" width="800">
+</p>
+
+```gherkin
+Feature: Route Search Flow
+
+  As a passenger planning a trip
+  I want to search for available routes between my origin and destination districts
+  So that I can view the price and estimated duration in ChapaTuRuta
+
+  Scenario: Successful search for existing direct routes
+    Given the system has available routes registered from "San Juan de Lurigancho" to "Ate"
+    When a user searches for available routes from "San Juan de Lurigancho" to "Ate"
+    Then the system returns a list of routes containing pricing and duration details
+    And each route option has a valid price and duration
+
+  Scenario: Search for routes with no coverage
+    Given there are no routes registered from "Ancón" to "Chosica"
+    When a user searches for available routes from "Ancón" to "Chosica"
+    Then the system returns an empty list of routes
+
+  Scenario: Search for routes with transfer
+    Given the system has a transfer route from "Ate" via "La Victoria" to "Cercado de Lima"
+    When a user searches for available routes from "Ate" to "Cercado de Lima"
+    Then the system returns routes with multiple legs
+
+  Scenario: Search for multiple available direct routes
+    Given the system has 3 available routes from "Miraflores" to "San Isidro"
+    When a user searches for available routes from "Miraflores" to "San Isidro"
+    Then the system returns 3 available routes
+    And each route option has a valid price and duration
+```
+
+
+**tracking-service**
+
+<p align="center">
+  <img src="./img/test_tracking.jpg" width="800">
+</p>
+
+```gherkin
+Feature: Tracking Controller API
+
+  As a client of the tracking service
+  I want to register check-ins and consult ETA information
+  So that the controller behaves correctly for valid and invalid requests
+
+  Scenario: Successful check-in processing
+    Given a valid check-in request for the tracking controller
+    When the client sends the check-in request
+    Then the response status should be 202
+    And the response body should confirm asynchronous processing
+
+  Scenario: Check-in request rejected due to invalid coordinates
+    Given an invalid check-in request with latitude -91.0 and longitude -76.9532
+    When the client sends the check-in request
+    Then the response status should be 400
+    And the response body should describe the validation error
+
+  Scenario: Successful ETA lookup for a route
+    Given the ETA service returns a result for route "11111111-1111-1111-1111-111111111111"
+    When the client requests the ETA for route "11111111-1111-1111-1111-111111111111" and passenger coordinates -12.0435 and -76.9532
+    Then the ETA payload should contain the route identifier and current vehicle coordinates
+
+  Scenario: ETA lookup returns not found when the route has no active vehicles
+    Given the ETA service cannot resolve route "11111111-1111-1111-1111-111111111111"
+    When the client requests the ETA for route "11111111-1111-1111-1111-111111111111" and passenger coordinates -12.0435 and -76.9532
+    Then the response status should be 404
+```
+
+
+```gherkin
+Feature: Vehicle Check-In Tracking Flow
+
+  As a driver navigating a route
+  I want my active location to be stored and published asynchronously
+  So that the tracking system can notify passengers without blocking the application
+
+  Scenario: Successful Check-In processing without passengers waiting
+    Given an active driver transmits check-in coordinates latitude -12.0435 and longitude -76.9532 for a route
+    When the check-in command is processed by the command service
+    Then the system updates the vehicle location in cache and emits an async notification event
+
+  Scenario: Successful Check-In processing with waiting passengers at a stop
+    Given an active driver transmits check-in coordinates latitude -12.0435 and longitude -76.9532 for a route
+    And the route has waiting passengers at stop "11111111-1111-1111-1111-111111111111"
+    When the check-in command is processed by the command service
+    Then the system updates the vehicle location in cache and emits an async notification event
+    And the waiting passengers at the stop receive a two-minute extension
+```
+
+| Repository          | Branch                 | Commit Id                                | Commit Message                                                                   | Commit Message Body                                                                                                                                                                                   | Commited on (Date)  |
+| ------------------- | ---------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| ChapaTuRuta-backend | feature/routing-tests  | e1e2c6632b665c23bba7db34a95d9df9a28ece59 | feat: enhance routing service tests and scenarios for direct and transfer routes | Se implementan los escenarios estructurados en Cucumber utilizando Gherkin para la búsqueda de rutas directas y opciones con transbordo multimodales, aislando la lógica algorítmica.                 | 04 de Junio de 2026 |
+| ChapaTuRuta-backend | feature/identity-tests | 8c43443be352cdaf524491d6b989a55ae9ae6d12 | feat: add validation for user registration scenarios                             | Cobertura integral de los flujos de autenticación e inyección de reglas de negocio en el registro de usuarios, validando correos duplicados y la asociación obligatoria de empresas para conductores. | 04 de Junio de 2026 |
+| ChapaTuRuta-backend | feature/tracking-tests | f0a95bda2db081946b9137ce06ac11e27cabf89e | feat: add tracking controller API with check-in and ETA scenarios                | Implementación de Integration Tests empleando MockMvc para la ingesta síncrona de telemetría GPS y cálculo predictivo de ETA, neutralizando las llamadas externas y colas de RabbitMQ.                | 04 de Junio de 2026 |
+
+
 
 #### 5.3.2.4 Execution Evidence for Sprint Review
 
