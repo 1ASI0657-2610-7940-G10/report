@@ -1810,7 +1810,7 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 - 🟡 Amarillo: Testing y Calidad
 
 **Fuente:** Elaboración propia mediante Trello.  
-**Enlace:** [Kanban Board del Proyecto](https://trello.com/invite/b/6a04e4d2318841e6879a0f06/ATTI1844f7065acbae5a1736de2850cd2f094DE602E1/kanban-board)
+**Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
 
 
 #### 5.3.2 Sprint 2
