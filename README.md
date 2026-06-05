@@ -1098,50 +1098,62 @@ Se redactaron archivos `.feature` en lenguaje Gherkin para que las pruebas refle
   <img src="./img/kanban.png" alt="Kanban Board Sprint 1" width="100%">
 </p>
 
-**Descripción de etiquetas:**
--🔵 Azul (Frontend / UX)
-US01 Explorar paraderos desde Landing
-US02 Consultar funcionamiento y ventajas
-US03 Acceder a FAQ
-US08 Edición de Perfil de Usuario
-US10 Personalizar perfil de Empresa
-US11 Panel de resumen de métricas
-US18 Detalle visual de la Ruta
-US22 Confirmación manual de abordaje
-US24 Ver información del Conductor
-US25 Calificar viaje y Conductor
-US26 Crear y listar Colecciones
-US27 Gestionar rutas en Colecciones
-US31 Consultar reputación propia
--🔴 Rojo (Backend)
-US04 Registro de Pasajeros
-US05 Registro de Conductores con RUC
-US06 Inicio de Sesión con JWT
-US07 Cierre de Sesión
-US09 Registro inicial de Empresa
-US12 Crear y listar Paraderos
-US13 Editar y eliminar Paraderos
-US15 Crear Ruta y Horarios
-US16 Gestionar Rutas (Editar/Eliminar)
--🟠 Naranja (Tiempo Real / Geolocalización)
-US14 Visualizar paraderos en el mapa
-US17 Búsqueda de Rutas y Transbordos
-US19 Indicar espera en Paradero
-US20 Consultar Tiempo Estimado (ETA)
-US21 Notificaciones push de proximidad
-US23 Eliminación automática de espera
-US28 Transmitir ubicación GPS
-US29 Check-in manual en Paraderos
-US30 Ver concurrencia en tiempo real
--🟢 Verde (Base de Datos)
-TS02 Persistencia Relacional (PostgreSQL)
-TS03 Caché de Coordenadas (Redis)
--⚫ Negro (Infraestructura)
-TS01 Seguridad en API Gateway
-TS04 Bus de Eventos (RabbitMQ)
-TS05 Integración de SDK Firebase Admin
--🟨 Amarillo (Testing)
-TS06 Pruebas BDD y Unitarias
+### Descripción de etiquetas
+
+#### 🔵 Azul (Frontend / UX)
+
+- US01 – Explorar paraderos desde Landing
+- US02 – Consultar funcionamiento y ventajas
+- US03 – Acceder a FAQ
+- US08 – Edición de Perfil de Usuario
+- US10 – Personalizar perfil de Empresa
+- US11 – Panel de resumen de métricas
+- US18 – Detalle visual de la Ruta
+- US22 – Confirmación manual de abordaje
+- US24 – Ver información del Conductor
+- US25 – Calificar viaje y Conductor
+- US26 – Crear y listar Colecciones
+- US27 – Gestionar rutas en Colecciones
+- US31 – Consultar reputación propia
+
+#### 🔴 Rojo (Backend)
+
+- US04 – Registro de Pasajeros
+- US05 – Registro de Conductores con RUC
+- US06 – Inicio de Sesión con JWT
+- US07 – Cierre de Sesión
+- US09 – Registro inicial de Empresa
+- US12 – Crear y listar Paraderos
+- US13 – Editar y eliminar Paraderos
+- US15 – Crear Ruta y Horarios
+- US16 – Gestionar Rutas (Editar/Eliminar)
+
+#### 🟠 Naranja (Tiempo Real / Geolocalización)
+
+- US14 – Visualizar paraderos en el mapa
+- US17 – Búsqueda de Rutas y Transbordos
+- US19 – Indicar espera en Paradero
+- US20 – Consultar Tiempo Estimado (ETA)
+- US21 – Notificaciones push de proximidad
+- US23 – Eliminación automática de espera
+- US28 – Transmitir ubicación GPS
+- US29 – Check-in manual en Paraderos
+- US30 – Ver concurrencia en tiempo real
+
+#### 🟢 Verde (Base de Datos)
+
+- TS02 – Persistencia Relacional (PostgreSQL)
+- TS03 – Caché de Coordenadas (Redis)
+
+#### ⚫ Negro (Infraestructura)
+
+- TS01 – Seguridad en API Gateway
+- TS04 – Bus de Eventos (RabbitMQ)
+- TS05 – Integración de SDK Firebase Admin
+
+#### 🟨 Amarillo (Testing)
+
+- TS06 – Pruebas BDD y Unitarias
 
 **Fuente:** Elaboración propia mediante Trello.  
 **Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
