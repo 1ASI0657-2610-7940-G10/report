@@ -1772,18 +1772,100 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 #### 5.3.1.8 Kanban Board
 
 
+|  BACKLOG (Product Backlog General) |  TO DO (Sprint 1 Commitments) |  IN PROGRESS |  DONE (Sprint 1 Completado) |
+|---|---|---|---|
+| US01 Explorar paraderos desde Landing | (Las 8 tareas planificadas para este Sprint ya iniciaron su ciclo) | (Ninguna tarea quedó bloqueada o a medias al cierre del Sprint) | TS01 Seguridad en API Gateway |
+| US02 Consultar funcionamiento y ventajas |  |  | TS02 Persistencia Relacional (PostgreSQL) |
+| US03 Acceder a FAQ |  |  | US04 Registro de Pasajeros |
+| US07 Cierre de Sesión |  |  | US05 Registro de Conductores con RUC |
+| US08 Edición de Perfil de Usuario |  |  | US06 Inicio de Sesión con JWT |
+| US09 Registro inicial de Empresa |  |  | US12 Crear y listar Paraderos |
+| US10 Personalizar perfil de Empresa |  |  | US15 Crear Ruta y Horarios |
+| US11 Panel de resumen de métricas |  |  | US17 Búsqueda de Rutas y Transbordos |
+| US13 Editar y eliminar Paraderos |  |  |  |
+| US14 Visualizar paraderos en el mapa |  |  |  |
+| US16 Gestionar Rutas (Editar/Eliminar) |  |  |  |
+| US18 Detalle visual de la Ruta |  |  |  |
+| US19 Indicar espera en Paradero |  |  |  |
+| TS03 Caché de Coordenadas (Redis) |  |  |  |
+| US28 Transmitir ubicación GPS |  |  |  |
+| US29 Check-in manual en Paraderos |  |  |  |
+| US20 Consultar Tiempo Estimado (ETA) |  |  |  |
+| TS04 Bus de Eventos (RabbitMQ) |  |  |  |
+| US30 Ver concurrencia en tiempo real |  |  |  |
+| TS05 Integración de SDK Firebase Admin |  |  |  |
+| US21 Notificaciones push de proximidad |  |  |  |
+| US22 Confirmación manual de abordaje |  |  |  |
+| US23 Eliminación automática de espera |  |  |  |
+| US24 Ver información del Conductor |  |  |  |
+| US25 Calificar viaje y Conductor |  |  |  |
+| US31 Consultar reputación propia |  |  |  |
+| US26 Crear y listar Colecciones |  |  |  |
+| US27 Gestionar rutas en Colecciones |  |  |  |
+| TS06 Pruebas BDD y Unitarias |  |  |  |
+
+### Kanban Board del Sprint 1
+
 <p align="center">
   <img src="./img/kanban.png" alt="Kanban Board Sprint 1" width="100%">
 </p>
 
-**Descripción de etiquetas:**
-- 🔵 Azul: Historias de Usuario (US)
-- 🟢 Verde: Base de Datos y Persistencia
-- 🔴 Rojo: Backend y Seguridad
-- 🟣 Morado: Frontend e Interfaz
-- 🟠 Naranja: Funcionalidades en Tiempo Real / GPS
-- ⚫ Negro: Infraestructura y Servicios
-- 🟡 Amarillo: Testing y Calidad
+### Descripción de etiquetas
+
+#### 🔵 Azul (Frontend / UX)
+
+- US01 – Explorar paraderos desde Landing
+- US02 – Consultar funcionamiento y ventajas
+- US03 – Acceder a FAQ
+- US08 – Edición de Perfil de Usuario
+- US10 – Personalizar perfil de Empresa
+- US11 – Panel de resumen de métricas
+- US18 – Detalle visual de la Ruta
+- US22 – Confirmación manual de abordaje
+- US24 – Ver información del Conductor
+- US25 – Calificar viaje y Conductor
+- US26 – Crear y listar Colecciones
+- US27 – Gestionar rutas en Colecciones
+- US31 – Consultar reputación propia
+
+#### 🔴 Rojo (Backend)
+
+- US04 – Registro de Pasajeros
+- US05 – Registro de Conductores con RUC
+- US06 – Inicio de Sesión con JWT
+- US07 – Cierre de Sesión
+- US09 – Registro inicial de Empresa
+- US12 – Crear y listar Paraderos
+- US13 – Editar y eliminar Paraderos
+- US15 – Crear Ruta y Horarios
+- US16 – Gestionar Rutas (Editar/Eliminar)
+
+#### 🟠 Naranja (Tiempo Real / Geolocalización)
+
+- US14 – Visualizar paraderos en el mapa
+- US17 – Búsqueda de Rutas y Transbordos
+- US19 – Indicar espera en Paradero
+- US20 – Consultar Tiempo Estimado (ETA)
+- US21 – Notificaciones push de proximidad
+- US23 – Eliminación automática de espera
+- US28 – Transmitir ubicación GPS
+- US29 – Check-in manual en Paraderos
+- US30 – Ver concurrencia en tiempo real
+
+#### 🟢 Verde (Base de Datos)
+
+- TS02 – Persistencia Relacional (PostgreSQL)
+- TS03 – Caché de Coordenadas (Redis)
+
+#### ⚫ Negro (Infraestructura)
+
+- TS01 – Seguridad en API Gateway
+- TS04 – Bus de Eventos (RabbitMQ)
+- TS05 – Integración de SDK Firebase Admin
+
+#### 🟨 Amarillo (Testing)
+
+- TS06 – Pruebas BDD y Unitarias
 
 **Fuente:** Elaboración propia mediante Trello.  
 **Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
