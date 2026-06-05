@@ -1867,6 +1867,6 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 
 - TS06 – Pruebas BDD y Unitarias
 
-**Fuente:** Elaboración propia mediante Trello.  
+**Fuente:** Elaboración propia mediante Jira.  
 **Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
 
