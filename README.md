@@ -2065,17 +2065,6 @@ En esta prueba se valida el endpoint de ETA del Tracking Service. Se consulta el
 
 ---
 
-#### 7. Tracking ETA After Check-in - Consulta de ETA después del Registro de Ubicación
-
-En esta prueba se valida nuevamente el cálculo del ETA luego de ejecutar correctamente el check-in del conductor. El objetivo es confirmar que, una vez registrada la ubicación en el Tracking Service, el sistema puede utilizar esa información para calcular el tiempo estimado de llegada sin errores de datos faltantes.
-
-**Método:** `GET`  
-**Endpoint:** `/api/v1/tracking/eta/{routeId}?pasajeroLat={lat}&pasajeroLng={lng}`
-
-![Tracking ETA After Check-in](./img/postman-evidence-TrackingETAAfterCheckIn.png)
-
----
-
 #### Resultado de la Validación
 
 Las pruebas ejecutadas en Postman permiten evidenciar que los principales endpoints de los microservicios se encuentran operativos. Además, se verifica que el flujo entre autenticación, autorización, búsqueda de rutas, registro de ubicación y cálculo de ETA funciona de manera integrada dentro del sistema.
