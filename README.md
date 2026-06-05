@@ -1993,9 +1993,94 @@ Feature: Vehicle Check-In Tracking Flow
 
 #### 5.3.2.4 Execution Evidence for Sprint Review
 
+### 5.3.2.4 Execution Evidence for Sprint Review
+
+Para validar el correcto funcionamiento de los microservicios desarrollados durante el sprint, se realizaron pruebas manuales utilizando Postman. Estas pruebas permiten verificar la autenticación, autorización, consulta de información del usuario, búsqueda de rutas, consulta de conductores, registro de ubicación del conductor y cálculo del tiempo estimado de llegada del bus.
+
+---
+
+#### 1. Login - Obtención del Token JWT
+
+En esta prueba se valida el endpoint de autenticación del Identity Service. Se envían las credenciales del usuario conductor para obtener un token JWT, el cual será utilizado posteriormente para acceder a los endpoints protegidos del sistema.
+
+**Método:** `POST`  
+**Endpoint:** `/api/v1/auth/login`
+
+![Login](./img/postman-evidence-Login.png)
+
+---
+
+#### 2. Auth Profile - Consulta del Perfil Autenticado
+
+En esta prueba se valida que el token JWT generado en el login permita acceder correctamente a la información del usuario autenticado. El objetivo es comprobar que el Identity Service reconoce al usuario y devuelve los datos asociados a su identificador.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/auth/profile/{userId}`
+
+![Auth Profile](./img/postman-evidence-AuthProfile.png)
+
+---
+
+#### 3. Routes Search - Búsqueda de Rutas
+
+En esta prueba se valida el funcionamiento del Routing Service. Se realiza una búsqueda de rutas disponibles entre un distrito de origen y un distrito de destino. El objetivo es comprobar que el sistema pueda retornar rutas válidas, incluyendo información como el identificador de la ruta y el precio estimado.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/routes/search?origin={origin}&destination={destination}`
+
+![Routes Search](./img/postman-evidence-RoutesSearch.png)
+
+---
+
+#### 4. Company Drivers - Consulta de Conductores por Empresa
+
+En esta prueba se valida que el Identity Service permita consultar los conductores asociados a una empresa de transporte específica. El objetivo es comprobar que la relación entre empresa y conductores se encuentre correctamente registrada y que el endpoint retorne la lista correspondiente.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/companies/{companyId}/drivers`
+
+![Company Drivers](./img/postman-evidence-CompanyDrivers.png)
+
+---
+
+#### 5. Tracking Check-in - Registro de Ubicación del Conductor
+
+En esta prueba se valida el endpoint de check-in del Tracking Service. Se registra la ubicación actual del conductor mediante coordenadas de latitud y longitud, asociándola a una ruta específica. El objetivo es actualizar la información de ubicación en el sistema para que pueda ser utilizada posteriormente en el cálculo del ETA.
+
+**Método:** `POST`  
+**Endpoint:** `/api/v1/tracking/check-in`
+
+![Tracking Check-in](./img/postman-evidence-TrackingCheckIn.png)
+
+---
+
+#### 6. Tracking ETA - Consulta del Tiempo Estimado de Llegada
+
+En esta prueba se valida el endpoint de ETA del Tracking Service. Se consulta el tiempo estimado de llegada del bus a partir de la ubicación del pasajero y la ruta seleccionada. El objetivo es comprobar que el sistema pueda calcular y devolver el ETA utilizando la ubicación previamente registrada del conductor.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/tracking/eta/{routeId}?pasajeroLat={lat}&pasajeroLng={lng}`
+
+![Tracking ETA](./img/postman-evidence-TrackingETA.png)
+
+---
+
+#### 7. Tracking ETA After Check-in - Consulta de ETA después del Registro de Ubicación
+
+En esta prueba se valida nuevamente el cálculo del ETA luego de ejecutar correctamente el check-in del conductor. El objetivo es confirmar que, una vez registrada la ubicación en el Tracking Service, el sistema puede utilizar esa información para calcular el tiempo estimado de llegada sin errores de datos faltantes.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/tracking/eta/{routeId}?pasajeroLat={lat}&pasajeroLng={lng}`
+
+![Tracking ETA After Check-in](./img/postman-evidence-TrackingETAAfterCheckIn.png)
+
+---
+
+#### Resultado de la Validación
+
+Las pruebas ejecutadas en Postman permiten evidenciar que los principales endpoints de los microservicios se encuentran operativos. Además, se verifica que el flujo entre autenticación, autorización, búsqueda de rutas, registro de ubicación y cálculo de ETA funciona de manera integrada dentro del sistema.
+
 #### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
-
-
 
 -  Los endpoints de creación, actualización y eliminación (POST, PUT y DELETE) entregam respuestas en formato JSON con un UUID generados por la base de datos para garantizar la integridad de la información. En el caso del endpoint de check-in del conductor, la solicitud se acepta de inmediato y el procesamiento se realiza en segundo plano mediante RabbitMQ para mejorar el rendimiento y evitar tiempos de espera.
 
