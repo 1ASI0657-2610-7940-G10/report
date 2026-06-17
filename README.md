@@ -2483,7 +2483,7 @@ En esta prueba se valida el flujo inicial de la aplicación. Se ingresan las cre
 **Acción ejecutada:** Inicio de sesión y enrutamiento dinámico basado en el rol del usuario.
 
 <p align="center">
-  <img src="./img/evidence_sprint31.jpg" width="800">
+  <img src="./img/evidence_sprint31.jpg" width="200">
 </p>
 
 
@@ -2500,7 +2500,7 @@ Esta prueba valida la integración del mapa dentro del `PassengerHomeView`. Se d
 
 
 <p align="center">
-  <img src="./img/evidence_sprint32.jpg" width="800">
+  <img src="./img/evidence_sprint32.jpg" width="200">
 </p>
 ---
 
@@ -2513,7 +2513,7 @@ Esta prueba valida la vista operativa del conductor. El `DriverHomeView` renderi
 **Acción ejecutada:** Emisión manual de eventos de ubicación y actualización reactiva del estado de la interfaz.
 
 <p align="center">
-  <img src="./img/evidence_sprint33.jpg" width="800">
+  <img src="./img/evidence_sprint33.jpg" width="200">
 </p>
 
 ---
@@ -2527,7 +2527,70 @@ Esta prueba valida la experiencia de usuario del pasajero durante la solicitud d
 **Acción ejecutada:** Confirmación del paradero de espera y recepción asíncrona del ETA mediante actualizaciones periódicas.
 
 <p align="center">
-  <img src="./img/evidence_sprint34.jpg" width="800">
+  <img src="./img/evidence_sprint34.jpg" width="200">
 </p>
 
 ---
+
+
+#### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
+
+
+
+## Integración de Red del Frontend (Flutter)
+
+En esta sección se documenta la capa de integración de red construida en el Frontend desarrollado en Flutter durante el presente Sprint. Debido a que los microservicios Backend fueron implementados y documentados mediante OpenAPI/Swagger en iteraciones anteriores, el objetivo de este Sprint fue desarrollar los **Repositorios (Repository Pattern)** y los **Modelos de Datos (Beans)** responsables de consumir dichos servicios desde la aplicación móvil.
+
+Para la comunicación con los servicios REST se implementó el paquete `http` de Dart en conjunto con `shared_preferences`, permitiendo la persistencia local del token JWT y su inyección automática en las cabeceras (`Headers`) de cada petición HTTP autenticada.
+
+A continuación, se presenta el mapeo entre los métodos implementados en Flutter y los endpoints expuestos a través del API Gateway, manteniendo una arquitectura desacoplada entre la capa de presentación (UI/BLoC) y la capa de acceso a datos (Repository).
+
+---
+
+| Repositorio Flutter (.dart) | Método Implementado                 | Método HTTP | Endpoint Consumido (API Gateway)      | Modelos / Beans Utilizados       | Descripción de la Integración                                                                                                                                                                 |
+| --------------------------- | ----------------------------------- | ----------- | ------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AuthRepository`            | `login(email, password)`            | `POST`      | `/api/v1/auth/login`                  | `String (JWT)`                   | Autentica al usuario contra el Identity Service y almacena el token JWT devuelto en el almacenamiento seguro del dispositivo.                                                                 |
+| `AuthRepository`            | `registerUser(...)`                 | `POST`      | `/api/v1/auth/register`               | Ninguno (`void`)                 | Serializa los datos del formulario de registro (Pasajero, Conductor o Manager) en formato JSON para la creación de una nueva cuenta.                                                          |
+| `PassengerRepository`       | `searchRoutes(origin, destination)` | `GET`       | `/api/v1/routes/search`               | `TripOptionBean`, `RouteLegBean` | Consulta las rutas disponibles entre un origen y destino. La respuesta JSON anidada es deserializada hacia objetos tipados en Dart.                                                           |
+| `PassengerRepository`       | `joinStopQueue(route, stop)`        | `POST`      | `/api/v1/demand/join`                 | Ninguno (`void`)                 | Obtiene el `passengerId` decodificando el payload del JWT almacenado localmente y lo envía al backend para registrar la espera del pasajero en Redis.                                         |
+| `PassengerRepository`       | `getEta(routeId, lat, lng)`         | `GET`       | `/api/v1/tracking/eta/{routeId}`      | `EtaBean`                        | Envía la ubicación estática del pasajero y recibe el cálculo de llegada generado mediante Mapbox, deserializando la respuesta en un objeto con información del tiempo estimado (ej. "6 min"). |
+| `DriverRepository`          | `getAllRoutes()`                    | `GET`       | `/api/v1/routes`                      | `List<RouteBean>`                | Obtiene el catálogo completo de rutas disponibles para poblar dinámicamente el menú desplegable (`Dropdown`) del conductor al iniciar su recorrido.                                           |
+| `DriverRepository`          | `sendCheckIn(...)`                  | `POST`      | `/api/v1/tracking/check-in`           | Ninguno (`void`)                 | Empaqueta el `driverId` obtenido desde el JWT, el paradero y las coordenadas actuales, enviando el evento de llegada manual al Tracking Service.                                              |
+| `ManagerRepository`         | `getDrivers(companyId)`             | `GET`       | `/api/v1/drivers/company/{companyId}` | `List<DriverBean>`               | Consulta los conductores asociados a una empresa específica, transformando la respuesta JSON en objetos de dominio utilizados por la interfaz de gestión.                                     |
+
+---
+
+Esta capa de integración permite que los BLoC del Frontend consuman servicios remotos mediante una interfaz de repositorios desacoplada, favoreciendo la mantenibilidad, la escalabilidad y la realización de pruebas unitarias mediante la sustitución de dependencias.
+
+
+| Endpoint                                | Acción                                            | Método HTTP | Sintaxis de llamada                     | Parámetros                                                                                                                                  | Ejemplo de Response                                                                                                                                                            | URL Documentación                                          |
+| --------------------------------------- | ------------------------------------------------- | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `/api/v1/auth/register`                 | Registrar un nuevo usuario (Pasajero o Conductor) | POST        | `/api/v1/auth/register`                 | **Body (JSON):** name (string), email (string), password (string), role (string), companyId (string/uuid)                                   | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/login`                    | Iniciar Sesión y obtener JWT                      | POST        | `/api/v1/auth/login`                    | **Body (JSON):** email (string), password (string)                                                                                          | `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZmE4NWY2NC..."`                                                                                                             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Obtener Perfil del usuario                        | GET         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Actualizar Perfil del usuario                     | PUT         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)<br>**Body (JSON):** name (string), password (string)                                                             | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Actualizado", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Eliminar Cuenta de usuario                        | DELETE      | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | En blanco (204 No Content / 200 OK)                                                                                                                                            | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/register`            | Registrar una nueva Empresa                       | POST        | `/api/v1/companies/register`            | **Body (JSON):** name (string), ruc (string), busPhotoUrl (string), managerId (string/uuid)                                                 | `{ "id": "e8a15f64-2717-4562-b3fc-2c963f66bbb2", "name": "Transportes Lima S.A.", "ruc": "20123456789" }`                                                                      | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/{companyId}/drivers` | Listar choferes de la empresa                     | GET         | `/api/v1/companies/{companyId}/drivers` | **Path:** companyId (string/uuid)                                                                                                           | `[{ "id": "8ca85f64-5717-4562-b3fc-2c963f66ccc4", "name": "Pedro Chofer", "email": "pedro@bus.com", "role": "DRIVER", "createdAt": "2026-06-03T19:00:00Z" }]`                  | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/routes`                        | Crear nueva ruta de transporte                    | POST        | `/api/v1/routes`                        | **Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer)                               | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }`                                        | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes`                        | Listar todas las rutas                            | GET         | `/api/v1/routes`                        | Ninguno                                                                                                                                     | `[{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }]`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Actualizar datos de una ruta                      | PUT         | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)<br>**Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer) | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Callao", "price": 4.00, "estimatedDuration": 50 }`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Eliminar una ruta                                 | DELETE      | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)                                                                                                                  | En blanco (200 OK)                                                                                                                                                             | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/search`                 | Buscar rutas directas/transbordos                 | GET         | `/api/v1/routes/search`                 | **Query:** origin (string), destination (string)                                                                                            | `[{ "legs": [{ "routeId": "4da75f64...", "origin": "Ate", "destination": "Lima", "price": 3.5, "estimatedDuration": 45 }], "totalPrice": 3.5, "totalEstimatedDuration": 45 }]` | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/tracking/check-in`             | Registrar Check-in del Conductor                  | POST        | `/api/v1/tracking/check-in`             | **Body (JSON):** driverId (uuid), routeId (uuid), stopId (uuid), latitude (number), longitude (number), timestamp (integer)                 | `"Check-in procesado asincronamente"`                                                                                                                                          | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/tracking/eta/{routeId}`        | Consultar Tiempo Estimado (ETA)                   | GET         | `/api/v1/tracking/eta/{routeId}`        | **Path:** routeId (string/uuid)<br>**Query:** pasajeroLat (number), pasajeroLng (number)                                                    | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "currentLatitude": -12.0400, "currentLongitude": -76.9500, "estimatedTime": "6 min" }`                                   | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/join`                   | Registrar pasajero en espera                      | POST        | `/api/v1/demand/join`                   | **Query:** routeId (string/uuid), stopId (string/uuid), passengerId (string/uuid)                                                           | `"Pasajero registrado en espera exitosamente"`                                                                                                                                 | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/transfer`               | Registrar transbordo de pasajero                  | POST        | `/api/v1/demand/transfer`               | **Query:** nextRouteId (string/uuid), nextStopId (string/uuid), passengerId (string/uuid)                                                   | `"Pasajero registrado para transbordo exitosamente"`                                                                                                                           | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/route/{routeId}`        | Ver demanda total de la ruta                      | GET         | `/api/v1/demand/route/{routeId}`        | **Path:** routeId (string/uuid)                                                                                                             | `{ "paradero-ate-123": 5, "paradero-santa-anita-456": 12 }`                                                                                                                    | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+
+
+<p align="center">
+  <img src="./img/microservice_evidence.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence1.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence2.jpg" width="800">
