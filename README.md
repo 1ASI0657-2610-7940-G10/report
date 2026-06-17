@@ -200,11 +200,11 @@ El curso cumple de manera directa el cumplimiento del Student Outcome 5 definido
 Somos un equipo de estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC) motivados en desarrollar una solución que cuyo objetivo principal sea ayudar a las personas que usan el transporte público.
 
 ### 1.1.1. Descripción de la Startup
-ChapaTuRuta es un startup enfocado en desarrollar soluciones de software eficientes que resuelvan problemas reales de infraestructura y logística urbana. Priorizamos el rendimiento y la escalabilidad, así como la adopción de prácticas de desarrollo para ofrecer una solución robusta que mejore el tránsito en la ciudad.
+ChapaTuRuta es una startup enfocada en desarrollar soluciones de software eficientes que resuelvan problemas reales de infraestructura y movilidad urbana. Priorizamos el rendimiento y la escalabilidad, así como la adopción de prácticas ágiles de desarrollo para ofrecer una solución robusta que democratice la información y mejore el tránsito en la ciudad.
 
-**Misión:** Brindar a los estudiantes universitarios una solución digital y accesible que proteja sus pertenencias y su tranquilidad mientras viven lejos de casa, facilitando seguros personalizados y procesos ágiles de gestión y reclamación.
+**Misión:** Brindar a los usuarios del transporte público y a las empresas operadoras una plataforma digital en tiempo real y accesible que optimice la movilidad diaria, facilitando el rastreo de unidades, el cálculo exacto de tiempos de llegada (ETA) y la digitalización de los procesos logísticos de las rutas.
 
-**Visión:** Ser la startup líder en seguros digitales para estudiantes universitarios, reconocida por ofrecer protección confiable, rápida y adaptada a sus necesidades.
+**Visión:** Ser la startup líder en innovación tecnológica para el transporte público urbano, reconocida por transformar y modernizar la experiencia de viaje de miles de ciudadanos a través de un ecosistema de información confiable, rápido y colaborativo.
 
 ### 1.1.2. Perfiles de integrantes del equipo
 | Foto | Información General |
