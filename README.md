@@ -2354,3 +2354,115 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 |     5 | US29 | Check-in manual en Paraderos    | Interfaz del conductor con botón "Llegué Aquí" para enviar coordenadas de actualización (ideal ya que el GPS continuo está comentado). |            3 | Done   | Adrian Valerio |
 
 
+
+
+#### 5.3.3.3 Testing Suite Evidence for Sprint Review
+
+### Pruebas de Integración de Interfaz de Usuario (Widget/Integration Tests)
+
+En esta sección se expone el conjunto de pruebas de integración de interfaz de usuario (Widget/Integration Tests) automatizadas bajo el enfoque de Desarrollo Guiado por Comportamiento (BDD) para la aplicación móvil desarrollada en Flutter.
+
+Los escenarios fueron escritos utilizando la sintaxis descriptiva Gherkin y acoplados al framework de pruebas nativo de Flutter mediante la librería `bdd_widget_test`. Estas pruebas validan de extremo a extremo que la gestión de estados mediante BLoC, la navegación condicional por roles y la renderización de componentes visuales (mapas, tarjetas y formularios) correspondan rigurosamente con los criterios de aceptación de las Historias de Usuario planificadas para el presente Sprint del Frontend.
+
+---
+
+### Authentication & Role Coordinator (`auth_flow.feature`)
+
+### Feature: Authentication and Role-Based Routing Flow
+
+**As a registered user**
+**I want to log in and be redirected to my specific workspace**
+**So that I can access the tools corresponding to my role (Passenger, Driver, or Manager)**
+
+### Scenario: Successful login and routing for a Passenger
+
+```gherkin
+Given the user is on the Login Screen
+When the user enters "juan@pasajero.com" into the email field
+And the user enters "secure123" into the password field
+And the user taps the "Ingresar" button
+Then the system validates the JWT and routes the user
+And the "PassengerHomeView" with the Mapbox map should be visible
+```
+
+### Scenario: Successful login and routing for a Driver
+
+```gherkin
+Given the user is on the Login Screen
+When the user enters "pedro@driver.com" into the email field
+And the user enters "secure123" into the password field
+And the user taps the "Ingresar" button
+Then the system validates the JWT and routes the user
+And the "DriverHomeView" with the green "INICIAR RUTA" button should be visible
+```
+
+---
+
+### Passenger Workspace (`passenger_map.feature`)
+
+### Feature: Passenger Map and Wait Flow
+
+**As a passenger**
+**I want to search a route and indicate my waiting stop**
+**So that I can see the bus moving on the map and its Estimated Time of Arrival (ETA)**
+
+### Scenario: Search and render a route successfully
+
+```gherkin
+Given the passenger is on the "PassengerHomeView"
+When the passenger enters "Pueblo Libre" as origin and "Santa Anita" as destination
+And taps the search icon
+Then the system fetches the route coordinates from the Routing Service
+And a curved blue Polyline and red Stop Markers should be rendered on the Mapbox layer
+```
+
+### Scenario: Passenger joins the queue and views the ETA card
+
+```gherkin
+Given the passenger has successfully searched for a route
+When the passenger taps on a red Stop Marker
+And taps the "Esperar Bus Aquí" button on the bottom sheet
+Then the bottom sheet should close
+And the Floating Wait Card should appear with the text "Calculando llegada..."
+And the Map should display a dynamic bus icon moving according to the ETA polling
+```
+
+---
+
+### Driver Workspace (`driver_checkin.feature`)
+
+### Feature: Driver Route Selection and Manual Check-In
+
+**As a driver**
+**I want to select my assigned route and manually report my arrival at stops**
+**So that passengers can receive accurate ETA updates without relying solely on continuous GPS**
+
+### Scenario: Select a dynamic route and start the trip
+
+```gherkin
+Given the driver is on the "DriverHomeView"
+When the dropdown menu fetches available routes from the backend
+And the driver selects the route "1285 San Antonio"
+And taps the "INICIAR RUTA" button
+Then the view should change to display the sequence of stops for the selected route
+```
+
+### Scenario: Successful manual check-in at a stop
+
+```gherkin
+Given the driver has started a route and sees the list of stops
+When the driver taps the "LLEGUÉ AQUÍ" button for the "Jorge Polar" stop
+Then the BLoC should send the stop coordinates to the Tracking Service
+And the button should change its state to "LISTO" and become disabled
+And a green SnackBar should appear with the message "Check-in exitoso"
+```
+
+---
+
+### Evidencia de Commits de Pruebas Automatizadas
+
+| Repository           | Branch                    | Commit Id                                | Commit Message                                                    | Commit Message Body                                                                                                                                                                                                                      | Commited on (Date)  |
+| -------------------- | ------------------------- | ---------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| ChapaTuRuta-frontend | feature/auth-widget-tests | 186d57bb9c85bf2870ed995f9b8b4b1e2d7214f1 | test: add BDD widget tests for login and role coordinator         | Se implementan pruebas de integración simulando la inserción de credenciales, verificando la gestión de estado del AuthBloc y asegurando que el RoleCoordinator redirija correctamente basándose en el payload del JWT.                  | 17 de Junio de 2026 |
+| ChapaTuRuta-frontend | feature/passenger-tests   | 77d7b6b0c8eae35241a139dfaf0c82f2b94d62e5 | test: verify mapbox rendering and ETA floating card interactions  | Cobertura BDD para el flujo del pasajero. Se verifica el renderizado de flutter_map, la aparición de la polilínea tras la búsqueda y la transición de la interfaz al presionar "Esperar Bus Aquí", mostrando la tarjeta flotante de ETA. | 17 de Junio de 2026 |
+| ChapaTuRuta-frontend | feature/driver-tests      | 2888a05d9b3b2dfa2cb2184f3548b9f97122d8f1 | test: validate driver dynamic route selection and check-in states | Se implementan pruebas de integración para el flujo del conductor, validando la selección dinámica de rutas, cambios de estado del botón de check-in y la interacción con el Driver BLoC.                                                | 17 de Junio de 2026 |
