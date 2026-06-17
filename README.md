@@ -832,7 +832,7 @@ Los esquemas de contenedores ilustran las distintas partes que conforman el sist
 Diagrama container:
 
 <p align="center">
-  <img src="./img/conteiners_diagram.png" alt="Container Diagram">
+  <img src="./img/conteiners_diagram.png" alt="Container Diagram">pr
 </p>
 
 #### 4.1.5 Relational / Non-Relational Database Diagram
@@ -2073,7 +2073,6 @@ Feature: Vehicle Check-In Tracking Flow
 
 
 
-#### 5.3.2.4 Execution Evidence for Sprint Review
 
 ### 5.3.2.4 Execution Evidence for Sprint Review
 
@@ -2341,5 +2340,17 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 #### **Fuente:** Elaboración propia mediante Jira.  
 #### **Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
 
+
+
+#### 5.3.3 Sprint 2
+#### 5.3.3.1 Sprint Backlog 
+
+| Orden | ID   | Título                          | Descripción                                                                                                                            | Story Points | Estado | Asignado a     |
+| ----: | ---- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -----------: | ------ | -------------- |
+|     1 | US07 | Cierre de Sesión                | Inactivación de sesión desde el cliente (eliminación del token JWT en SharedPreferences) y redirección al login.                       |            2 | Done   | Hector Rios    |
+|     2 | US14 | Visualizar paraderos en el mapa | Renderizado geolocalizado de pines interactivos para cada paradero usando la librería flutter_map.                                     |            5 | Done   | Andy Nuñez     |
+|     3 | US18 | Detalle visual de la Ruta       | Decodificación matemática nativa y dibujo de polilíneas exactas (calles y curvas) consumiendo la API de Mapbox.                        |            5 | Done   | Adrian Valerio |
+|     4 | US22 | Confirmación manual de abordaje | Interfaz de tarjeta flotante con botones interactivos ("Ya Subí" / "Cancelar") para salir de la cola de espera de Redis.               |            3 | Done   | Hector Rios    |
+|     5 | US29 | Check-in manual en Paraderos    | Interfaz del conductor con botón "Llegué Aquí" para enviar coordenadas de actualización (ideal ya que el GPS continuo está comentado). |            3 | Done   | Adrian Valerio |
 
 
