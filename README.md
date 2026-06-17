@@ -2353,7 +2353,7 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 |     4 | US22 | Confirmación manual de abordaje | Interfaz de tarjeta flotante con botones interactivos ("Ya Subí" / "Cancelar") para salir de la cola de espera de Redis.               |            3 | Done   | Hector Rios    |
 |     5 | US29 | Check-in manual en Paraderos    | Interfaz del conductor con botón "Llegué Aquí" para enviar coordenadas de actualización (ideal ya que el GPS continuo está comentado). |            3 | Done   | Adrian Valerio |
 
-
+#### 5.3.3.2 Development Evidence for Sprint Review
 
 
 #### 5.3.3.3 Testing Suite Evidence for Sprint Review
@@ -2466,3 +2466,68 @@ And a green SnackBar should appear with the message "Check-in exitoso"
 | ChapaTuRuta-frontend | feature/auth-widget-tests | 186d57bb9c85bf2870ed995f9b8b4b1e2d7214f1 | test: add BDD widget tests for login and role coordinator         | Se implementan pruebas de integración simulando la inserción de credenciales, verificando la gestión de estado del AuthBloc y asegurando que el RoleCoordinator redirija correctamente basándose en el payload del JWT.                  | 17 de Junio de 2026 |
 | ChapaTuRuta-frontend | feature/passenger-tests   | 77d7b6b0c8eae35241a139dfaf0c82f2b94d62e5 | test: verify mapbox rendering and ETA floating card interactions  | Cobertura BDD para el flujo del pasajero. Se verifica el renderizado de flutter_map, la aparición de la polilínea tras la búsqueda y la transición de la interfaz al presionar "Esperar Bus Aquí", mostrando la tarjeta flotante de ETA. | 17 de Junio de 2026 |
 | ChapaTuRuta-frontend | feature/driver-tests      | 2888a05d9b3b2dfa2cb2184f3548b9f97122d8f1 | test: validate driver dynamic route selection and check-in states | Se implementan pruebas de integración para el flujo del conductor, validando la selección dinámica de rutas, cambios de estado del botón de check-in y la interacción con el Driver BLoC.                                                | 17 de Junio de 2026 |
+
+
+#### 5.3.3.4 Execution Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de ejecución de las funcionalidades implementadas en el Sprint del Frontend. Cada evidencia demuestra el correcto funcionamiento de los flujos principales de la aplicación móvil Flutter, validando la interacción entre la interfaz de usuario, la gestión de estados mediante BLoC y la comunicación con los servicios del Backend.
+
+---
+
+#### 1. Autenticación y Coordinador de Roles (Login Flow)
+
+En esta prueba se valida el flujo inicial de la aplicación. Se ingresan las credenciales en el `LoginView`, el `AuthBloc` se comunica con el Identity Service, almacena el token JWT de forma segura y el `RoleCoordinator` evalúa el payload para redirigir al usuario hacia su espacio de trabajo correspondiente (Pasajero, Conductor o Manager).
+
+**Vista evaluada:** `LoginView.dart` → `RoleCoordinator.dart`
+
+**Acción ejecutada:** Inicio de sesión y enrutamiento dinámico basado en el rol del usuario.
+
+<p align="center">
+  <img src="./img/evidence_sprint31.jpg" width="800">
+</p>
+
+
+
+---
+
+#### 2. Renderizado de Mapa y Rutas (Passenger Workspace)
+
+Esta prueba valida la integración del mapa dentro del `PassengerHomeView`. Se demuestra que, al realizar una búsqueda de ruta (por ejemplo, Ate → San Miguel), el Frontend decodifica correctamente la polilínea (`Polyline`) obtenida desde el Routing Service y renderiza el recorrido sobre el mapa, incluyendo la visualización de los paraderos asociados.
+
+**Vista evaluada:** `PassengerHomeView.dart`
+
+**Acción ejecutada:** Búsqueda de ruta y renderizado de `flutter_map` mediante `TileLayer` utilizando servicios de Mapbox.
+
+
+<p align="center">
+  <img src="./img/evidence_sprint32.jpg" width="800">
+</p>
+---
+
+#### 3. Control de Check-in Manual (Driver Workspace)
+
+Esta prueba valida la vista operativa del conductor. El `DriverHomeView` renderiza la secuencia de paraderos correspondiente a la ruta seleccionada. Al presionar el botón **"LLEGUÉ AQUÍ"**, el sistema envía las coordenadas al Tracking Service y actualiza de manera reactiva el estado de la interfaz, deshabilitando el botón y mostrando el estado **"LISTO"**.
+
+**Vista evaluada:** `DriverHomeView.dart`
+
+**Acción ejecutada:** Emisión manual de eventos de ubicación y actualización reactiva del estado de la interfaz.
+
+<p align="center">
+  <img src="./img/evidence_sprint33.jpg" width="800">
+</p>
+
+---
+
+#### 4. Interacción de Espera y Tarjeta Flotante ETA (Passenger Interactions)
+
+Esta prueba valida la experiencia de usuario del pasajero durante la solicitud de un bus. Al seleccionar un paradero desde el mapa y confirmar la espera, la aplicación despliega una tarjeta flotante que inicia un proceso de consulta periódica (`polling`) para obtener y actualizar el Tiempo Estimado de Llegada (ETA) en tiempo real, manteniendo el mapa visible en segundo plano.
+
+**Vista evaluada:** `PassengerHomeView.dart` (Floating ETA Card)
+
+**Acción ejecutada:** Confirmación del paradero de espera y recepción asíncrona del ETA mediante actualizaciones periódicas.
+
+<p align="center">
+  <img src="./img/evidence_sprint34.jpg" width="800">
+</p>
+
+---
