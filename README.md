@@ -2544,8 +2544,6 @@ Esta prueba valida la experiencia de usuario del pasajero durante la solicitud d
 
 #### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
 
-
-
 ## Integración de Red del Frontend (Flutter)
 
 En esta sección se documenta la capa de integración de red construida en el Frontend desarrollado en Flutter durante el presente Sprint. Debido a que los microservicios Backend fueron implementados y documentados mediante OpenAPI/Swagger en iteraciones anteriores, el objetivo de este Sprint fue desarrollar los **Repositorios (Repository Pattern)** y los **Modelos de Datos (Beans)** responsables de consumir dichos servicios desde la aplicación móvil.
@@ -2603,3 +2601,48 @@ Esta capa de integración permite que los BLoC del Frontend consuman servicios r
 
 <p align="center">
   <img src="./img/microservice_evidence2.jpg" width="800">
+
+
+#### 5.3.3.6 Software Deployment Evidence for Sprint Review
+
+- La siguiente captura muestra el panel principal de la plataforma PaaS utilizada para el despliegue (Render Cloud). El estado operativo de cada servicio confirma que el proceso automatizado de integración y despliegue continuo ejecutó correctamente la construcción de imágenes Docker y la puesta en marcha de los contenedores en el entorno productivo.
+
+<p align="center">
+  <img src="./img/deployment_evidence0.jpg" width="800">
+</p>
+
+- Evidencia del despliegue exitoso del **identity-service** en la nube mediante su dominio público. La disponibilidad de la documentación interactiva valida que el servicio se encuentra operativo y preparado para gestionar procesos de autenticación y autorización basados en tokens JWT.
+
+<p align="center">
+  <img src="./img/deployment_evidence1.jpg" width="800">
+</p>
+
+- Captura correspondiente al **tracking-service** desplegado en producción. Su funcionamiento confirma la correcta configuración de las variables de entorno necesarias para el procesamiento y exposición de información relacionada con la telemetría y seguimiento en tiempo real.
+
+<p align="center">
+  <img src="./img/deployment_evidence2.jpg" width="800">
+</p>
+
+- Evidencia del entorno productivo del **routing-service**. La disponibilidad de sus endpoints demuestra que los componentes encargados de la gestión de rutas y cálculo de recorridos fueron desplegados satisfactoriamente y se encuentran accesibles desde la infraestructura cloud.
+
+<p align="center">
+  <img src="./img/deployment_evidence3.jpg" width="800">
+</p>
+
+- Captura de la consola administrativa de **Supabase**, donde se visualiza la base de datos PostgreSQL utilizada por la solución. Esta evidencia confirma la disponibilidad de las estructuras de almacenamiento y la conectividad requerida por los microservicios desplegados.
+
+<p align="center">
+  <img src="./img/deployment_evidence4.jpg" width="800">
+</p>
+
+- Monitoreo de la instancia de **Redis** alojada en Upstash. La evidencia demuestra que el servicio de almacenamiento en memoria se encuentra activo y disponible para soportar operaciones de acceso rápido y mecanismos de caché dentro de la arquitectura.
+
+<p align="center">
+  <img src="./img/deployment_evidence5.jpg" width="800">
+</p>
+
+- Panel de administración de **CloudAMQP** mostrando el estado operativo del bróker de mensajería. Esta captura verifica la correcta implementación de la infraestructura responsable de la comunicación asíncrona entre los diferentes servicios del sistema.
+
+<p align="center">
+  <img src="./img/deployment_evidence6.jpg" width="800">
+</p>
