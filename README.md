@@ -2646,3 +2646,37 @@ Esta capa de integración permite que los BLoC del Frontend consuman servicios r
 <p align="center">
   <img src="./img/deployment_evidence6.jpg" width="800">
 </p>
+
+#### 5.3.3.7 Team Collaboration Insights during Sprint
+
+**Informe:**
+<br>
+
+<p align="center">
+  <img src="./img/informe-sprint3.png" width="800">
+</p>
+
+<br>
+
+**Landing:**
+<br>
+<p align="center">
+  <img src="./img/landing-sprint3.png" width="800">
+</p>
+
+<br>
+
+**Frontend:**
+<br>
+<p align="center">
+  <img src="./img/frontend-sprint3.png" width="800">
+</p>
+
+<br>
+
+**Backend:**
+<br>
+
+<p align="center">
+  <img src="./img/backend-sprint3.png" width="800">
+</p>
