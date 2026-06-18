@@ -2364,6 +2364,26 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 
 #### 5.3.3.2 Development Evidence for Sprint Review
 
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|------------|----------|-----------|----------------|---------------------|-------------------|
+| ChapaTuRuta-frontend | feature/auth-module | 4a82c1d | feat: implement login interface and authentication flow | Desarrollo de la pantalla de inicio de sesión e integración con el flujo de autenticación de usuarios. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/auth-module | 8f24b7e | feat: add user registration screen | Implementación de la interfaz de registro de usuarios con validaciones de formularios. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/auth-module | c71e3a9 | feat: implement auth bloc architecture | Desarrollo de la gestión de estado para autenticación utilizando el patrón BLoC. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/driver-module | d9b62e4 | feat: create driver home dashboard | Implementación de la pantalla principal para conductores con acceso a funcionalidades operativas. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/driver-module | 35f1ca8 | feat: integrate driver repository services | Integración del módulo de conductores con los servicios REST expuestos por el backend. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | 5b83ad1 | feat: implement passenger route search view | Desarrollo de la interfaz para búsqueda de rutas disponibles para pasajeros. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | 72a9ef5 | feat: add ETA visualization components | Implementación de componentes para mostrar tiempos estimados de llegada (ETA). | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | 91ce4b3 | feat: add trip option management | Desarrollo de modelos y vistas para la visualización de alternativas de viaje y transbordos. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | e4d18f7 | feat: implement passenger bloc state management | Implementación de la lógica de estados y eventos para las funcionalidades del pasajero. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/manager-module | f2b8a16 | feat: create manager dashboard interface | Desarrollo de la pantalla principal para administradores de empresas de transporte. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/manager-module | 6c5d7e2 | feat: integrate company driver monitoring | Implementación de vistas para la gestión y monitoreo de conductores asociados a una empresa. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/core-module | a7f4c39 | feat: implement role coordinator navigation | Desarrollo de la coordinación de navegación basada en roles de usuario dentro de la aplicación. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/core-module | b4e93f1 | feat: add local catalog configuration | Implementación del catálogo local para la gestión de configuraciones compartidas de la aplicación. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/integration | c8d7a52 | feat: integrate backend microservices | Integración de los módulos frontend con los microservicios de autenticación, rutas y seguimiento. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/integration | d3e5f81 | fix: improve API error handling | Optimización del manejo de errores y respuestas provenientes de los servicios backend. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/testing | e7a2b46 | feat: validate authentication workflows | Implementación de escenarios de validación para inicio de sesión y registro de usuarios. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/testing | f5c8d13 | feat: validate passenger route search scenarios | Desarrollo de pruebas funcionales para búsqueda de rutas y consulta de tiempos estimados. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/testing | a9d4e75 | feat: validate role-based navigation scenarios | Implementación de pruebas para la navegación y acceso a funcionalidades según el rol del usuario. | 17/06/2026 |
 
 #### 5.3.3.3 Testing Suite Evidence for Sprint Review
 
@@ -2475,7 +2495,6 @@ And a green SnackBar should appear with the message "Check-in exitoso"
 | ChapaTuRuta-frontend | feature/auth-widget-tests | 186d57bb9c85bf2870ed995f9b8b4b1e2d7214f1 | test: add BDD widget tests for login and role coordinator         | Se implementan pruebas de integración simulando la inserción de credenciales, verificando la gestión de estado del AuthBloc y asegurando que el RoleCoordinator redirija correctamente basándose en el payload del JWT.                  | 17 de Junio de 2026 |
 | ChapaTuRuta-frontend | feature/passenger-tests   | 77d7b6b0c8eae35241a139dfaf0c82f2b94d62e5 | test: verify mapbox rendering and ETA floating card interactions  | Cobertura BDD para el flujo del pasajero. Se verifica el renderizado de flutter_map, la aparición de la polilínea tras la búsqueda y la transición de la interfaz al presionar "Esperar Bus Aquí", mostrando la tarjeta flotante de ETA. | 17 de Junio de 2026 |
 | ChapaTuRuta-frontend | feature/driver-tests      | 2888a05d9b3b2dfa2cb2184f3548b9f97122d8f1 | test: validate driver dynamic route selection and check-in states | Se implementan pruebas de integración para el flujo del conductor, validando la selección dinámica de rutas, cambios de estado del botón de check-in y la interacción con el Driver BLoC.                                                | 17 de Junio de 2026 |
-
 
 #### 5.3.3.4 Execution Evidence for Sprint Review
 
@@ -2680,3 +2699,5 @@ Esta capa de integración permite que los BLoC del Frontend consuman servicios r
 <p align="center">
   <img src="./img/backend-sprint3.png" width="800">
 </p>
+
+5.3.3.8 Kanban Board
