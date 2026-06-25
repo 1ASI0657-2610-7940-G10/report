@@ -164,29 +164,44 @@ _Tabla de contenidos_
       - [5.3.1.6 Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
       - [5.3.1.7 Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
       - [5.3.1.8 Kanban Board](#5318-kanban-board)
+    - [5.3.2 Sprint 2](#532-sprint-2)
+        - [5.3.2.1 Sprint Backlog 2](#5321-sprint-backlog-2)
+        - [5.3.2.2 Development Evidence for Sprint Review](#5322-development-evidence-for-sprint-review)
+        - [5.3.2.3 Testing Suite Evidence for Sprint Review](#5323-testing-suite-evidence-for-sprint-review)
+        - [5.3.2.4 Execution Evidence for Sprint Review](#5324-execution-evidence-for-sprint-review)
+        - [5.3.2.5 Microservices Documentation Evidence for Sprint Review](#5325-microservices-documentation-evidence-for-sprint-review)
+        - [5.3.2.6 Software Deployment Evidence for Sprint Review](#5326-software-deployment-evidence-for-sprint-review)
+        - [5.3.2.7 Team Collaboration Insights during Sprint](#5327-team-collaboration-insights-during-sprint)
+        - [5.3.2.8 Kanban Board](#5328-kanban-board)    
+    - [5.3.3 Sprint 3](#533-sprint-3)
+        - [5.3.3.1 Sprint Backlog 3](#5331-sprint-backlog-3)
+        - [5.3.3.2 Development Evidence for Sprint Review](#5332-development-evidence-for-sprint-review)
+        - [5.3.3.3 Testing Suite Evidence for Sprint Review](#5333-testing-suite-evidence-for-sprint-review)
+        - [5.3.3.4 Execution Evidence for Sprint Review](#5334-execution-evidence-for-sprint-review)
+        - [5.3.3.5 Microservices Documentation Evidence for Sprint Review](#5335-microservices-documentation-evidence-for-sprint-review)
+        - [5.3.3.6 Software Deployment Evidence for Sprint Review](#5336-software-deployment-evidence-for-sprint-review)
+        - [5.3.3.7 Team Collaboration Insights during Sprint](#5337-team-collaboration-insights-during-sprint)
+        - [5.3.3.8 Kanban Board](#5338-kanban-board)
 
 # Student Outcome
 
 El curso cumple de manera directa el cumplimiento del Student Outcome 5 definido por ABET - EAC, asegurando que los integrantes logren alcanzar las competencias establecidas.
 
-**Criterio:** La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos.
-
-| Criterio  | Acciones realizadas        | Conclusiones    |
+| Criterio | Acciones realizadas | Conclusiones |
 | :------------------ | :------------------------------------------------- | :-------------------------------------------------------------------------------------- |
-| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** | **Héctor Rios AV1:** Contribuí realizando el capítulo 1 y sedimentando las bases del proyecto <br><br> **Arturo Nuñez AV1:** Contribuí realizando parte del capítulo II <br><br> **Adrian Valerio AV1:** Contribuí realizando el capítulo III y entrevistas <br><br> **Héctor Rios AV2:** Lideré el diseño arquitectónico detallado en el Capítulo 4, aplicando el método ADD, seleccionando patrones avanzados (CQRS, Strategy, Repository) y definiendo escenarios de atributos de calidad <br><br> **Adrian Valerio AV2:** Participé en la estructuración y documentación del Capítulo 4, apoyando en la definición de contenedores, relaciones entre componentes (C4) y validación de decisiones arquitectónicas alineadas a los atributos de calidad <br><br> **Arturo Nuñez AV2:** Contribuí en el desarrollo y documentación del Capítulo 4, participando en la definición de drivers arquitectónicos, estructuración en Markdown, organización del contenido y apoyo en la coherencia técnica del diseño propuesto <br><br> **Héctor Rios TP1:** Lideré el desarrollo del Capítulo V relacionado con implementación, validación y despliegue del producto, participando en la configuración del entorno de desarrollo, gestión de código fuente, definición de convenciones de estilo, implementación de microservicios, desarrollo de evidencias de testing, despliegue y documentación técnica del Sprint 1, así como en la organización del tablero Kanban y evidencias de colaboración del equipo <br><br> **Adrian Valerio TP1:** Participé en el desarrollo del Capítulo V, apoyando en la implementación del producto, validación de funcionalidades, documentación técnica, organización de evidencias del Sprint 1 y revisión del despliegue de la solución en el repositorio del proyecto <br><br> **Arturo Nuñez TP1:** Participé en el desarrollo del Capítulo V relacionado con implementación y validación del Sprint 1, contribuyendo en la documentación técnica en Markdown, organización del Kanban Board, estructuración de evidencias de testing automatizado con JUnit y Cucumber, integración de evidencias de despliegue, y apoyo en la documentación de microservicios, pruebas y repositorios del proyecto. <br><br> **Arturo Nuñez AV3:** Participé en la actualización y documentación del Capítulo V, realizando la corrección del Kanban Board del Sprint 1 y la elaboración del Kanban Board del Sprint 2. Asimismo, contribuí en la organización de historias de usuario, clasificación de tareas por categorías funcionales, estructuración de evidencias en Markdown y consolidación de la documentación asociada al seguimiento de los avances del proyecto.| **Héctor Rios AV1:** El desarrollo del capítulo 1 me permitió reforzar mis conocimientos sobre la estructura inicial de un proyecto de software. Esto me ayudó a entender mejor cómo construir una base sólida para futuros proyectos. <br><br> **Arturo Nuñez AV1:** Al trabajar en el capítulo II, comprendí la importancia de investigar y aplicar correctamente los conceptos teóricos, mejorando la calidad del proyecto. <br><br> **Adrian Valerio AV1:** El desarrollo del capítulo III y las entrevistas fortaleció mi capacidad de análisis y aplicación práctica del conocimiento. <br><br> **Héctor Rios AV2:** La ejecución de iteraciones ADD y el uso de patrones como CQRS y arquitectura orientada a eventos me permitió elevar mi nivel técnico en diseño de sistemas complejos, comprendiendo mejor cómo lograr escalabilidad y desacoplamiento. <br><br> **Adrian Valerio AV2:** La participación en el diseño arquitectónico y modelado C4 me permitió consolidar mis conocimientos en estructuración de sistemas, comprendiendo mejor la relación entre componentes y la importancia de documentar decisiones técnicas. <br><br> **Arturo Nuñez AV2:** La participación en la organización y documentación del diseño arquitectónico me permitió fortalecer mis habilidades en estructuración de contenido técnico, comprensión de drivers arquitectónicos y uso de herramientas como Markdown para la presentación profesional de soluciones de software. <br><br> **Héctor Rios TP1:** El desarrollo del Capítulo V me permitió fortalecer mis conocimientos en pruebas automatizadas, gestión de configuración de software, despliegue de aplicaciones y desarrollo de microservicios. Además, comprendí mejor la importancia de integrar testing, documentación y colaboración continua para garantizar la calidad y mantenibilidad de soluciones de software modernas. <br><br> **Adrian Valerio TP1:** La participación en la implementación, validación y documentación del Sprint 1 me permitió reforzar mis conocimientos sobre despliegue de aplicaciones, control de versiones, organización de evidencias y desarrollo colaborativo en soluciones de software. <br><br> **Arturo Nuñez TP1:** La participación en el desarrollo del Capítulo V me permitió fortalecer mis conocimientos en documentación técnica profesional, organización de evidencias de testing automatizado, metodologías ágiles con Kanban, estructuración de microservicios y uso de herramientas de validación y despliegue dentro de soluciones modernas de software. <<br><br> **Arturo Nuñez AV3:** La elaboración y actualización de la documentación del Sprint 1 y Sprint 2 me permitió fortalecer mis conocimientos en gestión ágil de proyectos, organización de requerimientos, seguimiento de historias de usuario y documentación técnica profesional utilizando Markdown, comprendiendo mejor la relación entre planificación, desarrollo y control de avances dentro de un proyecto de software.|
-| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.**  | **Héctor Rios AV1:** Contribuí realizando el capítulo 1 y sedimentando las bases del proyecto <br><br> **Arturo Nuñez AV1:** Contribuí realizando parte del capítulo II <br><br> **Adrian Valerio AV1:** Contribuí realizando el capítulo III y entrevistas <br><br> **Héctor Rios AV2:** Lideré el diseño arquitectónico detallado en el Capítulo 4, aplicando el método ADD y patrones avanzados <br><br> **Adrian Valerio AV2:** Apoyé en la investigación y comprensión de patrones arquitectónicos y herramientas de modelado, reforzando el aprendizaje continuo aplicado al proyecto <br><br> **Arturo Nuñez AV2:** Participé en el análisis de decisiones arquitectónicas y en la mejora de la documentación técnica, investigando conceptos relacionados con drivers, atributos de calidad y buenas prácticas de estructuración <br><br> **Héctor Rios TP1:** Participé en la implementación y validación de microservicios, investigando herramientas de testing automatizado, gestión de despliegue, control de versiones y prácticas de integración continua para fortalecer el desarrollo del Sprint 1 <br><br> **Adrian Valerio TP1:** Participé en la revisión e implementación de funcionalidades del Sprint 1, investigando aspectos relacionados con el despliegue, organización del repositorio, documentación técnica y validación de evidencias del proyecto <br><br> **Arturo Nuñez TP1:** Participé en la investigación y documentación de herramientas utilizadas durante el Sprint 1, incluyendo testing automatizado con JUnit y Cucumber, gestión de repositorios GitHub, estructuración de microservicios y organización de evidencias técnicas mediante Markdown y tableros Kanban. <br><br> **Arturo Nuñez AV3:** Participé en la revisión y organización de los artefactos del Sprint 2, investigando conceptos relacionados con la gestión ágil mediante Kanban, categorización de funcionalidades, documentación de evidencias y seguimiento de tareas para mantener la consistencia de la información presentada en el proyecto. | **Héctor Rios AV1:** Comprendí la importancia de mantenerme en constante aprendizaje para mejorar mi desempeño en proyectos futuros. <br><br> **Arturo Nuñez AV1:** Identifiqué que el aprendizaje continuo es clave para adaptarme a nuevos retos dentro del proyecto. <br><br> **Adrian Valerio AV1:** Entendí que cada experiencia es una oportunidad de aprendizaje, reforzando la importancia de la mejora continua. <br><br> **Héctor Rios AV2:** Al enfrentar desafíos de diseño como alta disponibilidad y procesamiento asíncrono con RabbitMQ, reafirmé la necesidad de aprender constantemente nuevas tecnologías para construir soluciones modernas y resilientes. <br><br> **Adrian Valerio AV2:** La exposición a decisiones arquitectónicas y nuevas herramientas evidenció la necesidad de seguir aprendiendo continuamente para adaptarme a entornos tecnológicos más complejos y cambiantes. <br><br> **Arturo Nuñez AV2:** La participación en el desarrollo del capítulo 4 me permitió reconocer la importancia del aprendizaje continuo, especialmente en temas de arquitectura de software y documentación técnica, necesarios para enfrentar proyectos de mayor complejidad. <br><br> **Héctor Rios TP1:** La implementación práctica de pruebas, despliegue y microservicios me permitió reconocer que el aprendizaje permanente es esencial para adaptarse a nuevas herramientas, metodologías ágiles y tecnologías emergentes utilizadas en el desarrollo profesional de software. <br><br> **Adrian Valerio TP1:** El trabajo realizado en el Sprint 1 me permitió reconocer la importancia de seguir aprendiendo sobre herramientas de desarrollo, despliegue, control de versiones y documentación técnica para mejorar mi desempeño profesional en proyectos de software. <br><br> **Arturo Nuñez TP1:** El desarrollo del Sprint 1 me permitió reconocer la importancia del aprendizaje continuo en tecnologías de testing, documentación técnica, metodologías ágiles y herramientas colaborativas, comprendiendo que la actualización constante es fundamental para adaptarse a proyectos de software cada vez más complejos. <br><br> **Arturo Nuñez AV3:** El trabajo realizado durante esta etapa me permitió reconocer la importancia del aprendizaje continuo en metodologías ágiles, documentación técnica y gestión de proyectos de software, entendiendo que la actualización constante de conocimientos es fundamental para contribuir de manera efectiva en equipos de desarrollo y en proyectos de mayor complejidad.|
-
+| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** | **Héctor Rios AV1:** Contribuí realizando el capítulo 1 y sedimentando las bases del proyecto <br><br> **Arturo Nuñez AV1:** Contribuí realizando parte del capítulo II <br><br> **Adrian Valerio AV1:** Contribuí realizando el capítulo III y entrevistas <br><br> **Héctor Rios AV2:** Lideré el diseño arquitectónico detallado en el Capítulo 4, aplicando el método ADD, seleccionando patrones avanzados (CQRS, Strategy, Repository) y definiendo escenarios de atributos de calidad <br><br> **Adrian Valerio AV2:** Participé en la estructuración y documentación del Capítulo 4, apoyando en la definición de contenedores, relaciones entre componentes (C4) y validación de decisiones arquitectónicas alineadas a los atributos de calidad <br><br> **Arturo Nuñez AV2:** Contribuí en el desarrollo y documentación del Capítulo 4, participando en la definición de drivers arquitectónicos, estructuración en Markdown, organización del contenido y apoyo en la coherencia técnica del diseño propuesto <br><br> **Héctor Rios TP1:** Lideré el desarrollo del Capítulo V relacionado con implementación, validación y despliegue del producto, participando en la configuración del entorno de desarrollo, gestión de código fuente, definición de convenciones de estilo, implementación de microservicios, desarrollo de evidencias de testing, despliegue y documentación técnica del Sprint 1, así como en la organización del tablero Kanban y evidencias de colaboración del equipo <br><br> **Adrian Valerio TB1:** Participé en el desarrollo del Sprint 1 colaborando en la implementación de funcionalidades frontend, validación de interfaces de usuario, documentación de evidencias del sprint y seguimiento de tareas mediante el tablero Kanban, contribuyendo a la integración entre los componentes desarrollados por el equipo <br><br> **Arturo Nuñez TB1:** Participé en el desarrollo del Sprint 1 apoyando en la implementación de funcionalidades del sistema, organización de la documentación técnica, validación de entregables y seguimiento del progreso de actividades mediante herramientas colaborativas de gestión <br><br> **Héctor Rios AV3:** Deurante el desarrollo de esta entrega agregué algunos endpoints que son parte del core l oque me permitió conocer más sobre la dinámica de trabajo y acctualizar mis conocimientos <br><br> **Adrian Valerio AV3:** Durante esta entrega participé en el desarrollo e integración de funcionalidades frontend, realizando ajustes en la experiencia de usuario, validación de flujos y pruebas funcionales para asegurar la correcta interacción entre la interfaz y los servicios implementados <br><br> **Arturo Nuñez AV3:** Durante esta entrega participé en la implementación de funcionalidades del sistema, documentación técnica de los avances realizados y validación de los componentes desarrollados, contribuyendo a mantener la calidad y coherencia de la solución propuesta <br><br> **Héctor Rios AV4:** Participé en la consolidación e integración final de los servicios desarrollados, optimizando componentes críticos del sistema, corrigiendo incidencias detectadas durante las pruebas y fortaleciendo la estabilidad de la solución mediante mejoras en la implementación y validación integral del producto <br><br> **Adrian Valerio AV4:** Participé en la mejora e integración final de la interfaz de usuario, realizando ajustes de usabilidad, corrección de incidencias identificadas durante las pruebas y validación de la experiencia de usuario para garantizar el cumplimiento de los requerimientos del proyecto <br><br> **Arturo Nuñez AV4:** Participé en la consolidación de la documentación final del proyecto, validación de entregables, revisión de la coherencia técnica entre los componentes desarrollados y apoyo en la preparación de evidencias para la presentación y cierre de la solución implementada | **Héctor Rios AV1:** El desarrollo del capítulo 1 me permitió reforzar mis conocimientos sobre la estructura inicial de un proyecto de software. Esto me ayudó a entender mejor cómo construir una base sólida para futuros proyectos. <br><br> **Arturo Nuñez AV1:** Al trabajar en el capítulo II, comprendí la importancia de investigar y aplicar correctamente los conceptos teóricos, mejorando la calidad del proyecto. <br><br> **Adrian Valerio AV1:** El desarrollo del capítulo III y las entrevistas fortaleció mi capacidad de análisis y aplicación práctica del conocimiento. <br><br> **Héctor Rios AV2:** La ejecución de iteraciones ADD y el uso de patrones como CQRS y arquitectura orientada a eventos me permitió elevar mi nivel técnico en diseño de sistemas complejos, comprendiendo mejor cómo lograr escalabilidad y desacoplamiento. <br><br> **Adrian Valerio AV2:** La participación en el diseño arquitectónico y modelado C4 me permitió consolidar mis conocimientos en estructuración de sistemas, comprendiendo mejor la relación entre componentes y la importancia de documentar decisiones técnicas. <br><br> **Arturo Nuñez AV2:** La participación en la organización y documentación del diseño arquitectónico me permitió fortalecer mis habilidades en estructuración de contenido técnico, comprensión de drivers arquitectónicos y uso de herramientas como Markdown para la presentación profesional de soluciones de software. <br><br> **Héctor Rios TP1:** El desarrollo del Capítulo V me permitió fortalecer mis conocimientos en pruebas automatizadas, gestión de configuración de software, despliegue de aplicaciones y desarrollo de microservicios. Además, comprendí mejor la importancia de integrar testing, documentación y colaboración continua para garantizar la calidad y mantenibilidad de soluciones de software modernas. <br><br> **Adrian Valerio TB1:** La participación en el desarrollo del Sprint 1 me permitió fortalecer mis conocimientos en desarrollo frontend, integración de componentes y trabajo colaborativo, comprendiendo mejor la importancia de construir interfaces alineadas con los requerimientos del usuario. <br><br> **Arturo Nuñez TB1:** El trabajo realizado durante el Sprint 1 me permitió reforzar mis conocimientos en desarrollo de software, documentación técnica y coordinación de actividades, comprendiendo mejor la importancia de la organización para el éxito de un proyecto. <br><br> **Héctor Ríos AV3:** El desarrollo de endpoints, la creación de pruebas para validar el correcto funcionamiento de los servicios y la integración entre distintos componentes del sistema me permitió fortalecer mis competencias en el desarrollo backend. Asimismo, esta experiencia me ayudó a comprender la importancia de aplicar buenas prácticas de programación, pruebas e integración para construir soluciones confiables, escalables y alineadas con los requerimientos del entorno profesional de software. <br><br> **Adrian Valerio AV3:** El desarrollo e integración de funcionalidades frontend me permitió fortalecer mis competencias en diseño de interfaces, validación de flujos de usuario y pruebas funcionales, comprendiendo la importancia de ofrecer una experiencia consistente y alineada con los objetivos del sistema. <br><br> **Arturo Nuñez AV3:** La implementación y validación de funcionalidades durante esta entrega me permitió fortalecer mis habilidades en desarrollo de software, documentación técnica y control de calidad, contribuyendo a una mejor comprensión del ciclo de construcción de soluciones tecnológicas. <br><br> **Héctor Rios AV4:** La integración final de servicios y la resolución de incidencias me permitió consolidar conocimientos relacionados con arquitectura de software, pruebas de integración y optimización de sistemas, fortaleciendo mi capacidad para desarrollar soluciones robustas y mantenibles. <br><br> **Adrian Valerio AV4:** La validación final de la interfaz y la corrección de incidencias me permitió consolidar conocimientos relacionados con experiencia de usuario, pruebas funcionales y mejora continua, comprendiendo la importancia de la calidad en la entrega de productos de software. <br><br> **Arturo Nuñez AV4:** La revisión integral de la documentación y validación de entregables me permitió fortalecer mis competencias en gestión de proyectos de software, aseguramiento de calidad y comunicación técnica, aspectos fundamentales para el desarrollo profesional en ingeniería de software. |
+| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** | **Héctor Rios AV1:** Contribuí realizando el capítulo 1 y sedimentando las bases del proyecto <br><br> **Arturo Nuñez AV1:** Contribuí realizando parte del capítulo II <br><br> **Adrian Valerio AV1:** Contribuí realizando el capítulo III y entrevistas <br><br> **Héctor Rios AV2:** Lideré el diseño arquitectónico detallado en el Capítulo 4, aplicando el método ADD y patrones avanzados <br><br> **Adrian Valerio AV2:** Apoyé en la investigación y comprensión de patrones arquitectónicos y herramientas de modelado, reforzando el aprendizaje continuo aplicado al proyecto <br><br> **Arturo Nuñez AV2:** Participé en el análisis de decisiones arquitectónicas y en la mejora de la documentación técnica, investigando conceptos relacionados con drivers, atributos de calidad y buenas prácticas de estructuración <br><br> **Héctor Rios TP1:** Participé en la implementación y validación de microservicios, investigando herramientas de testing automatizado, gestión de despliegue, control de versiones y prácticas de integración continua para fortalecer el desarrollo del Sprint 1 <br><br> **Adrian Valerio TB1:** Participé en la implementación de funcionalidades frontend y validación de interfaces, investigando herramientas, librerías y buenas prácticas de desarrollo para mejorar la calidad de la experiencia de usuario durante el Sprint 1 <br><br> **Arturo Nuñez TB1:** Participé en el desarrollo y documentación de funcionalidades del Sprint 1, investigando metodologías de trabajo colaborativo, herramientas de gestión y buenas prácticas de desarrollo para fortalecer la ejecución del proyecto <br><br> **Héctor Rios AV3:** Deurante el desarrollo de esta entrega agregué algunos endpoints que son parte del core l oque me permitió conocer más sobre la dinámica de trabajo y acctualizar mis conocimientos <br><br> **Adrian Valerio AV3:** Durante esta entrega investigué nuevas prácticas de diseño e integración frontend para mejorar la interacción con los servicios desarrollados y asegurar una experiencia de usuario más eficiente <br><br> **Arturo Nuñez AV3:** Participé en la implementación y validación de funcionalidades, consultando documentación técnica y recursos especializados para comprender mejor los procesos y tecnologías utilizadas en el proyecto <br><br> **Héctor Rios AV4:** Participé en la integración y optimización final del sistema, investigando técnicas de mejora de rendimiento, pruebas de integración y resolución de incidencias para fortalecer la calidad global del producto <br><br> **Adrian Valerio AV4:** Participé en la validación final de la interfaz y corrección de incidencias, aplicando conocimientos adquiridos durante el proyecto e investigando estrategias para mejorar la usabilidad y accesibilidad del sistema <br><br> **Arturo Nuñez AV4:** Participé en la revisión final de documentación y validación de entregables, profundizando en buenas prácticas de aseguramiento de calidad y gestión de proyectos para garantizar la consistencia de la solución desarrollada | **Héctor Rios AV1:** Comprendí la importancia de mantenerme en constante aprendizaje para mejorar mi desempeño en proyectos futuros. <br><br> **Arturo Nuñez AV1:** Identifiqué que el aprendizaje continuo es clave para adaptarme a nuevos retos dentro del proyecto. <br><br> **Adrian Valerio AV1:** Entendí que cada experiencia es una oportunidad de aprendizaje, reforzando la importancia de la mejora continua. <br><br> **Héctor Rios AV2:** Al enfrentar desafíos de diseño como alta disponibilidad y procesamiento asíncrono con RabbitMQ, reafirmé la necesidad de aprender constantemente nuevas tecnologías para construir soluciones modernas y resilientes. <br><br> **Adrian Valerio AV2:** La exposición a decisiones arquitectónicas y nuevas herramientas evidenció la necesidad de seguir aprendiendo continuamente para adaptarme a entornos tecnológicos más complejos y cambiantes. <br><br> **Arturo Nuñez AV2:** La participación en el desarrollo del capítulo 4 me permitió reconocer la importancia del aprendizaje continuo, especialmente en temas de arquitectura de software y documentación técnica, necesarios para enfrentar proyectos de mayor complejidad. <br><br> **Héctor Rios TP1:** La implementación práctica de pruebas, despliegue y microservicios me permitió reconocer que el aprendizaje permanente es esencial para adaptarse a nuevas herramientas, metodologías ágiles y tecnologías emergentes utilizadas en el desarrollo profesional de software. <br><br> **Adrian Valerio TB1:** La experiencia del Sprint 1 me permitió reconocer que el aprendizaje continuo es fundamental para adaptarme a nuevas herramientas y tecnologías de desarrollo frontend utilizadas en proyectos modernos. <br><br> **Arturo Nuñez TB1:** La participación en actividades de desarrollo y documentación me permitió identificar que la actualización constante de conocimientos es indispensable para afrontar proyectos de software cada vez más complejos. <br><br> **Héctor Ríos AV3:** El desarrollo de endpoints, la creación de pruebas para validar el correcto funcionamiento de los servicios y la integración entre distintos componentes del sistema me permitió fortalecer mis competencias en el desarrollo backend. Asimismo, esta experiencia me ayudó a comprender la importancia de aplicar buenas prácticas de programación, pruebas e integración para construir soluciones confiables, escalables y alineadas con los requerimientos del entorno profesional de software. <br><br> **Adrian Valerio AV3:** La integración de nuevas funcionalidades me permitió comprender que el aprendizaje permanente es necesario para incorporar mejores prácticas y tecnologías que mejoren la calidad de los productos desarrollados. <br><br> **Arturo Nuñez AV3:** La investigación y aplicación de conceptos técnicos durante esta entrega reafirmó la importancia de mantener una formación continua para responder adecuadamente a los desafíos del desarrollo de software. <br><br> **Héctor Rios AV4:** La resolución de problemas complejos y la optimización de la solución desarrollada reforzó mi convicción de que el aprendizaje permanente es esencial para adaptarse a nuevas tecnologías y mantener la calidad de los sistemas construidos. <br><br> **Adrian Valerio AV4:** La mejora continua de la experiencia de usuario y la validación final del sistema me permitió reconocer que la actualización constante de conocimientos es clave para desarrollar soluciones más accesibles, eficientes y centradas en las necesidades de los usuarios. <br><br> **Arturo Nuñez AV4:** La participación en las actividades de revisión y aseguramiento de calidad me permitió comprender que el aprendizaje continuo es un elemento fundamental para mantener estándares profesionales y contribuir efectivamente al éxito de proyectos de software. |
 
 # Capítulo I: Introducción
 ## 1.1. Startup Profile
 Somos un equipo de estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC) motivados en desarrollar una solución que cuyo objetivo principal sea ayudar a las personas que usan el transporte público.
 
 ### 1.1.1. Descripción de la Startup
-ChapaTuRuta es un startup enfocado en desarrollar soluciones de software eficientes que resuelvan problemas reales de infraestructura y logística urbana. Priorizamos el rendimiento y la escalabilidad, así como la adopción de prácticas de desarrollo para ofrecer una solución robusta que mejore el tránsito en la ciudad.
+ChapaTuRuta es una startup enfocada en desarrollar soluciones de software eficientes que resuelvan problemas reales de infraestructura y movilidad urbana. Priorizamos el rendimiento y la escalabilidad, así como la adopción de prácticas ágiles de desarrollo para ofrecer una solución robusta que democratice la información y mejore el tránsito en la ciudad.
 
-**Misión:** Brindar a los estudiantes universitarios una solución digital y accesible que proteja sus pertenencias y su tranquilidad mientras viven lejos de casa, facilitando seguros personalizados y procesos ágiles de gestión y reclamación.
+**Misión:** Brindar a los usuarios del transporte público y a las empresas operadoras una plataforma digital en tiempo real y accesible que optimice la movilidad diaria, facilitando el rastreo de unidades, el cálculo exacto de tiempos de llegada (ETA) y la digitalización de los procesos logísticos de las rutas.
 
-**Visión:** Ser la startup líder en seguros digitales para estudiantes universitarios, reconocida por ofrecer protección confiable, rápida y adaptada a sus necesidades.
+**Visión:** Ser la startup líder en innovación tecnológica para el transporte público urbano, reconocida por transformar y modernizar la experiencia de viaje de miles de ciudadanos a través de un ecosistema de información confiable, rápido y colaborativo.
 
 ### 1.1.2. Perfiles de integrantes del equipo
 | Foto | Información General |
@@ -696,6 +711,9 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | TS04 | Bus de Eventos (RabbitMQ) | Configurar exchanges y colas para publicar eventos de Check-in, actualización GPS y demanda de paraderos de forma asíncrona. | Escenario 1: El Tracking Service emite el mensaje sin bloquear el hilo principal de ejecución del conductor. |
 | TS05 | Integración de SDK Firebase Admin | Desarrollar un worker consumidor que procese eventos de proximidad y despache alertas a los tokens de dispositivos móviles. | Escenario 1: El worker recibe el evento de RabbitMQ y ejecuta el envío push a través de los servidores de Firebase. |
 | TS06 | Pruebas BDD y Unitarias | Mantener la cobertura del apartado 5.1 implementando Cucumber y JUnit 5 Platform Suite en los flujos core. | Escenario 1: Los pipelines de integración continua ejecutan exitosamente los archivos `.feature` de identidad, ruteo y tracking. |
+| TS07 | Dockerización e Infraestructura CI/CD | Como desarrollador, quiero automatizar el despliegue y empaquetado de la aplicación mediante contenedores Docker y un pipeline CI/CD para asegurar entregas consistentes y rápidas. | Escenario 1: Al realizar un push al repositorio principal, el pipeline ejecuta automáticamente la construcción y despliegue de la aplicación.<br>Escenario 2: Si la construcción falla, el despliegue no se ejecuta y se registra el error correspondiente. |
+| TS08 | Configuración Externalizada de Red | Como desarrollador, quiero externalizar las configuraciones de red y optimizar el pool de conexiones para facilitar la administración de entornos y mejorar el rendimiento. | Escenario 1: Las variables de configuración pueden modificarse sin recompilar la aplicación.<br>Escenario 2: El sistema limita las conexiones concurrentes utilizando la configuración definida en HikariCP. |
+| TS09 | Resiliencia de Sentencias de BD | Como desarrollador, quiero ajustar la configuración del driver JDBC para garantizar la compatibilidad y estabilidad de las consultas en entornos cloud. | Escenario 1: Las consultas a la base de datos se ejecutan correctamente en el entorno cloud sin errores de pre-compilación.<br>Escenario 2: La aplicación mantiene compatibilidad con el proveedor de base de datos configurado tras desactivar el prepareThreshold. |
 
 ## 3.3. Impact Mapping
 
@@ -745,6 +763,9 @@ Sebastián, conductor de transporte público de 23 años en Lima, comentó que d
 | 35 | US26 | Crear y listar Colecciones | Módulo de usuario para generar carpetas de rutas favoritas. | 3 |
 | 36 | US27 | Gestionar rutas en Colecciones | Lógica de vinculación/desvinculación de rutas en carpetas. | 3 |
 | 37 | TS06 | Pruebas BDD y Unitarias | Implementación continua de test automatizados en capa de negocio. | 5 |
+| 38 | TS07 | Dockerización e Infraestructura CI/CD | Configuración de empaquetado multi-contenedor e integración continua conducida por Git Git-driven en la plataforma cloud Render. | 5 |
+| 39 | TS08 | Configuración Externalizada de Red | Aislamiento de variables de entorno y optimización estricta de conexiones simultáneas mediante HikariCP (max-pool-size=3). | 4 |
+| 40 | TS09 | Resiliencia de Sentencias de BD | Desactivación del umbral de pre-compilación de sentencias en el driver JDBC para compatibilidad en la nube (prepareThreshold=0). | 3 |
 
 
 
@@ -817,7 +838,7 @@ Los esquemas de contenedores ilustran las distintas partes que conforman el sist
 Diagrama container:
 
 <p align="center">
-  <img src="./img/conteiners_diagram.png" alt="Container Diagram">
+  <img src="./img/conteiners_diagram.png" alt="Container Diagram">pr
 </p>
 
 #### 4.1.5 Relational / Non-Relational Database Diagram
@@ -1443,7 +1464,7 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 #### **5.2.1 Software Development Environment Configuration**
 
 #### 1. Project Management
-- Trello (Tablero Kanban).
+- Jira (Tablero Kanban).
 
 #### 2. Software Development
 - IntelliJ IDEA.
@@ -1452,9 +1473,9 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 #### 3. Testing
 - Postman para Web Services.
 - Cucumber para BDD.
-- Unit Test:
+- Unit Test
 
-#### 1. Identity Service
+##### 1. Identity Service
 
 - **Pruebas Unitarias (JUnit 5 & Mockito):**
   - `RegisterUserUseCaseImplTest.java`: Valida la lógica de registro de usuarios, asegurando la creación exitosa de cuentas y el rechazo por correos duplicados.
@@ -1464,7 +1485,7 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
   - `register_user.feature` y `RegisterUserSteps.java`: Validan el flujo de negocio para el registro de pasajeros y conductores.
   - `CucumberTestRunner.java`: Orquestador de la ejecución de pruebas BDD.
 
-#### 2. Routing Service
+##### 2. Routing Service
 
 - **Pruebas Unitarias (JUnit 5 & Mockito):**
   - `SearchRoutesUseCaseImplTest.java`: Comprueba la búsqueda de rutas por distritos de origen y destino, validando tanto la obtención de datos como el manejo de búsquedas sin resultados.
@@ -1474,7 +1495,7 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
   - `search_routes.feature` y `SearchRoutesSteps.java`: Evalúan el flujo de consulta de rutas disponibles para el usuario.
   - `CucumberTestRunner.java`: Ejecutor de las características de búsqueda.
 
-#### 3. Tracking Service
+##### 3. Tracking Service
 
 - **Pruebas Unitarias (JUnit 5 & Mockito):**
   - `TrackingCommandServiceTest.java`: Testea el procesamiento de Check-In de vehículos, verificando el almacenamiento de coordenadas en caché (Redis) y la emisión de eventos asíncronos (RabbitMQ).
@@ -1487,11 +1508,20 @@ Se ha diseñado la librería ChapaTuRuta-Shared-Lib para estandarizar:
 
 
 #### 4. Software Deployment
-- AWS Management Console.
+- 4.1. Plataforma de Despliegue (PaaS): Render Cloud.
+- 4.2. Estrategia de Empaquetado: Docker y CaaS (Container as a Service).
+- 4.3. Integración y Despliegue Continuo (CI/CD): Despliegue automatizado guiado por Git (Git-driven deployment).
 
-#### 5. Software Deployment
-- Software Documentation
+#### 5. Chat y Comunicación
+- 5.1. Comunicación del Equipo: Uso de Microsoft Teams como medio de comunicación masiva, coordinación de entregables y resolución de bloqueos técnicos en el desarrollo.
 
+#### 6. Videoconferencia
+- 6.1. Sincronización y Ceremonias: Se utiliza Zoom como plataforma de videoconferencia para la coordinación de avances, revisiones de modificaciones arquitectónicas y reuniones periódicas de asignación de responsabilidades.
+
+#### 7. Prácticas DevOps y Calidad de Software (CI/CD)
+- 7.1. Orquestación de Integración Continua: Jenkins (Automatización del pipeline de construcción, compilación y ejecución de suites de pruebas).
+- 7.2. Inspección Continua y Análisis Estático: SonarQube (Evaluación exhaustiva de la salud del código, detección de deuda técnica, vulnerabilidades de seguridad y control de métricas de cobertura).
+- 7.3. Calidad de Integración (Quality Gates): Configuración automatizada de barreras de calidad (Quality Gates) con una exigencia mínima del 80% de cobertura en pruebas de código para autorizar el paso a entornos productivos.
 #### **5.2.2 Source Code Management**
 
 ### 1. Plataforma de Control de Versiones
@@ -1868,7 +1898,365 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 - TS06 – Pruebas BDD y Unitarias
 
 **Fuente:** Elaboración propia mediante Jira.  
-**Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
+**Enlace:** https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9
+
+
+#### 5.3.2 Sprint 2
+#### 5.3.2.1 Sprint Backlog 
+
+| Orden | ID | Título | Descripción | Story Points | Estado | Asignado a |
+|--------|--------|--------|--------|--------|--------|--------|
+| 1 | TS03 | Caché de Coordenadas (Redis) | Setup de almacenamiento en memoria RAM (Upstash) con SSL para lecturas y escrituras de GPS a velocidad de sub-milisegundo. | 5 | Done | Andy Nuñez |
+| 2 | US28 | Transmitir ubicación GPS | Endpoint de emisión y actualización continua de coordenadas desde el dispositivo móvil del conductor hacia la caché. | 5 | Done | Hector Rios |
+| 3 | US19 | Indicar espera en Paradero | Acción del pasajero para registrar su presencia de origen/destino, almacenándose en el set de demanda de la caché. | 5 | Done | Hector Rios |
+| 4 | US20 | Consultar Tiempo Estimado (ETA) | Consumo de coordenadas en tiempo real emparejadas con la API de Mapbox para retornar la distancia y los minutos de arribo exactos. | 5 | Done | Adrian Valerio |
+| 5 | TS04 | Bus de Eventos (RabbitMQ) | Orquestación de mensajería asíncrona mediante CloudAMQP (tracking.exchange) para desacoplar el guardado del GPS del procesamiento de alertas. | 5 | Done | Andy Nuñez |
+| 6 | US23 | Eliminación automática de espera | Implementación de la "Regla de los 2 minutos" (TTL) en Redis para otorgar tolerancia a caídas de internet del conductor antes de limpiar la cola. | 5 | Done | Hector Rios |
+| 7 | TS06 | Pruebas BDD y Unitarias (Fase II) | Implementación de pruebas automatizadas con Cucumber, Gherkin (vehicle_checkin.feature) y Mockito para la capa de negocio del tracking. | 5 | Done | Adrian Valerio |
+| 8 | TS07 | Dockerización e Infraestructura CI/CD | Configuración de empaquetado multi-contenedor e integración continua conducida por Git en la plataforma cloud Render. | 5 | Done | Andy Nuñez |
+| 9 | TS08 | Configuración Externalizada de Red | Aislamiento de variables de entorno y optimización estricta de conexiones simultáneas mediante HikariCP (max-pool-size=3). | 4 | Done | Hector Rios |
+| 10 | TS09 | Resiliencia de Sentencias de BD | Desactivación del umbral de pre-compilación de sentencias en el driver JDBC para compatibilidad en la nube (prepareThreshold=0). | 3 | Done | Adrian Valerio |
+
+#### 5.3.2.2 Development Evidence for Sprint Review
+
+| Repository          | Branch                   | Commit Id | Commit Message                                                                   | Commit Message Body                                                                               | Commited on (Date) |
+| ------------------- | ------------------------ | --------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------ |
+| ChapaTuRuta-backend | feature/identityservice  | 72ddfd8   | feat: adding register with ruc for drivers                                       | Implementación del registro de conductores con asociación obligatoria a una empresa mediante RUC. | 01/06/2026         |
+| ChapaTuRuta-backend | feature/identityservice  | 1056d4e   | feat: Implement user profile management and driver list by company               | Desarrollo de la gestión de perfiles de usuario y consulta de conductores por empresa.            | 01/06/2026         |
+| ChapaTuRuta-backend | feature/routing-service  | 75c7daf   | feat: Implement CRUD for route management in the catalog                         | Implementación de operaciones CRUD para la administración de rutas de transporte.                 | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | 5933528   | feat: adding pattern for coordinates                                             | Implementación de validaciones para el manejo y almacenamiento de coordenadas geográficas.        | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | 4e3602d   | feat: adding endpoint for passengers demand                                      | Desarrollo de endpoints para registrar y consultar la demanda de pasajeros.                       | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | f543212   | feat: adding location history management                                         | Implementación del historial de ubicaciones de las unidades de transporte.                        | 02/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | 6b91b81   | feat: Integrate Mapbox for ETA and PostgreSQL for offline history                | Integración con Mapbox para cálculo de ETA y PostgreSQL para persistencia histórica.              | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | 228033a   | fix: adding connection to Supabase                                               | Configuración de la conexión entre la aplicación y la base de datos Supabase en entorno cloud.    | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | e694bfc   | fix: generate token jwt                                                          | Corrección en la generación de tokens JWT para autenticación segura.                              | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | 0479e86   | feat: adding validation token                                                    | Implementación de validación de tokens JWT en las solicitudes protegidas.                         | 02/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | dc8d086   | feat: adding jwt                                                                 | Incorporación de autenticación basada en JWT dentro de la arquitectura del sistema.               | 03/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | dd15a8c   | fix: fixing connections to db                                                    | Optimización y corrección de conexiones a la base de datos para entornos productivos.             | 03/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | df6e070   | fix: fixing schema to use configuration                                          | Ajuste del esquema de persistencia para utilizar configuración externalizada.                     | 03/06/2026         |
+| ChapaTuRuta-backend | feature/api-gateway      | cfbf8e5   | fix: stop setting manual UUID for routes                                         | Corrección en la generación automática de identificadores UUID para rutas.                        | 03/06/2026         |
+| ChapaTuRuta-backend | feature/identityservice  | 8c43443   | feat: add validation for user registration scenarios                             | Implementación de pruebas BDD para validar escenarios de registro de usuarios.                    | 03/06/2026         |
+| ChapaTuRuta-backend | feature/tracking-service | f0a95bd   | feat: add tracking controller API with check-in and ETA scenarios                | Desarrollo de pruebas de integración para Check-In y ETA del servicio de tracking.                | 04/06/2026         |
+| ChapaTuRuta-backend | feature/routing-service  | e1e2c66   | feat: enhance routing service tests and scenarios for direct and transfer routes | Implementación de escenarios BDD para búsqueda de rutas directas y con transbordos.               | 04/06/2026         |
+
+
+#### 5.3.2.3 Testing Suite Evidence for Sprint Review
+
+
+En esta sección se expone el conjunto de pruebas de integración y aceptación (Integration/Acceptance Tests) automatizadas bajo el enfoque de Desarrollo Guiado por Comportamiento (BDD). Los escenarios fueron escritos en lenguaje natural utilizando la sintaxis descriptiva Gherkin y acoplados al contexto de Spring Boot mediante Cucumber.
+
+Estas pruebas validan de extremo a extremo que las reglas de negocio, filtros de excepción y flujos de datos perimetrales correspondan rigurosamente con los criterios de aceptación de las Historias de Usuario (User Stories) planificadas para el presente Sprint.
+
+**Identity-service**
+
+<p align="center">
+  <img src="./img/test_identity.jpg" width="800">
+</p>
+
+```gherkin
+Feature: User Registration Authentication Flow
+
+  As a new passenger or driver
+  I want to register an account with my personal details
+  So that I can authenticate and access the ChapaTuRuta platform
+
+  Scenario: Successful user registration
+    Given a new user wants to register with email "juan.perez@example.com", name "Juan Perez", password "secure123", and role "PASSENGER"
+    When the registration request is processed
+    Then the account is successfully created returning the user details
+
+  Scenario: Registration fails due to duplicate email
+    Given an existing user is already registered with email "admin@example.com"
+    When a new user attempts to register with the duplicate email "admin@example.com"
+    Then the system rejects the request with a bad request error "El correo ya está registrado"
+
+  Scenario: Registration fails for driver without a company
+    Given a new driver attempts to register with email "chofer@example.com", name "Carlos", password "pass123", but no company ID
+    When the registration request is processed
+    Then the system rejects the request with a bad request error "Los conductores deben estar asociados a una empresa (companyId requerido)"
+```
+
+
+**routing-service**
+
+<p align="center">
+  <img src="./img/test_routing.jpg" width="800">
+</p>
+
+```gherkin
+Feature: Route Search Flow
+
+  As a passenger planning a trip
+  I want to search for available routes between my origin and destination districts
+  So that I can view the price and estimated duration in ChapaTuRuta
+
+  Scenario: Successful search for existing direct routes
+    Given the system has available routes registered from "San Juan de Lurigancho" to "Ate"
+    When a user searches for available routes from "San Juan de Lurigancho" to "Ate"
+    Then the system returns a list of routes containing pricing and duration details
+    And each route option has a valid price and duration
+
+  Scenario: Search for routes with no coverage
+    Given there are no routes registered from "Ancón" to "Chosica"
+    When a user searches for available routes from "Ancón" to "Chosica"
+    Then the system returns an empty list of routes
+
+  Scenario: Search for routes with transfer
+    Given the system has a transfer route from "Ate" via "La Victoria" to "Cercado de Lima"
+    When a user searches for available routes from "Ate" to "Cercado de Lima"
+    Then the system returns routes with multiple legs
+
+  Scenario: Search for multiple available direct routes
+    Given the system has 3 available routes from "Miraflores" to "San Isidro"
+    When a user searches for available routes from "Miraflores" to "San Isidro"
+    Then the system returns 3 available routes
+    And each route option has a valid price and duration
+```
+
+
+**tracking-service**
+
+<p align="center">
+  <img src="./img/test_tracking.jpg" width="800">
+</p>
+
+```gherkin
+Feature: Tracking Controller API
+
+  As a client of the tracking service
+  I want to register check-ins and consult ETA information
+  So that the controller behaves correctly for valid and invalid requests
+
+  Scenario: Successful check-in processing
+    Given a valid check-in request for the tracking controller
+    When the client sends the check-in request
+    Then the response status should be 202
+    And the response body should confirm asynchronous processing
+
+  Scenario: Check-in request rejected due to invalid coordinates
+    Given an invalid check-in request with latitude -91.0 and longitude -76.9532
+    When the client sends the check-in request
+    Then the response status should be 400
+    And the response body should describe the validation error
+
+  Scenario: Successful ETA lookup for a route
+    Given the ETA service returns a result for route "11111111-1111-1111-1111-111111111111"
+    When the client requests the ETA for route "11111111-1111-1111-1111-111111111111" and passenger coordinates -12.0435 and -76.9532
+    Then the ETA payload should contain the route identifier and current vehicle coordinates
+
+  Scenario: ETA lookup returns not found when the route has no active vehicles
+    Given the ETA service cannot resolve route "11111111-1111-1111-1111-111111111111"
+    When the client requests the ETA for route "11111111-1111-1111-1111-111111111111" and passenger coordinates -12.0435 and -76.9532
+    Then the response status should be 404
+```
+
+
+```gherkin
+Feature: Vehicle Check-In Tracking Flow
+
+  As a driver navigating a route
+  I want my active location to be stored and published asynchronously
+  So that the tracking system can notify passengers without blocking the application
+
+  Scenario: Successful Check-In processing without passengers waiting
+    Given an active driver transmits check-in coordinates latitude -12.0435 and longitude -76.9532 for a route
+    When the check-in command is processed by the command service
+    Then the system updates the vehicle location in cache and emits an async notification event
+
+  Scenario: Successful Check-In processing with waiting passengers at a stop
+    Given an active driver transmits check-in coordinates latitude -12.0435 and longitude -76.9532 for a route
+    And the route has waiting passengers at stop "11111111-1111-1111-1111-111111111111"
+    When the check-in command is processed by the command service
+    Then the system updates the vehicle location in cache and emits an async notification event
+    And the waiting passengers at the stop receive a two-minute extension
+```
+
+| Repository          | Branch                 | Commit Id                                | Commit Message                                                                   | Commit Message Body                                                                                                                                                                                   | Commited on (Date)  |
+| ------------------- | ---------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| ChapaTuRuta-backend | feature/routing-tests  | e1e2c6632b665c23bba7db34a95d9df9a28ece59 | feat: enhance routing service tests and scenarios for direct and transfer routes | Se implementan los escenarios estructurados en Cucumber utilizando Gherkin para la búsqueda de rutas directas y opciones con transbordo multimodales, aislando la lógica algorítmica.                 | 04 de Junio de 2026 |
+| ChapaTuRuta-backend | feature/identity-tests | 8c43443be352cdaf524491d6b989a55ae9ae6d12 | feat: add validation for user registration scenarios                             | Cobertura integral de los flujos de autenticación e inyección de reglas de negocio en el registro de usuarios, validando correos duplicados y la asociación obligatoria de empresas para conductores. | 04 de Junio de 2026 |
+| ChapaTuRuta-backend | feature/tracking-tests | f0a95bda2db081946b9137ce06ac11e27cabf89e | feat: add tracking controller API with check-in and ETA scenarios                | Implementación de Integration Tests empleando MockMvc para la ingesta síncrona de telemetría GPS y cálculo predictivo de ETA, neutralizando las llamadas externas y colas de RabbitMQ.                | 04 de Junio de 2026 |
+
+
+
+
+### 5.3.2.4 Execution Evidence for Sprint Review
+
+Para validar el correcto funcionamiento de los microservicios desarrollados durante el sprint, se realizaron pruebas manuales utilizando Postman. Estas pruebas permiten verificar la autenticación, autorización, consulta de información del usuario, búsqueda de rutas, consulta de conductores, registro de ubicación del conductor y cálculo del tiempo estimado de llegada del bus.
+
+---
+
+#### 1. Login - Obtención del Token JWT
+
+En esta prueba se valida el endpoint de autenticación del Identity Service. Se envían las credenciales del usuario conductor para obtener un token JWT, el cual será utilizado posteriormente para acceder a los endpoints protegidos del sistema.
+
+**Método:** `POST`  
+**Endpoint:** `/api/v1/auth/login`
+
+![Login](./img/postman-evidence-Login.png)
+
+---
+
+#### 2. Auth Profile - Consulta del Perfil Autenticado
+
+En esta prueba se valida que el token JWT generado en el login permita acceder correctamente a la información del usuario autenticado. El objetivo es comprobar que el Identity Service reconoce al usuario y devuelve los datos asociados a su identificador.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/auth/profile/{userId}`
+
+![Auth Profile](./img/postman-evidence-AuthProfile.png)
+
+---
+
+#### 3. Routes Search - Búsqueda de Rutas
+
+En esta prueba se valida el funcionamiento del Routing Service. Se realiza una búsqueda de rutas disponibles entre un distrito de origen y un distrito de destino. El objetivo es comprobar que el sistema pueda retornar rutas válidas, incluyendo información como el identificador de la ruta y el precio estimado.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/routes/search?origin={origin}&destination={destination}`
+
+![Routes Search](./img/postman-evidence-RoutesSearch.png)
+
+---
+
+#### 4. Company Drivers - Consulta de Conductores por Empresa
+
+En esta prueba se valida que el Identity Service permita consultar los conductores asociados a una empresa de transporte específica. El objetivo es comprobar que la relación entre empresa y conductores se encuentre correctamente registrada y que el endpoint retorne la lista correspondiente.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/companies/{companyId}/drivers`
+
+![Company Drivers](./img/postman-evidence-CompanyDrivers.png)
+
+---
+
+#### 5. Tracking Check-in - Registro de Ubicación del Conductor
+
+En esta prueba se valida el endpoint de check-in del Tracking Service. Se registra la ubicación actual del conductor mediante coordenadas de latitud y longitud, asociándola a una ruta específica. El objetivo es actualizar la información de ubicación en el sistema para que pueda ser utilizada posteriormente en el cálculo del ETA.
+
+**Método:** `POST`  
+**Endpoint:** `/api/v1/tracking/check-in`
+
+![Tracking Check-in](./img/postman-evidence-TrackingCheckIn.png)
+
+---
+
+#### 6. Tracking ETA - Consulta del Tiempo Estimado de Llegada
+
+En esta prueba se valida el endpoint de ETA del Tracking Service. Se consulta el tiempo estimado de llegada del bus a partir de la ubicación del pasajero y la ruta seleccionada. El objetivo es comprobar que el sistema pueda calcular y devolver el ETA utilizando la ubicación previamente registrada del conductor.
+
+**Método:** `GET`  
+**Endpoint:** `/api/v1/tracking/eta/{routeId}?pasajeroLat={lat}&pasajeroLng={lng}`
+
+![Tracking ETA](./img/postman-evidence-TrackingETA.png)
+
+---
+
+#### Resultado de la Validación
+
+Las pruebas ejecutadas en Postman permiten evidenciar que los principales endpoints de los microservicios se encuentran operativos. Además, se verifica que el flujo entre autenticación, autorización, búsqueda de rutas, registro de ubicación y cálculo de ETA funciona de manera integrada dentro del sistema.
+
+#### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
+
+-  Los endpoints de creación, actualización y eliminación (POST, PUT y DELETE) entregam respuestas en formato JSON con un UUID generados por la base de datos para garantizar la integridad de la información. En el caso del endpoint de check-in del conductor, la solicitud se acepta de inmediato y el procesamiento se realiza en segundo plano mediante RabbitMQ para mejorar el rendimiento y evitar tiempos de espera.
+
+- Por otro lado, los endpoints de consulta (GET) obtienen la información desde Redis, una caché en memoria que permite respuestas más rápidas. Para calcular el tiempo estimado de llegada (ETA), el sistema combina las coordenadas almacenadas con datos de tráfico proporcionados por Mapbox y devuelve un resultado sencillo, por ejemplo, "6 min", listo para mostrarse en la aplicación móvil.
+
+
+
+| Endpoint                                | Acción                                            | Método HTTP | Sintaxis de llamada                     | Parámetros                                                                                                                                  | Ejemplo de Response                                                                                                                                                            | URL Documentación                                          |
+| --------------------------------------- | ------------------------------------------------- | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `/api/v1/auth/register`                 | Registrar un nuevo usuario (Pasajero o Conductor) | POST        | `/api/v1/auth/register`                 | **Body (JSON):** name (string), email (string), password (string), role (string), companyId (string/uuid)                                   | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/login`                    | Iniciar Sesión y obtener JWT                      | POST        | `/api/v1/auth/login`                    | **Body (JSON):** email (string), password (string)                                                                                          | `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZmE4NWY2NC..."`                                                                                                             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Obtener Perfil del usuario                        | GET         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Actualizar Perfil del usuario                     | PUT         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)<br>**Body (JSON):** name (string), password (string)                                                             | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Actualizado", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Eliminar Cuenta de usuario                        | DELETE      | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | En blanco (204 No Content / 200 OK)                                                                                                                                            | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/register`            | Registrar una nueva Empresa                       | POST        | `/api/v1/companies/register`            | **Body (JSON):** name (string), ruc (string), busPhotoUrl (string), managerId (string/uuid)                                                 | `{ "id": "e8a15f64-2717-4562-b3fc-2c963f66bbb2", "name": "Transportes Lima S.A.", "ruc": "20123456789" }`                                                                      | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/{companyId}/drivers` | Listar choferes de la empresa                     | GET         | `/api/v1/companies/{companyId}/drivers` | **Path:** companyId (string/uuid)                                                                                                           | `[{ "id": "8ca85f64-5717-4562-b3fc-2c963f66ccc4", "name": "Pedro Chofer", "email": "pedro@bus.com", "role": "DRIVER", "createdAt": "2026-06-03T19:00:00Z" }]`                  | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/routes`                        | Crear nueva ruta de transporte                    | POST        | `/api/v1/routes`                        | **Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer)                               | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }`                                        | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes`                        | Listar todas las rutas                            | GET         | `/api/v1/routes`                        | Ninguno                                                                                                                                     | `[{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }]`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Actualizar datos de una ruta                      | PUT         | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)<br>**Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer) | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Callao", "price": 4.00, "estimatedDuration": 50 }`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Eliminar una ruta                                 | DELETE      | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)                                                                                                                  | En blanco (200 OK)                                                                                                                                                             | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/search`                 | Buscar rutas directas/transbordos                 | GET         | `/api/v1/routes/search`                 | **Query:** origin (string), destination (string)                                                                                            | `[{ "legs": [{ "routeId": "4da75f64...", "origin": "Ate", "destination": "Lima", "price": 3.5, "estimatedDuration": 45 }], "totalPrice": 3.5, "totalEstimatedDuration": 45 }]` | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/tracking/check-in`             | Registrar Check-in del Conductor                  | POST        | `/api/v1/tracking/check-in`             | **Body (JSON):** driverId (uuid), routeId (uuid), stopId (uuid), latitude (number), longitude (number), timestamp (integer)                 | `"Check-in procesado asincronamente"`                                                                                                                                          | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/tracking/eta/{routeId}`        | Consultar Tiempo Estimado (ETA)                   | GET         | `/api/v1/tracking/eta/{routeId}`        | **Path:** routeId (string/uuid)<br>**Query:** pasajeroLat (number), pasajeroLng (number)                                                    | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "currentLatitude": -12.0400, "currentLongitude": -76.9500, "estimatedTime": "6 min" }`                                   | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/join`                   | Registrar pasajero en espera                      | POST        | `/api/v1/demand/join`                   | **Query:** routeId (string/uuid), stopId (string/uuid), passengerId (string/uuid)                                                           | `"Pasajero registrado en espera exitosamente"`                                                                                                                                 | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/transfer`               | Registrar transbordo de pasajero                  | POST        | `/api/v1/demand/transfer`               | **Query:** nextRouteId (string/uuid), nextStopId (string/uuid), passengerId (string/uuid)                                                   | `"Pasajero registrado para transbordo exitosamente"`                                                                                                                           | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/route/{routeId}`        | Ver demanda total de la ruta                      | GET         | `/api/v1/demand/route/{routeId}`        | **Path:** routeId (string/uuid)                                                                                                             | `{ "paradero-ate-123": 5, "paradero-santa-anita-456": 12 }`                                                                                                                    | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+
+
+<p align="center">
+  <img src="./img/microservice_evidence.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence1.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence2.jpg" width="800">
+</p>
+
+
+
+https://identity-service-2nhw.onrender.com/swagger-ui/index.html
+
+https://tracking-service-yj42.onrender.com/swagger-ui/index.html
+
+https://chapaturuta-backend.onrender.com/swagger-ui/index.html
+
+
+- **URL del Repositorio de Web Services:** https://github.com/1ASI0657-2610-7940-G10/ChapaTuRuta-backend
+
+
+
+#### 5.3.2.6 Software Deployment Evidence for Sprint Review
+
+- Esta captura evidencia el dashboard principal de nuestra plataforma PaaS (Render Cloud). El estado verde ("Deploy successful" / "Live") de todos los componentes confirma que el pipeline de Integración Continua (CI/CD) descargó correctamente el código fuente, empaquetó las imágenes inmutables de Docker y levantó los contenedores sin errores
+
+<p align="center">
+  <img src="./img/deployment_evidence0.jpg" width="800">
+</p>
+
+- Se confirma el despliegue del identity-service en su dominio público. La interfaz interactiva demuestra que el contenedor ha cargado exitosamente las configuraciones de seguridad criptográfica y está listo para emitir y validar tokens JWT en la nube.
+
+<p align="center">
+  <img src="./img/deployment_evidence1.jpg" width="800">
+</p>
+
+- Evidencia del despliegue del tracking-service. Su correcto arranque en la nube confirma que la inyección de variables de entorno críticas (como el MAPBOX_ACCESS_TOKEN y las credenciales de colas) fue exitosa, permitiendo exponer los endpoints de telemetría de alta velocidad.
+
+<p align="center">
+  <img src="./img/deployment_evidence2.jpg" width="800">
+</p>
+
+- Captura del entorno productivo del routing-service, demostrando que los controladores que albergan la lógica algorítmica de búsqueda de itinerarios y transbordos están operativos y expuestos a través de la red perimetral.
+
+<p align="center">
+  <img src="./img/deployment_evidence3.jpg" width="800">
+</p>
+
+- Consola de administración de Supabase evidenciando el aprovisionamiento de la base de datos relacional (PostgreSQL). Demuestra que las tablas maestras de dominios (Usuarios, Rutas, Empresas) están activas en la nube y recibiendo conexiones persistentes desde los microservicios, validando las credenciales JDBC inyectadas en Render.
+
+<p align="center">
+  <img src="./img/deployment_evidence4.jpg" width="800">
+</p>
+
+- Monitoreo del clúster gestionado de Redis en Upstash. Esta instancia en memoria RAM, ahora activa en la nube, es la responsable de absorber la alta concurrencia de la telemetría GPS vehicular y la gestión de colas de demanda, garantizando lecturas de latencia ultrabaja.
+
+<p align="center">
+  <img src="./img/deployment_evidence5.jpg" width="800">
+</p>
+
+- Panel de control de CloudAMQP mostrando el bróker de mensajería en estado de ejecución (Running). Esta captura certifica el correcto despliegue de la infraestructura de colas asíncronas.
+
+<p align="center">
+  <img src="./img/deployment_evidence6.jpg" width="800">
+</p>
+
+
+
+#### 5.3.2.7 Team Collaboration Insights during Sprint
 
 #### 5.3.2.8 Kanban Board
 
@@ -1955,6 +2343,438 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 
 - TS06 – Pruebas BDD y Unitarias (Fase II)
 
-**Fuente:** Elaboración propia mediante Jira.  
-**Enlace:** [Kanban Board del Proyecto](https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9)
+#### **Fuente:** Elaboración propia mediante Jira.  
+#### **Enlace:** https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9
 
+#### 5.3.3 Sprint 2
+#### 5.3.3.1 Sprint Backlog 
+
+| Orden | ID   | Título                          | Descripción                                                                                                                            | Story Points | Estado | Asignado a     |
+| ----: | ---- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -----------: | ------ | -------------- |
+|     1 | US07 | Cierre de Sesión                | Inactivación de sesión desde el cliente (eliminación del token JWT en SharedPreferences) y redirección al login.                       |            2 | Done   | Hector Rios    |
+|     2 | US14 | Visualizar paraderos en el mapa | Renderizado geolocalizado de pines interactivos para cada paradero usando la librería flutter_map.                                     |            5 | Done   | Andy Nuñez     |
+|     3 | US18 | Detalle visual de la Ruta       | Decodificación matemática nativa y dibujo de polilíneas exactas (calles y curvas) consumiendo la API de Mapbox.                        |            5 | Done   | Adrian Valerio |
+|     4 | US22 | Confirmación manual de abordaje | Interfaz de tarjeta flotante con botones interactivos ("Ya Subí" / "Cancelar") para salir de la cola de espera de Redis.               |            3 | Done   | Hector Rios    |
+|     5 | US29 | Check-in manual en Paraderos    | Interfaz del conductor con botón "Llegué Aquí" para enviar coordenadas de actualización (ideal ya que el GPS continuo está comentado). |            3 | Done   | Adrian Valerio |
+
+#### 5.3.3.2 Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|------------|----------|-----------|----------------|---------------------|-------------------|
+| ChapaTuRuta-frontend | feature/auth-module | 4a82c1d | feat: implement login interface and authentication flow | Desarrollo de la pantalla de inicio de sesión e integración con el flujo de autenticación de usuarios. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/auth-module | 8f24b7e | feat: add user registration screen | Implementación de la interfaz de registro de usuarios con validaciones de formularios. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/auth-module | c71e3a9 | feat: implement auth bloc architecture | Desarrollo de la gestión de estado para autenticación utilizando el patrón BLoC. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/driver-module | d9b62e4 | feat: create driver home dashboard | Implementación de la pantalla principal para conductores con acceso a funcionalidades operativas. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/driver-module | 35f1ca8 | feat: integrate driver repository services | Integración del módulo de conductores con los servicios REST expuestos por el backend. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | 5b83ad1 | feat: implement passenger route search view | Desarrollo de la interfaz para búsqueda de rutas disponibles para pasajeros. | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | 72a9ef5 | feat: add ETA visualization components | Implementación de componentes para mostrar tiempos estimados de llegada (ETA). | 16/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | 91ce4b3 | feat: add trip option management | Desarrollo de modelos y vistas para la visualización de alternativas de viaje y transbordos. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/passenger-module | e4d18f7 | feat: implement passenger bloc state management | Implementación de la lógica de estados y eventos para las funcionalidades del pasajero. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/manager-module | f2b8a16 | feat: create manager dashboard interface | Desarrollo de la pantalla principal para administradores de empresas de transporte. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/manager-module | 6c5d7e2 | feat: integrate company driver monitoring | Implementación de vistas para la gestión y monitoreo de conductores asociados a una empresa. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/core-module | a7f4c39 | feat: implement role coordinator navigation | Desarrollo de la coordinación de navegación basada en roles de usuario dentro de la aplicación. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/core-module | b4e93f1 | feat: add local catalog configuration | Implementación del catálogo local para la gestión de configuraciones compartidas de la aplicación. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/integration | c8d7a52 | feat: integrate backend microservices | Integración de los módulos frontend con los microservicios de autenticación, rutas y seguimiento. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/integration | d3e5f81 | fix: improve API error handling | Optimización del manejo de errores y respuestas provenientes de los servicios backend. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/testing | e7a2b46 | feat: validate authentication workflows | Implementación de escenarios de validación para inicio de sesión y registro de usuarios. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/testing | f5c8d13 | feat: validate passenger route search scenarios | Desarrollo de pruebas funcionales para búsqueda de rutas y consulta de tiempos estimados. | 17/06/2026 |
+| ChapaTuRuta-frontend | feature/testing | a9d4e75 | feat: validate role-based navigation scenarios | Implementación de pruebas para la navegación y acceso a funcionalidades según el rol del usuario. | 17/06/2026 |
+
+#### 5.3.3.3 Testing Suite Evidence for Sprint Review
+
+### Pruebas de Integración de Interfaz de Usuario (Widget/Integration Tests)
+
+En esta sección se expone el conjunto de pruebas de integración de interfaz de usuario (Widget/Integration Tests) automatizadas bajo el enfoque de Desarrollo Guiado por Comportamiento (BDD) para la aplicación móvil desarrollada en Flutter.
+
+Los escenarios fueron escritos utilizando la sintaxis descriptiva Gherkin y acoplados al framework de pruebas nativo de Flutter mediante la librería `bdd_widget_test`. Estas pruebas validan de extremo a extremo que la gestión de estados mediante BLoC, la navegación condicional por roles y la renderización de componentes visuales (mapas, tarjetas y formularios) correspondan rigurosamente con los criterios de aceptación de las Historias de Usuario planificadas para el presente Sprint del Frontend.
+
+---
+
+### Authentication & Role Coordinator (`auth_flow.feature`)
+
+### Feature: Authentication and Role-Based Routing Flow
+
+**As a registered user**
+**I want to log in and be redirected to my specific workspace**
+**So that I can access the tools corresponding to my role (Passenger, Driver, or Manager)**
+
+### Scenario: Successful login and routing for a Passenger
+
+```gherkin
+Given the user is on the Login Screen
+When the user enters "juan@pasajero.com" into the email field
+And the user enters "secure123" into the password field
+And the user taps the "Ingresar" button
+Then the system validates the JWT and routes the user
+And the "PassengerHomeView" with the Mapbox map should be visible
+```
+
+### Scenario: Successful login and routing for a Driver
+
+```gherkin
+Given the user is on the Login Screen
+When the user enters "pedro@driver.com" into the email field
+And the user enters "secure123" into the password field
+And the user taps the "Ingresar" button
+Then the system validates the JWT and routes the user
+And the "DriverHomeView" with the green "INICIAR RUTA" button should be visible
+```
+
+---
+
+### Passenger Workspace (`passenger_map.feature`)
+
+### Feature: Passenger Map and Wait Flow
+
+**As a passenger**
+**I want to search a route and indicate my waiting stop**
+**So that I can see the bus moving on the map and its Estimated Time of Arrival (ETA)**
+
+### Scenario: Search and render a route successfully
+
+```gherkin
+Given the passenger is on the "PassengerHomeView"
+When the passenger enters "Pueblo Libre" as origin and "Santa Anita" as destination
+And taps the search icon
+Then the system fetches the route coordinates from the Routing Service
+And a curved blue Polyline and red Stop Markers should be rendered on the Mapbox layer
+```
+
+### Scenario: Passenger joins the queue and views the ETA card
+
+```gherkin
+Given the passenger has successfully searched for a route
+When the passenger taps on a red Stop Marker
+And taps the "Esperar Bus Aquí" button on the bottom sheet
+Then the bottom sheet should close
+And the Floating Wait Card should appear with the text "Calculando llegada..."
+And the Map should display a dynamic bus icon moving according to the ETA polling
+```
+
+---
+
+### Driver Workspace (`driver_checkin.feature`)
+
+### Feature: Driver Route Selection and Manual Check-In
+
+**As a driver**
+**I want to select my assigned route and manually report my arrival at stops**
+**So that passengers can receive accurate ETA updates without relying solely on continuous GPS**
+
+### Scenario: Select a dynamic route and start the trip
+
+```gherkin
+Given the driver is on the "DriverHomeView"
+When the dropdown menu fetches available routes from the backend
+And the driver selects the route "1285 San Antonio"
+And taps the "INICIAR RUTA" button
+Then the view should change to display the sequence of stops for the selected route
+```
+
+### Scenario: Successful manual check-in at a stop
+
+```gherkin
+Given the driver has started a route and sees the list of stops
+When the driver taps the "LLEGUÉ AQUÍ" button for the "Jorge Polar" stop
+Then the BLoC should send the stop coordinates to the Tracking Service
+And the button should change its state to "LISTO" and become disabled
+And a green SnackBar should appear with the message "Check-in exitoso"
+```
+
+---
+
+### Evidencia de Commits de Pruebas Automatizadas
+
+| Repository           | Branch                    | Commit Id                                | Commit Message                                                    | Commit Message Body                                                                                                                                                                                                                      | Commited on (Date)  |
+| -------------------- | ------------------------- | ---------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| ChapaTuRuta-frontend | feature/auth-widget-tests | 186d57bb9c85bf2870ed995f9b8b4b1e2d7214f1 | test: add BDD widget tests for login and role coordinator         | Se implementan pruebas de integración simulando la inserción de credenciales, verificando la gestión de estado del AuthBloc y asegurando que el RoleCoordinator redirija correctamente basándose en el payload del JWT.                  | 17 de Junio de 2026 |
+| ChapaTuRuta-frontend | feature/passenger-tests   | 77d7b6b0c8eae35241a139dfaf0c82f2b94d62e5 | test: verify mapbox rendering and ETA floating card interactions  | Cobertura BDD para el flujo del pasajero. Se verifica el renderizado de flutter_map, la aparición de la polilínea tras la búsqueda y la transición de la interfaz al presionar "Esperar Bus Aquí", mostrando la tarjeta flotante de ETA. | 17 de Junio de 2026 |
+| ChapaTuRuta-frontend | feature/driver-tests      | 2888a05d9b3b2dfa2cb2184f3548b9f97122d8f1 | test: validate driver dynamic route selection and check-in states | Se implementan pruebas de integración para el flujo del conductor, validando la selección dinámica de rutas, cambios de estado del botón de check-in y la interacción con el Driver BLoC.                                                | 17 de Junio de 2026 |
+
+#### 5.3.3.4 Execution Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de ejecución de las funcionalidades implementadas en el Sprint del Frontend. Cada evidencia demuestra el correcto funcionamiento de los flujos principales de la aplicación móvil Flutter, validando la interacción entre la interfaz de usuario, la gestión de estados mediante BLoC y la comunicación con los servicios del Backend.
+
+---
+
+#### 1. Autenticación y Coordinador de Roles (Login Flow)
+
+En esta prueba se valida el flujo inicial de la aplicación. Se ingresan las credenciales en el `LoginView`, el `AuthBloc` se comunica con el Identity Service, almacena el token JWT de forma segura y el `RoleCoordinator` evalúa el payload para redirigir al usuario hacia su espacio de trabajo correspondiente (Pasajero, Conductor o Manager).
+
+**Vista evaluada:** `LoginView.dart` → `RoleCoordinator.dart`
+
+**Acción ejecutada:** Inicio de sesión y enrutamiento dinámico basado en el rol del usuario.
+
+<p align="center">
+  <img src="./img/evidence_sprint31.jpg" width="200">
+</p>
+
+
+
+---
+
+#### 2. Renderizado de Mapa y Rutas (Passenger Workspace)
+
+Esta prueba valida la integración del mapa dentro del `PassengerHomeView`. Se demuestra que, al realizar una búsqueda de ruta (por ejemplo, Ate → San Miguel), el Frontend decodifica correctamente la polilínea (`Polyline`) obtenida desde el Routing Service y renderiza el recorrido sobre el mapa, incluyendo la visualización de los paraderos asociados.
+
+**Vista evaluada:** `PassengerHomeView.dart`
+
+**Acción ejecutada:** Búsqueda de ruta y renderizado de `flutter_map` mediante `TileLayer` utilizando servicios de Mapbox.
+
+
+<p align="center">
+  <img src="./img/evidence_sprint32.jpg" width="200">
+</p>
+---
+
+#### 3. Control de Check-in Manual (Driver Workspace)
+
+Esta prueba valida la vista operativa del conductor. El `DriverHomeView` renderiza la secuencia de paraderos correspondiente a la ruta seleccionada. Al presionar el botón **"LLEGUÉ AQUÍ"**, el sistema envía las coordenadas al Tracking Service y actualiza de manera reactiva el estado de la interfaz, deshabilitando el botón y mostrando el estado **"LISTO"**.
+
+**Vista evaluada:** `DriverHomeView.dart`
+
+**Acción ejecutada:** Emisión manual de eventos de ubicación y actualización reactiva del estado de la interfaz.
+
+<p align="center">
+  <img src="./img/evidence_sprint33.jpg" width="200">
+</p>
+
+---
+
+#### 4. Interacción de Espera y Tarjeta Flotante ETA (Passenger Interactions)
+
+Esta prueba valida la experiencia de usuario del pasajero durante la solicitud de un bus. Al seleccionar un paradero desde el mapa y confirmar la espera, la aplicación despliega una tarjeta flotante que inicia un proceso de consulta periódica (`polling`) para obtener y actualizar el Tiempo Estimado de Llegada (ETA) en tiempo real, manteniendo el mapa visible en segundo plano.
+
+**Vista evaluada:** `PassengerHomeView.dart` (Floating ETA Card)
+
+**Acción ejecutada:** Confirmación del paradero de espera y recepción asíncrona del ETA mediante actualizaciones periódicas.
+
+<p align="center">
+  <img src="./img/evidence_sprint34.jpg" width="200">
+</p>
+
+---
+
+
+#### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
+
+## Integración de Red del Frontend (Flutter)
+
+En esta sección se documenta la capa de integración de red construida en el Frontend desarrollado en Flutter durante el presente Sprint. Debido a que los microservicios Backend fueron implementados y documentados mediante OpenAPI/Swagger en iteraciones anteriores, el objetivo de este Sprint fue desarrollar los **Repositorios (Repository Pattern)** y los **Modelos de Datos (Beans)** responsables de consumir dichos servicios desde la aplicación móvil.
+
+Para la comunicación con los servicios REST se implementó el paquete `http` de Dart en conjunto con `shared_preferences`, permitiendo la persistencia local del token JWT y su inyección automática en las cabeceras (`Headers`) de cada petición HTTP autenticada.
+
+A continuación, se presenta el mapeo entre los métodos implementados en Flutter y los endpoints expuestos a través del API Gateway, manteniendo una arquitectura desacoplada entre la capa de presentación (UI/BLoC) y la capa de acceso a datos (Repository).
+
+---
+
+| Repositorio Flutter (.dart) | Método Implementado                 | Método HTTP | Endpoint Consumido (API Gateway)      | Modelos / Beans Utilizados       | Descripción de la Integración                                                                                                                                                                 |
+| --------------------------- | ----------------------------------- | ----------- | ------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AuthRepository`            | `login(email, password)`            | `POST`      | `/api/v1/auth/login`                  | `String (JWT)`                   | Autentica al usuario contra el Identity Service y almacena el token JWT devuelto en el almacenamiento seguro del dispositivo.                                                                 |
+| `AuthRepository`            | `registerUser(...)`                 | `POST`      | `/api/v1/auth/register`               | Ninguno (`void`)                 | Serializa los datos del formulario de registro (Pasajero, Conductor o Manager) en formato JSON para la creación de una nueva cuenta.                                                          |
+| `PassengerRepository`       | `searchRoutes(origin, destination)` | `GET`       | `/api/v1/routes/search`               | `TripOptionBean`, `RouteLegBean` | Consulta las rutas disponibles entre un origen y destino. La respuesta JSON anidada es deserializada hacia objetos tipados en Dart.                                                           |
+| `PassengerRepository`       | `joinStopQueue(route, stop)`        | `POST`      | `/api/v1/demand/join`                 | Ninguno (`void`)                 | Obtiene el `passengerId` decodificando el payload del JWT almacenado localmente y lo envía al backend para registrar la espera del pasajero en Redis.                                         |
+| `PassengerRepository`       | `getEta(routeId, lat, lng)`         | `GET`       | `/api/v1/tracking/eta/{routeId}`      | `EtaBean`                        | Envía la ubicación estática del pasajero y recibe el cálculo de llegada generado mediante Mapbox, deserializando la respuesta en un objeto con información del tiempo estimado (ej. "6 min"). |
+| `DriverRepository`          | `getAllRoutes()`                    | `GET`       | `/api/v1/routes`                      | `List<RouteBean>`                | Obtiene el catálogo completo de rutas disponibles para poblar dinámicamente el menú desplegable (`Dropdown`) del conductor al iniciar su recorrido.                                           |
+| `DriverRepository`          | `sendCheckIn(...)`                  | `POST`      | `/api/v1/tracking/check-in`           | Ninguno (`void`)                 | Empaqueta el `driverId` obtenido desde el JWT, el paradero y las coordenadas actuales, enviando el evento de llegada manual al Tracking Service.                                              |
+| `ManagerRepository`         | `getDrivers(companyId)`             | `GET`       | `/api/v1/drivers/company/{companyId}` | `List<DriverBean>`               | Consulta los conductores asociados a una empresa específica, transformando la respuesta JSON en objetos de dominio utilizados por la interfaz de gestión.                                     |
+
+---
+
+Esta capa de integración permite que los BLoC del Frontend consuman servicios remotos mediante una interfaz de repositorios desacoplada, favoreciendo la mantenibilidad, la escalabilidad y la realización de pruebas unitarias mediante la sustitución de dependencias.
+
+
+| Endpoint                                | Acción                                            | Método HTTP | Sintaxis de llamada                     | Parámetros                                                                                                                                  | Ejemplo de Response                                                                                                                                                            | URL Documentación                                          |
+| --------------------------------------- | ------------------------------------------------- | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `/api/v1/auth/register`                 | Registrar un nuevo usuario (Pasajero o Conductor) | POST        | `/api/v1/auth/register`                 | **Body (JSON):** name (string), email (string), password (string), role (string), companyId (string/uuid)                                   | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/login`                    | Iniciar Sesión y obtener JWT                      | POST        | `/api/v1/auth/login`                    | **Body (JSON):** email (string), password (string)                                                                                          | `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZmE4NWY2NC..."`                                                                                                             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Obtener Perfil del usuario                        | GET         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Perez", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`                   | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Actualizar Perfil del usuario                     | PUT         | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)<br>**Body (JSON):** name (string), password (string)                                                             | `{ "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "Juan Actualizado", "email": "juan@mail.com", "role": "PASSENGER", "createdAt": "2026-06-03T18:33:10Z" }`             | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/auth/profile/{id}`             | Eliminar Cuenta de usuario                        | DELETE      | `/api/v1/auth/profile/{id}`             | **Path:** id (string/uuid)                                                                                                                  | En blanco (204 No Content / 200 OK)                                                                                                                                            | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/register`            | Registrar una nueva Empresa                       | POST        | `/api/v1/companies/register`            | **Body (JSON):** name (string), ruc (string), busPhotoUrl (string), managerId (string/uuid)                                                 | `{ "id": "e8a15f64-2717-4562-b3fc-2c963f66bbb2", "name": "Transportes Lima S.A.", "ruc": "20123456789" }`                                                                      | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/companies/{companyId}/drivers` | Listar choferes de la empresa                     | GET         | `/api/v1/companies/{companyId}/drivers` | **Path:** companyId (string/uuid)                                                                                                           | `[{ "id": "8ca85f64-5717-4562-b3fc-2c963f66ccc4", "name": "Pedro Chofer", "email": "pedro@bus.com", "role": "DRIVER", "createdAt": "2026-06-03T19:00:00Z" }]`                  | https://identity-service-2nhw.onrender.com/swagger-ui.html |
+| `/api/v1/routes`                        | Crear nueva ruta de transporte                    | POST        | `/api/v1/routes`                        | **Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer)                               | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }`                                        | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes`                        | Listar todas las rutas                            | GET         | `/api/v1/routes`                        | Ninguno                                                                                                                                     | `[{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Lima", "price": 3.50, "estimatedDuration": 45 }]`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Actualizar datos de una ruta                      | PUT         | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)<br>**Body (JSON):** originDistrict (string), destinationDistrict (string), price (number), durationMin (integer) | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "origin": "Ate", "destination": "Callao", "price": 4.00, "estimatedDuration": 50 }`                                      | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/{id}`                   | Eliminar una ruta                                 | DELETE      | `/api/v1/routes/{id}`                   | **Path:** id (string/uuid)                                                                                                                  | En blanco (200 OK)                                                                                                                                                             | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes/search`                 | Buscar rutas directas/transbordos                 | GET         | `/api/v1/routes/search`                 | **Query:** origin (string), destination (string)                                                                                            | `[{ "legs": [{ "routeId": "4da75f64...", "origin": "Ate", "destination": "Lima", "price": 3.5, "estimatedDuration": 45 }], "totalPrice": 3.5, "totalEstimatedDuration": 45 }]` | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/tracking/check-in`             | Registrar Check-in del Conductor                  | POST        | `/api/v1/tracking/check-in`             | **Body (JSON):** driverId (uuid), routeId (uuid), stopId (uuid), latitude (number), longitude (number), timestamp (integer)                 | `"Check-in procesado asincronamente"`                                                                                                                                          | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/tracking/eta/{routeId}`        | Consultar Tiempo Estimado (ETA)                   | GET         | `/api/v1/tracking/eta/{routeId}`        | **Path:** routeId (string/uuid)<br>**Query:** pasajeroLat (number), pasajeroLng (number)                                                    | `{ "routeId": "4da75f64-5717-4562-b3fc-2c963f66ddd5", "currentLatitude": -12.0400, "currentLongitude": -76.9500, "estimatedTime": "6 min" }`                                   | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/join`                   | Registrar pasajero en espera                      | POST        | `/api/v1/demand/join`                   | **Query:** routeId (string/uuid), stopId (string/uuid), passengerId (string/uuid)                                                           | `"Pasajero registrado en espera exitosamente"`                                                                                                                                 | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/transfer`               | Registrar transbordo de pasajero                  | POST        | `/api/v1/demand/transfer`               | **Query:** nextRouteId (string/uuid), nextStopId (string/uuid), passengerId (string/uuid)                                                   | `"Pasajero registrado para transbordo exitosamente"`                                                                                                                           | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+| `/api/v1/demand/route/{routeId}`        | Ver demanda total de la ruta                      | GET         | `/api/v1/demand/route/{routeId}`        | **Path:** routeId (string/uuid)                                                                                                             | `{ "paradero-ate-123": 5, "paradero-santa-anita-456": 12 }`                                                                                                                    | https://tracking-service-yj42.onrender.com/swagger-ui.html |
+
+
+<p align="center">
+  <img src="./img/microservice_evidence.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence1.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/microservice_evidence2.jpg" width="800">
+
+
+#### 5.3.3.6 Software Deployment Evidence for Sprint Review
+
+- La siguiente captura muestra el panel principal de la plataforma PaaS utilizada para el despliegue (Render Cloud). El estado operativo de cada servicio confirma que el proceso automatizado de integración y despliegue continuo ejecutó correctamente la construcción de imágenes Docker y la puesta en marcha de los contenedores en el entorno productivo.
+
+<p align="center">
+  <img src="./img/deployment_evidence0.jpg" width="800">
+</p>
+
+- Evidencia del despliegue exitoso del **identity-service** en la nube mediante su dominio público. La disponibilidad de la documentación interactiva valida que el servicio se encuentra operativo y preparado para gestionar procesos de autenticación y autorización basados en tokens JWT.
+
+<p align="center">
+  <img src="./img/deployment_evidence1.jpg" width="800">
+</p>
+
+- Captura correspondiente al **tracking-service** desplegado en producción. Su funcionamiento confirma la correcta configuración de las variables de entorno necesarias para el procesamiento y exposición de información relacionada con la telemetría y seguimiento en tiempo real.
+
+<p align="center">
+  <img src="./img/deployment_evidence2.jpg" width="800">
+</p>
+
+- Evidencia del entorno productivo del **routing-service**. La disponibilidad de sus endpoints demuestra que los componentes encargados de la gestión de rutas y cálculo de recorridos fueron desplegados satisfactoriamente y se encuentran accesibles desde la infraestructura cloud.
+
+<p align="center">
+  <img src="./img/deployment_evidence3.jpg" width="800">
+</p>
+
+- Captura de la consola administrativa de **Supabase**, donde se visualiza la base de datos PostgreSQL utilizada por la solución. Esta evidencia confirma la disponibilidad de las estructuras de almacenamiento y la conectividad requerida por los microservicios desplegados.
+
+<p align="center">
+  <img src="./img/deployment_evidence4.jpg" width="800">
+</p>
+
+- Monitoreo de la instancia de **Redis** alojada en Upstash. La evidencia demuestra que el servicio de almacenamiento en memoria se encuentra activo y disponible para soportar operaciones de acceso rápido y mecanismos de caché dentro de la arquitectura.
+
+<p align="center">
+  <img src="./img/deployment_evidence5.jpg" width="800">
+</p>
+
+- Panel de administración de **CloudAMQP** mostrando el estado operativo del bróker de mensajería. Esta captura verifica la correcta implementación de la infraestructura responsable de la comunicación asíncrona entre los diferentes servicios del sistema.
+
+<p align="center">
+  <img src="./img/deployment_evidence6.jpg" width="800">
+</p>
+
+#### 5.3.3.7 Team Collaboration Insights during Sprint
+
+**Informe:**
+<br>
+
+<p align="center">
+  <img src="./img/informe-sprint3.png" width="800">
+</p>
+
+<br>
+
+**Landing:**
+<br>
+<p align="center">
+  <img src="./img/landing-sprint3.png" width="800">
+</p>
+
+<br>
+
+**Frontend:**
+<br>
+<p align="center">
+  <img src="./img/frontend-sprint3.png" width="800">
+</p>
+
+<br>
+
+**Backend:**
+<br>
+
+<p align="center">
+  <img src="./img/backend-sprint3.png" width="800">
+</p>
+
+5.3.3.8 Kanban Board
+
+| BACKLOG (Product Backlog General)        | TO DO (Sprint 3 Commitments)                                                                       | IN PROGRESS                                                      | DONE (Sprint 3 Completado)           |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------ |
+| US01 Explorar paraderos desde Landing    | (Las 5 tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint) | US07 Cierre de Sesión                |
+| US02 Consultar funcionamiento y ventajas |                                                                                                    |                                                                  | US14 Visualizar paraderos en el mapa |
+| US03 Acceder a FAQ                       |                                                                                                    |                                                                  | US18 Detalle visual de la Ruta       |
+| US08 Edición de Perfil de Usuario        |                                                                                                    |                                                                  | US22 Confirmación manual de abordaje |
+| US09 Registro inicial de Empresa         |                                                                                                    |                                                                  | US29 Check-in manual en Paraderos    |
+| US10 Personalizar perfil de Empresa      |                                                                                                    |                                                                  |                                      |
+| US11 Panel de resumen de métricas        |                                                                                                    |                                                                  |                                      |
+| US13 Editar y eliminar Paraderos         |                                                                                                    |                                                                  |                                      |
+| US16 Gestionar Rutas (Editar/Eliminar)   |                                                                                                    |                                                                  |                                      |
+| US21 Notificaciones push de proximidad   |                                                                                                    |                                                                  |                                      |
+| US24 Ver información del Conductor       |                                                                                                    |                                                                  |                                      |
+| US25 Calificar viaje y Conductor         |                                                                                                    |                                                                  |                                      |
+| US26 Crear y listar Colecciones          |                                                                                                    |                                                                  |                                      |
+| US27 Gestionar rutas en Colecciones      |                                                                                                    |                                                                  |                                      |
+| US30 Ver concurrencia en tiempo real     |                                                                                                    |                                                                  |                                      |
+| US31 Consultar reputación propia         |                                                                                                    |                                                                  |                                      |
+| TS05 Integración de SDK Firebase Admin   |                                                                                                    |                                                                  |                                      |
+
+
+### Kanban Board del Sprint 3
+
+<p align="center">
+  <img src="./img/kanban-sprint3.png" alt="Kanban Board Sprint 2" width="100%">
+</p>
+
+### Descripción de etiquetas
+
+#### 🔵 Azul (Frontend / UX)
+
+- US01 – Explorar paraderos desde Landing
+- US02 – Consultar funcionamiento y ventajas
+- US03 – Acceder a FAQ
+- US08 – Edición de Perfil de Usuario
+- US10 – Personalizar perfil de Empresa
+- US11 – Panel de resumen de métricas
+- US18 – Detalle visual de la Ruta
+- US22 – Confirmación manual de abordaje
+- US24 – Ver información del Conductor
+- US25 – Calificar viaje y Conductor
+- US26 – Crear y listar Colecciones
+- US27 – Gestionar rutas en Colecciones
+- US31 – Consultar reputación propia
+
+#### 🔴 Rojo (Backend)
+
+- US07 – Cierre de Sesión
+- US09 – Registro inicial de Empresa
+- US13 – Editar y eliminar Paraderos
+- US16 – Gestionar Rutas (Editar/Eliminar)
+
+#### 🟠 Naranja (Tiempo Real / Geolocalización)
+
+- US14 – Visualizar paraderos en el mapa
+- US19 – Indicar espera en Paradero
+- US20 – Consultar Tiempo Estimado (ETA)
+- US21 – Notificaciones push de proximidad
+- US23 – Eliminación automática de espera
+- US28 – Transmitir ubicación GPS
+- US29 – Check-in manual en Paraderos
+- US30 – Ver concurrencia en tiempo real
+
+#### 🟢 Verde (Base de Datos)
+
+- TS03 – Caché de Coordenadas (Redis)
+- TS09 – Resiliencia de Sentencias de BD
+
+#### ⚫ Negro (Infraestructura)
+
+- TS04 – Bus de Eventos (RabbitMQ)
+- TS05 – Integración de SDK Firebase Admin
+- TS07 – Dockerización e Infraestructura CI/CD
+- TS08 – Configuración Externalizada de Red
+
+#### 🟨 Amarillo (Testing)
+
+- TS06 – Pruebas BDD y Unitarias (Fase II)
+
+#### **Fuente:** Elaboración propia mediante Jira.  
+#### **Enlace:** https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9
