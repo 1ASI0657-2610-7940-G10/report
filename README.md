@@ -2346,8 +2346,6 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 #### **Fuente:** Elaboración propia mediante Jira.  
 #### **Enlace:** https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9
 
-
-
 #### 5.3.3 Sprint 2
 #### 5.3.3.1 Sprint Backlog 
 
