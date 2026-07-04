@@ -2805,9 +2805,16 @@ Para el último Sprint (TF1), se seleccionaron del Product Backlog aquellas Hist
 
 #### 5.3.4.2 Development Evidence for Sprint Review
 
-Durante el Sprint 4 se ejecutó la integración final de los ecosistemas. 
-- **En el Frontend:** Se estructuró el AuthContext para gestionar roles globalmente y se desarrollaron las vistas core del negocio: La **Consola del Conductor** y el **Mapa en tiempo real del Pasajero** integrando la librería Mapbox GL JS. Adicionalmente, se configuró la suite completa de Cypress para Testing E2E.
-- **En el Backend:** Se finalizó el CRUD robusto del microservicio `routing-service`, garantizando la inserción correcta de las tablas relacionales (`route_stops`) al inicializar la base de datos, y se mitigaron errores HTTP 500 en la gestión de identidad. Además, se profundizó enormemente en la documentación de Arquitectura, introduciendo los patrones CQRS y Event Sourcing formalmente.
+Durante el Sprint 4 se ejecutó la integración final de los ecosistemas. A continuación, se presenta el historial de los commits más representativos que consolidan el desarrollo de esta iteración:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|------------|----------|-----------|----------------|---------------------|-------------------|
+| ChapaTuRuta-frontend | develop | 4af41ce | test(e2e): configure Cypress and add E2E flow tests | Se configura Cypress y se agregan flujos E2E para pasajero, conductor y manager. | 01/07/2026 |
+| ChapaTuRuta-frontend | develop | 0f885aa | feat(tracking): implement driver console, passenger real-time map | Desarrollo de la consola del conductor y mapa en tiempo real para el pasajero con geolocalización. | 01/07/2026 |
+| ChapaTuRuta-frontend | develop | dd5f051 | feat(manager): implement dashboard with route upload | Implementación del dashboard para el rol manager permitiendo carga y mapeo de rutas. | 01/07/2026 |
+| ChapaTuRuta-backend | develop | 1166015 | docs(architecture): rewrite architecture report incorporating Serverless | Reescritura del documento de arquitectura incorporando patrones CQRS, Serverless e IaC. | 03/07/2026 |
+| ChapaTuRuta-backend | develop | f16c547 | test/refactor(backend): agregar pruebas unitarias/BDD | Se agregan pruebas unitarias y BDD para paraderos, se aísla config de BD. | 02/07/2026 |
+| ChapaTuRuta-backend | develop | 9b33772 | fix: explicitly create route_stops table | Se soluciona error inicializando explícitamente la tabla route_stops al arrancar. | 01/07/2026 |
 
 #### 5.3.4.3 Testing Suite Evidence for Sprint Review
 
@@ -2861,6 +2868,36 @@ Se consolida la arquitectura orientada a servicios **(PaaS + BaaS)**:
 - Orquestación automatizada de los contenedores Docker en **Render.com** conectados a repositorios GitHub vía Webhooks (CI/CD).
 - **Supabase (PostgreSQL)** como Storage estructurado bajo patrón *Database per Service*.
 - **Upstash (Redis)** y **CloudAMQP (RabbitMQ)** gestionando concurrencia asíncrona (CQRS) sin estado transaccional.
+
+- La siguiente captura muestra el panel principal de la plataforma PaaS utilizada para el despliegue (Render Cloud). El estado operativo de cada servicio confirma que el proceso automatizado de integración y despliegue continuo ejecutó correctamente la construcción de imágenes Docker y la puesta en marcha de los contenedores en el entorno productivo.
+
+<p align="center">
+  <img src="./img/deployment_evidence0.jpg" width="800">
+</p>
+
+- Evidencia del despliegue exitoso del **identity-service** en la nube mediante su dominio público. La disponibilidad de la documentación interactiva valida que el servicio se encuentra operativo y preparado para gestionar procesos de autenticación y autorización basados en tokens JWT.
+
+<p align="center">
+  <img src="./img/deployment_evidence1.jpg" width="800">
+</p>
+
+- Captura correspondiente al **tracking-service** desplegado en producción. Su funcionamiento confirma la correcta configuración de las variables de entorno necesarias para el procesamiento y exposición de información relacionada con la telemetría y seguimiento en tiempo real.
+
+<p align="center">
+  <img src="./img/deployment_evidence2.jpg" width="800">
+</p>
+
+- Evidencia del entorno productivo del **routing-service**. La disponibilidad de sus endpoints demuestra que los componentes encargados de la gestión de rutas y cálculo de recorridos fueron desplegados satisfactoriamente y se encuentran accesibles desde la infraestructura cloud.
+
+<p align="center">
+  <img src="./img/deployment_evidence3.jpg" width="800">
+</p>
+
+- Captura de la consola administrativa de **Supabase**, donde se visualiza la base de datos PostgreSQL utilizada por la solución. Esta evidencia confirma la disponibilidad de las estructuras de almacenamiento y la conectividad requerida por los microservicios desplegados.
+
+<p align="center">
+  <img src="./img/deployment_evidence4.jpg" width="800">
+</p>
 
 **Despliegue de la Aplicación SPA (Frontend):**
 El Frontend, construido con React.js, se desplegó haciendo uso de **Vercel**. 
