@@ -191,6 +191,9 @@ _Tabla de contenidos_
         - [5.3.4.6 Execution Evidence for Sprint Review](#5346-execution-evidence-for-sprint-review)
         - [5.3.4.7 Team Collaboration Insights during Sprint](#5347-team-collaboration-insights-during-sprint)
         - [5.3.4.8 Kanban Board](#5348-kanban-board)
+  - [5.4 Microservices Deployment](#54-microservices-deployment)
+    - [5.4.1 Cloud Architecture Diagram](#541-cloud-architecture-diagram)
+    - [5.4.2 Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud)](#542-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud)
 
 # Student Outcome
 
@@ -2909,3 +2912,45 @@ Al estar alojado en Vercel, la aplicación React (Single Page Application) es em
 #### 5.3.4.7 Team Collaboration Insights during Sprint
 
 #### 5.3.4.8 Kanban Board
+
+
+## 5.4 Microservices Deployment
+
+El despliegue final de **ChapaTuRuta** se sustenta en una arquitectura **Multi-Cloud PaaS/BaaS**, delegando la gestión de infraestructura subyacente (IaaS) a proveedores especializados para priorizar la entrega de valor, el escalamiento automático y la configuración nativa de pipelines CI/CD.
+
+### 5.4.1 Cloud Architecture Diagram
+
+El siguiente diagrama ilustra la topología de red y despliegue del ecosistema en la nube. Se visualiza cómo los usuarios acceden mediante la capa Edge (Vercel CDN) hacia el API Gateway (Render Cloud), el cual orquesta las llamadas a los microservicios, interactuando de forma asíncrona mediante buses de mensajes y persistiendo en bases de datos gestionadas.
+
+<p align="center">
+  <img src="./img/cloud_architecture.jpg" width="800" alt="Cloud Architecture Diagram">
+</p>
+
+*(Nota: Asegúrate de reemplazar `cloud_architecture.jpg` en la carpeta `img` con tu diagrama oficial C4 de Despliegue).*
+
+### 5.4.2 Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud)
+
+A diferencia de un despliegue monolítico tradicional en máquinas virtuales aisladas (EC2 en AWS o Compute Engine en GCP), la arquitectura de **ChapaTuRuta** ha sido desplegada utilizando proveedores **Cloud Native** que abstraen la complejidad operativa, ofreciendo ventajas superiores en resiliencia y automatización:
+
+1. **Frontend en Vercel (Edge Network):**
+   La Single Page Application (SPA) en React está alojada en Vercel. Este proveedor actúa como un CDN global (Edge), sirviendo el contenido estático de forma inmediata a los pasajeros y conductores sin importar su ubicación. El pipeline de Vercel está conectado al repositorio `chapaturuta-frontend`, desencadenando despliegues automáticos (Deploy Previews y Production Builds) ante cada push a la rama `develop`.
+
+2. **API Gateway y Microservicios en Render (Container PaaS):**
+   Los servicios backend (`identity-service`, `routing-service`, `tracking-service` y el `api-gateway`) han sido dockerizados. Se utilizó **Render.com** como plataforma como servicio (PaaS) para alojar estos contenedores Docker. Render facilita métricas en tiempo real, balanceo de carga automático y despliegues sin interrupciones (Zero-Downtime Deploys) enganchados a GitHub.
+
+3. **Database as a Service (BaaS) - Supabase:**
+   Para la persistencia relacional, se emplea **Supabase**, que proporciona instancias gestionadas de PostgreSQL altamente disponibles y escalables. La separación de la base de datos de los contenedores lógicos permite escalar la lectura y escritura independientemente del tráfico de los microservicios.
+
+4. **Event Streaming & Caché (CloudAMQP y Upstash):**
+   La alta concurrencia de rastreo GPS (Tracking) y notificaciones de llegada se gestionan de forma asíncrona mediante:
+   - **Upstash (Serverless Redis):** Maneja el estado en memoria para el cálculo de ETA (Estimated Time of Arrival) y el caching de rutas de forma ultrarrápida.
+   - **CloudAMQP (Managed RabbitMQ):** Actúa como el Message Broker que desacopla la comunicación entre los servicios de Tracking y Routing, garantizando tolerancia a fallos.
+
+**Enlaces de Producción (Live URLs):**
+- **Frontend SPA (Vercel):** *[Insertar link de vercel]*
+- **API Gateway (Render):** `https://chapaturuta-gateway.onrender.com`
+- **Identity Service Swagger:** `https://identity-service-2nhw.onrender.com/swagger-ui.html`
+- **Routing Service Swagger:** `https://chapaturuta-backend.onrender.com/swagger-ui.html`
+- **Tracking Service Swagger:** `https://tracking-service-yj42.onrender.com/swagger-ui.html`
+
+Esta configuración descentralizada asegura un *Time-to-Market* acelerado y costos predecibles de operación cloud.
