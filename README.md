@@ -2554,7 +2554,7 @@ Esta prueba valida la integración del mapa dentro de `PassengerHome`. Se demues
 
 
 <p align="center">
-  <img src="./img/evidence_sprint32.jpg" width="600">
+  <img src="./img/evidence_sprint321.jpg" width="600">
 </p>
 ---
 
@@ -2902,12 +2902,75 @@ Se consolida la arquitectura orientada a servicios **(PaaS + BaaS)**:
   <img src="./img/deployment_evidence4.jpg" width="800">
 </p>
 
+https://tracking-service-yj42.onrender.com/swagger-ui/index.html
+
+https://identity-service-2nhw.onrender.com/swagger-ui/index.html
+
+https://chapaturuta-backend.onrender.com/swagger-ui/index.html
+
 **Despliegue de la Aplicación SPA (Frontend):**
 El Frontend, construido con React.js, se desplegó haciendo uso de **Vercel**. 
 Al estar alojado en Vercel, la aplicación React (Single Page Application) es empaquetada como archivos estáticos ultra optimizados (HTML, CSS, JS) y servida a través del CDN global Edge de la plataforma. Esto garantiza tiempos de respuesta mínimos (TTFB) y permite integraciones fluidas con los APIs del backend (Render) eludiendo problemas de latencia regional. Las variables de entorno de producción (`REACT_APP_API_URL`, tokens de Mapbox, etc.) se inyectan dinámicamente desde el panel seguro de Vercel en cada *Deploy Preview* o paso a *Producción*.
 
+<p align="center">
+  <img src="./img/deploy_evidence.jpg" width="800">
+</p>
+
+https://chapaturuta-frontend.vercel.app/
+
+
 
 #### 5.3.4.6 Execution Evidence for Sprint Review
+
+A continuación se muestran todas las vistas del fronted realizado para este sprint:
+
+<p align="center">
+  <img src="./img/evidence_sprint31.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint311.jpg" width="800">
+</p>
+
+
+<p align="center">
+  <img src="./img/evidence_sprint321.jpg" width="800">
+</p>
+
+
+<p align="center">
+  <img src="./img/evidence_sprint322.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint32.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint34.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint35.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint39.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint33.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint36.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="./img/evidence_sprint37.jpg" width="800">
+</p>
+
+
 
 #### 5.3.4.7 Team Collaboration Insights during Sprint
 
