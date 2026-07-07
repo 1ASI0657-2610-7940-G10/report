@@ -3016,7 +3016,7 @@ A continuación se muestran todas las vistas del fronted realizado para este spr
 ### Kanban Board del Sprint 4
 
 <p align="center">
-  <img src="./img/kanban-sprint3.png" alt="Kanban Board Sprint 2" width="100%">
+  <img src="./img/kanban-sprint4.png" alt="Kanban Board Sprint 4" width="100%">
 </p>
 
 ### Descripción de etiquetas
