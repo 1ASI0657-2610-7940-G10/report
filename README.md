@@ -2835,6 +2835,30 @@ Se instaló y configuró la herramienta **Cypress**. Se automatizaron los flujos
 - La carga correcta del Dashboard del Manager tras la autenticación.
 - La simulación del flujo de un pasajero entrando al mapa e indicando "espera" en un paradero.
 
+- **Pruebas realizadas en Jenkinks:**
+
+<p align="center">
+  <img src="./img/jenkins-test1.png" alt="Jenkins test 1" width="100%">
+</p>
+
+<p align="center">
+  <img src="./img/jenkins-test2.png" alt="Jenkins test 2" width="100%">
+</p>
+
+<p align="center">
+  <img src="./img/jenkins-test3.png" alt="Jenkins test 3" width="100%">
+</p>
+
+<p align="center">
+  <img src="./img/jenkins-test4.png" alt="Jenkins test 4" width="100%">
+</p>
+
+**Code quality revisado en SonarQube:**
+
+<p align="center">
+  <img src="./img/Sonarqube-test1.png" alt="SonarQube 1" width="100%">
+</p>
+
 #### 5.3.4.4 Microservices Documentation Evidence for Sprint Review
 
 ## Integración de Red del Frontend (React SPA) - Sprint 4
