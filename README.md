@@ -3000,15 +3000,13 @@ A continuación se muestran todas las vistas del fronted realizado para este spr
 
 #### 5.3.4.8 Kanban Board
 
-##### 5.3.3.8 Kanban Board
-
 | BACKLOG (Product Backlog General) | TO DO (Sprint 4 Commitments) | IN PROGRESS | DONE (Sprint 4 Completado) |
 |-----------------------------------|------------------------------|-------------|----------------------------|
-| (Las historias de usuario y tareas técnicas pendientes fueron priorizadas en Sprints anteriores.) | (Las 8 tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo.) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint.) | TS10 Pruebas E2E (Cypress) |
-| | | | US32 Dashboard Manager (Rutas) |
-| | | | US33 Consola del Conductor y Rastreo de Pasajeros |
-| | | | US34 Autenticación Frontend (AuthContext) |
-| | | | US15 Crear Ruta y Horarios (Backend) |
+| US01 Explorar paraderos desde Landing | (Las tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo.) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint.) | TS10 Pruebas E2E (Cypress) |
+| US02 Consultar funcionamiento y ventajas | | | US32 Dashboard Manager (Rutas) |
+| US03 Acceder a FAQ | | | US33 Consola del Conductor y Rastreo de Pasajeros |
+| US09 Registro inicial de Empresa | | | US34 Autenticación Frontend (AuthContext) |
+| US13 Editar y eliminar Paraderos | | | US15 Crear Ruta y Horarios (Backend) |
 | | | | US35 Cancelación de Espera de Bus |
 | | | | TS06 Pruebas BDD y Unitarias |
 | | | | TS11 Documentación Arquitectónica |
@@ -3033,11 +3031,15 @@ A continuación se muestran todas las vistas del fronted realizado para este spr
 - US14 – Visualizar paraderos en el mapa
 - US18 – Detalle visual de la Ruta
 - US22 – Confirmación manual de abordaje
+- US32 – Dashboard Manager (Rutas)
+- US33 – Consola del Conductor y Rastreo de Pasajeros
 
 #### 🔴 Rojo (Backend)
 
 - US13 – Editar y eliminar Paraderos
 - US16 – Gestionar Rutas (Editar/Eliminar)
+- US35 – Cancelación de Espera de Bus
+- US34 – Autenticación Frontend
 
 #### 🟠 Naranja (Tiempo Real / Geolocalización)
 
@@ -3051,6 +3053,7 @@ A continuación se muestran todas las vistas del fronted realizado para este spr
 #### ⚫ Negro (Infraestructura)
 
 - TS05 – Integración de SDK Firebase Admin
+- TS11 – Documentación Arquitectónica
 
 #### **Fuente:** Elaboración propia mediante Jira.  
 #### **Enlace:** https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9
