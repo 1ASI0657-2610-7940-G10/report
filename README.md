@@ -3000,6 +3000,60 @@ A continuación se muestran todas las vistas del fronted realizado para este spr
 
 #### 5.3.4.8 Kanban Board
 
+##### 5.3.3.8 Kanban Board
+
+| BACKLOG (Product Backlog General) | TO DO (Sprint 4 Commitments) | IN PROGRESS | DONE (Sprint 4 Completado) |
+|-----------------------------------|------------------------------|-------------|----------------------------|
+| (Las historias de usuario y tareas técnicas pendientes fueron priorizadas en Sprints anteriores.) | (Las 8 tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo.) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint.) | TS10 Pruebas E2E (Cypress) |
+| | | | US32 Dashboard Manager (Rutas) |
+| | | | US33 Consola del Conductor y Rastreo de Pasajeros |
+| | | | US34 Autenticación Frontend (AuthContext) |
+| | | | US15 Crear Ruta y Horarios (Backend) |
+| | | | US35 Cancelación de Espera de Bus |
+| | | | TS06 Pruebas BDD y Unitarias |
+| | | | TS11 Documentación Arquitectónica |
+
+### Kanban Board del Sprint 4
+
+<p align="center">
+  <img src="./img/kanban-sprint3.png" alt="Kanban Board Sprint 2" width="100%">
+</p>
+
+### Descripción de etiquetas
+
+#### 🔵 Azul (Frontend / UX)
+
+- US01 – Explorar paraderos desde Landing
+- US02 – Consultar funcionamiento y ventajas
+- US03 – Acceder a FAQ
+- US07 – Cierre de Sesión
+- US09 – Registro inicial de Empresa
+- US10 – Personalizar perfil de Empresa
+- US11 – Panel de resumen de métricas
+- US14 – Visualizar paraderos en el mapa
+- US18 – Detalle visual de la Ruta
+- US22 – Confirmación manual de abordaje
+
+#### 🔴 Rojo (Backend)
+
+- US13 – Editar y eliminar Paraderos
+- US16 – Gestionar Rutas (Editar/Eliminar)
+
+#### 🟠 Naranja (Tiempo Real / Geolocalización)
+
+- US19 – Indicar espera en Paradero
+- US21 – Notificaciones push de proximidad
+- US23 – Eliminación automática de espera
+- US28 – Transmitir ubicación GPS
+- US29 – Check-in manual en Paraderos
+- US30 – Ver concurrencia en tiempo real
+
+#### ⚫ Negro (Infraestructura)
+
+- TS05 – Integración de SDK Firebase Admin
+
+#### **Fuente:** Elaboración propia mediante Jira.  
+#### **Enlace:** https://arturons.atlassian.net/jira/software/projects/CK/boards/2?atlOrigin=eyJpIjoiMmZiZjEyNzNjOWQzNDllOTlhZGI1YmU0YTUyMjM2NWEiLCJwIjoiaiJ9
 
 ## 5.4 Microservices Deployment
 
