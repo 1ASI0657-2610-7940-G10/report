@@ -259,7 +259,7 @@ ChapaTuRuta es una plataforma digital multi-rol diseñada para pasajeros, conduc
  
 
 **How much**  
--	En gran parte de las principales ciudades del país, el transporte representa un alto porcentaje de los viajes motorizados diarios. Los usuarios pueden llegar a perder en promedio entre 20 a 40 minutos diarios de su tiempo productivo únicamente esperando en los paraderos sin saber a qué hora pasará su vehículo. Y según datos publicados por El Comercio, Lima no solo está dentro del top 10 de ciudades con más tráfico del mundo, sino que también se pierden alrededor de 195 horas al año en horas punta.
+-	En gran parte de las principales ciudades del país, el transporte representa un alto porcentaje de los viajes motorizados diarios. Los usuarios pueden llegar a perder en promedio entre 15 a 30 minutos diarios de su tiempo productivo únicamente esperando en los paraderos sin saber a qué hora pasará su vehículo. Y según datos publicados por El Comercio, Lima no solo está dentro del top 10 de ciudades con más tráfico del mundo, sino que también se pierden alrededor de 195 horas al año en horas punta.
 
 ---
 
@@ -1847,25 +1847,6 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 | | | | US15 Crear Ruta y Horarios |
 | | | | US17 Visualizar panel central del conductor |
 
-| US18 Detalle visual de la Ruta |  |  |  |
-| US19 Indicar espera en Paradero |  |  |  |
-| TS03 Caché de Coordenadas (Redis) |  |  |  |
-| US28 Transmitir ubicación GPS |  |  |  |
-| US29 Check-in manual en Paraderos |  |  |  |
-| US20 Consultar Tiempo Estimado (ETA) |  |  |  |
-| TS04 Bus de Eventos (RabbitMQ) |  |  |  |
-| US30 Ver concurrencia en tiempo real |  |  |  |
-| TS05 Integración de SDK Firebase Admin |  |  |  |
-| US21 Notificaciones push de proximidad |  |  |  |
-| US22 Confirmación manual de abordaje |  |  |  |
-| US23 Eliminación automática de espera |  |  |  |
-| US24 Ver información del Conductor |  |  |  |
-| US25 Calificar viaje y Conductor |  |  |  |
-| US31 Consultar reputación propia |  |  |  |
-| US26 Crear y listar Colecciones |  |  |  |
-| US27 Gestionar rutas en Colecciones |  |  |  |
-| TS06 Pruebas BDD y Unitarias |  |  |  |
-
 ### Kanban Board del Sprint 1
 
 <p align="center">
@@ -2300,17 +2281,6 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 | | | | US20 Consultar Tiempo Estimado (ETA) |
 | | | | TS04 Bus de Eventos (RabbitMQ) |
 | | | | US23 Eliminación automática de espera |
-
-| US21 Notificaciones push de proximidad |  |  |  |
-| US22 Confirmación manual de abordaje |  |  |  |
-| US24 Ver información del Conductor |  |  |  |
-| US25 Calificar viaje y Conductor |  |  |  |
-| US26 Crear y listar Colecciones |  |  |  |
-| US27 Gestionar rutas en Colecciones |  |  |  |
-| US29 Check-in manual en Paraderos |  |  |  |
-| US30 Ver concurrencia en tiempo real |  |  |  |
-| US31 Consultar reputación propia |  |  |  |
-| TS05 Integración de SDK Firebase Admin |  |  |  |
 
 ### Kanban Board del Sprint 2
 
