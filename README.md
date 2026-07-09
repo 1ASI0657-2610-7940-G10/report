@@ -1835,19 +1835,18 @@ Los servicios enlazados en producción y operando en estado *Live* son:
 #### 5.3.1.8 Kanban Board
 
 
-|  BACKLOG (Product Backlog General) |  TO DO (Sprint 1 Commitments) |  IN PROGRESS |  DONE (Sprint 1 Completado) |
+| BACKLOG | TO DO (Sprint 1 Commitments) | IN PROGRESS | DONE (Sprint 1 Completado) |
 |---|---|---|---|
-| US01 Explorar paraderos desde Landing | (Las 8 tareas planificadas para este Sprint ya iniciaron su ciclo) | (Ninguna tarea quedó bloqueada o a medias al cierre del Sprint) | TS01 Seguridad en API Gateway |
-| US02 Consultar funcionamiento y ventajas |  |  | TS02 Persistencia Relacional (PostgreSQL) |
-| US03 Acceder a FAQ |  |  | US04 Registro de Pasajeros |
-| US07 Cierre de Sesión |  |  | US05 Registro de Conductores con RUC |
-| US08 Edición de Perfil de Usuario |  |  | US06 Inicio de Sesión con JWT |
-| US09 Registro inicial de Empresa |  |  | US12 Crear y listar Paraderos |
-| US10 Personalizar perfil de Empresa |  |  | US15 Crear Ruta y Horarios |
-| US11 Panel de resumen de métricas |  |  | US17 Búsqueda de Rutas y Transbordos |
-| US13 Editar y eliminar Paraderos |  |  |  |
-| US14 Visualizar paraderos en el mapa |  |  |  |
-| US16 Gestionar Rutas (Editar/Eliminar) |  |  |  |
+| | | | TS01 Seguridad en API Gateway |
+| | | | TS02 Persistencia Relacional |
+| | | | US04 Selección de Rol |
+| | | | US05 Inicio de Sesión de Pasajeros |
+| | | | US08 Inicio de Sesión de Conductores |
+| | | | US06 Registro Inicial de Pasajeros |
+| | | | US12 Registro Inicial de Conductores |
+| | | | US15 Crear Ruta y Horarios |
+| | | | US17 Visualizar panel central del conductor |
+
 | US18 Detalle visual de la Ruta |  |  |  |
 | US19 Indicar espera en Paradero |  |  |  |
 | TS03 Caché de Coordenadas (Redis) |  |  |  |
@@ -2293,20 +2292,15 @@ https://chapaturuta-backend.onrender.com/swagger-ui/index.html
 
 #### 5.3.2.8 Kanban Board
 
-|  BACKLOG (Product Backlog General) |  TO DO (Sprint 2 Commitments) |  IN PROGRESS |  DONE (Sprint 2 Completado) |
+| BACKLOG | TO DO (Sprint 2 Commitments) | IN PROGRESS | DONE (Sprint 2 Completado) |
 |---|---|---|---|
-| US01 Explorar paraderos desde Landing | (Las 10 tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint) | TS03 Caché de Coordenadas (Redis) |
-| US02 Consultar funcionamiento y ventajas |  |  | US28 Transmitir ubicación GPS |
-| US03 Acceder a FAQ |  |  | US19 Indicar espera en Paradero |
-| US07 Cierre de Sesión |  |  | US20 Consultar Tiempo Estimado (ETA) |
-| US08 Edición de Perfil de Usuario |  |  | TS04 Bus de Eventos (RabbitMQ) |
-| US09 Registro inicial de Empresa |  |  | US23 Eliminación automática de espera |
-| US10 Personalizar perfil de Empresa |  |  | TS06 Pruebas BDD y Unitarias (Fase II) |
-| US11 Panel de resumen de métricas |  |  | TS07 Dockerización e Infraestructura CI/CD |
-| US13 Editar y eliminar Paraderos |  |  | TS08 Configuración Externalizada de Red |
-| US14 Visualizar paraderos en el mapa |  |  | TS09 Resiliencia de Sentencias de BD |
-| US16 Gestionar Rutas (Editar/Eliminar) |  |  |  |
-| US18 Detalle visual de la Ruta |  |  |  |
+| | | | TS03 Caché de Coordenadas (Redis) |
+| | | | US28 Transmitir ubicación GPS |
+| | | | US19 Indicar espera en Paradero |
+| | | | US20 Consultar Tiempo Estimado (ETA) |
+| | | | TS04 Bus de Eventos (RabbitMQ) |
+| | | | US23 Eliminación automática de espera |
+
 | US21 Notificaciones push de proximidad |  |  |  |
 | US22 Confirmación manual de abordaje |  |  |  |
 | US24 Ver información del Conductor |  |  |  |
@@ -2537,7 +2531,7 @@ En esta prueba se valida el flujo inicial de la aplicación. Se ingresan las cre
 **Acción ejecutada:** Inicio de sesión y enrutamiento dinámico basado en el rol del usuario.
 
 <p align="center">
-  <img src="./img/evidence_sprint31.jpg" width="600">
+  <img src="./img/evidence_sprint31.jpg" width="800">
 </p>
 
 
@@ -2554,7 +2548,7 @@ Esta prueba valida la integración del mapa dentro de `PassengerHome`. Se demues
 
 
 <p align="center">
-  <img src="./img/evidence_sprint321.jpg" width="600">
+  <img src="./img/evidence_sprint321.jpg" width="800">
 </p>
 ---
 
@@ -2567,7 +2561,7 @@ Esta prueba valida la vista operativa del conductor. El componente `DriverHome` 
 **Acción ejecutada:** Emisión manual de eventos de ubicación y actualización reactiva del estado de la interfaz.
 
 <p align="center">
-  <img src="./img/evidence_sprint33.jpg" width="200">
+  <img src="./img/evidence_sprint33.jpg" width="800">
 </p>
 
 ---
@@ -2581,7 +2575,7 @@ Esta prueba valida la experiencia de usuario del pasajero durante la solicitud d
 **Acción ejecutada:** Confirmación del paradero de espera y recepción asíncrona del ETA mediante actualizaciones periódicas.
 
 <p align="center">
-  <img src="./img/evidence_sprint34.jpg" width="200">
+  <img src="./img/evidence_sprint34.jpg" width="800">
 </p>
 
 ---
@@ -2728,22 +2722,13 @@ Esta capa de integración permite que los componentes React consuman servicios r
 
 ##### 5.3.3.8 Kanban Board
 
-| BACKLOG (Product Backlog General)        | TO DO (Sprint 3 Commitments)                                                                       | IN PROGRESS                                                      | DONE (Sprint 3 Completado)           |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------ |
-| US01 Explorar paraderos desde Landing    | (Las 5 tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint) | US07 Cierre de Sesión                |
-| US02 Consultar funcionamiento y ventajas |                                                                                                    |                                                                  | US14 Visualizar paraderos en el mapa |
-| US03 Acceder a FAQ                       |                                                                                                    |                                                                  | US18 Detalle visual de la Ruta       |
-| US09 Registro inicial de Empresa         |                                                                                                    |                                                                  | US22 Confirmación manual de abordaje |
-| US10 Personalizar perfil de Empresa      |                                                                                                    |                                                                  | US29 Check-in manual en Paraderos    |
-| US11 Panel de resumen de métricas        |                                                                                                    |                                                                  |                                      |
-| US13 Editar y eliminar Paraderos         |                                                                                                    |                                                                  |                                      |
-| US16 Gestionar Rutas (Editar/Eliminar)   |                                                                                                    |                                                                  |                                      |
-| US19 Indicar espera en Paradero          |                                                                                                    |                                                                  |                                      |
-| US21 Notificaciones push de proximidad   |                                                                                                    |                                                                  |                                      |
-| US23 Eliminación automática de espera   |                                                                                                    |                                                                  |                                      |
-| US28 Transmitir ubicación GPS            |                                                                                                    |                                                                  |                                      |
-| US30 Ver concurrencia en tiempo real     |                                                                                                    |                                                                  |                                      |
-| TS05 Integración de SDK Firebase Admin   |                                                                                                    |                                                                  |                                      |
+| BACKLOG | TO DO (Sprint 3 Commitments) | IN PROGRESS | DONE (Sprint 3 Completado) |
+|---|---|---|---|
+| | | | US07 Cierre de Sesión |
+| | | | US14 Visualizar paraderos en el mapa |
+| | | | US18 Detalle visual de la Ruta |
+| | | | US22 Confirmación manual de abordaje |
+| | | | US29 Check-in manual en Paraderos |                                                                                                    |                                                                  |                                      |
 
 
 ### Kanban Board del Sprint 3
@@ -2801,7 +2786,6 @@ Para el último Sprint (TF1), se seleccionaron del Product Backlog aquellas Hist
 | 2 | US32 | Dashboard Manager (Rutas) | Interfaz visual e integración con Mapbox para gestionar el ecosistema de la empresa. | 5 | Done | Héctor Rios |
 | 3 | US33 | Consola del Conductor y Rastreo Pasajeros | Renderizado del seguimiento GPS de buses y panel de chofer. | 8 | Done | Héctor Rios |
 | 4 | US34 | Autenticación Frontend (AuthContext) | Seguridad del SPA usando el token provisto por el backend. | 5 | Done | Héctor Rios |
-| 5 | US15 | Crear Ruta y Horarios (Backend) | CRUD de Rutas y paraderos lógicos en el Routing-Service. | 8 | Done | Héctor Rios |
 | 6 | US35 | Cancelación de Espera de Bus | Endpoint en backend para abortar la intención de viaje en un paradero. | 3 | Done | Héctor Rios |
 | 7 | TS06 | Pruebas BDD y Unitarias | Refactorización de tests automatizados (Cucumber/JUnit) para paraderos. | 5 | Done | Héctor Rios |
 | 8 | TS11 | Documentación Arquitectónica | Actualización del framework arquitectónico (Serverless, CQRS, Hexagonal). | 3 | Done | Héctor Rios |
@@ -2869,8 +2853,8 @@ Durante el Sprint 4, se integraron nuevos servicios y métodos en el Frontend (R
 
 | Repositorio / Servicio (React) | Método / Hook implementado                 | Método HTTP | Endpoint Consumido (API Gateway)      | Modelos / Tipos TypeScript       | Descripción de la Integración                                                                                                                                           |
 | --------------------------- | ----------------------------------- | ----------- | ------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `managerService.ts`         | `createRoute(routeData)`            | `POST`      | `/api/v1/routing/routes`              | `Route`, `Stop[]`                | Serializa los datos del formulario del Dashboard Manager para crear rutas y paraderos geolocalizados.                                                    |
-| `managerService.ts`         | `getCompanyRoutes(companyId)`       | `GET`       | `/api/v1/routing/routes`              | `Route[]`                        | Consulta el listado completo de rutas de una empresa para su gestión en el Dashboard.                                                                   |
+| `managerService.ts`         | `createRoute(routeData)`            | `POST`      | `/api/v1/routes`              | `Route`, `Stop[]`                | Serializa los datos del formulario del Dashboard Manager para crear rutas y paraderos geolocalizados.                                                    |
+| `managerService.ts`         | `getCompanyRoutes(companyId)`       | `GET`       | `/api/v1/routes`              | `Route[]`                        | Consulta el listado completo de rutas de una empresa para su gestión en el Dashboard.                                                                   |
 | `passengerService.ts`       | `cancelWait(routeId)`               | `POST`      | `/api/v1/tracking/cancel-wait`        | `void`                           | Envía la señal al backend para eliminar al pasajero de la cola de espera del paradero, reduciendo la demanda concurrente.                               |
 
 ---
@@ -2881,8 +2865,8 @@ La capa de APIs consumidas y expuestas en este sprint incluyeron mejoras y refac
 
 | Endpoint                                | Acción                                            | Método HTTP | Sintaxis de llamada                     | Parámetros                                                                                                                                 | Ejemplo de Response                                                                                                                                                                    | URL Documentación                                          |
 | --------------------------------------- | ------------------------------------------------- | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `/api/v1/routing/routes`                | Crear nueva ruta y paraderos                      | POST        | `/api/v1/routing/routes`                | **Body (JSON):** origin (string), destination (string), stops (array of Stop ID), price (number)                                           | `{ "routeId": "4da75f64...", "status": "CREATED", "stopsCount": 5 }`                                                                                                                   | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
-| `/api/v1/routing/routes`                | Listado completo de malla estructural             | GET         | `/api/v1/routing/routes`                | Ninguno                                                                                                                                    | `[{ "routeId": "4da75f64...", "origin": "Ate", "destination": "Lima" }]`                                                                                                               | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes`                | Crear nueva ruta y paraderos                      | POST        | `/api/v1/routes`                | **Body (JSON):** origin (string), destination (string), stops (array of Stop ID), price (number)                                           | `{ "routeId": "4da75f64...", "status": "CREATED", "stopsCount": 5 }`                                                                                                                   | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
+| `/api/v1/routes`                | Listado completo de malla estructural             | GET         | `/api/v1/routes`                | Ninguno                                                                                                                                    | `[{ "routeId": "4da75f64...", "origin": "Ate", "destination": "Lima" }]`                                                                                                               | https://chapaturuta-backend.onrender.com/swagger-ui.html   |
 | `/api/v1/tracking/cancel-wait`          | Cancelar espera de pasajero                       | POST        | `/api/v1/tracking/cancel-wait`          | **Query:** routeId (uuid), passengerId (uuid)                                                                                              | `"Demanda reducida y espera cancelada exitosamente"`                                                                                                                                   | https://tracking-service-yj42.onrender.com/swagger-ui.html |
 | `/api/v1/tracking/check-in`             | Registrar Check-in (Refactor)                     | POST        | `/api/v1/tracking/check-in`             | **Body (JSON):** driverId (uuid), routeId (uuid), stopId (uuid)                                                                            | `"Check-in procesado y demanda limpiada inmediatamente"`                                                                                                                               | https://tracking-service-yj42.onrender.com/swagger-ui.html |
 | `/api/v1/auth/register`                 | Registrar un nuevo usuario (Refactor)             | POST        | `/api/v1/auth/register`                 | **Body (JSON):** name (string), email (string), password (string), role (string)                                                           | `HTTP 201 Created` o `HTTP 409 Conflict (Correo duplicado)`                                                                                                                            | https://identity-service-2nhw.onrender.com/swagger-ui.html |
@@ -3000,13 +2984,12 @@ A continuación se muestran todas las vistas del fronted realizado para este spr
 
 #### 5.3.4.8 Kanban Board
 
-| BACKLOG (Product Backlog General) | TO DO (Sprint 4 Commitments) | IN PROGRESS | DONE (Sprint 4 Completado) |
-|-----------------------------------|------------------------------|-------------|----------------------------|
-| US01 Explorar paraderos desde Landing | (Las tareas planificadas para este Sprint completaron satisfactoriamente su ciclo de desarrollo.) | (Ninguna tarea quedó bloqueada o pendiente al cierre del Sprint.) | TS10 Pruebas E2E (Cypress) |
-| US02 Consultar funcionamiento y ventajas | | | US32 Dashboard Manager (Rutas) |
-| US03 Acceder a FAQ | | | US33 Consola del Conductor y Rastreo de Pasajeros |
-| US09 Registro inicial de Empresa | | | US34 Autenticación Frontend (AuthContext) |
-| US13 Editar y eliminar Paraderos | | | US15 Crear Ruta y Horarios (Backend) |
+| BACKLOG | TO DO (Sprint 4 Commitments) | IN PROGRESS | DONE (Sprint 4 Completado) |
+|---|---|---|---|
+| | | | TS10 Pruebas E2E (Cypress) |
+| | | | US32 Dashboard Manager (Rutas) |
+| | | | US33 Consola del Conductor y Rastreo Pasajeros |
+| | | | US34 Autenticación Frontend (AuthContext) |
 | | | | US35 Cancelación de Espera de Bus |
 | | | | TS06 Pruebas BDD y Unitarias |
 | | | | TS11 Documentación Arquitectónica |
