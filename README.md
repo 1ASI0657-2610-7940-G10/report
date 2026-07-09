@@ -1,63 +1,58 @@
 <p align="center">
     <br />
     <img
-      src="https://www.upc.edu.pe/static/img/logo_upc_red.png"
-      width="100px"
+      src="./img/UPC_logo_transparente.png""
+      width="120px"
     />
-    <br />
+    <br /><br />
     <strong>Universidad Peruana de Ciencias Aplicadas</strong>
+    <br />
+    <strong>Ingeniería de Software</strong>
     <br /><br />
-    <strong>Carrera de Ingeniería de Software</strong>
+    <strong>1ASI0657 Fundamentos de Arquitectura de Software</strong>
+    <br />
+    <strong>202610</strong>
     <br /><br />
-    <strong>Ciclo 202610</strong>
+    <strong>NRC:</strong> 7940
     <br /><br />
-    1ASI0657-2610 - Fundamentos de Arquitectura de Software
+    <strong>Profesor:</strong> Mori Yzaguirre, Daniel Enrique
     <br /><br />
-    <strong>NRC:</strong> 7940 <br /><br />
-    <strong>Profesor:</strong> Mori Yzaguirre, Daniel Enrique <br /><br />
-    <strong>Informe de TB1</strong>
+    <strong>TRABAJO FINAL</strong>
+    <br /><br />
+    <strong>Nombre del Producto:</strong> ChapaTuRuta
   </p>
 
-  <div style="width: 80%; margin: 0 auto; text-align: center">
-    <p>
-      <strong>Startup:</strong> Grupo 10 
+  <div style="width: 80%; margin: 0 auto; text-align: center;">
       <br />
-      <strong>Producto:</strong> ChapaTuRuta
-    </p>
-
-  <div>
-      <strong>Relación de integrantes</strong>
+      <strong>Integrantes:</strong>
       <br /><br />
-      <table style="width: 60%; margin: 0 auto;   text-align: left">
+      <table style="width: 80%; margin: 0 auto; text-align: left; border-collapse: collapse; border: 1px solid black;">
         <thead>
-          <tr>
-            <th>Código</th>
-            <th>Nombre</th>
+          <tr style="border: 1px solid black; background-color: #f2f2f2;">
+            <th style="border: 1px solid black; padding: 8px; text-align: center;">Alumno</th>
+            <th style="border: 1px solid black; padding: 8px; text-align: center;">Codigo</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>u20231c540 </td>
-            <td> Rios Pacheco, Hector </td>
+          <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;">Rios Pacheco, Hector</td>
+            <td style="border: 1px solid black; padding: 8px; text-align: center;">u20231c540</td>
           </tr>
-          <tr>
-            <td> u20231e795 </td>
-            <td> Nuñez Soto, Andy Arturo </td>
+          <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;">Nuñez Soto, Andy Arturo</td>
+            <td style="border: 1px solid black; padding: 8px; text-align: center;">u20231e795</td>
           </tr>
-          <tr>
-            <td> u202210334 </td>
-            <td> Valerio Garcia, Adrian Emanuel </td>
+          <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;">Valerio Garcia, Adrian Emanuel</td>
+            <td style="border: 1px solid black; padding: 8px; text-align: center;">u202210334</td>
           </tr>
         </tbody>
       </table>
       <p style="text-align: center">
         <br />
-        <strong>Abril 2026</strong>
+        <strong>Julio 2026</strong>
       </p>
-    </div>
-
   </div>
-</div>
 
 <div style="page-break-after: always;"></div>
 
@@ -2789,29 +2784,7 @@ Se instaló y configuró la herramienta **Cypress**. Se automatizaron los flujos
 - La carga correcta del Dashboard del Manager tras la autenticación.
 - La simulación del flujo de un pasajero entrando al mapa e indicando "espera" en un paradero.
 
-- **Pruebas realizadas en Jenkinks:**
 
-<p align="center">
-  <img src="./img/jenkins-test1.png" alt="Jenkins test 1" width="100%">
-</p>
-
-<p align="center">
-  <img src="./img/jenkins-test2.png" alt="Jenkins test 2" width="100%">
-</p>
-
-<p align="center">
-  <img src="./img/jenkins-test3.png" alt="Jenkins test 3" width="100%">
-</p>
-
-<p align="center">
-  <img src="./img/jenkins-test4.png" alt="Jenkins test 4" width="100%">
-</p>
-
-**Code quality revisado en SonarQube:**
-
-<p align="center">
-  <img src="./img/Sonarqube-test1.png" alt="SonarQube 1" width="100%">
-</p>
 
 #### 5.3.4.4 Microservices Documentation Evidence for Sprint Review
 
@@ -3044,10 +3017,74 @@ A diferencia de un despliegue monolítico tradicional en máquinas virtuales ais
    - **CloudAMQP (Managed RabbitMQ):** Actúa como el Message Broker que desacopla la comunicación entre los servicios de Tracking y Routing, garantizando tolerancia a fallos.
 
 **Enlaces de Producción (Live URLs):**
-- **Frontend SPA (Vercel):** *[Insertar link de vercel]*
+- **Frontend SPA (Vercel):** *https://chapaturuta-frontend.vercel.app/*
 - **API Gateway (Render):** `https://chapaturuta-gateway.onrender.com`
 - **Identity Service Swagger:** `https://identity-service-2nhw.onrender.com/swagger-ui.html`
 - **Routing Service Swagger:** `https://chapaturuta-backend.onrender.com/swagger-ui.html`
 - **Tracking Service Swagger:** `https://tracking-service-yj42.onrender.com/swagger-ui.html`
 
 Esta configuración descentralizada asegura un *Time-to-Market* acelerado y costos predecibles de operación cloud.
+
+---
+
+## 5.5 Conclusiones y Recomendaciones
+
+### 5.5.1 Conclusiones
+* **Optimización de Rendimiento mediante Desacoplamiento:** La separación física de la base de datos relacional (PostgreSQL) y el motor en memoria (Redis) demostró ser una táctica arquitectónica indispensable para mitigar cuellos de botella por I/O. El almacenamiento de telemetría de alta frecuencia en Redis garantiza lecturas y escrituras en submilisegundos, haciendo viable el cálculo y consulta continua de ETAs por parte de miles de pasajeros concurrentes.
+* **Escalabilidad y Modificabilidad por Microservicios:** La implementación del patrón de microservicios con Arquitectura Hexagonal y API Gateway permitió desacoplar el dominio del negocio de la infraestructura tecnológica. Esto asegura que componentes como la autenticación de usuarios o la gestión de rutas puedan ser modificados o escalados independientemente sin comprometer la estabilidad global de la aplicación.
+* **Tolerancia a Fallos Asíncrona:** La integración de RabbitMQ en CloudAMQP como Message Broker actúa como un amortiguador ante ráfagas de tráfico de GPS o pérdidas de señal temporal por parte de los conductores, encolando eventos de telemetría sin riesgo de saturación ni pérdidas de datos en el backend.
+
+### 5.5.2 Recomendaciones
+* **Definición y Congelación Temprana de Contratos de API:** Se recomienda documentar de forma estricta los endpoints de los microservicios en fases iniciales del proyecto (usando especificaciones como OpenAPI/Swagger) para evitar retrasos de integración entre los equipos de Frontend y Backend.
+* **Uso de Entornos de Pruebas y Migraciones Automatizadas:** Es vital mantener un flujo ordenado en la base de datos local y de producción mediante herramientas de migración como Flyway, resolviendo conflictos de versionamiento antes de realizar despliegues continuos para mitigar errores de esquema en tiempo de ejecución.
+* **Monitoreo Continuo:** Para futuros desarrollos, se recomienda añadir un pipeline de observabilidad integrado con herramientas de recolección de métricas (ej. Prometheus y Grafana) para medir la latencia del API Gateway y el uso de CPU/RAM de los contenedores en Render.
+
+---
+
+## 5.6 Video About-The-Team
+
+A continuación se presenta el video explicativo del equipo sobre el desarrollo, organización, roles y aprendizajes del proyecto de arquitectura de software:
+
+https://www.youtube.com/watch?v=f5cqNS3Oikkv
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=f5cqNS3Oikk" target="_blank">
+    <img src="./img/video_about_the_team.jpg" alt="Video About The Team - ChapaTuRuta" width="600px" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  </a>
+</p>
+
+---
+
+## 5.7 Referencias Bibliográficas
+* Bass, L., Clements, P., & Kazman, R. (2021). *Software Architecture in Practice* (4th ed.). Addison-Wesley Professional.
+* Fowler, M. (2014). *CQRS*. MartinFowler.com. Recuperado de https://martinfowler.com/bliki/CQRS.html
+* Richards, M., & Ford, N. (2020). *Fundamentals of Software Architecture: An Engineering Approach*. O'Reilly Media.
+* Brown, S. (2018). *The C4 model for visualizing software architecture*. C4model.com. Recuperado de https://c4model.com/
+* Spring Cloud Gateway Reference Guide. (2026). VMware, Inc. Recuperado de https://spring.io/projects/spring-cloud-gateway
+
+---
+
+## 5.8 Anexos
+* **Anexo A - Resultados de Pruebas Automatizadas:** Evidencias de ejecuciones exitosas de suites de JUnit (Unit Tests) y Cucumber (BDD) en todos los microservicios, registrando 0 fallos.
+* **Anexo B - Scripts de Base de Datos:** Archivos de migración de Flyway para la creación de esquemas relacionales (`users`, `companies`, `routes`, `route_stops`) en Supabase PostgreSQL.
+
+---
+
+## 5.9 Links de Interés
+* **Repositorio de Código Backend (ChapaTuRuta):** https://github.com/1ASI0657-2610-7940-G10/ChapaTuRuta-backend
+* **Repositorio de Código Frontend (chapaturuta-frontend):** https://github.com/1ASI0657-2610-7940-G10/chapaturuta-frontend
+* **Despliegue en Producción (Vercel):** https://chapaturuta-frontend.vercel.app/
+* **Video About-The-Team:** https://www.youtube.com/watch?v=f5cqNS3Oikk
+
+---
+
+## 5.10 Student Outcome
+
+A continuación se detalla la contribución y justificación de logro del **Student Outcome 2** (Diseño de Ingeniería) para los miembros del equipo:
+
+| Student Outcome / Criterio | Alumno | Ciclo/Fase | Detalle de avance / Contribución | Justificación / Criterio Técnico y Profesional |
+| :--- | :--- | :--- | :--- | :--- |
+| **SO 2 (Diseño de Ingeniería):** Capacidad de aplicar el diseño de ingeniería para producir soluciones que satisfagan necesidades específicas con consideración de salud pública, seguridad y bienestar, así como factores globales, culturales, sociales, ambientales y económicos. | Rios Pacheco, Hector | TF | Diseño e implementación de la arquitectura de enrutamiento y seguridad centralizada (API Gateway con JWT), y la estructura de telemetría en tiempo real del microservicio `tracking-service` utilizando Redis en memoria y el encolamiento asíncrono con RabbitMQ. | La integración de estas tecnologías y patrones (CQRS, Arquitectura Hexagonal) sustenta técnicamente la solución ante demandas de alto rendimiento de telemetría GPS, reduciendo significativamente la incertidumbre en paraderos. Esto incide directamente en la seguridad y el bienestar de los pasajeros en la ciudad al minimizar su exposición al peligro en la vía pública, logrando un despliegue optimizado y a coste cero (Free Tier). |
+| | Nuñez Soto, Andy Arturo | TF | *[Pendiente de completar por el alumno]* | *[Pendiente de completar por el alumno]* |
+| | Valerio Garcia, Adrian Emanuel | TF | *[Pendiente de completar por el alumno]* | *[Pendiente de completar por el alumno]* |
+
